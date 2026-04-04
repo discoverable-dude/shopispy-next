@@ -1,62 +1,38 @@
 "use client";
 
 import Link from "next/link";
-import { Play, CheckCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { ArrowRight } from "lucide-react";
 import { FadeInView } from "@/components/motion";
 
 export function HomepageCTA() {
   return (
-    <section className="bg-gradient-to-br from-primary/5 via-background to-accent/5 px-4 py-20 sm:px-6 lg:px-8">
-      <FadeInView className="mx-auto max-w-4xl space-y-8 text-center">
-        <Badge
-          variant="secondary"
-          className="border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium"
-        >
-          Start Tracking Competitors Today
-        </Badge>
-        <h2 className="text-3xl font-bold sm:text-4xl">Stay Ahead of Your Competition</h2>
-        <p className="text-lg text-muted-foreground sm:text-xl">
-          Monitor competitor pricing in real-time and adjust your strategy instantly with automated
-          alerts and insights.
+    <section className="py-24 px-6">
+      <FadeInView className="mx-auto max-w-3xl text-center">
+        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          Ready to outsmart your competition?
+        </h2>
+        <p className="mt-4 text-lg text-muted-foreground">
+          Join thousands of Shopify brands using ShopiSpy to track competitors and
+          optimize pricing.
         </p>
-
-        <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
-          <Link href="/scraper">
-            <Button
-              size="lg"
-              className="w-full bg-gradient-to-r from-primary to-primary/80 px-8 py-6 text-lg text-primary-foreground sm:w-auto"
-            >
-              <Play className="mr-2 h-5 w-5" />
-              Try It Now - Free
-            </Button>
+        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <Link
+            href="/scraper"
+            className="inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+          >
+            Try it free
+            <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link href="/pricing">
-            <Button
-              size="lg"
-              variant="outline"
-              className="w-full border-primary/20 px-8 py-6 text-lg hover:border-primary/40 sm:w-auto"
-            >
-              View Pricing
-            </Button>
+          <Link
+            href="/pricing"
+            className="inline-flex h-11 items-center justify-center rounded-lg border border-border bg-background px-6 text-sm font-medium shadow-sm transition-colors hover:bg-muted"
+          >
+            View pricing
           </Link>
         </div>
-
-        <div className="flex flex-col items-center justify-center gap-4 pt-6 text-sm text-muted-foreground sm:flex-row sm:gap-6">
-          {["Try before signing up", "Free plan available", "Upgrade anytime"].map((text) => (
-            <div key={text} className="flex items-center gap-2">
-              <CheckCircle className="h-4 w-4 text-primary" />
-              {text}
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-8 border-t border-primary/10 pt-8">
-          <p className="text-sm font-medium text-muted-foreground">
-            Join 10,000+ Shopify stores already using ShopiSpy for competitor intelligence
-          </p>
-        </div>
+        <p className="mt-4 text-xs text-muted-foreground">
+          No credit card required &middot; Free plan available &middot; Cancel anytime
+        </p>
       </FadeInView>
     </section>
   );

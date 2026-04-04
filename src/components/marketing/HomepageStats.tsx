@@ -1,36 +1,41 @@
 "use client";
 
-import { StaggerContainer, StaggerItem, CountUp } from "@/components/motion";
+import { motion } from "framer-motion";
 
 const stats = [
-  { label: "Competitor Stores Tracked", value: "10,000+" },
-  { label: "Products Monitored", value: "2.5M+" },
-  { label: "Price Alerts Sent", value: "500K+" },
-  { label: "Extra Revenue Generated", value: "\u00a350M+" },
+  { value: "10,000+", label: "Stores tracked" },
+  { value: "2.5M+", label: "Products monitored" },
+  { value: "500K+", label: "Alerts sent" },
+  { value: "99.9%", label: "Uptime" },
 ];
 
 export function HomepageStats() {
   return (
-    <section className="border-y border-primary/10 bg-gradient-to-r from-primary/3 to-primary/5 py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <StaggerContainer className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
-          {stats.map((stat, index) => (
-            <StaggerItem
-              key={index}
-              className="space-y-2 rounded-lg border border-primary/10 bg-background/50 p-4 text-center backdrop-blur"
+    <section className="border-y border-border/60 py-12">
+      <div className="mx-auto max-w-5xl px-6">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
+          className="grid grid-cols-2 gap-8 md:grid-cols-4"
+        >
+          {stats.map((stat) => (
+            <motion.div
+              key={stat.label}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+              }}
+              className="text-center"
             >
-              <div className="text-2xl font-bold sm:text-3xl md:text-4xl">
-                <CountUp
-                  value={stat.value}
-                  className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
-                />
+              <div className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                {stat.value}
               </div>
-              <div className="text-sm font-medium text-muted-foreground sm:text-base">
-                {stat.label}
-              </div>
-            </StaggerItem>
+              <div className="mt-1 text-sm text-muted-foreground">{stat.label}</div>
+            </motion.div>
           ))}
-        </StaggerContainer>
+        </motion.div>
       </div>
     </section>
   );

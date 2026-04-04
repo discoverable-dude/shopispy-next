@@ -1,71 +1,89 @@
 "use client";
 
-import { Search, BarChart3, Bell, Download } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { StaggerContainer, StaggerItem, HoverScale } from "@/components/motion";
+import { motion } from "framer-motion";
+import { Search, BarChart3, Bell, Download, TrendingUp, Zap } from "lucide-react";
 import { FadeInView } from "@/components/motion";
 
 const features = [
   {
-    icon: <Search className="h-6 w-6" />,
-    title: "Track Competitor Pricing",
-    description:
-      "Monitor live competitor store prices and see exactly what they\u2019re charging right now.",
+    icon: Search,
+    title: "Track competitor pricing",
+    description: "Monitor live prices across competitor stores. See exactly what they charge, updated daily.",
   },
   {
-    icon: <BarChart3 className="h-6 w-6" />,
-    title: "Spot Price Changes Instantly",
-    description:
-      "Get notified the moment competitors change prices so you can adjust your strategy.",
+    icon: Bell,
+    title: "Instant price alerts",
+    description: "Get notified the moment a competitor changes prices — via email, Slack, or webhook.",
   },
   {
-    icon: <Bell className="h-6 w-6" />,
-    title: "Real-time Product Alerts",
-    description:
-      "Know immediately when competitors launch new products or update their catalog.",
+    icon: TrendingUp,
+    title: "Spot new products",
+    description: "Know immediately when competitors launch new products or update their catalog.",
   },
   {
-    icon: <Download className="h-6 w-6" />,
-    title: "Export Complete Catalogs",
-    description:
-      "Download full competitor product data to analyze and plan your competitive pricing.",
+    icon: Download,
+    title: "Export full catalogs",
+    description: "Download complete product data as CSV, Excel, or JSON for offline analysis.",
+  },
+  {
+    icon: BarChart3,
+    title: "Analytics dashboard",
+    description: "Pricing trends, inventory changes, and competitive positioning — all in one view.",
+  },
+  {
+    icon: Zap,
+    title: "Works in seconds",
+    description: "Enter any Shopify URL. See every product, variant, and price in under 10 seconds.",
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" as const } },
+};
+
 export function HomepageFeatures() {
   return (
-    <section className="px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <FadeInView className="mb-16 space-y-4 text-center">
-          <h2 className="text-3xl font-bold sm:text-4xl">
-            Everything You Need for Competitive Pricing
+    <section className="py-24 px-6">
+      <div className="mx-auto max-w-5xl">
+        <FadeInView className="text-center">
+          <p className="text-sm font-medium uppercase tracking-widest text-primary">Features</p>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+            Everything you need for competitive pricing
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Stop guessing. Start using competitor data to make smarter pricing decisions.
+          <p className="mt-4 mx-auto max-w-2xl text-muted-foreground">
+            Stop guessing. Start using competitor data to make smarter decisions.
           </p>
         </FadeInView>
 
-        <StaggerContainer className="grid gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-4">
-          {features.map((feature, index) => (
-            <StaggerItem key={index}>
-              <HoverScale>
-                <Card className="border border-primary/10 transition-shadow hover:shadow-lg hover:shadow-primary/5 h-full">
-                  <CardHeader className="pb-4">
-                    <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                      {feature.icon}
-                    </div>
-                    <CardTitle className="text-lg sm:text-xl">{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-sm text-muted-foreground sm:text-base">
-                      {feature.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </HoverScale>
-            </StaggerItem>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {features.map((feature) => (
+            <motion.div
+              key={feature.title}
+              variants={itemVariants}
+              className="group relative rounded-xl border border-border/60 bg-background p-6 transition-colors hover:border-primary/20 hover:bg-muted/30"
+            >
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-muted/50 text-primary transition-colors group-hover:border-primary/30 group-hover:bg-primary/10">
+                <feature.icon className="h-5 w-5" strokeWidth={1.5} />
+              </div>
+              <h3 className="mt-4 text-sm font-semibold">{feature.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {feature.description}
+              </p>
+            </motion.div>
           ))}
-        </StaggerContainer>
+        </motion.div>
       </div>
     </section>
   );
