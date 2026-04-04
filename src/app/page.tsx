@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HomepageHero } from "@/components/marketing/HomepageHero";
-import { HomepageFeatures } from "@/components/marketing/HomepageFeatures";
+import { HomepageLogos } from "@/components/marketing/HomepageLogos";
 import { HomepageStats } from "@/components/marketing/HomepageStats";
+import { HomepageHowItWorks } from "@/components/marketing/HomepageHowItWorks";
+import { HomepageFeatures } from "@/components/marketing/HomepageFeatures";
+import { LiveIntelligence } from "@/components/marketing/LiveIntelligence";
 import { HomepageTestimonials } from "@/components/marketing/HomepageTestimonials";
 import { HomepageCTA } from "@/components/marketing/HomepageCTA";
-import { HomepageDemo } from "@/components/marketing/HomepageDemo";
-import { LiveIntelligence } from "@/components/marketing/LiveIntelligence";
 
 export const metadata: Metadata = {
   title: "ShopiSpy - Shopify Competitor Intelligence Tool",
@@ -21,8 +22,9 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       <Header />
       <HomepageHero />
-      <HomepageDemo />
+      <HomepageLogos />
       <HomepageStats />
+      <HomepageHowItWorks />
       <HomepageFeatures />
       <LiveIntelligence />
       <HomepageTestimonials />
