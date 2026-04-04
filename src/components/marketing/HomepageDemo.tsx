@@ -8,11 +8,11 @@ import { FadeInView } from "@/components/motion";
 
 export function HomepageDemo() {
   return (
-    <section className="bg-gradient-to-r from-primary/5 to-accent/5 px-4 py-16 sm:px-6 lg:px-8">
+    <section className="border-y border-primary/10 bg-gradient-to-r from-primary/5 to-primary/3 px-4 py-16 sm:px-6 lg:px-8">
       <FadeInView className="mx-auto max-w-4xl space-y-8 text-center">
         <Badge
           variant="secondary"
-          className="border border-primary/30 bg-gradient-to-r from-primary/20 to-accent/20 px-4 py-2 text-sm"
+          className="border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium"
         >
           Try It Now - No Signup Required
         </Badge>
@@ -25,7 +25,7 @@ export function HomepageDemo() {
           <Link href="/scraper">
             <Button
               size="lg"
-              className="w-full bg-gradient-to-r from-primary to-accent px-8 py-6 text-lg shadow-lg sm:w-auto"
+              className="w-full bg-gradient-to-r from-primary to-primary/80 px-8 py-6 text-lg text-primary-foreground shadow-lg sm:w-auto"
             >
               <Play className="mr-2 h-5 w-5" />
               Start Scraping Now

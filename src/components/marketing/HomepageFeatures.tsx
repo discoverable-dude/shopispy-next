@@ -49,9 +49,11 @@ export function HomepageFeatures() {
           {features.map((feature, index) => (
             <StaggerItem key={index}>
               <HoverScale>
-                <Card className="border-2 transition-shadow hover:shadow-lg h-full">
+                <Card className="border border-primary/10 transition-shadow hover:shadow-lg hover:shadow-primary/5 h-full">
                   <CardHeader className="pb-4">
-                    <div className="mb-2 text-primary">{feature.icon}</div>
+                    <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                      {feature.icon}
+                    </div>
                     <CardTitle className="text-lg sm:text-xl">{feature.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="pt-0">

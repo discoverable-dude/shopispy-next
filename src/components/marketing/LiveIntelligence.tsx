@@ -38,7 +38,7 @@ const verticals: Vertical[] = [
     id: "fashion",
     label: "Fashion",
     icon: <Shirt className="h-4 w-4" />,
-    color: "from-pink-500/10 to-rose-500/10 border-pink-500/20",
+    color: "from-primary/5 to-primary/10 border-primary/15",
     brands: [
       { name: "Gymshark", domain: "gymshark.com", products: "2,847", lastUpdate: "2 hrs ago", newestProduct: "Vital Seamless 2.0 Crop Top", priceRange: "\u00a318\u2013\u00a365" },
       { name: "SKIMS", domain: "skims.com", products: "1,923", lastUpdate: "4 hrs ago", newestProduct: "Soft Lounge Long Sleeve Dress", priceRange: "$28\u2013$128" },
@@ -52,7 +52,7 @@ const verticals: Vertical[] = [
     id: "beauty",
     label: "Beauty",
     icon: <Sparkles className="h-4 w-4" />,
-    color: "from-purple-500/10 to-violet-500/10 border-purple-500/20",
+    color: "from-primary/5 to-accent/5 border-primary/15",
     brands: [
       { name: "Kylie Cosmetics", domain: "kyliecosmetics.com", products: "687", lastUpdate: "3 hrs ago", newestProduct: "Lip Shine Lacquer \u2013 Nude", priceRange: "$15\u2013$42" },
       { name: "Fenty Beauty", domain: "fentybeauty.com", products: "1,241", lastUpdate: "1 hr ago", newestProduct: "Gloss Bomb Stix", priceRange: "$22\u2013$52" },
@@ -66,7 +66,7 @@ const verticals: Vertical[] = [
     id: "food",
     label: "Food & Drink",
     icon: <Coffee className="h-4 w-4" />,
-    color: "from-amber-500/10 to-orange-500/10 border-amber-500/20",
+    color: "from-accent/5 to-accent/10 border-accent/15",
     brands: [
       { name: "Liquid Death", domain: "liquiddeath.com", products: "156", lastUpdate: "5 hrs ago", newestProduct: "Armless Palmer Iced Tea", priceRange: "$1.89\u2013$19.99" },
       { name: "Death Wish Coffee", domain: "deathwishcoffee.com", products: "89", lastUpdate: "8 hrs ago", newestProduct: "Cold Brew Reserve Blend", priceRange: "$14\u2013$39" },
@@ -80,7 +80,7 @@ const verticals: Vertical[] = [
     id: "fitness",
     label: "Health & Fitness",
     icon: <Dumbbell className="h-4 w-4" />,
-    color: "from-green-500/10 to-emerald-500/10 border-green-500/20",
+    color: "from-primary/8 to-primary/5 border-primary/15",
     brands: [
       { name: "Alo Yoga", domain: "aloyoga.com", products: "2,156", lastUpdate: "2 hrs ago", newestProduct: "Airlift High-Waist Legging", priceRange: "$48\u2013$198" },
       { name: "Therabody", domain: "therabody.com", products: "67", lastUpdate: "1 day ago", newestProduct: "Theragun PRO Plus", priceRange: "$199\u2013$599" },
@@ -94,7 +94,7 @@ const verticals: Vertical[] = [
     id: "home",
     label: "Home",
     icon: <Home className="h-4 w-4" />,
-    color: "from-blue-500/10 to-cyan-500/10 border-blue-500/20",
+    color: "from-primary/5 to-primary/8 border-primary/15",
     brands: [
       { name: "Brooklinen", domain: "brooklinen.com", products: "567", lastUpdate: "3 hrs ago", newestProduct: "Luxe Hardcore Sheet Bundle", priceRange: "$49\u2013$399" },
       { name: "Ruggable", domain: "ruggable.com", products: "4,123", lastUpdate: "1 hr ago", newestProduct: "Kamran Coral 8x10", priceRange: "$99\u2013$749" },
@@ -108,7 +108,7 @@ const verticals: Vertical[] = [
     id: "tech",
     label: "Tech",
     icon: <Smartphone className="h-4 w-4" />,
-    color: "from-slate-500/10 to-zinc-500/10 border-slate-500/20",
+    color: "from-muted/50 to-primary/5 border-primary/10",
     brands: [
       { name: "Peak Design", domain: "peakdesign.com", products: "234", lastUpdate: "5 hrs ago", newestProduct: "Travel Backpack 30L V2", priceRange: "$29\u2013$299" },
       { name: "Nomad", domain: "nomadgoods.com", products: "189", lastUpdate: "3 hrs ago", newestProduct: "iPhone 16 Rugged Case", priceRange: "$19\u2013$129" },

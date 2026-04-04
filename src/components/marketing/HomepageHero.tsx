@@ -11,16 +11,19 @@ import { GlowPulse } from "@/components/motion";
 export function HomepageHero() {
   return (
     <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-      {/* Background blobs */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
+      {/* Grid pattern background */}
+      <div className="absolute inset-0 bg-grid-pattern" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+
+      {/* Subtle teal glow effects */}
       <motion.div
-        className="absolute left-1/4 top-20 h-72 w-72 rounded-full bg-primary/10 blur-3xl"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+        className="absolute left-1/3 top-1/4 h-96 w-96 rounded-full bg-primary/8 blur-[100px]"
+        animate={{ opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-20 right-1/4 h-96 w-96 rounded-full bg-accent/10 blur-3xl"
-        animate={{ scale: [1, 1.15, 1], opacity: [0.2, 0.4, 0.2] }}
+        className="absolute bottom-1/4 right-1/3 h-64 w-64 rounded-full bg-accent/6 blur-[80px]"
+        animate={{ opacity: [0.15, 0.3, 0.15] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
 
@@ -33,7 +36,7 @@ export function HomepageHero() {
           >
             <Badge
               variant="secondary"
-              className="border border-primary/20 bg-gradient-to-r from-primary/10 to-accent/10 px-4 py-2 text-sm"
+              className="border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium tracking-wide text-primary"
             >
               Real-Time Competitor Intelligence for Shopify Stores
             </Badge>
@@ -76,7 +79,7 @@ export function HomepageHero() {
               <GlowPulse>
                 <Button
                   size="lg"
-                  className="w-full bg-gradient-to-r from-primary to-accent px-8 py-6 text-lg shadow-lg transition-all duration-300 hover:opacity-90 hover:shadow-xl sm:w-auto"
+                  className="w-full bg-gradient-to-r from-primary to-primary/80 px-8 py-6 text-lg text-primary-foreground shadow-lg transition-all duration-300 hover:opacity-90 hover:shadow-xl sm:w-auto"
                 >
                   <Play className="mr-2 h-5 w-5" />
                   Try It Now - Free
@@ -112,8 +115,8 @@ export function HomepageHero() {
           className="mx-auto mt-16 max-w-6xl"
         >
           <div className="group relative">
-            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary to-accent opacity-30 blur-lg transition duration-500 group-hover:opacity-50" />
-            <div className="relative overflow-hidden rounded-xl border-2 border-primary/20 bg-gradient-to-br from-background to-muted/30 shadow-2xl">
+            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary/30 to-primary/10 opacity-30 blur-lg transition duration-500 group-hover:opacity-50" />
+            <div className="relative overflow-hidden rounded-xl border border-primary/15 bg-gradient-to-br from-background to-muted/30 shadow-2xl">
               <Image
                 src="/images/hero-dashboard.png"
                 alt="ShopiSpy Dashboard - Track competitor prices in real-time"

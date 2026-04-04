@@ -61,12 +61,7 @@ export function ScraperContent() {
   const [storeName, setStoreName] = useState("");
   const [storeInfo, setStoreInfo] = useState<StoreInfo | null>(null);
 
-  // Redirect authenticated users to dashboard — this page is for new user onboarding only
-  useEffect(() => {
-    if (user) {
-      router.replace('/dashboard');
-    }
-  }, [user, router]);
+  // No redirect — scraper is accessible to all users
 
   // Auto-trigger scraping when URL parameter is present
   useEffect(() => {
@@ -98,15 +93,21 @@ export function ScraperContent() {
     return undefined;
   };
 
+  // Proxy helper to avoid CORS issues with direct Shopify requests
+  const proxyFetch = async (domain: string, endpoint = "products.json", params: Record<string, string> = {}) => {
+    const sp = new URLSearchParams({ domain, endpoint, ...params });
+    return fetch(`/api/scrape?${sp.toString()}`);
+  };
+
   const detectStoreCurrency = async (domain: string, firstProduct?: any): Promise<StoreInfo> => {
+    const currencyMapping: { [key: string]: string } = {
+      'USD': '$', 'GBP': '£', 'EUR': '€', 'CAD': 'C$', 'AUD': 'A$', 'JPY': '¥'
+    };
     try {
-      const shopResponse = await fetch(`https://${domain}/shop.json`);
+      const shopResponse = await proxyFetch(domain, "shop.json");
       if (shopResponse.ok) {
         const shopData = await shopResponse.json();
         const shop = shopData.shop;
-        const currencyMapping: { [key: string]: string } = {
-          'USD': '$', 'GBP': '£', 'EUR': '€', 'CAD': 'C$', 'AUD': 'A$', 'JPY': '¥'
-        };
         return {
           currency: shop.currency || 'USD',
           currencySymbol: currencyMapping[shop.currency] || '$',
@@ -115,30 +116,24 @@ export function ScraperContent() {
         };
       }
     } catch (error) {
-      console.log('Could not fetch shop info from shop.json endpoint');
+      console.log('Could not fetch shop info');
     }
     if (firstProduct && firstProduct.variants && firstProduct.variants[0]) {
       try {
-        const productResponse = await fetch(`https://${domain}/products/${firstProduct.handle}.json`);
-        if (productResponse.ok) {
-          const cartResponse = await fetch(`https://${domain}/cart.json`);
-          if (cartResponse.ok) {
-            const cartData = await cartResponse.json();
-            if (cartData.currency) {
-              const currencyMapping: { [key: string]: string } = {
-                'USD': '$', 'GBP': '£', 'EUR': '€', 'CAD': 'C$', 'AUD': 'A$', 'JPY': '¥'
-              };
-              return {
-                currency: cartData.currency,
-                currencySymbol: currencyMapping[cartData.currency] || '$',
-                name: domain,
-                domain: domain
-              };
-            }
+        const cartResponse = await proxyFetch(domain, "cart.json");
+        if (cartResponse.ok) {
+          const cartData = await cartResponse.json();
+          if (cartData.currency) {
+            return {
+              currency: cartData.currency,
+              currencySymbol: currencyMapping[cartData.currency] || '$',
+              name: domain,
+              domain: domain
+            };
           }
         }
       } catch (error) {
-        console.log('Could not detect currency from product/cart endpoints');
+        console.log('Could not detect currency');
       }
       if (domain.includes('.co.uk')) {
         return { currency: 'GBP', currencySymbol: '£', name: domain, domain: domain };
@@ -157,7 +152,7 @@ export function ScraperContent() {
 
   const validateShopifyStore = async (domain: string): Promise<boolean> => {
     try {
-      const response = await fetch(`https://${domain}/products.json?limit=1`);
+      const response = await proxyFetch(domain, "products.json", { limit: "1" });
       if (!response.ok) return false;
       const data = await response.json();
       return data && typeof data === 'object' && 'products' in data && Array.isArray(data.products);
@@ -194,7 +189,7 @@ export function ScraperContent() {
         return;
       }
 
-      const firstResponse = await fetch(`https://${domain}/products.json?limit=1`);
+      const firstResponse = await proxyFetch(domain, "products.json", { limit: "1" });
       if (!firstResponse.ok) throw new Error(`Failed to fetch products: ${firstResponse.status}`);
       const firstData = await firstResponse.json();
       const firstProduct = firstData.products?.[0];
@@ -210,9 +205,8 @@ export function ScraperContent() {
       const limit = 250;
 
       while (hasMorePages) {
-        const productsUrl = `https://${domain}/products.json?limit=${limit}&page=${page}`;
         setLoadingProgress({ current: page, total: 0 });
-        const response = await fetch(productsUrl);
+        const response = await proxyFetch(domain, "products.json", { limit: String(limit), page: String(page) });
         if (!response.ok) throw new Error(`Failed to fetch products: ${response.status}`);
         const data = await response.json();
         const pageProducts = data.products || [];

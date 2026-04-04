@@ -223,9 +223,9 @@ export function GlowPulse({
   return (
     <motion.div
       animate={{ boxShadow: [
-        "0 0 20px hsl(262 83% 58% / 0.2)",
-        "0 0 40px hsl(262 83% 58% / 0.4)",
-        "0 0 20px hsl(262 83% 58% / 0.2)",
+        "0 0 20px hsl(170 84% 30% / 0.2)",
+        "0 0 40px hsl(170 84% 30% / 0.4)",
+        "0 0 20px hsl(170 84% 30% / 0.2)",
       ]}}
       transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       className={className}

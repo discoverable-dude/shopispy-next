@@ -60,9 +60,9 @@ export function PricingContent() {
       period: "month",
       description: "Lead Gen / Hook",
       icon: <Star className="h-6 w-6" />,
-      gradient: "from-green-500/10 to-emerald-500/10",
-      border: "border-green-500/20 hover:border-green-500/40",
-      buttonClass: "bg-green-600 hover:bg-green-700 text-white",
+      gradient: "from-primary/5 to-primary/10",
+      border: "border-primary/15 hover:border-primary/30",
+      buttonClass: "bg-primary hover:bg-primary/90 text-primary-foreground",
       features: [
         "Track 1 competitor store",
         "10 product scrapes per month",
@@ -78,9 +78,9 @@ export function PricingContent() {
       period: "month",
       description: "Low-Barrier Upgrade",
       icon: <Zap className="h-5 w-5" />,
-      gradient: "from-cyan-500/10 to-blue-500/10",
-      border: "border-cyan-500/20 hover:border-cyan-500/40",
-      buttonClass: "bg-cyan-600 hover:bg-cyan-700 text-white",
+      gradient: "from-primary/5 to-primary/10",
+      border: "border-primary/15 hover:border-primary/30",
+      buttonClass: "bg-primary hover:bg-primary/90 text-primary-foreground",
       features: [
         "Track 1 competitor store",
         "Up to 200 products per store",
@@ -97,9 +97,9 @@ export function PricingContent() {
       period: "month",
       description: "Perfect for Small Brands",
       icon: <Zap className="h-6 w-6" />,
-      gradient: "from-blue-500/10 to-indigo-500/10",
-      border: "border-blue-500/20 hover:border-blue-500/40",
-      buttonClass: "bg-blue-600 hover:bg-blue-700 text-white",
+      gradient: "from-primary/5 to-primary/10",
+      border: "border-primary/15 hover:border-primary/30",
+      buttonClass: "bg-primary hover:bg-primary/90 text-primary-foreground",
       features: [
         "Track 2 competitor stores",
         "Up to 500 products/store",
@@ -116,9 +116,9 @@ export function PricingContent() {
       period: "month",
       description: "Growth-Stage eCommerce",
       icon: <Crown className="h-6 w-6" />,
-      gradient: "from-orange-500/10 to-amber-500/10",
-      border: "border-orange-500/30 hover:border-orange-500/50 ring-2 ring-orange-500/20",
-      buttonClass: "bg-orange-600 hover:bg-orange-700 text-white",
+      gradient: "from-accent/5 to-accent/10",
+      border: "border-accent/30 hover:border-accent/50 ring-2 ring-accent/20",
+      buttonClass: "bg-accent hover:bg-accent/90 text-accent-foreground",
       popular: true,
       features: [
         "Track up to 10 stores",
@@ -137,9 +137,9 @@ export function PricingContent() {
       period: `${currency.symbol}99+/month`,
       description: "Large Brands & Agencies",
       icon: <Users className="h-6 w-6" />,
-      gradient: "from-red-500/10 to-rose-500/10",
-      border: "border-red-500/20 hover:border-red-500/40",
-      buttonClass: "bg-red-600 hover:bg-red-700 text-white",
+      gradient: "from-primary/3 to-accent/5",
+      border: "border-primary/20 hover:border-primary/40",
+      buttonClass: "bg-primary hover:bg-primary/90 text-primary-foreground",
       features: [
         "Unlimited competitor stores",
         "Custom scrape frequency (hourly)",
@@ -205,7 +205,7 @@ export function PricingContent() {
                 className={`relative flex h-full flex-col border-2 bg-gradient-to-br ${plan.gradient} ${plan.border} transition-all`}
               >
                 {plan.popular && (
-                  <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-600 text-white">
+                  <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground">
                     Most Popular
                   </Badge>
                 )}
@@ -284,7 +284,7 @@ export function PricingContent() {
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/auth">
-              <Button size="lg" className="bg-green-600 font-semibold text-white hover:bg-green-700">
+              <Button size="lg" className="bg-accent font-semibold text-accent-foreground hover:bg-accent/90">
                 Start Free Trial
               </Button>
             </Link>

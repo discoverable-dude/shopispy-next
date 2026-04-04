@@ -89,7 +89,7 @@ export function Header() {
             <Link href="/scraper" className="ml-2">
               <Button
                 size="sm"
-                className="bg-gradient-to-r from-primary to-accent text-primary-foreground hover:opacity-90"
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
               >
                 Try It Free
               </Button>
@@ -141,7 +141,7 @@ export function Header() {
               </Button>
             ) : (
               <Link href="/scraper" onClick={() => setMobileOpen(false)}>
-                <Button size="sm" className="w-full bg-gradient-to-r from-primary to-accent">
+                <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                   Try It Free
                 </Button>
               </Link>

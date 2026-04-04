@@ -31,7 +31,7 @@ const testimonials = [
 
 export function HomepageTestimonials() {
   return (
-    <section className="bg-muted/50 px-4 py-20 sm:px-6 lg:px-8">
+    <section className="border-y border-primary/5 bg-muted/50 px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <FadeInView className="mb-16 space-y-4 text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">
@@ -46,11 +46,11 @@ export function HomepageTestimonials() {
           {testimonials.map((testimonial, index) => (
             <StaggerItem key={index}>
               <HoverScale>
-                <Card className="h-full bg-background">
+                <Card className="h-full border-primary/10 bg-background">
                   <CardContent className="flex h-full flex-col p-6">
                     <div className="mb-4 flex">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        <Star key={i} className="h-4 w-4 fill-accent text-accent" />
                       ))}
                     </div>
                     <p className="mb-6 flex-grow italic text-muted-foreground">

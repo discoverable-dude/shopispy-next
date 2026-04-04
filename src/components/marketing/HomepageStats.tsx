@@ -11,7 +11,7 @@ const stats = [
 
 export function HomepageStats() {
   return (
-    <section className="border-y border-primary/10 bg-gradient-to-r from-primary/5 to-accent/5 py-16">
+    <section className="border-y border-primary/10 bg-gradient-to-r from-primary/3 to-primary/5 py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <StaggerContainer className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
           {stats.map((stat, index) => (

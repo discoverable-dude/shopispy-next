@@ -8,11 +8,11 @@ import { FadeInView } from "@/components/motion";
 
 export function HomepageCTA() {
   return (
-    <section className="bg-gradient-to-br from-primary/10 via-background to-accent/10 px-4 py-20 sm:px-6 lg:px-8">
+    <section className="bg-gradient-to-br from-primary/5 via-background to-accent/5 px-4 py-20 sm:px-6 lg:px-8">
       <FadeInView className="mx-auto max-w-4xl space-y-8 text-center">
         <Badge
           variant="secondary"
-          className="border border-primary/30 bg-gradient-to-r from-primary/20 to-accent/20 px-4 py-2 text-sm"
+          className="border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium"
         >
           Start Tracking Competitors Today
         </Badge>
@@ -26,7 +26,7 @@ export function HomepageCTA() {
           <Link href="/scraper">
             <Button
               size="lg"
-              className="w-full bg-gradient-to-r from-primary to-accent px-8 py-6 text-lg sm:w-auto"
+              className="w-full bg-gradient-to-r from-primary to-primary/80 px-8 py-6 text-lg text-primary-foreground sm:w-auto"
             >
               <Play className="mr-2 h-5 w-5" />
               Try It Now - Free
@@ -36,7 +36,7 @@ export function HomepageCTA() {
             <Button
               size="lg"
               variant="outline"
-              className="w-full border-primary/30 px-8 py-6 text-lg sm:w-auto"
+              className="w-full border-primary/20 px-8 py-6 text-lg hover:border-primary/40 sm:w-auto"
             >
               View Pricing
             </Button>
@@ -46,7 +46,7 @@ export function HomepageCTA() {
         <div className="flex flex-col items-center justify-center gap-4 pt-6 text-sm text-muted-foreground sm:flex-row sm:gap-6">
           {["Try before signing up", "Free plan available", "Upgrade anytime"].map((text) => (
             <div key={text} className="flex items-center gap-2">
-              <CheckCircle className="h-4 w-4 text-green-600" />
+              <CheckCircle className="h-4 w-4 text-primary" />
               {text}
             </div>
           ))}
