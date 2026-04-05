@@ -1,9 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Check, Star, Zap, Crown, Users, Globe } from "lucide-react";
-import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Check, Globe } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -12,7 +11,7 @@ import { getSupabaseClient } from "@/lib/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 import { useCurrency } from "@/hooks/useCurrency";
-import { FadeInView, StaggerContainer, StaggerItem, HoverScale } from "@/components/motion";
+import { FadeInView, StaggerContainer, StaggerItem } from "@/components/motion";
 
 export function PricingContent() {
   const { user, subscribed, subscriptionTier } = useAuth();
@@ -58,36 +57,27 @@ export function PricingContent() {
       name: "Free",
       price: `${currency.symbol}0`,
       period: "month",
-      description: "Lead Gen / Hook",
-      icon: <Star className="h-6 w-6" />,
-      gradient: "from-primary/5 to-primary/10",
-      border: "border-primary/15 hover:border-primary/30",
-      buttonClass: "bg-primary hover:bg-primary/90 text-primary-foreground",
+      description: "Get started with basic competitor tracking.",
       features: [
         "Track 1 competitor store",
         "10 product scrapes per month",
-        "Basic product data only",
+        "Basic product data",
         "Summary dashboard",
-        "New product alerts (weekly)",
-        "CSV export locked",
+        "Weekly new product alerts",
       ],
     },
     {
       name: "Lite",
       price: formatPrice("lite"),
       period: "month",
-      description: "Low-Barrier Upgrade",
-      icon: <Zap className="h-5 w-5" />,
-      gradient: "from-primary/5 to-primary/10",
-      border: "border-primary/15 hover:border-primary/30",
-      buttonClass: "bg-primary hover:bg-primary/90 text-primary-foreground",
+      description: "Full product data for a single store.",
       features: [
         "Track 1 competitor store",
         "Up to 200 products per store",
         "Full product data",
         "Daily scraping",
         "Daily price & product alerts",
-        "CSV export enabled",
+        "CSV export",
         "Email support",
       ],
     },
@@ -95,18 +85,14 @@ export function PricingContent() {
       name: "Starter",
       price: formatPrice("starter"),
       period: "month",
-      description: "Perfect for Small Brands",
-      icon: <Zap className="h-6 w-6" />,
-      gradient: "from-primary/5 to-primary/10",
-      border: "border-primary/15 hover:border-primary/30",
-      buttonClass: "bg-primary hover:bg-primary/90 text-primary-foreground",
+      description: "Perfect for growing brands tracking competitors.",
       features: [
         "Track 2 competitor stores",
-        "Up to 500 products/store",
+        "Up to 500 products per store",
         "Enhanced product data",
         "Weekly price monitoring",
         "Weekly new product alerts",
-        "CSV export enabled",
+        "CSV export",
         "Email support",
       ],
     },
@@ -114,11 +100,7 @@ export function PricingContent() {
       name: "Pro",
       price: formatPrice("pro"),
       period: "month",
-      description: "Growth-Stage eCommerce",
-      icon: <Crown className="h-6 w-6" />,
-      gradient: "from-accent/5 to-accent/10",
-      border: "border-accent/30 hover:border-accent/50 ring-2 ring-accent/20",
-      buttonClass: "bg-accent hover:bg-accent/90 text-accent-foreground",
+      description: "Advanced intelligence for scaling eCommerce teams.",
       popular: true,
       features: [
         "Track up to 10 stores",
@@ -135,17 +117,13 @@ export function PricingContent() {
       name: "Enterprise",
       price: "Custom",
       period: `${currency.symbol}99+/month`,
-      description: "Large Brands & Agencies",
-      icon: <Users className="h-6 w-6" />,
-      gradient: "from-primary/3 to-accent/5",
-      border: "border-primary/20 hover:border-primary/40",
-      buttonClass: "bg-primary hover:bg-primary/90 text-primary-foreground",
+      description: "For large brands and agencies with custom needs.",
       features: [
         "Unlimited competitor stores",
         "Custom scrape frequency (hourly)",
         "Full enterprise data access",
         "Custom data enrichment",
-        "Slack, webhook, email, SMS alerts",
+        "Slack, webhook, email & SMS alerts",
         "Competitor comparison dashboards",
         "Export history & versioning",
         "Dedicated support & onboarding",
@@ -154,21 +132,19 @@ export function PricingContent() {
   ];
 
   return (
-    <div className="mx-auto max-w-7xl space-y-16 p-4 py-12">
+    <div className="mx-auto max-w-6xl space-y-16 px-4 py-16">
       {/* Header */}
-      <FadeInView className="space-y-6 text-center">
-        <h1 className="bg-gradient-primary bg-clip-text text-5xl font-bold text-transparent">
-          Choose Your Plan
+      <FadeInView className="space-y-4 text-center">
+        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+          Simple, transparent pricing
         </h1>
-        <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
-          Unlock the full potential of Shopify store intelligence with flexible pricing for every
-          business size.
+        <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+          Choose the plan that fits your business. Start free, upgrade when you need more.
         </p>
-        <div className="mt-6 flex items-center justify-center gap-2">
-          <Globe className="h-4 w-4 text-muted-foreground" />
-          <span className="text-sm text-muted-foreground">Currency:</span>
+        <div className="flex items-center justify-center gap-2 pt-2">
+          <Globe className="h-3.5 w-3.5 text-muted-foreground" />
           <Select value={currency.code} onValueChange={changeCurrency}>
-            <SelectTrigger className="w-32">
+            <SelectTrigger className="h-8 w-28 border-border/60 text-xs">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -182,64 +158,68 @@ export function PricingContent() {
         </div>
       </FadeInView>
 
-      {/* Stats */}
-      <div className="flex items-center justify-center gap-8">
-        {[
-          { value: "10k+", label: "Products Tracked" },
-          { value: "500+", label: "Active Users" },
-          { value: "99.9%", label: "Uptime" },
-        ].map((stat) => (
-          <div key={stat.label} className="text-center">
-            <div className="text-2xl font-bold text-primary">{stat.value}</div>
-            <div className="text-sm text-muted-foreground">{stat.label}</div>
-          </div>
-        ))}
-      </div>
+      {/* Plan cards */}
+      <StaggerContainer className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {plans.map((plan, index) => {
+          const isPopular = plan.popular;
+          const isCurrent = subscribed && subscriptionTier === plan.name;
 
-      {/* Cards */}
-      <StaggerContainer className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
-        {plans.map((plan, index) => (
-          <StaggerItem key={index}>
-            <HoverScale>
+          return (
+            <StaggerItem key={index}>
               <Card
-                className={`relative flex h-full flex-col border-2 bg-gradient-to-br ${plan.gradient} ${plan.border} transition-all`}
+                className={`relative flex h-full flex-col rounded-xl transition-all ${
+                  isPopular
+                    ? "border-2 border-primary shadow-sm"
+                    : "border border-border/60"
+                }`}
               >
-                {plan.popular && (
-                  <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground">
+                {isPopular && (
+                  <Badge className="absolute -top-2.5 left-4 bg-primary text-primary-foreground text-xs font-semibold px-2.5 py-0.5">
                     Most Popular
                   </Badge>
                 )}
-                <CardHeader className="pb-4 text-center">
-                  <div className="mb-2 flex justify-center">{plan.icon}</div>
-                  <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
-                  <div className="space-y-1">
-                    <div className="text-3xl font-bold">
-                      {plan.price}
+
+                <CardHeader className="pb-2 pt-6">
+                  <div className="space-y-3">
+                    <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+                      {plan.name}
+                    </h3>
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-4xl font-bold tracking-tight text-foreground">
+                        {plan.price}
+                      </span>
                       {plan.name !== "Enterprise" && (
-                        <span className="text-sm font-normal text-muted-foreground">
+                        <span className="text-sm text-muted-foreground">
                           /{plan.period}
                         </span>
                       )}
                     </div>
                     {plan.name === "Enterprise" && (
-                      <div className="text-sm text-muted-foreground">{plan.period}</div>
+                      <p className="text-xs text-muted-foreground">
+                        {plan.period}
+                      </p>
                     )}
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {plan.description}
+                    </p>
                   </div>
-                  <p className="text-sm text-muted-foreground">{plan.description}</p>
                 </CardHeader>
-                <CardContent className="flex flex-1 flex-col space-y-4">
-                  <ul className="flex-1 space-y-2">
+
+                <CardContent className="flex flex-1 flex-col pt-4">
+                  <ul className="flex-1 space-y-2.5">
                     {plan.features.map((feature, fi) => (
-                      <li key={fi} className="flex items-start gap-2 text-sm">
-                        <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-600" />
-                        <span>{feature}</span>
+                      <li key={fi} className="flex items-start gap-2.5 text-sm">
+                        <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                        <span className="text-foreground/80">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-auto space-y-3">
-                    {subscribed && subscriptionTier === plan.name ? (
+
+                  <div className="mt-8">
+                    {isCurrent ? (
                       <Button
-                        className="w-full bg-green-600 text-white hover:bg-green-700"
+                        variant="outline"
+                        className="w-full rounded-lg border-border/60"
                         size="lg"
                         onClick={handleManageSubscription}
                       >
@@ -247,7 +227,12 @@ export function PricingContent() {
                       </Button>
                     ) : (
                       <Button
-                        className={`w-full ${plan.buttonClass}`}
+                        variant={isPopular ? "default" : "outline"}
+                        className={`w-full rounded-lg ${
+                          isPopular
+                            ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                            : "border-border/60"
+                        }`}
                         size="lg"
                         onClick={() => {
                           if (plan.name === "Enterprise") {
@@ -262,35 +247,37 @@ export function PricingContent() {
                         {plan.name === "Enterprise"
                           ? "Contact Sales"
                           : plan.name === "Free"
-                            ? "Get Started"
+                            ? "Get Started Free"
                             : `Subscribe to ${plan.name}`}
                       </Button>
                     )}
                   </div>
                 </CardContent>
               </Card>
-            </HoverScale>
-          </StaggerItem>
-        ))}
+            </StaggerItem>
+          );
+        })}
       </StaggerContainer>
 
-      {/* CTA */}
+      {/* Bottom CTA */}
       <FadeInView>
-        <div className="rounded-lg bg-gradient-primary p-8 text-center text-white space-y-6">
-          <h3 className="text-3xl font-bold">Ready to Outsmart Your Competition?</h3>
-          <p className="mx-auto max-w-2xl text-lg text-white/90">
-            Join hundreds of successful brands using ShopiSpy to monitor competitors and optimize
-            pricing.
+        <div className="rounded-xl border border-border/60 bg-muted/30 p-8 text-center space-y-4">
+          <h3 className="text-xl font-semibold text-foreground">
+            Ready to outsmart your competition?
+          </h3>
+          <p className="mx-auto max-w-lg text-sm text-muted-foreground">
+            Join hundreds of brands using ShopiSpy to monitor competitors and optimize pricing. No credit card required.
           </p>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          <div className="flex justify-center gap-3 pt-2">
             <Link href="/auth">
-              <Button size="lg" className="bg-accent font-semibold text-accent-foreground hover:bg-accent/90">
+              <Button size="lg" className="rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
                 Start Free Trial
               </Button>
             </Link>
             <Button
               size="lg"
-              className="bg-white text-primary hover:bg-white/90"
+              variant="outline"
+              className="rounded-lg border-border/60"
               onClick={() =>
                 window.open("mailto:demo@shopispy.com?subject=Schedule Demo Request", "_blank")
               }
@@ -298,9 +285,6 @@ export function PricingContent() {
               Schedule Demo
             </Button>
           </div>
-          <p className="text-sm text-white/70">
-            No credit card required &middot; Free plan available &middot; Cancel anytime
-          </p>
         </div>
       </FadeInView>
     </div>

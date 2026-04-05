@@ -15,9 +15,13 @@ export function Footer() {
     : "/images/shopispy-logo-light.png";
 
   const links = [
+    { href: "/market", label: "Market" },
+    { href: "/industries", label: "Industries" },
+    { href: "/reports", label: "Reports" },
+    { href: "/compare", label: "Compare" },
     { href: "/pricing", label: "Pricing" },
-    { href: "/faq", label: "FAQ" },
     { href: "/blog", label: "Blog" },
+    { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "Contact" },
     { href: "/privacy", label: "Privacy" },
     { href: "/terms", label: "Terms" },
