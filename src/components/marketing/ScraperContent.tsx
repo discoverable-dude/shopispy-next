@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import { useAuth } from "@/components/providers/AuthProvider";
+import { getSupabaseClient } from "@/lib/supabase/client";
 import { validateStoreUrl } from "@/lib/urlValidation";
 
 export interface Product {
@@ -151,6 +152,7 @@ export function ScraperContent() {
   const [scanProgress, setScanProgress] = useState({ page: 0, found: 0 });
   const [phaseDetail, setPhaseDetail] = useState("");
   const [showInUserCurrency, setShowInUserCurrency] = useState(false);
+  const [savedToDb, setSavedToDb] = useState(false);
   const userCurrency = useRef(getUserCurrency());
   const storeCurrencyDiffers = storeInfo ? storeInfo.currency !== userCurrency.current.code : false;
 
@@ -178,6 +180,7 @@ export function ScraperContent() {
     setShowAll(false);
     setScanProgress({ page: 0, found: 0 });
     setShowInUserCurrency(false);
+    setSavedToDb(false);
 
     // Phase 1: Validate
     setPhase("validating");
@@ -191,9 +194,10 @@ export function ScraperContent() {
     if (!domain.includes(".")) domain = `${domain}.myshopify.com`;
 
     setPhaseDetail(`Verifying ${domain} is a Shopify store...`);
-    await new Promise((r) => setTimeout(r, 300)); // brief visual pause
+    await new Promise((r) => setTimeout(r, 300));
 
     try {
+      // Validate store exists first (always via proxy — fast check)
       const testResp = await proxyFetch(domain, "products.json", { limit: "1" });
       if (!testResp.ok) {
         setPhase("error"); setPhaseDetail("Couldn't reach this store");
@@ -216,12 +220,7 @@ export function ScraperContent() {
           const shopData = await shopResp.json();
           const shop = shopData.shop;
           const cur = shop.currency || "USD";
-          info = {
-            name: shop.name || domain,
-            domain,
-            currency: cur,
-            currencySymbol: CURRENCY_MAP[cur] || cur,
-          };
+          info = { name: shop.name || domain, domain, currency: cur, currencySymbol: CURRENCY_MAP[cur] || cur };
           setPhaseDetail(`Found: ${info.name} (${info.currency})`);
         }
       } catch { /* fallback */ }
@@ -230,38 +229,84 @@ export function ScraperContent() {
 
       // Phase 3: Scan products
       setPhase("scanning");
-      const all: Product[] = [];
-      let page = 1;
-      let hasMore = true;
-      while (hasMore) {
-        setPhaseDetail(`Fetching page ${page}...`);
-        setScanProgress({ page, found: all.length });
-        const resp = await proxyFetch(domain, "products.json", { limit: "250", page: String(page) });
-        if (!resp.ok) break;
-        const data = await resp.json();
-        const pageProducts = data.products || [];
-        all.push(...pageProducts);
-        setScanProgress({ page, found: all.length });
-        hasMore = pageProducts.length === 250;
-        page++;
-        if (page > 20) break;
+
+      // ── Authenticated: use Supabase edge function (persists to DB) ──
+      if (user) {
+        setPhaseDetail("Scanning via ShopiSpy engine...");
+        setScanProgress({ page: 1, found: 0 });
+
+        const supabase = getSupabaseClient();
+        const { data, error } = await supabase.functions.invoke("scrape-store", {
+          body: { storeUrl: domain },
+        });
+
+        if (error || data?.error) {
+          // Fall back to proxy if edge function fails
+          console.warn("Edge function failed, falling back to proxy:", error || data?.error);
+          await fetchViaProxy(domain, info);
+          return;
+        }
+
+        // Edge function succeeded — fetch products from proxy for display
+        // (the edge function only returns count, not full product data)
+        setScanProgress({ page: 1, found: data.productCount || 0 });
+        setPhaseDetail(`Saved ${data.productCount} products to your dashboard`);
+        setSavedToDb(true);
+
+        // Now fetch products for display via proxy
+        await fetchViaProxy(domain, info);
+
+        // Send Slack notification
+        supabase.functions.invoke("send-slack-notification", {
+          body: {
+            type: "scrape_completed",
+            title: "Store Scraped",
+            message: `${info.name} scraped: ${products.length || data.productCount} products`,
+            data: { store_name: info.name, store_url: domain, product_count: data.productCount },
+            severity: "info",
+          },
+        }).catch(() => {});
+
+      } else {
+        // ── Anonymous: proxy only (no persistence) ──
+        await fetchViaProxy(domain, info);
       }
 
-      setProducts(all);
-      setPhase("complete");
-      setPhaseDetail(`${all.length.toLocaleString()} products found`);
-      if (all.length === 0) toast.info("No products found.");
-      else toast.success(`Found ${all.length.toLocaleString()} products from ${info.name}`);
-
-      // Auto-toggle currency if different
-      if (info.currency !== userCurrency.current.code) {
-        setShowInUserCurrency(false); // default to store currency, user can toggle
-      }
     } catch (err) {
       setPhase("error");
       setPhaseDetail("Something went wrong");
       toast.error("Failed to scan store. Please try again.");
       console.error(err);
+    }
+  };
+
+  // Fetch products via the Next.js API proxy (for display)
+  const fetchViaProxy = async (domain: string, info: StoreInfo) => {
+    const all: Product[] = [];
+    let page = 1;
+    let hasMore = true;
+    while (hasMore) {
+      setPhaseDetail(`Fetching page ${page}...`);
+      setScanProgress({ page, found: all.length });
+      const resp = await proxyFetch(domain, "products.json", { limit: "250", page: String(page) });
+      if (!resp.ok) break;
+      const data = await resp.json();
+      const pageProducts = data.products || [];
+      all.push(...pageProducts);
+      setScanProgress({ page, found: all.length });
+      hasMore = pageProducts.length === 250;
+      page++;
+      if (page > 20) break;
+    }
+
+    setProducts(all);
+    setPhase("complete");
+    setPhaseDetail(`${all.length.toLocaleString()} products found`);
+    if (all.length === 0) toast.info("No products found.");
+    else toast.success(`Found ${all.length.toLocaleString()} products from ${info.name}`);
+
+    if (info.currency !== userCurrency.current.code) {
+      setShowInUserCurrency(false);
     }
   };
 
@@ -445,6 +490,21 @@ export function ScraperContent() {
                     <h2 className="text-lg font-semibold">{storeInfo.name}</h2>
                   </div>
                   <p className="mt-0.5 text-sm text-muted-foreground">{storeInfo.domain}</p>
+
+                  {/* Saved to DB indicator */}
+                  {savedToDb && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      className="mt-2 flex items-center gap-1.5 rounded-lg border border-primary/20 bg-primary/5 px-3 py-1.5"
+                    >
+                      <Check className="h-3.5 w-3.5 text-primary" />
+                      <p className="text-xs text-primary font-medium">
+                        Saved to your dashboard &mdash;{" "}
+                        <Link href="/dashboard/stores" className="underline">view tracked stores</Link>
+                      </p>
+                    </motion.div>
+                  )}
 
                   {/* Currency notice */}
                   {storeCurrencyDiffers && (
