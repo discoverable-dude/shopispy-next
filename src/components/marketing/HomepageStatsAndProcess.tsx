@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Search, Database, Bell } from "lucide-react";
 import { FadeInView } from "@/components/motion";
+import { ALL_BRANDS, TOTAL_PRODUCTS, VERTICALS } from "@/lib/brands";
 
 function Counter({ end, suffix = "" }: { end: number; suffix?: string }) {
   const ref = useRef(null);
@@ -101,9 +102,9 @@ export function HomepageStatsAndProcess() {
 
               <div className="mt-10 grid grid-cols-2 gap-6">
                 {[
-                  { value: 10000, suffix: "+", label: "Stores tracked" },
-                  { value: 2500000, suffix: "+", label: "Products scanned" },
-                  { value: 500000, suffix: "+", label: "Alerts delivered" },
+                  { value: ALL_BRANDS.length, suffix: " stores", label: "Brands tracked" },
+                  { value: TOTAL_PRODUCTS, suffix: "+", label: "Products scanned" },
+                  { value: VERTICALS.length, suffix: " verticals", label: "Industries covered" },
                   { value: 99, suffix: ".9%", label: "Uptime SLA" },
                 ].map((stat) => (
                   <div key={stat.label} className="rounded-xl border border-border/60 bg-muted/20 p-4">

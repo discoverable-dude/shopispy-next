@@ -48,10 +48,10 @@ const CURRENCY_MAP: Record<string, string> = {
 
 const EXAMPLES = [
   { name: "Gymshark", domain: "gymshark.com" },
-  { name: "Allbirds", domain: "allbirds.com" },
-  { name: "ColourPop", domain: "colourpop.com" },
-  { name: "MVMT", domain: "mvmtwatches.com" },
-  { name: "Glossier", domain: "glossier.com" },
+  { name: "Fenty Beauty", domain: "fentybeauty.com" },
+  { name: "Liquid Death", domain: "liquiddeath.com" },
+  { name: "Ridge Wallet", domain: "ridgewallet.com" },
+  { name: "Ruggable", domain: "ruggable.com" },
 ];
 
 // Detect user's locale currency

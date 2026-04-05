@@ -2,10 +2,18 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Star, Shirt, Sparkles, Coffee, Dumbbell, Home, Smartphone } from "lucide-react";
+import { Star, Shirt, Sparkles, Coffee, Home, Cpu } from "lucide-react";
+import { VERTICALS } from "@/lib/brands";
 import { FadeInView } from "@/components/motion";
 
-// ── Testimonials data ──
+const VERTICAL_ICONS: Record<string, React.ReactNode> = {
+  fashion: <Shirt className="h-3 w-3" />,
+  beauty: <Sparkles className="h-3 w-3" />,
+  home: <Home className="h-3 w-3" />,
+  food: <Coffee className="h-3 w-3" />,
+  electronics: <Cpu className="h-3 w-3" />,
+};
+
 const testimonials = [
   {
     quote: "ShopiSpy helped us stay competitive with real-time price tracking. We adjusted our strategy and saw a 47% increase in sales.",
@@ -21,47 +29,17 @@ const testimonials = [
   },
 ];
 
-// ── Brand intel data (compact) ──
-const verticals = [
-  { id: "fashion", label: "Fashion", icon: <Shirt className="h-3 w-3" />,
-    brands: [
-      { name: "Gymshark", products: "2,847", lastUpdate: "2h", change: "-12% on 4 items" },
-      { name: "SKIMS", products: "1,923", lastUpdate: "4h", change: "3 new products" },
-      { name: "Allbirds", products: "412", lastUpdate: "6h", change: "Price increase +5%" },
-    ],
-  },
-  { id: "beauty", label: "Beauty", icon: <Sparkles className="h-3 w-3" />,
-    brands: [
-      { name: "Fenty Beauty", products: "1,241", lastUpdate: "1h", change: "New collection" },
-      { name: "Glossier", products: "312", lastUpdate: "8h", change: "-8% on skincare" },
-      { name: "ColourPop", products: "3,891", lastUpdate: "2h", change: "Disney collab" },
-    ],
-  },
-  { id: "food", label: "Food", icon: <Coffee className="h-3 w-3" />,
-    brands: [
-      { name: "Liquid Death", products: "156", lastUpdate: "5h", change: "New flavour" },
-      { name: "Huel", products: "178", lastUpdate: "4h", change: "Price drop -10%" },
-      { name: "AG1", products: "34", lastUpdate: "2d", change: "Bundle update" },
-    ],
-  },
-  { id: "fitness", label: "Fitness", icon: <Dumbbell className="h-3 w-3" />,
-    brands: [
-      { name: "Alo Yoga", products: "2,156", lastUpdate: "2h", change: "14 new items" },
-      { name: "Bombas", products: "1,234", lastUpdate: "4h", change: "-6% on socks" },
-      { name: "MVMT", products: "456", lastUpdate: "6h", change: "New launch" },
-    ],
-  },
-];
-
 export function HomepageIntelAndProof() {
-  const [activeVertical, setActiveVertical] = useState("fashion");
-  const active = verticals.find((v) => v.id === activeVertical)!;
+  const [activeVertical, setActiveVertical] = useState(VERTICALS[0].id);
+  const active = VERTICALS.find((v) => v.id === activeVertical)!;
+  // Show top 4 brands per vertical
+  const displayBrands = active.brands.slice(0, 4);
 
   return (
     <section className="py-24 px-6 bg-muted/20">
       <div className="mx-auto max-w-6xl">
         <FadeInView className="text-center mb-14">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">Intelligence & proof</p>
+          <p className="text-sm font-medium uppercase tracking-widest text-primary">Intelligence &amp; proof</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
             See the data. Hear from the brands.
           </h2>
@@ -73,7 +51,7 @@ export function HomepageIntelAndProof() {
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-semibold">Live brand tracking</h3>
               <div className="flex gap-1">
-                {verticals.map((v) => (
+                {VERTICALS.map((v) => (
                   <button
                     key={v.id}
                     onClick={() => setActiveVertical(v.id)}
@@ -83,7 +61,7 @@ export function HomepageIntelAndProof() {
                         : "text-muted-foreground hover:text-foreground hover:bg-muted"
                     }`}
                   >
-                    {v.icon}
+                    {VERTICAL_ICONS[v.id]}
                     {v.label}
                   </button>
                 ))}
@@ -99,7 +77,7 @@ export function HomepageIntelAndProof() {
                 transition={{ duration: 0.2 }}
                 className="mt-4 space-y-2"
               >
-                {active.brands.map((brand) => (
+                {displayBrands.map((brand) => (
                   <div
                     key={brand.name}
                     className="group flex items-center justify-between rounded-xl border border-border/60 bg-background p-4 transition-colors hover:border-primary/20"
@@ -114,7 +92,7 @@ export function HomepageIntelAndProof() {
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="text-xs font-medium">{brand.change}</p>
+                      <p className="text-xs font-medium">{brand.latestChange}</p>
                       <p className="text-[10px] text-muted-foreground">{brand.lastUpdate} ago</p>
                     </div>
                   </div>
@@ -123,7 +101,7 @@ export function HomepageIntelAndProof() {
             </AnimatePresence>
 
             <p className="mt-4 text-center text-[10px] text-muted-foreground">
-              Tracking 36+ brands across 6 verticals &mdash; updated continuously
+              Tracking {active.brands.length} brands in {active.label} &mdash; updated continuously
             </p>
           </div>
 
