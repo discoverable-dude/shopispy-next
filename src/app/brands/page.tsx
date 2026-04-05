@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { VERTICALS, ALL_BRANDS } from "@/lib/brands";
 import { slugify } from "@/lib/brandUtils";
+import { BrandIcon } from "@/components/marketing/BrandIcon";
 
 export const metadata: Metadata = {
   title: "All Tracked Brands | ShopiSpy",
@@ -50,9 +51,7 @@ export default function BrandsIndexPage() {
                     className="flex items-center justify-between rounded-lg border border-border/60 px-3 py-2.5 transition-colors hover:border-primary/20"
                   >
                     <div className="flex items-center gap-2.5">
-                      <div className="flex h-7 w-7 items-center justify-center rounded-md border border-border bg-muted/40 text-[10px] font-bold text-primary">
-                        {brand.name.charAt(0)}
-                      </div>
+                      <BrandIcon name={brand.name} domain={brand.domain} size="sm" />
                       <div>
                         <p className="text-sm font-medium">{brand.name}</p>
                         <p className="text-[10px] text-muted-foreground">{brand.domain}</p>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Shirt, Sparkles, Coffee, Dumbbell, Home, Smartphone } from "lucide-react";
 import { FadeInView } from "@/components/motion";
+import { BrandIcon } from "@/components/marketing/BrandIcon";
 
 interface BrandData {
   name: string;
@@ -148,9 +149,7 @@ export function LiveIntelligence() {
                 {/* Brand header */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-md border border-border bg-muted/50 text-xs font-bold text-primary">
-                      {brand.name.charAt(0)}
-                    </div>
+                    <BrandIcon name={brand.name} domain={brand.domain} size="sm" />
                     <div>
                       <p className="text-sm font-medium leading-tight">{brand.name}</p>
                       <p className="text-[11px] text-muted-foreground">{brand.domain}</p>
