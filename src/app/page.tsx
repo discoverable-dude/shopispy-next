@@ -3,8 +3,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HomepageHero } from "@/components/marketing/HomepageHero";
 import { HomepageLogos } from "@/components/marketing/HomepageLogos";
-import { HomepageStatsAndProcess } from "@/components/marketing/HomepageStatsAndProcess";
 import { HomepageFeatures } from "@/components/marketing/HomepageFeatures";
+import { HomepageStatsAndProcess } from "@/components/marketing/HomepageStatsAndProcess";
 import { HomepageIntelAndProof } from "@/components/marketing/HomepageIntelAndProof";
 import { HomepageCTA } from "@/components/marketing/HomepageCTA";
 
@@ -21,8 +21,8 @@ export default function HomePage() {
       <Header />
       <HomepageHero />
       <HomepageLogos />
-      <HomepageStatsAndProcess />
       <HomepageFeatures />
+      <HomepageStatsAndProcess />
       <HomepageIntelAndProof />
       <HomepageCTA />
       <Footer />

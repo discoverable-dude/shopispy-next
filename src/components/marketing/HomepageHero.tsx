@@ -161,7 +161,7 @@ export function HomepageHero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="rounded-2xl border border-border bg-background/80 p-6 shadow-lg shadow-black/[0.03] backdrop-blur-sm"
+            className="mt-12 rounded-2xl border border-border bg-background/80 p-6 shadow-lg shadow-black/[0.03] backdrop-blur-sm lg:mt-12"
           >
             <p className="text-[10px] font-medium uppercase tracking-widest text-primary mb-4">How it works</p>
 

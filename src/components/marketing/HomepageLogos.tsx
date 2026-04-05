@@ -29,18 +29,15 @@ const brands = [
 
 function BrandLogo({ name, domain }: { name: string; domain: string }) {
   return (
-    <div className="flex shrink-0 items-center gap-2.5 px-4">
+    <div className="flex shrink-0 items-center px-5">
       <Image
         src={`https://logo.clearbit.com/${domain}`}
         alt={name}
-        width={24}
-        height={24}
-        className="h-6 w-6 rounded-sm object-contain grayscale opacity-40 transition-all hover:grayscale-0 hover:opacity-100"
+        width={32}
+        height={32}
+        className="h-8 w-8 rounded object-contain grayscale opacity-30 transition-all hover:grayscale-0 hover:opacity-100"
         unoptimized
       />
-      <span className="whitespace-nowrap text-sm font-medium text-muted-foreground/40 transition-colors hover:text-foreground">
-        {name}
-      </span>
     </div>
   );
 }
