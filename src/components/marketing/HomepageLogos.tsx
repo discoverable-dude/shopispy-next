@@ -1,46 +1,29 @@
 "use client";
 
-import Image from "next/image";
 import { FadeInView } from "@/components/motion";
 
-// Brand logos using clearbit logo API (free, high-quality company logos)
 const brands = [
-  { name: "Gymshark", domain: "gymshark.com" },
-  { name: "SKIMS", domain: "skims.com" },
-  { name: "Allbirds", domain: "allbirds.com" },
-  { name: "Fenty Beauty", domain: "fentybeauty.com" },
-  { name: "Glossier", domain: "glossier.com" },
-  { name: "Liquid Death", domain: "liquiddeath.com" },
-  { name: "Alo Yoga", domain: "aloyoga.com" },
-  { name: "Brooklinen", domain: "brooklinen.com" },
-  { name: "Our Place", domain: "fromourplace.com" },
-  { name: "Peak Design", domain: "peakdesign.com" },
-  { name: "Bombas", domain: "bombas.com" },
-  { name: "MVMT", domain: "mvmtwatches.com" },
-  { name: "ColourPop", domain: "colourpop.com" },
-  { name: "Ruggable", domain: "ruggable.com" },
-  { name: "Steve Madden", domain: "stevemadden.com" },
-  { name: "Hydro Flask", domain: "hydroflask.com" },
-  { name: "Kylie Cosmetics", domain: "kyliecosmetics.com" },
-  { name: "Huel", domain: "huel.com" },
-  { name: "Therabody", domain: "therabody.com" },
-  { name: "Outdoor Voices", domain: "outdoorvoices.com" },
+  { name: "GYMSHARK", style: "font-bold tracking-wider" },
+  { name: "SKIMS", style: "font-bold tracking-[0.3em]" },
+  { name: "allbirds", style: "font-medium lowercase" },
+  { name: "FENTY BEAUTY", style: "font-bold tracking-widest text-[11px]" },
+  { name: "Glossier", style: "font-medium italic" },
+  { name: "LIQUID DEATH", style: "font-black tracking-wider text-[11px]" },
+  { name: "alo", style: "font-light tracking-[0.4em] uppercase" },
+  { name: "Brooklinen", style: "font-medium" },
+  { name: "OUR PLACE", style: "font-bold tracking-[0.25em] text-[11px]" },
+  { name: "Peak Design", style: "font-semibold" },
+  { name: "Bombas", style: "font-bold" },
+  { name: "MVMT", style: "font-bold tracking-[0.3em]" },
+  { name: "ColourPop", style: "font-bold" },
+  { name: "RUGGABLE", style: "font-medium tracking-[0.2em]" },
+  { name: "Steve Madden", style: "font-medium tracking-wide" },
+  { name: "HYDRO FLASK", style: "font-black tracking-wider text-[11px]" },
+  { name: "KYLIE", style: "font-bold tracking-[0.35em]" },
+  { name: "huel", style: "font-bold lowercase" },
+  { name: "THERABODY", style: "font-medium tracking-[0.2em] text-[11px]" },
+  { name: "Outdoor Voices", style: "font-medium italic" },
 ];
-
-function BrandLogo({ name, domain }: { name: string; domain: string }) {
-  return (
-    <div className="flex shrink-0 items-center px-5">
-      <Image
-        src={`https://logo.clearbit.com/${domain}`}
-        alt={name}
-        width={32}
-        height={32}
-        className="h-8 w-8 rounded object-contain grayscale opacity-30 transition-all hover:grayscale-0 hover:opacity-100"
-        unoptimized
-      />
-    </div>
-  );
-}
 
 export function HomepageLogos() {
   return (
@@ -50,14 +33,17 @@ export function HomepageLogos() {
           Tracking intelligence from brands you know
         </p>
         <div className="relative">
-          {/* Fade edges */}
           <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-background to-transparent" />
           <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-background to-transparent" />
 
-          {/* Row 1 */}
-          <div className="flex animate-marquee">
+          <div className="flex animate-marquee whitespace-nowrap">
             {[...brands, ...brands].map((brand, i) => (
-              <BrandLogo key={`${brand.domain}-${i}`} name={brand.name} domain={brand.domain} />
+              <span
+                key={`${brand.name}-${i}`}
+                className={`mx-5 shrink-0 text-sm text-muted-foreground/30 transition-colors hover:text-foreground sm:mx-7 ${brand.style}`}
+              >
+                {brand.name}
+              </span>
             ))}
           </div>
         </div>

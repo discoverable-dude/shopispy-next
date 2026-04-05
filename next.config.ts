@@ -7,10 +7,6 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "fihtvgywpihxdsmkhswn.supabase.co",
       },
-      {
-        protocol: "https",
-        hostname: "logo.clearbit.com",
-      },
     ],
   },
   async redirects() {
