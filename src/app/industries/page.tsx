@@ -5,7 +5,8 @@ import { Footer } from "@/components/layout/Footer";
 import { BrandIcon } from "@/components/marketing/BrandIcon";
 import { VERTICALS, ALL_BRANDS, TOTAL_PRODUCTS } from "@/lib/brands";
 import { slugify, getVerticalStats, getTopBrands } from "@/lib/brandUtils";
-import { ArrowRight } from "lucide-react";
+import { IndustriesGrid } from "@/components/marketing/IndustriesGrid";
+import { ArrowRight, Download } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Industries",
@@ -15,84 +16,61 @@ export const metadata: Metadata = {
 };
 
 export default function IndustriesPage() {
+  // Pre-compute data for each vertical
+  const verticalData = VERTICALS.map((v) => {
+    const stats = getVerticalStats(v);
+    const top5 = getTopBrands(v, 5);
+    return {
+      id: v.id,
+      label: v.label,
+      slug: slugify(v.label),
+      brandCount: v.brands.length,
+      totalProducts: stats.total,
+      recentlyUpdated: stats.recentlyUpdated,
+      topBrands: top5.map((b) => ({ name: b.name, domain: b.domain })),
+    };
+  });
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="mx-auto max-w-6xl px-6 py-16">
-        <div>
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">Intelligence by sector</p>
-          <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Industries</h1>
-          <p className="mt-3 text-muted-foreground">
-            {ALL_BRANDS.length} Shopify brands tracked across {VERTICALS.length} industries.{" "}
-            {TOTAL_PRODUCTS.toLocaleString()} products monitored.
+
+      {/* Hero */}
+      <section className="relative overflow-hidden pb-8 pt-20">
+        <div className="absolute inset-0 bg-dot-pattern mask-fade-b" />
+        <div className="relative mx-auto max-w-5xl px-6 text-center">
+          <p className="text-sm font-medium uppercase tracking-widest text-primary">
+            {ALL_BRANDS.length} brands &middot; {VERTICALS.length} industries
           </p>
-        </div>
-
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {VERTICALS.map((vertical) => {
-            const stats = getVerticalStats(vertical);
-            const top5 = getTopBrands(vertical, 5);
-
-            return (
-              <Link
-                key={vertical.id}
-                href={`/industries/${slugify(vertical.label)}`}
-                className="group rounded-2xl border border-border/60 p-5 transition-all hover:border-primary/20 hover:shadow-sm"
-              >
-                <div className="flex items-center justify-between">
-                  <h2 className="text-sm font-semibold group-hover:text-primary transition-colors">
-                    {vertical.label}
-                  </h2>
-                  <ArrowRight className="h-4 w-4 text-muted-foreground/30 transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
-                </div>
-
-                <div className="mt-2 flex items-center gap-3 text-xs text-muted-foreground">
-                  <span>{vertical.brands.length} brands</span>
-                  <span className="text-border">&middot;</span>
-                  <span>{stats.total.toLocaleString()} products</span>
-                  <span className="text-border">&middot;</span>
-                  <span>{stats.recentlyUpdated} active</span>
-                </div>
-
-                {/* Brand favicon row */}
-                <div className="mt-4 flex items-center gap-1.5">
-                  {top5.map((brand) => (
-                    <BrandIcon key={brand.name} name={brand.name} domain={brand.domain} size="sm" />
-                  ))}
-                  {vertical.brands.length > 5 && (
-                    <span className="flex h-7 w-7 items-center justify-center rounded-md border border-border bg-muted/40 text-[9px] text-muted-foreground">
-                      +{vertical.brands.length - 5}
-                    </span>
-                  )}
-                </div>
-
-                {/* Top brand names */}
-                <div className="mt-3 flex flex-wrap gap-1">
-                  {top5.slice(0, 3).map((brand) => (
-                    <span key={brand.name} className="rounded-full bg-muted px-2 py-0.5 text-[10px] text-muted-foreground">
-                      {brand.name}
-                    </span>
-                  ))}
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-
-        {/* CTA */}
-        <div className="mt-12 rounded-2xl border border-border bg-muted/20 p-8 text-center">
-          <h3 className="text-lg font-bold">Download industry benchmark reports</h3>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Get CSV and JSON data for all {ALL_BRANDS.length} brands across {VERTICALS.length} industries.
+          <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+            Shopify intelligence <span className="text-gradient">by industry</span>
+          </h1>
+          <p className="mt-4 mx-auto max-w-xl text-muted-foreground">
+            Browse {TOTAL_PRODUCTS.toLocaleString()} tracked products across {VERTICALS.length} verticals.
+            Drill into any industry for top brands, pricing data, and competitive insights.
           </p>
-          <Link
-            href="/reports"
-            className="mt-4 inline-flex h-10 items-center gap-2 rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground shadow-md shadow-primary/20"
-          >
-            Download reports <ArrowRight className="h-4 w-4" />
-          </Link>
+          <div className="mt-6 flex justify-center gap-3">
+            <Link
+              href="/reports"
+              className="inline-flex h-10 items-center gap-2 rounded-xl border border-border px-5 text-sm font-medium transition-colors hover:bg-muted"
+            >
+              <Download className="h-4 w-4" /> Download reports
+            </Link>
+            <Link
+              href="/scraper"
+              className="inline-flex h-10 items-center gap-2 rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground shadow-md shadow-primary/20 transition-all hover:brightness-110"
+            >
+              Track your competitors <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* Grid — client component for animations */}
+      <section className="mx-auto max-w-6xl px-6 py-12">
+        <IndustriesGrid verticals={verticalData} />
+      </section>
+
       <Footer />
     </div>
   );

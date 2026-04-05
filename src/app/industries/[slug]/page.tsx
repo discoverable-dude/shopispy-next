@@ -4,6 +4,13 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BrandIcon } from "@/components/marketing/BrandIcon";
+import { IndustryStatsClient } from "@/components/marketing/IndustryStatsClient";
+import { FadeInView, StaggerContainer, StaggerItem } from "@/components/motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
+import { Separator } from "@/components/ui/separator";
 import { VERTICALS } from "@/lib/brands";
 import {
   getVerticalBySlug,
@@ -54,10 +61,9 @@ export default async function IndustryPage({
   const topBrands = getTopBrands(vertical, 10);
   const allBrands = vertical.brands;
 
-  // Product size distribution - top 10 brands for bar chart
   const maxProducts = Math.max(...topBrands.map(getProductCount));
 
-  // Activity breakdown - categorise all brands
+  // Activity breakdown
   const changeCounts: Record<string, number> = {};
   for (const brand of allBrands) {
     const type = categoriseChange(brand.latestChange);
@@ -76,274 +82,312 @@ export default async function IndustryPage({
       color: getChangeTypeColor(type),
     }));
 
-  // Bar colors for the product size chart
-  const barColors = [
-    "bg-primary",
-    "bg-primary/90",
-    "bg-primary/80",
-    "bg-primary/70",
-    "bg-primary/60",
-    "bg-primary/55",
-    "bg-primary/50",
-    "bg-primary/45",
-    "bg-primary/40",
-    "bg-primary/35",
+  const statsData = [
+    { label: "Total Products", value: stats.total, formatted: stats.total.toLocaleString(), gradient: "from-primary/5" },
+    { label: "Avg per Store", value: stats.avg, formatted: stats.avg.toLocaleString(), gradient: "from-blue-500/5" },
+    { label: "Recently Active", value: stats.recentlyUpdated, formatted: stats.recentlyUpdated.toString(), gradient: "from-green-500/5" },
+    { label: "Brand Count", value: stats.brandCount, formatted: stats.brandCount.toString(), gradient: "from-amber-500/5" },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-        {/* Breadcrumb */}
-        <nav className="mb-8 text-sm text-muted-foreground">
-          <Link href="/industries" className="hover:text-foreground transition-colors">
-            Industries
-          </Link>
-          <span className="mx-2">/</span>
-          <span className="text-foreground">{vertical.label}</span>
-        </nav>
+      <main>
+        {/* ── Hero ── */}
+        <section className="relative overflow-hidden border-b border-border">
+          <div className="absolute inset-0 bg-dot-pattern mask-fade-b" />
+          <div className="relative mx-auto max-w-5xl px-4 pb-16 pt-24 sm:px-6 sm:pt-32">
+            <nav className="mb-8 text-sm text-muted-foreground">
+              <Link href="/industries" className="hover:text-foreground transition-colors">
+                Industries
+              </Link>
+              <span className="mx-2">/</span>
+              <span className="text-foreground">{vertical.label}</span>
+            </nav>
 
-        {/* Header */}
-        <div className="mb-10">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            {vertical.label}
-          </h1>
-          <p className="mt-3 text-lg text-muted-foreground">
-            Top {allBrands.length} {vertical.label} Shopify stores tracked by ShopiSpy
-          </p>
-          <div className="mt-3 flex items-center gap-4 text-sm text-muted-foreground">
-            <span>{allBrands.length} brands</span>
-            <span className="text-border">|</span>
-            <span>{stats.total.toLocaleString()} total products</span>
-          </div>
-        </div>
+            <FadeInView>
+              <Badge variant="outline" className="mb-4 gap-1.5 border-primary/30 text-primary">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+                </span>
+                Live data
+              </Badge>
 
-        {/* Stats Row */}
-        <div className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          <div className="rounded-xl border border-border bg-gradient-to-br from-primary/5 to-transparent p-5">
-            <p className="text-sm font-medium text-muted-foreground">Total Products</p>
-            <p className="mt-1 text-3xl font-bold tracking-tight">{stats.total.toLocaleString()}</p>
-          </div>
-          <div className="rounded-xl border border-border bg-gradient-to-br from-blue-500/5 to-transparent p-5">
-            <p className="text-sm font-medium text-muted-foreground">Avg per Store</p>
-            <p className="mt-1 text-3xl font-bold tracking-tight">{stats.avg.toLocaleString()}</p>
-          </div>
-          <div className="rounded-xl border border-border bg-gradient-to-br from-green-500/5 to-transparent p-5">
-            <p className="text-sm font-medium text-muted-foreground">Recently Updated</p>
-            <p className="mt-1 text-3xl font-bold tracking-tight">{stats.recentlyUpdated}</p>
-          </div>
-          <div className="rounded-xl border border-border bg-gradient-to-br from-amber-500/5 to-transparent p-5">
-            <p className="text-sm font-medium text-muted-foreground">Brand Count</p>
-            <p className="mt-1 text-3xl font-bold tracking-tight">{stats.brandCount}</p>
-          </div>
-        </div>
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+                {vertical.label} Intelligence
+              </h1>
+              <p className="mt-4 max-w-2xl text-lg text-muted-foreground sm:text-xl">
+                Track {allBrands.length} brands and {stats.total.toLocaleString()} products across the {vertical.label.toLowerCase()} vertical. Real-time pricing, launches, and catalog changes.
+              </p>
 
-        {/* Activity Breakdown */}
-        <section className="mb-12">
-          <h2 className="mb-4 text-xl font-bold tracking-tight">Activity Breakdown</h2>
-          <div className="flex flex-wrap gap-3">
-            {activityPills.map(({ type, label, count, color }) => (
-              <span
-                key={type}
-                className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold ${color}`}
-              >
-                <span className="text-lg">{count}</span>
-                {label}
-              </span>
-            ))}
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Button asChild size="lg" className="h-12 rounded-xl gap-2 shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 hover:brightness-110">
+                  <Link href="/scraper">
+                    Track these stores
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="h-12 rounded-xl">
+                  <Link href={`/industries/${slug}#all-brands`}>
+                    Download report
+                  </Link>
+                </Button>
+              </div>
+            </FadeInView>
           </div>
         </section>
 
-        {/* Product Size Distribution */}
-        <section className="mb-16">
-          <h2 className="mb-6 text-xl font-bold tracking-tight">Product Size Distribution</h2>
-          <div className="rounded-xl border border-border p-6">
-            <div className="space-y-3">
-              {topBrands.map((brand, i) => {
-                const count = getProductCount(brand);
-                const pct = maxProducts > 0 ? (count / maxProducts) * 100 : 0;
+        <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+          {/* ── Stats Row (animated) ── */}
+          <section className="mb-16">
+            <IndustryStatsClient stats={statsData} />
+          </section>
+
+          {/* ── Top 10 Ranked List ── */}
+          <FadeInView>
+            <section className="mb-16">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl">
+                    Top 10 {vertical.label} Brands by Catalog Size
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-1">
+                  {topBrands.map((brand, i) => {
+                    const changeType = categoriseChange(brand.latestChange);
+                    const changeColor = getChangeTypeColor(changeType);
+                    const changeLabel = getChangeTypeLabel(changeType);
+                    const count = getProductCount(brand);
+                    const pct = maxProducts > 0 ? Math.round((count / maxProducts) * 100) : 0;
+
+                    return (
+                      <div key={brand.name}>
+                        <div className="flex items-center gap-3 py-3">
+                          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-sm font-bold text-primary tabular-nums">
+                            #{i + 1}
+                          </span>
+                          <BrandIcon name={brand.name} domain={brand.domain} size="md" />
+                          <div className="min-w-0 flex-1">
+                            <div className="flex items-center gap-2">
+                              <Link
+                                href={`/brands/${slugify(brand.name)}`}
+                                className="truncate font-semibold hover:text-primary transition-colors"
+                              >
+                                {brand.name}
+                              </Link>
+                              <span className="hidden text-xs text-muted-foreground sm:inline">
+                                {brand.domain}
+                              </span>
+                            </div>
+                            <div className="mt-1.5">
+                              <Progress value={pct} className="h-2" />
+                            </div>
+                          </div>
+                          <div className="shrink-0 text-right">
+                            <p className="text-sm font-bold tabular-nums">{brand.products}</p>
+                            <Badge
+                              variant="secondary"
+                              className={`mt-1 text-[10px] ${changeColor}`}
+                            >
+                              {changeLabel}
+                            </Badge>
+                          </div>
+                        </div>
+                        {i < topBrands.length - 1 && <Separator />}
+                      </div>
+                    );
+                  })}
+                </CardContent>
+              </Card>
+            </section>
+          </FadeInView>
+
+          {/* ── Activity Breakdown ── */}
+          <FadeInView>
+            <section className="mb-16">
+              <h2 className="mb-4 text-xl font-bold tracking-tight">Activity Breakdown</h2>
+              <div className="flex flex-wrap gap-3">
+                {activityPills.map(({ type, label, count, color }) => (
+                  <Badge
+                    key={type}
+                    variant="secondary"
+                    className={`gap-2 px-4 py-2 text-sm ${color}`}
+                  >
+                    <span className="text-lg font-bold">{count}</span>
+                    {label}
+                  </Badge>
+                ))}
+              </div>
+            </section>
+          </FadeInView>
+
+          {/* ── Use Cases ── */}
+          <FadeInView>
+            <section className="mb-16">
+              <h2 className="mb-2 text-xl font-bold tracking-tight">
+                Why track {vertical.label} brands?
+              </h2>
+              <p className="mb-6 text-muted-foreground">
+                Stay ahead in {vertical.label.toLowerCase()} with intelligence your competitors wish they had.
+              </p>
+              <StaggerContainer className="grid gap-4 sm:grid-cols-3">
+                <StaggerItem>
+                  <Card className="h-full bg-gradient-to-br from-red-500/5 to-transparent">
+                    <CardContent className="p-6">
+                      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-red-500/10 text-lg font-bold text-red-600">
+                        $
+                      </div>
+                      <h3 className="font-semibold">Monitor competitor pricing</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                        See exactly when competitors drop or raise prices. React faster than the market and
+                        protect your margins across {stats.total.toLocaleString()} tracked products.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </StaggerItem>
+                <StaggerItem>
+                  <Card className="h-full bg-gradient-to-br from-primary/5 to-transparent">
+                    <CardContent className="p-6">
+                      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-lg font-bold text-primary">
+                        +
+                      </div>
+                      <h3 className="font-semibold">Spot new launches first</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                        Get notified within hours when any {vertical.label.toLowerCase()} brand launches
+                        new products. Understand trends before they go mainstream.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </StaggerItem>
+                <StaggerItem>
+                  <Card className="h-full bg-gradient-to-br from-blue-500/5 to-transparent">
+                    <CardContent className="p-6">
+                      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/10 text-lg font-bold text-blue-600">
+                        #
+                      </div>
+                      <h3 className="font-semibold">Benchmark your catalog</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                        Compare your product count against the top {vertical.label.toLowerCase()} stores.
+                        The average store here carries {stats.avg.toLocaleString()} products.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </StaggerItem>
+              </StaggerContainer>
+            </section>
+          </FadeInView>
+
+          {/* ── All Brands Grid ── */}
+          <section id="all-brands" className="mb-16">
+            <FadeInView>
+              <h2 className="mb-6 text-xl font-bold tracking-tight">
+                All {allBrands.length} Brands
+              </h2>
+            </FadeInView>
+            <StaggerContainer className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {allBrands.map((brand) => {
+                const changeType = categoriseChange(brand.latestChange);
+                const changeColor = getChangeTypeColor(changeType);
+                const changeLabel = getChangeTypeLabel(changeType);
+
                 return (
-                  <div key={brand.name} className="flex items-center gap-3">
+                  <StaggerItem key={brand.name}>
                     <Link
                       href={`/brands/${slugify(brand.name)}`}
-                      className="w-32 shrink-0 truncate text-sm font-medium hover:text-primary transition-colors"
+                      className="group block"
                     >
-                      {brand.name}
+                      <Card className="transition-all hover:bg-muted/50 hover:shadow-sm">
+                        <CardContent className="p-4">
+                          <div className="flex items-start gap-3">
+                            <BrandIcon name={brand.name} domain={brand.domain} size="md" />
+                            <div className="min-w-0 flex-1">
+                              <p className="truncate font-medium group-hover:text-primary transition-colors">
+                                {brand.name}
+                              </p>
+                              <p className="text-xs text-muted-foreground">{brand.domain}</p>
+                            </div>
+                            <p className="shrink-0 text-sm font-semibold tabular-nums">{brand.products}</p>
+                          </div>
+                          <div className="mt-3 flex items-center justify-between">
+                            <Badge
+                              variant="secondary"
+                              className={`text-[10px] ${changeColor}`}
+                            >
+                              {changeLabel}
+                            </Badge>
+                            <span className="text-xs text-muted-foreground">
+                              {brand.lastUpdate} ago
+                            </span>
+                          </div>
+                        </CardContent>
+                      </Card>
                     </Link>
-                    <div className="relative flex-1 h-7 rounded-md bg-muted/50 overflow-hidden">
-                      <div
-                        className={`h-full rounded-md ${barColors[i] || "bg-primary/30"} transition-all duration-500`}
-                        style={{ width: `${Math.max(pct, 2)}%` }}
-                      />
-                    </div>
-                    <span className="w-16 shrink-0 text-right text-sm font-semibold tabular-nums">
-                      {brand.products}
-                    </span>
-                  </div>
+                  </StaggerItem>
                 );
               })}
-            </div>
-          </div>
-        </section>
+            </StaggerContainer>
+          </section>
 
-        {/* Top 10 Brands */}
-        <section className="mb-16">
-          <h2 className="mb-6 text-xl font-bold tracking-tight">
-            Top 10 {vertical.label} Brands
-          </h2>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {topBrands.map((brand, i) => {
-              const changeType = categoriseChange(brand.latestChange);
-              const changeColor = getChangeTypeColor(changeType);
-              const changeLabel = getChangeTypeLabel(changeType);
-              const count = getProductCount(brand);
-              const pct = maxProducts > 0 ? (count / maxProducts) * 100 : 0;
+          {/* ── CTA with plus-icon corners ── */}
+          <FadeInView>
+            <section className="mb-16">
+              <div className="relative border-y border-border">
+                {/* Plus icons at corners */}
+                <svg className="absolute -top-3 -left-3 h-6 w-6 text-muted-foreground/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                <svg className="absolute -top-3 -right-3 h-6 w-6 text-muted-foreground/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                <svg className="absolute -bottom-3 -left-3 h-6 w-6 text-muted-foreground/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                <svg className="absolute -bottom-3 -right-3 h-6 w-6 text-muted-foreground/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
 
-              return (
-                <Link
-                  key={brand.name}
-                  href={`/brands/${slugify(brand.name)}`}
-                  className="group rounded-xl border border-border p-5 transition-all hover:bg-muted/50 hover:shadow-sm"
-                >
-                  <div className="flex items-start gap-3">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-sm font-bold text-primary">
-                      #{i + 1}
-                    </span>
-                    <BrandIcon name={brand.name} domain={brand.domain} size="md" />
-                    <div className="min-w-0 flex-1">
-                      <p className="truncate font-semibold group-hover:text-primary transition-colors">
-                        {brand.name}
-                      </p>
-                      <p className="text-xs text-muted-foreground">{brand.domain}</p>
-                    </div>
-                    <div className="text-right shrink-0">
-                      <p className="text-lg font-bold tabular-nums">{brand.products}</p>
-                      <p className="text-xs text-muted-foreground">{brand.lastUpdate} ago</p>
-                    </div>
+                <div className="absolute inset-y-0 left-1/2 -translate-x-px border-l border-dashed border-border" />
+
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "radial-gradient(35% 80% at 25% 0%, hsl(var(--foreground) / .06), transparent)",
+                  }}
+                />
+
+                <div className="relative px-8 py-16 text-center sm:px-16">
+                  <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">
+                    Start tracking {vertical.label.toLowerCase()} brands
+                  </h3>
+                  <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+                    Get real-time alerts when any of these {allBrands.length} brands change prices, launch
+                    products, or update their catalog. Free plan available.
+                  </p>
+                  <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                    <Button asChild size="lg" className="h-12 rounded-xl gap-2 shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 hover:brightness-110">
+                      <Link href="/scraper">
+                        Start Tracking for Free
+                      </Link>
+                    </Button>
+                    <Button asChild variant="outline" size="lg" className="h-12 rounded-xl">
+                      <Link href="/pricing">
+                        View pricing
+                      </Link>
+                    </Button>
                   </div>
-
-                  {/* Mini product bar */}
-                  <div className="mt-3 h-1.5 w-full rounded-full bg-muted/50 overflow-hidden">
-                    <div
-                      className="h-full rounded-full bg-primary/40"
-                      style={{ width: `${Math.max(pct, 3)}%` }}
-                    />
+                  <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
+                    <span>No credit card required</span>
+                    <span className="hidden sm:inline">&middot;</span>
+                    <span>Free plan forever</span>
+                    <span className="hidden sm:inline">&middot;</span>
+                    <span>Cancel anytime</span>
                   </div>
-
-                  <div className="mt-3 flex items-center justify-between">
-                    <span
-                      className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${changeColor}`}
-                    >
-                      {changeLabel}
-                    </span>
-                    <p className="text-xs text-muted-foreground truncate max-w-[60%] text-right">
-                      {brand.latestChange}
-                    </p>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* Use Cases */}
-        <section className="mb-16">
-          <h2 className="mb-6 text-xl font-bold tracking-tight">
-            Why track {vertical.label} brands?
-          </h2>
-          <div className="grid gap-4 sm:grid-cols-3">
-            <div className="rounded-xl border border-border bg-gradient-to-br from-red-500/5 to-transparent p-6">
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-red-500/10 text-lg">
-                $
+                </div>
               </div>
-              <h3 className="font-semibold">Monitor competitor pricing</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                See exactly when competitors drop or raise prices. React faster than the market and
-                protect your margins with real-time pricing intelligence.
-              </p>
-            </div>
-            <div className="rounded-xl border border-border bg-gradient-to-br from-primary/5 to-transparent p-6">
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-lg">
-                +
-              </div>
-              <h3 className="font-semibold">Spot new product launches first</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Get notified within hours when any brand in {vertical.label.toLowerCase()} launches
-                new products. Understand trends before they go mainstream.
-              </p>
-            </div>
-            <div className="rounded-xl border border-border bg-gradient-to-br from-blue-500/5 to-transparent p-6">
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/10 text-lg">
-                #
-              </div>
-              <h3 className="font-semibold">Benchmark your catalog size</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Compare your product count and assortment against the top {vertical.label.toLowerCase()} stores.
-                Identify gaps in your catalog and opportunities to expand.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA - Track these stores */}
-        <section className="mb-16 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 p-8 sm:p-10 text-center">
-          <h3 className="text-2xl font-bold tracking-tight">
-            Track these stores on ShopiSpy
-          </h3>
-          <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-            Get real-time alerts when any of these {allBrands.length} brands change prices, launch
-            products, or update their catalog. Free plan available.
-          </p>
-          <Link
-            href="/scraper"
-            className="mt-6 inline-block rounded-lg bg-primary px-8 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Start Tracking for Free
-          </Link>
-        </section>
-
-        {/* All Brands */}
-        <section className="mb-16">
-          <h2 className="mb-6 text-xl font-bold tracking-tight">
-            All {allBrands.length} Brands
-          </h2>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {allBrands.map((brand) => {
-              const changeType = categoriseChange(brand.latestChange);
-              const changeColor = getChangeTypeColor(changeType);
-              const changeLabel = getChangeTypeLabel(changeType);
-
-              return (
-                <Link
-                  key={brand.name}
-                  href={`/brands/${slugify(brand.name)}`}
-                  className="group rounded-xl border border-border p-4 transition-colors hover:bg-muted/50"
-                >
-                  <div className="flex items-start gap-3">
-                    <BrandIcon name={brand.name} domain={brand.domain} size="md" />
-                    <div className="min-w-0 flex-1">
-                      <p className="truncate font-medium group-hover:text-primary transition-colors">
-                        {brand.name}
-                      </p>
-                      <p className="text-xs text-muted-foreground">{brand.domain}</p>
-                    </div>
-                    <p className="shrink-0 text-sm font-semibold">{brand.products}</p>
-                  </div>
-                  <div className="mt-2 flex items-center justify-between">
-                    <span
-                      className={`rounded-full px-2 py-0.5 text-xs font-medium ${changeColor}`}
-                    >
-                      {changeLabel}
-                    </span>
-                    <span className="text-xs text-muted-foreground">
-                      {brand.lastUpdate} ago
-                    </span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </section>
+            </section>
+          </FadeInView>
+        </div>
       </main>
       <Footer />
     </div>

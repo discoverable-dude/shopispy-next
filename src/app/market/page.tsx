@@ -1,11 +1,29 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight, Plus, ShoppingBag, BarChart3, Megaphone, Users, Download } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BrandIcon } from "@/components/marketing/BrandIcon";
 import { VERTICALS, ALL_BRANDS, TOTAL_PRODUCTS } from "@/lib/brands";
-import { getVerticalStats, categoriseChange, getChangeTypeColor, getChangeTypeLabel, slugify, getProductCount, type ChangeType } from "@/lib/brandUtils";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import {
+  getVerticalStats,
+  categoriseChange,
+  getChangeTypeColor,
+  getChangeTypeLabel,
+  slugify,
+  getProductCount,
+  getTopBrands,
+  type ChangeType,
+} from "@/lib/brandUtils";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Progress } from "@/components/ui/progress";
+import { FadeInView, StaggerContainer, StaggerItem } from "@/components/motion";
+import { MarketHeroClient } from "@/components/marketing/MarketHeroClient";
+import { MarketActivityBar, type ActivitySegment } from "@/components/marketing/MarketActivityBar";
+import { LargestStoresChart, type StoreBar } from "@/components/marketing/LargestStoresChart";
 
 export const metadata: Metadata = {
   title: "Live Market Intelligence",
@@ -14,242 +32,345 @@ export const metadata: Metadata = {
   alternates: { canonical: "/market" },
 };
 
+function PlusIcon({ className }: { className?: string }) {
+  return (
+    <Plus
+      className={`absolute h-6 w-6 text-muted-foreground/40 ${className}`}
+      strokeWidth={1}
+    />
+  );
+}
+
 export default function MarketPage() {
   const totalBrands = ALL_BRANDS.length;
-  const recentChanges = ALL_BRANDS.filter(
-    (b) => ["1h", "2h"].some((t) => b.lastUpdate.includes(t))
-  ).length;
 
   // Activity breakdown
   const changeBreakdown: Record<ChangeType, number> = {
-    price_drop: 0, price_increase: 0, new_products: 0, restock: 0, sale: 0, other: 0,
+    price_drop: 0,
+    price_increase: 0,
+    new_products: 0,
+    restock: 0,
+    sale: 0,
+    other: 0,
   };
   ALL_BRANDS.forEach((b) => {
     changeBreakdown[categoriseChange(b.latestChange)]++;
   });
   const totalChanges = Object.values(changeBreakdown).reduce((a, b) => a + b, 0);
 
-  // Recent activity
-  const recentActivity = ALL_BRANDS
-    .filter((b) => ["1h", "2h", "3h"].some((t) => b.lastUpdate.includes(t)))
+  // Build activity segments for client component
+  const barColorMap: Record<ChangeType, string> = {
+    new_products: "bg-primary",
+    price_drop: "bg-red-500",
+    price_increase: "bg-amber-500",
+    restock: "bg-blue-500",
+    sale: "bg-orange-500",
+    other: "bg-muted-foreground/30",
+  };
+  const activitySegments: ActivitySegment[] = (
+    Object.entries(changeBreakdown) as [ChangeType, number][]
+  ).map(([type, count]) => ({
+    type,
+    label: getChangeTypeLabel(type),
+    count,
+    colorClass: getChangeTypeColor(type),
+    barColor: barColorMap[type],
+  }));
+
+  // Top 15 by size
+  const topBySize = [...ALL_BRANDS]
+    .sort((a, b) => getProductCount(b) - getProductCount(a))
     .slice(0, 15);
-
-  // Top by size
-  const topBySize = [...ALL_BRANDS].sort((a, b) => getProductCount(b) - getProductCount(a)).slice(0, 12);
   const maxProducts = getProductCount(topBySize[0]);
+  const storeData: StoreBar[] = topBySize.map((b) => ({
+    name: b.name,
+    domain: b.domain,
+    slug: slugify(b.name),
+    products: b.products,
+    count: getProductCount(b),
+  }));
 
-  // Industry chart data
+  // Industry data
   const industryData = VERTICALS.map((v) => {
     const stats = getVerticalStats(v);
-    return { ...v, ...stats };
+    const top3 = getTopBrands(v, 3);
+    return { ...v, ...stats, top3 };
   }).sort((a, b) => b.total - a.total);
   const maxIndustryProducts = industryData[0]?.total || 1;
+
+  // Use cases
+  const useCases = [
+    {
+      icon: ShoppingBag,
+      title: "Brand Owners",
+      desc: "Monitor competitor pricing in real-time and react before your margins erode. Know the moment a rival launches, discounts, or restocks.",
+    },
+    {
+      icon: BarChart3,
+      title: "eCommerce Managers",
+      desc: "Benchmark your catalog against hundreds of stores. Track product launches across your category and spot gaps before competitors fill them.",
+    },
+    {
+      icon: Megaphone,
+      title: "Marketing Teams",
+      desc: "Detect competitor promotions and flash sales the instant they go live. Time your campaigns to capitalise on market shifts.",
+    },
+    {
+      icon: Users,
+      title: "Agencies",
+      desc: "Deliver competitive intelligence reports across multiple verticals. Impress clients with data they cannot get anywhere else.",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <div className="mx-auto max-w-6xl px-6 py-16">
-        {/* Header */}
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="text-sm font-medium uppercase tracking-widest text-primary">Live intelligence</p>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-              Shopify Market Dashboard
+
+      {/* ────────────────────── HERO ────────────────────── */}
+      <section className="relative overflow-hidden bg-dot-pattern mask-fade-b">
+        <div className="mx-auto max-w-5xl px-6 pb-20 pt-24 text-center">
+          <FadeInView>
+            <Badge variant="secondary" className="mb-4 text-xs">
+              Live intelligence — updated every hour
+            </Badge>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+              Real-time Shopify
+              <br />
+              market intelligence
             </h1>
-            <p className="mt-2 text-muted-foreground">
-              Real-time data across {totalBrands} brands and {VERTICALS.length} industries.
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+              Track pricing, product launches, and competitive movements across{" "}
+              <strong className="text-foreground">{totalBrands}+ brands</strong>,{" "}
+              <strong className="text-foreground">{VERTICALS.length} industries</strong>, and{" "}
+              <strong className="text-foreground">{TOTAL_PRODUCTS.toLocaleString()} products</strong>.
             </p>
-          </div>
-          <Link
-            href="/scraper"
-            className="inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground shadow-md shadow-primary/20 transition-all hover:brightness-110"
+
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Button asChild size="lg" className="h-12 rounded-xl gap-2 shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 hover:brightness-110">
+                <Link href="/scraper">
+                  Start tracking free
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="h-12 rounded-xl gap-2">
+                <Link href="/reports">
+                  <Download className="h-4 w-4" />
+                  Download reports
+                </Link>
+              </Button>
+            </div>
+          </FadeInView>
+
+          <MarketHeroClient
+            brandCount={totalBrands}
+            industryCount={VERTICALS.length}
+            productCount={TOTAL_PRODUCTS}
+          />
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-6xl px-6">
+        <Separator />
+
+        {/* ────────────────── ACTIVITY BREAKDOWN ────────────────── */}
+        <section className="py-16">
+          <FadeInView>
+            <div className="text-center">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+                Market activity at a glance
+              </h2>
+              <p className="mt-2 text-muted-foreground">
+                Live breakdown of the {totalChanges} tracked changes happening right now.
+              </p>
+            </div>
+          </FadeInView>
+          <FadeInView delay={0.15}>
+            <div className="mx-auto mt-8 max-w-3xl">
+              <MarketActivityBar segments={activitySegments} total={totalChanges} />
+            </div>
+          </FadeInView>
+        </section>
+
+        <Separator />
+
+        {/* ────────────────── INDUSTRY RANKINGS ────────────────── */}
+        <section className="py-16">
+          <FadeInView>
+            <div className="text-center">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+                {VERTICALS.length} industries. One dashboard.
+              </h2>
+              <p className="mt-2 text-muted-foreground">
+                Every vertical ranked by catalog size, with live brand coverage.
+              </p>
+            </div>
+          </FadeInView>
+
+          <StaggerContainer
+            className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+            staggerDelay={0.07}
           >
-            Track your competitors <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-
-        {/* Stats row */}
-        <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
-          {[
-            { value: totalBrands.toLocaleString(), label: "Brands tracked", sub: `across ${VERTICALS.length} industries` },
-            { value: TOTAL_PRODUCTS.toLocaleString(), label: "Products monitored", sub: "updated continuously" },
-            { value: String(recentChanges), label: "Changes (2h)", sub: "price + product updates" },
-            { value: `${changeBreakdown.price_drop}`, label: "Price drops", sub: "active right now" },
-          ].map((s) => (
-            <div key={s.label} className="rounded-xl border border-border p-4">
-              <p className="text-2xl font-bold">{s.value}</p>
-              <p className="text-xs font-medium">{s.label}</p>
-              <p className="text-[10px] text-muted-foreground">{s.sub}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Activity type breakdown — visual bar */}
-        <div className="mt-8 rounded-xl border border-border p-5">
-          <h2 className="text-sm font-semibold mb-4">Activity breakdown</h2>
-          <div className="flex h-4 w-full overflow-hidden rounded-full bg-muted">
-            {(Object.entries(changeBreakdown) as [ChangeType, number][])
-              .filter(([, count]) => count > 0)
-              .map(([type, count]) => (
-                <div
-                  key={type}
-                  className={`h-full transition-all ${
-                    type === "new_products" ? "bg-primary" :
-                    type === "price_drop" ? "bg-red-500" :
-                    type === "price_increase" ? "bg-amber-500" :
-                    type === "restock" ? "bg-blue-500" :
-                    type === "sale" ? "bg-orange-500" :
-                    "bg-muted-foreground/30"
-                  }`}
-                  style={{ width: `${(count / totalChanges) * 100}%` }}
-                  title={`${getChangeTypeLabel(type)}: ${count}`}
-                />
-              ))}
-          </div>
-          <div className="mt-3 flex flex-wrap gap-3">
-            {(Object.entries(changeBreakdown) as [ChangeType, number][])
-              .filter(([, count]) => count > 0)
-              .sort((a, b) => b[1] - a[1])
-              .map(([type, count]) => (
-                <span key={type} className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-medium ${getChangeTypeColor(type)}`}>
-                  {getChangeTypeLabel(type)}: {count}
-                </span>
-              ))}
-          </div>
-        </div>
-
-        <div className="mt-8 grid gap-8 lg:grid-cols-[1fr,1fr]">
-          {/* Left: Activity feed */}
-          <div>
-            <h2 className="text-sm font-semibold mb-4">Recent activity</h2>
-            <div className="space-y-1.5">
-              {recentActivity.map((brand) => {
-                const changeType = categoriseChange(brand.latestChange);
-                return (
-                  <Link
-                    key={brand.name}
-                    href={`/brands/${slugify(brand.name)}`}
-                    className="flex items-center justify-between rounded-xl border border-border/60 bg-background p-3 transition-colors hover:border-primary/20"
-                  >
-                    <div className="flex items-center gap-2.5">
-                      <BrandIcon name={brand.name} domain={brand.domain} size="sm" />
-                      <div>
-                        <p className="text-sm font-medium">{brand.name}</p>
-                        <p className="text-[10px] text-muted-foreground">{brand.latestChange}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className={`rounded-full px-2 py-0.5 text-[9px] font-medium ${getChangeTypeColor(changeType)}`}>
-                        {getChangeTypeLabel(changeType)}
-                      </span>
-                      <span className="text-[10px] text-muted-foreground">{brand.lastUpdate}</span>
-                    </div>
+            {industryData.map((v) => {
+              const pctOfMax = Math.round((v.total / maxIndustryProducts) * 100);
+              return (
+                <StaggerItem key={v.id}>
+                  <Link href={`/industries/${slugify(v.label)}`} className="block group">
+                    <Card className="h-full transition-colors hover:border-primary/30">
+                      <CardHeader className="pb-3">
+                        <CardTitle className="text-base group-hover:text-primary transition-colors">
+                          {v.label}
+                        </CardTitle>
+                        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                          <span>{v.brandCount} brands</span>
+                          <span>&middot;</span>
+                          <span>{v.total.toLocaleString()} products</span>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <Progress value={pctOfMax} className="h-2" />
+                        <div className="mt-3 flex items-center justify-between">
+                          <div className="flex -space-x-1.5">
+                            {v.top3.map((brand) => (
+                              <BrandIcon
+                                key={brand.name}
+                                name={brand.name}
+                                domain={brand.domain}
+                                size="sm"
+                                className="ring-2 ring-background"
+                              />
+                            ))}
+                          </div>
+                          <ArrowRight className="h-4 w-4 text-muted-foreground opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-0.5" />
+                        </div>
+                      </CardContent>
+                    </Card>
                   </Link>
-                );
-              })}
-            </div>
-          </div>
+                </StaggerItem>
+              );
+            })}
+          </StaggerContainer>
+        </section>
 
-          {/* Right: Charts */}
-          <div className="space-y-8">
-            {/* Industry size chart */}
-            <div>
-              <h2 className="text-sm font-semibold mb-4">Products by industry</h2>
-              <div className="space-y-2">
-                {industryData.map((v) => (
-                  <Link
-                    key={v.id}
-                    href={`/industries/${slugify(v.label)}`}
-                    className="group flex items-center gap-3"
-                  >
-                    <span className="w-28 shrink-0 truncate text-xs font-medium group-hover:text-primary transition-colors">
-                      {v.label}
-                    </span>
-                    <div className="flex-1 h-5 rounded-full bg-muted overflow-hidden">
-                      <div
-                        className="h-full rounded-full bg-primary/70 group-hover:bg-primary transition-colors"
-                        style={{ width: `${(v.total / maxIndustryProducts) * 100}%` }}
-                      />
-                    </div>
-                    <span className="w-16 text-right text-[10px] text-muted-foreground">
-                      {v.total.toLocaleString()}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
+        <Separator />
 
-            {/* Largest stores */}
-            <div>
-              <h2 className="text-sm font-semibold mb-4">Largest stores</h2>
-              <div className="space-y-1.5">
-                {topBySize.map((brand, i) => {
-                  const count = getProductCount(brand);
-                  return (
-                    <Link
-                      key={brand.name}
-                      href={`/brands/${slugify(brand.name)}`}
-                      className="group flex items-center gap-3"
-                    >
-                      <span className="w-5 text-right text-[10px] font-mono text-muted-foreground">{i + 1}</span>
-                      <BrandIcon name={brand.name} domain={brand.domain} size="sm" />
-                      <span className="w-32 shrink-0 truncate text-xs font-medium group-hover:text-primary transition-colors">{brand.name}</span>
-                      <div className="flex-1 h-3 rounded-full bg-muted overflow-hidden">
-                        <div
-                          className="h-full rounded-full bg-accent/70 group-hover:bg-accent transition-colors"
-                          style={{ width: `${(count / maxProducts) * 100}%` }}
-                        />
-                      </div>
-                      <span className="w-14 text-right text-[10px] text-muted-foreground">{brand.products}</span>
-                    </Link>
-                  );
-                })}
-              </div>
+        {/* ────────────────── LARGEST STORES ────────────────── */}
+        <section className="py-16">
+          <FadeInView>
+            <div className="text-center">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+                Largest stores we track
+              </h2>
+              <p className="mt-2 text-muted-foreground">
+                The top 15 Shopify stores by product catalog size, updated continuously.
+              </p>
             </div>
-          </div>
-        </div>
+          </FadeInView>
+          <FadeInView delay={0.1}>
+            <div className="mx-auto mt-8 max-w-3xl">
+              <LargestStoresChart stores={storeData} maxCount={maxProducts} />
+            </div>
+          </FadeInView>
+        </section>
 
-        {/* Use cases */}
-        <div className="mt-16">
-          <h2 className="text-center text-2xl font-bold tracking-tight">Who uses market intelligence?</h2>
-          <p className="mt-2 text-center text-muted-foreground">ShopiSpy powers competitive strategy for every type of ecommerce team.</p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { title: "Brand Owners", desc: "Monitor competitor pricing and react in real-time to stay competitive in your market." },
-              { title: "eCommerce Managers", desc: "Track product launches across your category and benchmark your catalog against rivals." },
-              { title: "Marketing Teams", desc: "Spot competitor promotions and sales before they impact your campaigns." },
-              { title: "Agencies", desc: "Provide clients with competitive intelligence reports across multiple industries." },
-            ].map((uc) => (
-              <div key={uc.title} className="rounded-xl border border-border p-5">
-                <h3 className="text-sm font-semibold">{uc.title}</h3>
-                <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{uc.desc}</p>
-              </div>
+        <Separator />
+
+        {/* ────────────────── USE CASES ────────────────── */}
+        <section className="py-16">
+          <FadeInView>
+            <div className="text-center">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+                Who uses market intelligence?
+              </h2>
+              <p className="mt-2 text-muted-foreground">
+                ShopiSpy powers competitive strategy for every type of ecommerce team.
+              </p>
+            </div>
+          </FadeInView>
+          <StaggerContainer
+            className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+            staggerDelay={0.08}
+          >
+            {useCases.map((uc) => (
+              <StaggerItem key={uc.title}>
+                <Card className="h-full">
+                  <CardHeader>
+                    <uc.icon className="h-8 w-8 text-primary" />
+                    <CardTitle className="text-base">{uc.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      {uc.desc}
+                    </p>
+                  </CardContent>
+                </Card>
+              </StaggerItem>
             ))}
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="mt-16 rounded-2xl border border-border bg-muted/20 p-8 text-center">
-          <h3 className="text-xl font-bold">Start tracking your competitors</h3>
-          <p className="mt-2 text-muted-foreground max-w-lg mx-auto">
-            Enter any Shopify store URL and get instant product data, price alerts, and competitive insights. Free plan available.
-          </p>
-          <div className="mt-5 flex justify-center gap-3">
-            <Link
-              href="/scraper"
-              className="inline-flex h-10 items-center justify-center gap-2 rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground shadow-md shadow-primary/20"
-            >
-              Try it free <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/compare"
-              className="inline-flex h-10 items-center justify-center rounded-xl border border-border px-5 text-sm font-medium transition-colors hover:bg-muted"
-            >
-              Compare brands
-            </Link>
-          </div>
-        </div>
+          </StaggerContainer>
+        </section>
       </div>
+
+      {/* ────────────────── CTA ────────────────── */}
+      <section className="px-6 py-24">
+        <FadeInView>
+          <div className="mx-auto max-w-4xl">
+            <div className="relative border-y border-border">
+              {/* Plus icons at corners */}
+              <PlusIcon className="-top-3 -left-3" />
+              <PlusIcon className="-top-3 -right-3" />
+              <PlusIcon className="-bottom-3 -left-3" />
+              <PlusIcon className="-bottom-3 -right-3" />
+
+              {/* Dashed center vertical line */}
+              <div className="absolute inset-y-0 left-1/2 -translate-x-px border-l border-dashed border-border" />
+
+              {/* Radial gradient background */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "radial-gradient(35% 80% at 25% 0%, hsl(var(--foreground) / .06), transparent)",
+                }}
+              />
+
+              {/* Content */}
+              <div className="relative px-8 py-16 text-center sm:px-16">
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                  Want to track YOUR competitors?
+                </h2>
+                <p className="mt-4 mx-auto max-w-xl text-lg text-muted-foreground">
+                  Enter any Shopify store URL and get instant product data, price
+                  alerts, and competitive insights. Free plan available.
+                </p>
+
+                <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="h-12 rounded-xl gap-2 shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 hover:brightness-110"
+                  >
+                    <Link href="/scraper" className="group">
+                      Start tracking for free
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                    </Link>
+                  </Button>
+                  <Button asChild variant="outline" size="lg" className="h-12 rounded-xl">
+                    <Link href="/compare">Compare brands</Link>
+                  </Button>
+                </div>
+
+                <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
+                  <span>No credit card required</span>
+                  <span className="hidden sm:inline">&middot;</span>
+                  <span>Free plan forever</span>
+                  <span className="hidden sm:inline">&middot;</span>
+                  <span>Cancel anytime</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </FadeInView>
+      </section>
+
       <Footer />
     </div>
   );
