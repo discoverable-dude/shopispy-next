@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/components/providers/AuthProvider";
 import { useTheme } from "next-themes";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 export function Header() {
   const pathname = usePathname();
@@ -15,17 +16,20 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
 
-  useEffect(() => { setMounted(true); }, []);
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    setMounted(true);
   }, []);
 
-  const logoSrc = mounted && resolvedTheme === "dark"
-    ? "/images/shopispy-logo-dark.png"
-    : "/images/shopispy-logo-light.png";
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 50);
+  });
+
+  const logoSrc =
+    mounted && resolvedTheme === "dark"
+      ? "/images/shopispy-logo-dark.png"
+      : "/images/shopispy-logo-light.png";
 
   const navLinks = user
     ? [
@@ -43,57 +47,108 @@ export function Header() {
         { href: "/pricing", label: "Pricing" },
       ];
 
-  const isActive = (href: string) => href === "/" ? pathname === "/" : pathname.startsWith(href);
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-all duration-200 ${
-        scrolled
-          ? "border-b border-border/60 bg-background/80 backdrop-blur-lg shadow-sm"
-          : "bg-background/60 backdrop-blur-sm"
-      }`}
-    >
-      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center">
-          <Image src={logoSrc} alt="ShopiSpy" width={120} height={30} className="h-7 w-auto" priority />
-        </Link>
-
-        {/* Desktop */}
-        <nav className="hidden items-center gap-1 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`rounded-md px-3 py-1.5 text-sm transition-colors ${
-                isActive(link.href)
-                  ? "font-medium text-foreground"
-                  : "text-muted-foreground hover:text-foreground"
+    <header className="sticky top-0 z-50 w-full">
+      <div className="flex justify-center py-2 px-4">
+        <motion.nav
+          initial={false}
+          animate={
+            scrolled
+              ? {
+                  maxWidth: 720,
+                  paddingTop: 6,
+                  paddingBottom: 6,
+                  paddingLeft: 16,
+                  paddingRight: 16,
+                  borderRadius: 18,
+                  boxShadow:
+                    "0 4px 24px -4px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04)",
+                }
+              : {
+                  maxWidth: 1280,
+                  paddingTop: 10,
+                  paddingBottom: 10,
+                  paddingLeft: 24,
+                  paddingRight: 24,
+                  borderRadius: 0,
+                  boxShadow: "0 0px 0px 0px rgba(0,0,0,0)",
+                }
+          }
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          className={`relative flex w-full items-center justify-between border border-transparent backdrop-blur-lg ${
+            scrolled
+              ? "border-border/60 bg-background/80"
+              : "bg-background/60"
+          }`}
+        >
+          {/* Logo — left */}
+          <Link href="/" className="relative z-10 flex shrink-0 items-center">
+            <Image
+              src={logoSrc}
+              alt="ShopiSpy"
+              width={120}
+              height={30}
+              className={`w-auto transition-all duration-200 ${
+                scrolled ? "h-6" : "h-7"
               }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-          {user ? (
-            <button
-              onClick={signOut}
-              className="ml-3 rounded-md border border-border px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Sign Out
-            </button>
-          ) : (
-            <Link
-              href="/scraper"
-              className="ml-3 rounded-md bg-primary px-3.5 py-1.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-            >
-              Get Started
-            </Link>
-          )}
-        </nav>
+              priority
+            />
+          </Link>
 
-        {/* Mobile toggle */}
-        <button className="md:hidden" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
-          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+          {/* Desktop nav — centered (absolute) */}
+          <div className="absolute inset-0 hidden items-center justify-center md:flex">
+            <div className="flex items-center gap-0.5">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`rounded-lg px-3 py-1.5 text-sm transition-colors ${
+                    isActive(link.href)
+                      ? "font-medium text-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA — right */}
+          <div className="relative z-10 hidden items-center md:flex">
+            {user ? (
+              <button
+                onClick={signOut}
+                className="rounded-lg border border-border px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Sign Out
+              </button>
+            ) : (
+              <Link
+                href="/scraper"
+                className="rounded-lg bg-primary px-3.5 py-1.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                Get Started
+              </Link>
+            )}
+          </div>
+
+          {/* Mobile toggle */}
+          <button
+            className="relative z-10 md:hidden"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Menu"
+          >
+            {mobileOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
+          </button>
+        </motion.nav>
       </div>
 
       {/* Mobile menu */}
@@ -106,7 +161,9 @@ export function Header() {
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
                 className={`rounded-md px-3 py-2 text-sm ${
-                  isActive(link.href) ? "font-medium text-foreground bg-muted" : "text-muted-foreground"
+                  isActive(link.href)
+                    ? "font-medium text-foreground bg-muted"
+                    : "text-muted-foreground"
                 }`}
               >
                 {link.label}
@@ -114,7 +171,10 @@ export function Header() {
             ))}
             {user ? (
               <button
-                onClick={() => { signOut(); setMobileOpen(false); }}
+                onClick={() => {
+                  signOut();
+                  setMobileOpen(false);
+                }}
                 className="mt-2 rounded-md border border-border px-3 py-2 text-sm text-muted-foreground"
               >
                 Sign Out
