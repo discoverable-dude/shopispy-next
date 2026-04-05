@@ -4,6 +4,9 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { FadeInView } from "@/components/motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const testimonials = [
   {
@@ -83,63 +86,69 @@ export function HomepageTestimonials() {
 
         <div className="relative mt-14">
           {/* Card */}
-          <div className="relative overflow-hidden rounded-xl border border-border/60 bg-background p-8 sm:p-10">
-            {/* Quote icon */}
-            <Quote className="absolute top-5 left-5 h-8 w-8 text-primary/15" />
+          <Card className="relative overflow-hidden rounded-xl border-border/60">
+            <CardContent className="p-8 sm:p-10">
+              {/* Quote icon */}
+              <Quote className="absolute top-5 left-5 h-8 w-8 text-primary/15" />
 
-            <AnimatePresence mode="wait" custom={direction}>
-              <motion.div
-                key={current}
-                custom={direction}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 0.35, ease: "easeInOut" }}
-              >
-                {/* Stars */}
-                <div className="flex justify-center gap-0.5">
-                  {[...Array(t.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-4 w-4 fill-amber-400 text-amber-400"
-                    />
-                  ))}
-                </div>
-
-                {/* Quote text */}
-                <p className="mt-6 text-center text-lg leading-relaxed text-foreground sm:text-xl">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-
-                {/* Avatar + info */}
-                <div className="mt-8 flex flex-col items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
-                    {t.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
+              <AnimatePresence mode="wait" custom={direction}>
+                <motion.div
+                  key={current}
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{ duration: 0.35, ease: "easeInOut" }}
+                >
+                  {/* Stars */}
+                  <div className="flex justify-center gap-0.5">
+                    {[...Array(t.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="h-4 w-4 fill-amber-400 text-amber-400"
+                      />
+                    ))}
                   </div>
-                  <div className="text-center">
-                    <p className="text-sm font-semibold">{t.name}</p>
-                    <p className="text-xs text-muted-foreground">
-                      {t.role}, {t.company}
-                    </p>
+
+                  {/* Quote text */}
+                  <p className="mt-6 text-center text-lg leading-relaxed text-foreground sm:text-xl">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+
+                  {/* Avatar + info */}
+                  <div className="mt-8 flex flex-col items-center gap-3">
+                    <Avatar className="h-11 w-11">
+                      <AvatarFallback className="bg-primary/10 text-sm font-semibold text-primary">
+                        {t.name
+                          .split(" ")
+                          .map((n) => n[0])
+                          .join("")}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div className="text-center">
+                      <p className="text-sm font-semibold">{t.name}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {t.role}, {t.company}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
+                </motion.div>
+              </AnimatePresence>
+            </CardContent>
+          </Card>
 
           {/* Navigation arrows */}
           <div className="mt-6 flex items-center justify-center gap-4">
-            <button
+            <Button
+              variant="outline"
+              size="icon"
+              className="h-9 w-9 rounded-full"
               onClick={() => paginate(-1)}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-border transition-colors hover:bg-muted"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="h-4 w-4" />
-            </button>
+            </Button>
 
             {/* Dot indicators */}
             <div className="flex items-center gap-2">
@@ -159,13 +168,15 @@ export function HomepageTestimonials() {
               ))}
             </div>
 
-            <button
+            <Button
+              variant="outline"
+              size="icon"
+              className="h-9 w-9 rounded-full"
               onClick={() => paginate(1)}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-border transition-colors hover:bg-muted"
               aria-label="Next testimonial"
             >
               <ChevronRight className="h-4 w-4" />
-            </button>
+            </Button>
           </div>
         </div>
       </div>

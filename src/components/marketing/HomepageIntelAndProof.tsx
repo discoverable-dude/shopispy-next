@@ -6,6 +6,9 @@ import { Star, Shirt, Sparkles, Coffee, Home, Cpu, Dumbbell, Gem, Bike, Dog, Bab
 import { VERTICALS } from "@/lib/brands";
 import { FadeInView } from "@/components/motion";
 import { BrandIcon } from "@/components/marketing/BrandIcon";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 const VERTICAL_ICONS: Record<string, React.ReactNode> = {
   fashion: <Shirt className="h-3 w-3" />,
@@ -57,22 +60,23 @@ export function HomepageIntelAndProof() {
           <div>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <h3 className="text-sm font-semibold">Live brand tracking</h3>
-              <div className="flex flex-wrap gap-1">
+              <ToggleGroup
+                type="single"
+                value={activeVertical}
+                onValueChange={(val) => { if (val) setActiveVertical(val); }}
+                className="flex flex-wrap gap-1"
+              >
                 {VERTICALS.map((v) => (
-                  <button
+                  <ToggleGroupItem
                     key={v.id}
-                    onClick={() => setActiveVertical(v.id)}
-                    className={`flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-medium transition-all ${
-                      activeVertical === v.id
-                        ? "bg-foreground text-background"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                    }`}
+                    value={v.id}
+                    className="flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-medium h-auto data-[state=on]:bg-foreground data-[state=on]:text-background"
                   >
                     {VERTICAL_ICONS[v.id]}
                     {v.label}
-                  </button>
+                  </ToggleGroupItem>
                 ))}
-              </div>
+              </ToggleGroup>
             </div>
 
             <AnimatePresence mode="wait">
@@ -85,22 +89,24 @@ export function HomepageIntelAndProof() {
                 className="mt-4 space-y-2"
               >
                 {displayBrands.map((brand) => (
-                  <div
+                  <Card
                     key={brand.name}
-                    className="group flex items-center justify-between rounded-xl border border-border/60 bg-background p-4 transition-colors hover:border-primary/20"
+                    className="group rounded-xl border-border/60 transition-colors hover:border-primary/20"
                   >
-                    <div className="flex items-center gap-3">
-                      <BrandIcon name={brand.name} domain={brand.domain} size="md" />
-                      <div>
-                        <p className="text-sm font-medium">{brand.name}</p>
-                        <p className="text-[10px] text-muted-foreground">{brand.products} products</p>
+                    <CardContent className="flex items-center justify-between p-4">
+                      <div className="flex items-center gap-3">
+                        <BrandIcon name={brand.name} domain={brand.domain} size="md" />
+                        <div>
+                          <p className="text-sm font-medium">{brand.name}</p>
+                          <p className="text-[10px] text-muted-foreground">{brand.products} products</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-xs font-medium">{brand.latestChange}</p>
-                      <p className="text-[10px] text-muted-foreground">{brand.lastUpdate} ago</p>
-                    </div>
-                  </div>
+                      <div className="text-right">
+                        <p className="text-xs font-medium">{brand.latestChange}</p>
+                        <p className="text-[10px] text-muted-foreground">{brand.lastUpdate} ago</p>
+                      </div>
+                    </CardContent>
+                  </Card>
                 ))}
               </motion.div>
             </AnimatePresence>
@@ -114,28 +120,32 @@ export function HomepageIntelAndProof() {
           <div className="space-y-4">
             <h3 className="text-sm font-semibold">What teams say</h3>
             {testimonials.map((t) => (
-              <div
+              <Card
                 key={t.name}
-                className="rounded-xl border border-border/60 bg-background p-5 transition-colors hover:border-primary/10"
+                className="rounded-xl border-border/60 transition-colors hover:border-primary/10"
               >
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-3 w-3 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div className="mt-4 flex items-center gap-2.5">
-                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10 text-[10px] font-semibold text-primary">
-                    {t.name.split(" ").map((n) => n[0]).join("")}
+                <CardContent className="p-5">
+                  <div className="flex gap-0.5 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-3 w-3 fill-amber-400 text-amber-400" />
+                    ))}
                   </div>
-                  <div>
-                    <p className="text-xs font-medium">{t.name}</p>
-                    <p className="text-[10px] text-muted-foreground">{t.role}, {t.company}</p>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                  <div className="mt-4 flex items-center gap-2.5">
+                    <Avatar className="h-7 w-7">
+                      <AvatarFallback className="bg-primary/10 text-[10px] font-semibold text-primary">
+                        {t.name.split(" ").map((n) => n[0]).join("")}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="text-xs font-medium">{t.name}</p>
+                      <p className="text-[10px] text-muted-foreground">{t.role}, {t.company}</p>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

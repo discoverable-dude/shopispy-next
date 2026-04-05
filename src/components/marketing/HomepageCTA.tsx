@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight, Plus } from "lucide-react";
 import { FadeInView } from "@/components/motion";
+import { Button } from "@/components/ui/button";
 
 function PlusIcon({ className }: { className?: string }) {
   return (
@@ -49,19 +50,17 @@ export function HomepageCTA() {
               </p>
 
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <Link
-                  href="/scraper"
-                  className="group inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-primary px-6 text-sm font-medium text-primary-foreground shadow-md shadow-primary/20 transition-all hover:shadow-lg hover:shadow-primary/30 hover:brightness-110"
-                >
-                  Start tracking for free
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                </Link>
-                <Link
-                  href="/pricing"
-                  className="inline-flex h-12 items-center justify-center rounded-xl border border-border px-6 text-sm font-medium transition-colors hover:bg-muted"
-                >
-                  View pricing
-                </Link>
+                <Button asChild size="lg" className="h-12 rounded-xl gap-2 shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 hover:brightness-110">
+                  <Link href="/scraper" className="group">
+                    Start tracking for free
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="h-12 rounded-xl">
+                  <Link href="/pricing">
+                    View pricing
+                  </Link>
+                </Button>
               </div>
 
               <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground">

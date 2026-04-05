@@ -4,6 +4,10 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Search, Database, Bell } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
 
 const liveFeedItems = [
   { text: "Gymshark dropped prices on 12 items", time: "2m ago" },
@@ -55,7 +59,7 @@ const steps = [
           { text: "3 new products added", color: "bg-primary" },
         ].map((a) => (
           <div key={a.text} className="flex items-center gap-2 rounded-md border border-border bg-background px-2.5 py-1.5">
-            <span className={`h-1.5 w-1.5 rounded-full ${a.color}`} />
+            <Badge variant="secondary" className="h-1.5 w-1.5 rounded-full p-0 border-0" style={{ backgroundColor: a.color === "bg-amber-500" ? "rgb(245 158 11)" : "hsl(var(--primary))" }} />
             <span className="text-[10px]">{a.text}</span>
           </div>
         ))}
@@ -87,21 +91,23 @@ export function HomepageHero() {
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mb-6 inline-flex items-center gap-3 rounded-full border border-border bg-background/80 px-3.5 py-1.5 shadow-sm backdrop-blur-sm"
+              className="mb-6 inline-flex"
             >
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
-              </span>
-              <motion.span
-                key={feedIndex}
-                initial={{ opacity: 0, y: 6 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-xs text-muted-foreground"
-              >
-                {liveFeedItems[feedIndex].text}
-                <span className="ml-1.5 text-muted-foreground/40">{liveFeedItems[feedIndex].time}</span>
-              </motion.span>
+              <Badge variant="secondary" className="inline-flex items-center gap-3 rounded-full border border-border bg-background/80 px-3.5 py-1.5 shadow-sm backdrop-blur-sm font-normal">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+                </span>
+                <motion.span
+                  key={feedIndex}
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-xs text-muted-foreground"
+                >
+                  {liveFeedItems[feedIndex].text}
+                  <span className="ml-1.5 text-muted-foreground/40">{liveFeedItems[feedIndex].time}</span>
+                </motion.span>
+              </Badge>
             </motion.div>
 
             <motion.h1
@@ -131,19 +137,17 @@ export function HomepageHero() {
               transition={{ duration: 0.5, delay: 0.25 }}
               className="mt-7 flex flex-col gap-3 sm:flex-row"
             >
-              <Link
-                href="/scraper"
-                className="group inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground shadow-md shadow-primary/20 transition-all hover:shadow-lg hover:shadow-primary/30 hover:brightness-110"
-              >
-                Try it free
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </Link>
-              <Link
-                href="/pricing"
-                className="inline-flex h-11 items-center justify-center rounded-xl border border-border px-5 text-sm font-medium transition-colors hover:bg-muted"
-              >
-                View pricing
-              </Link>
+              <Button asChild className="h-11 rounded-xl gap-2 shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 hover:brightness-110">
+                <Link href="/scraper" className="group">
+                  Try it free
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="h-11 rounded-xl">
+                <Link href="/pricing">
+                  View pricing
+                </Link>
+              </Button>
             </motion.div>
 
             <motion.p
@@ -161,67 +165,70 @@ export function HomepageHero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-12 rounded-2xl border border-border bg-background/80 p-6 shadow-lg shadow-black/[0.03] backdrop-blur-sm lg:mt-12"
           >
-            <p className="text-[10px] font-medium uppercase tracking-widest text-primary mb-4">How it works</p>
+            <Card className="mt-12 rounded-2xl bg-background/80 shadow-lg shadow-black/[0.03] backdrop-blur-sm lg:mt-12">
+              <CardContent className="p-6">
+                <p className="text-[10px] font-medium uppercase tracking-widest text-primary mb-4">How it works</p>
 
-            <div className="space-y-1">
-              {steps.map((step, index) => (
-                <button
-                  key={step.number}
-                  onClick={() => setActiveStep(index)}
-                  className={`w-full rounded-xl px-3.5 py-3 text-left transition-all ${
-                    activeStep === index
-                      ? "border border-primary/20 bg-primary/5"
-                      : "border border-transparent hover:bg-muted/30"
-                  }`}
-                >
-                  <div className="flex items-start gap-3">
-                    <div className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs transition-colors ${
-                      activeStep === index
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-muted text-muted-foreground"
-                    }`}>
-                      <step.icon className="h-3.5 w-3.5" strokeWidth={1.5} />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-2">
-                        <span className="text-[9px] font-mono text-muted-foreground">{step.number}</span>
-                        <h3 className="text-xs font-semibold">{step.title}</h3>
+                <div className="space-y-1">
+                  {steps.map((step, index) => (
+                    <button
+                      key={step.number}
+                      onClick={() => setActiveStep(index)}
+                      className={`w-full rounded-xl px-3.5 py-3 text-left transition-all ${
+                        activeStep === index
+                          ? "border border-primary/20 bg-primary/5"
+                          : "border border-transparent hover:bg-muted/30"
+                      }`}
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs transition-colors ${
+                          activeStep === index
+                            ? "bg-primary text-primary-foreground"
+                            : "bg-muted text-muted-foreground"
+                        }`}>
+                          <step.icon className="h-3.5 w-3.5" strokeWidth={1.5} />
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <div className="flex items-center gap-2">
+                            <span className="text-[9px] font-mono text-muted-foreground">{step.number}</span>
+                            <h3 className="text-xs font-semibold">{step.title}</h3>
+                          </div>
+                          <p className="mt-0.5 text-[11px] leading-relaxed text-muted-foreground">{step.description}</p>
+
+                          <AnimatePresence>
+                            {activeStep === index && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                exit={{ opacity: 0, height: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="mt-2.5"
+                              >
+                                {step.visual}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
                       </div>
-                      <p className="mt-0.5 text-[11px] leading-relaxed text-muted-foreground">{step.description}</p>
 
-                      <AnimatePresence>
-                        {activeStep === index && (
+                      {/* Progress bar */}
+                      {activeStep === index && (
+                        <div className="mt-2 ml-10 h-0.5 rounded-full bg-primary/10 overflow-hidden">
                           <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="mt-2.5"
-                          >
-                            {step.visual}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  </div>
-
-                  {/* Progress bar */}
-                  {activeStep === index && (
-                    <div className="mt-2 ml-10 h-0.5 rounded-full bg-primary/10 overflow-hidden">
-                      <motion.div
-                        className="h-full bg-primary"
-                        initial={{ width: "0%" }}
-                        animate={{ width: "100%" }}
-                        transition={{ duration: 4, ease: "linear" }}
-                        key={`prog-${index}-${activeStep}`}
-                      />
-                    </div>
-                  )}
-                </button>
-              ))}
-            </div>
+                            className="h-full bg-primary"
+                            initial={{ width: "0%" }}
+                            animate={{ width: "100%" }}
+                            transition={{ duration: 4, ease: "linear" }}
+                            key={`prog-${index}-${activeStep}`}
+                          />
+                        </div>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </motion.div>
         </div>
       </div>

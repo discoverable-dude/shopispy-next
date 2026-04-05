@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Bell, TrendingUp, Download, BarChart3, Zap, ArrowRight } from "lucide-react";
 import { FadeInView } from "@/components/motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const features = [
   {
@@ -129,28 +130,32 @@ export function HomepageFeatures() {
               variants={itemVariants}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className={`group relative overflow-hidden rounded-2xl border border-border/60 bg-background p-6 transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 ${feature.span}`}
+              className={feature.span}
             >
-              {/* Hover glow */}
-              <AnimatePresence>
-                {hoveredIndex === index && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-accent/[0.02]"
-                  />
-                )}
-              </AnimatePresence>
+              <Card className="group relative h-full overflow-hidden rounded-2xl border-border/60 transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5">
+                {/* Hover glow */}
+                <AnimatePresence>
+                  {hoveredIndex === index && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-accent/[0.02]"
+                    />
+                  )}
+                </AnimatePresence>
 
-              <div className="relative">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-muted/50 text-primary transition-colors group-hover:border-primary/30 group-hover:bg-primary/10">
-                  <feature.icon className="h-5 w-5" strokeWidth={1.5} />
-                </div>
-                <h3 className="mt-4 text-sm font-semibold">{feature.title}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{feature.description}</p>
-                {feature.visual}
-              </div>
+                <CardHeader className="relative pb-0">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-muted/50 text-primary transition-colors group-hover:border-primary/30 group-hover:bg-primary/10">
+                    <feature.icon className="h-5 w-5" strokeWidth={1.5} />
+                  </div>
+                  <CardTitle className="text-sm font-semibold">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="relative">
+                  <p className="text-sm leading-relaxed text-muted-foreground">{feature.description}</p>
+                  {feature.visual}
+                </CardContent>
+              </Card>
             </motion.div>
           ))}
         </motion.div>

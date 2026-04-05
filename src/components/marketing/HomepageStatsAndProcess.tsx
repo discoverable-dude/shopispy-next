@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Search, Database, Bell } from "lucide-react";
 import { FadeInView } from "@/components/motion";
 import { ALL_BRANDS, TOTAL_PRODUCTS, VERTICALS } from "@/lib/brands";
+import { Card, CardContent } from "@/components/ui/card";
 
 function Counter({ end, suffix = "" }: { end: number; suffix?: string }) {
   const ref = useRef(null);
@@ -107,12 +108,14 @@ export function HomepageStatsAndProcess() {
                   { value: VERTICALS.length, suffix: " verticals", label: "Industries covered" },
                   { value: 99, suffix: ".9%", label: "Uptime SLA" },
                 ].map((stat) => (
-                  <div key={stat.label} className="rounded-xl border border-border/60 bg-muted/20 p-4">
-                    <p className="text-2xl font-bold tracking-tight">
-                      <Counter end={stat.value} suffix={stat.suffix} />
-                    </p>
-                    <p className="mt-0.5 text-xs text-muted-foreground">{stat.label}</p>
-                  </div>
+                  <Card key={stat.label} className="rounded-xl border-border/60 bg-muted/20">
+                    <CardContent className="p-4">
+                      <p className="text-2xl font-bold tracking-tight">
+                        <Counter end={stat.value} suffix={stat.suffix} />
+                      </p>
+                      <p className="mt-0.5 text-xs text-muted-foreground">{stat.label}</p>
+                    </CardContent>
+                  </Card>
                 ))}
               </div>
             </div>
