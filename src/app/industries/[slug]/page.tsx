@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
+import { CheckCircle2 } from "lucide-react";
 import { VERTICALS } from "@/lib/brands";
 import {
   getVerticalBySlug,
@@ -142,6 +143,70 @@ export default async function IndustryPage({
           <section className="mb-16">
             <IndustryStatsClient stats={statsData} />
           </section>
+
+          {/* ── Why Track Competitors ── */}
+          <FadeInView>
+            <section className="mb-16">
+              <div className="grid gap-8 md:grid-cols-2">
+                <div>
+                  <h2 className="mb-4 text-xl font-bold tracking-tight">
+                    Why track {vertical.label} competitors?
+                  </h2>
+                  <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
+                    The {vertical.label} market on Shopify is one of the most competitive. With{" "}
+                    <strong className="text-foreground">{stats.brandCount} brands</strong> actively
+                    updating their catalogs, prices shift daily and new products launch weekly.
+                    Without intelligence, you&apos;re flying blind.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2.5 text-sm">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                      <span>Know when competitors drop prices before your customers do</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-sm">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                      <span>Discover new product launches within hours of going live</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-sm">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                      <span>Benchmark your catalog size and pricing against the top performers</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex items-center">
+                  <Card className="w-full bg-gradient-to-br from-green-500/5 to-transparent">
+                    <CardContent className="p-6 text-center">
+                      <p className="text-4xl font-bold tracking-tight text-foreground">
+                        {stats.recentlyUpdated}
+                      </p>
+                      <p className="mt-1 text-sm font-medium text-muted-foreground">
+                        brands updated in the last 3 hours
+                      </p>
+                      <Separator className="my-4" />
+                      <p className="mb-3 text-sm text-muted-foreground">
+                        That&apos;s{" "}
+                        <strong className="text-foreground">
+                          {stats.brandCount > 0
+                            ? Math.round((stats.recentlyUpdated / stats.brandCount) * 100)
+                            : 0}
+                          %
+                        </strong>{" "}
+                        of all {vertical.label} brands we track
+                      </p>
+                      <Progress
+                        value={
+                          stats.brandCount > 0
+                            ? Math.round((stats.recentlyUpdated / stats.brandCount) * 100)
+                            : 0
+                        }
+                        className="h-3"
+                      />
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </section>
+          </FadeInView>
 
           {/* ── Top 10 Ranked List ── */}
           <FadeInView>

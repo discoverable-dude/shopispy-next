@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Plus, ShoppingBag, BarChart3, Megaphone, Users, Download } from "lucide-react";
+import { ArrowRight, Plus, ShoppingBag, BarChart3, Megaphone, Users, Download, Zap, TrendingUp, Eye } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BrandIcon } from "@/components/marketing/BrandIcon";
@@ -172,6 +172,63 @@ export default function MarketPage() {
       <div className="mx-auto max-w-6xl px-6">
         <Separator />
 
+        {/* ────────────────── WHY MARKET INTELLIGENCE ────────────────── */}
+        <section className="py-16">
+          <FadeInView>
+            <div className="text-center">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+                Why market intelligence matters
+              </h2>
+              <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
+                In ecommerce, the brands that move first win. Here&apos;s how real-time data changes the game.
+              </p>
+            </div>
+          </FadeInView>
+          <StaggerContainer className="mt-10 grid gap-4 sm:grid-cols-3" staggerDelay={0.08}>
+            <StaggerItem>
+              <Card className="h-full bg-gradient-to-br from-red-500/5 to-transparent">
+                <CardHeader>
+                  <Zap className="h-8 w-8 text-red-500" />
+                  <CardTitle className="text-base">React before your competitors</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    By the time you notice a competitor&apos;s price change manually, they&apos;ve already captured your customers. Real-time intelligence means you see changes within hours, not weeks.
+                  </p>
+                </CardContent>
+              </Card>
+            </StaggerItem>
+            <StaggerItem>
+              <Card className="h-full bg-gradient-to-br from-primary/5 to-transparent">
+                <CardHeader>
+                  <TrendingUp className="h-8 w-8 text-primary" />
+                  <CardTitle className="text-base">Data-driven pricing decisions</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    Stop guessing what to charge. With pricing data from {totalBrands}+ brands across {VERTICALS.length} industries, you can benchmark your pricing against the market — not just your gut feeling.
+                  </p>
+                </CardContent>
+              </Card>
+            </StaggerItem>
+            <StaggerItem>
+              <Card className="h-full bg-gradient-to-br from-blue-500/5 to-transparent">
+                <CardHeader>
+                  <Eye className="h-8 w-8 text-blue-500" />
+                  <CardTitle className="text-base">Spot opportunities others miss</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    New product launches, stockouts, seasonal sales — every competitor move is a potential opportunity. ShopiSpy surfaces these signals so you can act on them first.
+                  </p>
+                </CardContent>
+              </Card>
+            </StaggerItem>
+          </StaggerContainer>
+        </section>
+
+        <Separator />
+
         {/* ────────────────── ACTIVITY BREAKDOWN ────────────────── */}
         <section className="py-16">
           <FadeInView>
@@ -179,8 +236,8 @@ export default function MarketPage() {
               <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
                 Market activity at a glance
               </h2>
-              <p className="mt-2 text-muted-foreground">
-                Live breakdown of the {totalChanges} tracked changes happening right now.
+              <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
+                Right now, across our database of {totalBrands} brands, here&apos;s what&apos;s happening in the Shopify market:
               </p>
             </div>
           </FadeInView>

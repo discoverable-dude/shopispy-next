@@ -170,6 +170,52 @@ export default async function BrandPage({
             </section>
           </FadeInView>
 
+          {/* ── Why Track This Brand ── */}
+          <FadeInView>
+            <section className="mb-16">
+              <h2 className="mb-4 text-xl font-bold tracking-tight">
+                Why track {brand.name}?
+              </h2>
+              <Card className="bg-gradient-to-br from-primary/5 to-transparent">
+                <CardContent className="p-6">
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    With <strong className="text-foreground">{brand.products}</strong> products in their catalog,{" "}
+                    <strong className="text-foreground">{brand.name}</strong> is{" "}
+                    {productCount >= verticalStats.avg
+                      ? "one of the larger"
+                      : "a focused"}{" "}
+                    stores in {brand.vertical.label}. Tracking them means you&apos;ll know the moment they change a price, launch a product, or run a promotion — giving you hours or days of lead time to react.
+                  </p>
+                  <Separator className="my-4" />
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="rounded-lg border border-border bg-background/50 p-4">
+                      <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                        {brand.name} vs {brand.vertical.label} average
+                      </p>
+                      <p className="mt-2 text-lg font-bold tabular-nums">
+                        {brand.products}{" "}
+                        <span className="text-sm font-normal text-muted-foreground">
+                          vs {verticalStats.avg.toLocaleString()} products
+                        </span>
+                      </p>
+                    </div>
+                    <div className="rounded-lg border border-border bg-background/50 p-4">
+                      <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                        Last activity
+                      </p>
+                      <p className="mt-2 text-lg font-bold tabular-nums">
+                        {brand.lastUpdate} ago
+                      </p>
+                      <p className="mt-0.5 text-xs text-muted-foreground">
+                        {brand.latestChange}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </section>
+          </FadeInView>
+
           {/* ── What You'll Get ── */}
           <FadeInView>
             <section className="mb-16">
