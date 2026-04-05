@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, ArrowRight, Package, Clock, Tag, BarChart3 } from "lucide-react";
 import { ALL_BRANDS, VERTICALS, type Brand } from "@/lib/brands";
 import { slugify, getProductCount, categoriseChange, getChangeTypeColor, getChangeTypeLabel } from "@/lib/brandUtils";
+import { BrandIcon } from "@/components/marketing/BrandIcon";
 
 export function ComparisonTool() {
   const [query, setQuery] = useState("");
@@ -79,9 +80,7 @@ export function ComparisonTool() {
                     className="flex w-full items-center justify-between px-4 py-2.5 text-left text-sm transition-colors hover:bg-muted first:rounded-t-xl last:rounded-b-xl"
                   >
                     <div className="flex items-center gap-2.5">
-                      <div className="flex h-7 w-7 items-center justify-center rounded-md border border-border bg-muted/40 text-[10px] font-bold text-primary">
-                        {brand.name.charAt(0)}
-                      </div>
+                      <BrandIcon name={brand.name} domain={brand.domain} size="sm" />
                       <div>
                         <p className="font-medium">{brand.name}</p>
                         <p className="text-[10px] text-muted-foreground">{brand.domain}</p>

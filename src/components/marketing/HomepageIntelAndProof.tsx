@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Star, Shirt, Sparkles, Coffee, Home, Cpu } from "lucide-react";
+import { Star, Shirt, Sparkles, Coffee, Home, Cpu, Dumbbell, Gem, Bike, Dog, Baby } from "lucide-react";
 import { VERTICALS } from "@/lib/brands";
 import { FadeInView } from "@/components/motion";
+import { BrandIcon } from "@/components/marketing/BrandIcon";
 
 const VERTICAL_ICONS: Record<string, React.ReactNode> = {
   fashion: <Shirt className="h-3 w-3" />,
@@ -12,6 +13,12 @@ const VERTICAL_ICONS: Record<string, React.ReactNode> = {
   home: <Home className="h-3 w-3" />,
   food: <Coffee className="h-3 w-3" />,
   electronics: <Cpu className="h-3 w-3" />,
+  sports: <Dumbbell className="h-3 w-3" />,
+  kids: <Baby className="h-3 w-3" />,
+  pets: <Dog className="h-3 w-3" />,
+  fitness: <Dumbbell className="h-3 w-3" />,
+  jewellery: <Gem className="h-3 w-3" />,
+  mobility: <Bike className="h-3 w-3" />,
 };
 
 const testimonials = [
@@ -83,9 +90,7 @@ export function HomepageIntelAndProof() {
                     className="group flex items-center justify-between rounded-xl border border-border/60 bg-background p-4 transition-colors hover:border-primary/20"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-muted/40 text-xs font-bold text-primary">
-                        {brand.name.charAt(0)}
-                      </div>
+                      <BrandIcon name={brand.name} domain={brand.domain} size="md" />
                       <div>
                         <p className="text-sm font-medium">{brand.name}</p>
                         <p className="text-[10px] text-muted-foreground">{brand.products} products</p>
