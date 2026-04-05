@@ -37,9 +37,10 @@ export function Header() {
       ]
     : [
         { href: "/", label: "Home" },
-        { href: "/scraper", label: "Try It Free" },
+        { href: "/market", label: "Market" },
+        { href: "/industries", label: "Industries" },
+        { href: "/compare", label: "Compare" },
         { href: "/pricing", label: "Pricing" },
-        { href: "/faq", label: "FAQ" },
       ];
 
   const isActive = (href: string) => href === "/" ? pathname === "/" : pathname.startsWith(href);
