@@ -2,23 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
-import { ArrowRight, Search, Bell, TrendingDown, Package } from "lucide-react";
-
-function AnimatedNumber({ value, duration = 2 }: { value: number; duration?: number }) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    let start = 0;
-    const step = value / (duration * 60);
-    const timer = setInterval(() => {
-      start += step;
-      if (start >= value) { setCount(value); clearInterval(timer); }
-      else setCount(Math.floor(start));
-    }, 1000 / 60);
-    return () => clearInterval(timer);
-  }, [value, duration]);
-  return <>{count.toLocaleString()}</>;
-}
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Search, Database, Bell } from "lucide-react";
 
 const liveFeedItems = [
   { text: "Gymshark dropped prices on 12 items", time: "2m ago" },
@@ -28,36 +13,77 @@ const liveFeedItems = [
   { text: "Glossier launched new collection", time: "15m ago" },
 ];
 
+const steps = [
+  {
+    icon: Search, number: "01", title: "Paste a store URL",
+    description: "Enter any Shopify store. We detect it instantly — no setup needed.",
+    visual: (
+      <div className="flex items-center gap-2 rounded-lg border border-border bg-background px-3 py-2">
+        <Search className="h-3.5 w-3.5 text-muted-foreground" />
+        <span className="text-xs text-muted-foreground">gymshark.com</span>
+      </div>
+    ),
+  },
+  {
+    icon: Database, number: "02", title: "We scan everything",
+    description: "Full catalog — products, prices, variants, images — in under 10 seconds.",
+    visual: (
+      <div className="space-y-2">
+        <div className="flex justify-between text-[10px]">
+          <span>Scanning...</span>
+          <span className="text-primary font-mono">2,847 found</span>
+        </div>
+        <div className="h-1.5 rounded-full bg-border overflow-hidden">
+          <motion.div
+            initial={{ width: "0%" }}
+            whileInView={{ width: "100%" }}
+            viewport={{ once: true }}
+            transition={{ duration: 2, ease: "easeOut" }}
+            className="h-full rounded-full bg-primary"
+          />
+        </div>
+      </div>
+    ),
+  },
+  {
+    icon: Bell, number: "03", title: "Track & get alerted",
+    description: "Save stores. Get price alerts via email, Slack, or webhook.",
+    visual: (
+      <div className="space-y-1.5">
+        {[
+          { text: "Price drop: Crop Top -12%", color: "bg-amber-500" },
+          { text: "3 new products added", color: "bg-primary" },
+        ].map((a) => (
+          <div key={a.text} className="flex items-center gap-2 rounded-md border border-border bg-background px-2.5 py-1.5">
+            <span className={`h-1.5 w-1.5 rounded-full ${a.color}`} />
+            <span className="text-[10px]">{a.text}</span>
+          </div>
+        ))}
+      </div>
+    ),
+  },
+];
+
 export function HomepageHero() {
   const [feedIndex, setFeedIndex] = useState(0);
+  const [activeStep, setActiveStep] = useState(0);
+
   useEffect(() => {
-    const timer = setInterval(() => setFeedIndex((i) => (i + 1) % liveFeedItems.length), 3000);
-    return () => clearInterval(timer);
+    const feedTimer = setInterval(() => setFeedIndex((i) => (i + 1) % liveFeedItems.length), 3000);
+    const stepTimer = setInterval(() => setActiveStep((s) => (s + 1) % steps.length), 4000);
+    return () => { clearInterval(feedTimer); clearInterval(stepTimer); };
   }, []);
 
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const springX = useSpring(mouseX, { stiffness: 50, damping: 20 });
-  const springY = useSpring(mouseY, { stiffness: 50, damping: 20 });
-  const rotateX = useTransform(springY, [-300, 300], [3, -3]);
-  const rotateY = useTransform(springX, [-300, 300], [-3, 3]);
-
   return (
-    <section
-      className="relative overflow-hidden pb-8 pt-20 sm:pt-28"
-      onMouseMove={(e) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        mouseX.set(e.clientX - rect.left - rect.width / 2);
-        mouseY.set(e.clientY - rect.top - rect.height / 2);
-      }}
-    >
+    <section className="relative overflow-hidden pb-12 pt-20 sm:pt-28">
       <div className="absolute inset-0 bg-dot-pattern mask-fade-b" />
       <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-primary/[0.04] blur-[100px]" />
 
       <div className="relative mx-auto max-w-6xl px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr,1fr] lg:gap-16">
-          {/* Left */}
+        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+          {/* ─── Left: Copy ─── */}
           <div>
+            {/* Live ticker */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -130,76 +156,71 @@ export function HomepageHero() {
             </motion.p>
           </div>
 
-          {/* Right: Interactive mini-dashboard card */}
+          {/* ─── Right: How It Works stepper ─── */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            style={{ rotateX, rotateY, perspective: 1200 }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="rounded-2xl border border-border bg-background/80 p-6 shadow-lg shadow-black/[0.03] backdrop-blur-sm"
           >
-            <div className="relative rounded-2xl border border-border bg-background p-5 shadow-xl shadow-black/[0.04]">
-              <div className="absolute inset-0 rounded-2xl animate-shimmer" />
+            <p className="text-[10px] font-medium uppercase tracking-widest text-primary mb-4">How it works</p>
 
-              <div className="relative space-y-3">
-                {/* Search mock */}
-                <div className="flex items-center gap-2 rounded-lg border border-border bg-muted/40 px-3 py-2">
-                  <Search className="h-3.5 w-3.5 text-muted-foreground" />
-                  <span className="text-xs text-muted-foreground">gymshark.com</span>
-                  <span className="ml-auto rounded-md bg-primary/10 px-2 py-0.5 text-[10px] font-medium text-primary">Live</span>
-                </div>
-
-                {/* Stats */}
-                <div className="grid grid-cols-3 gap-2">
-                  {[
-                    { label: "Products", value: 2847 },
-                    { label: "Avg Price", value: 42, prefix: "\u00a3" },
-                    { label: "New Today", value: 7 },
-                  ].map((s) => (
-                    <div key={s.label} className="rounded-lg border border-border bg-muted/20 p-2.5 text-center">
-                      <p className="text-base font-bold">{s.prefix}<AnimatedNumber value={s.value} /></p>
-                      <p className="text-[9px] text-muted-foreground">{s.label}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Product rows */}
-                {[
-                  { name: "Vital Seamless Crop Top", price: "\u00a328", tag: "-12%", tagColor: "text-red-600 bg-red-500/10" },
-                  { name: "Apex Joggers", price: "\u00a345", tag: "New", tagColor: "text-primary bg-primary/10" },
-                  { name: "Training T-Shirt", price: "\u00a322", tag: "-8%", tagColor: "text-red-600 bg-red-500/10" },
-                ].map((item, i) => (
-                  <motion.div
-                    key={item.name}
-                    initial={{ opacity: 0, x: 16 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.6 + i * 0.12 }}
-                    className="flex items-center justify-between rounded-lg border border-border px-3 py-2"
-                  >
-                    <div className="flex items-center gap-2.5">
-                      <div className="h-7 w-7 rounded bg-muted animate-float" style={{ animationDelay: `${i * 0.4}s` }} />
-                      <div>
-                        <p className="text-[11px] font-medium">{item.name}</p>
-                        <p className="text-[10px] text-muted-foreground">{item.price}</p>
-                      </div>
-                    </div>
-                    <span className={`rounded-full px-2 py-0.5 text-[9px] font-medium ${item.tagColor}`}>{item.tag}</span>
-                  </motion.div>
-                ))}
-
-                {/* Alert */}
-                <motion.div
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.2 }}
-                  className="flex items-center gap-2.5 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 dark:border-amber-500/20 dark:bg-amber-500/10"
+            <div className="space-y-1">
+              {steps.map((step, index) => (
+                <button
+                  key={step.number}
+                  onClick={() => setActiveStep(index)}
+                  className={`w-full rounded-xl px-3.5 py-3 text-left transition-all ${
+                    activeStep === index
+                      ? "border border-primary/20 bg-primary/5"
+                      : "border border-transparent hover:bg-muted/30"
+                  }`}
                 >
-                  <Bell className="h-3.5 w-3.5 text-amber-600" />
-                  <div>
-                    <p className="text-[10px] font-medium text-amber-900 dark:text-amber-400">Price Drop Alert</p>
-                    <p className="text-[9px] text-amber-700 dark:text-amber-500">3 items reduced in the last hour</p>
+                  <div className="flex items-start gap-3">
+                    <div className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs transition-colors ${
+                      activeStep === index
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-muted text-muted-foreground"
+                    }`}>
+                      <step.icon className="h-3.5 w-3.5" strokeWidth={1.5} />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center gap-2">
+                        <span className="text-[9px] font-mono text-muted-foreground">{step.number}</span>
+                        <h3 className="text-xs font-semibold">{step.title}</h3>
+                      </div>
+                      <p className="mt-0.5 text-[11px] leading-relaxed text-muted-foreground">{step.description}</p>
+
+                      <AnimatePresence>
+                        {activeStep === index && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="mt-2.5"
+                          >
+                            {step.visual}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
                   </div>
-                </motion.div>
-              </div>
+
+                  {/* Progress bar */}
+                  {activeStep === index && (
+                    <div className="mt-2 ml-10 h-0.5 rounded-full bg-primary/10 overflow-hidden">
+                      <motion.div
+                        className="h-full bg-primary"
+                        initial={{ width: "0%" }}
+                        animate={{ width: "100%" }}
+                        transition={{ duration: 4, ease: "linear" }}
+                        key={`prog-${index}-${activeStep}`}
+                      />
+                    </div>
+                  )}
+                </button>
+              ))}
             </div>
           </motion.div>
         </div>
