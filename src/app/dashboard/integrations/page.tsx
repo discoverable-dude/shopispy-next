@@ -3,12 +3,9 @@
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mail, MessageSquare, Webhook } from "lucide-react";
+import { Mail, MessageSquare, Webhook, Plug } from "lucide-react";
 import { UpgradePrompt } from "@/components/dashboard/UpgradePrompt";
 import { useSubscriptionLimits } from "@/hooks/useSubscriptionLimits";
 
@@ -17,15 +14,54 @@ const Integrations = () => {
   const hasSlack = tierConfig.alerts.channels.includes("slack");
   const hasWebhook = tierConfig.alerts.channels.includes("webhook");
 
+  const integrations = [
+    {
+      name: "Slack",
+      description: "Get price alerts and new product notifications directly in Slack.",
+      detail:
+        "Receive real-time alerts in your Slack channels when competitors change prices or add new products.",
+      icon: MessageSquare,
+      available: hasSlack,
+      badgeLabel: hasSlack ? "Available" : "Enterprise",
+    },
+    {
+      name: "Email Notifications",
+      description: "Configure custom email alerts for price changes.",
+      detail:
+        "Set up email notifications for specific products, price thresholds, and more. Available on all plans.",
+      icon: Mail,
+      available: true,
+      badgeLabel: "Available",
+    },
+    {
+      name: "Webhooks",
+      description: "Connect to your own systems with custom webhooks.",
+      detail:
+        "Send alert data to any endpoint for custom integrations and workflows.",
+      icon: Webhook,
+      available: hasWebhook,
+      badgeLabel: hasWebhook ? "Available" : "Enterprise",
+    },
+  ];
+
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold text-foreground">Integrations</h1>
-        <p className="text-muted-foreground">
-          Connect your favorite tools and get alerts where you work
+    <div className="space-y-8">
+      {/* Page header */}
+      <div className="space-y-1">
+        <div className="flex items-center gap-2.5">
+          <div className="rounded-lg bg-primary/10 p-2">
+            <Plug className="h-4 w-4 text-primary" />
+          </div>
+          <h1 className="text-2xl font-semibold tracking-tight text-foreground">
+            Integrations
+          </h1>
+        </div>
+        <p className="text-sm text-muted-foreground pl-[44px]">
+          Connect your favourite tools and get alerts where you work.
         </p>
       </div>
 
+      {/* Upgrade prompt for non-enterprise users */}
       {!hasSlack && !hasWebhook && (
         <UpgradePrompt
           feature="Custom Integrations"
@@ -34,73 +70,57 @@ const Integrations = () => {
         />
       )}
 
+      {/* Integration cards */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <Card className={`relative ${!hasSlack ? "opacity-60" : ""}`}>
-          <Badge
-            className="absolute top-4 right-4"
-            variant={hasSlack ? "default" : "secondary"}
+        {integrations.map((integration) => (
+          <Card
+            key={integration.name}
+            className={`rounded-2xl border-border/60 transition-colors ${
+              !integration.available ? "opacity-60" : "hover:border-primary/30"
+            }`}
           >
-            {hasSlack
-              ? "Available"
-              : tierName === "pro"
-                ? "Enterprise"
-                : "Enterprise"}
-          </Badge>
-          <CardHeader>
-            <div className="flex items-center gap-2">
-              <MessageSquare className="h-5 w-5 text-muted-foreground" />
-              <CardTitle>Slack</CardTitle>
-            </div>
-            <CardDescription>
-              Get price alerts and new product notifications directly in Slack
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-sm text-muted-foreground">
-            Receive real-time alerts in your Slack channels when competitors
-            change prices or add new products.
-          </CardContent>
-        </Card>
+            <CardContent className="p-6 space-y-4">
+              {/* Icon + badge row */}
+              <div className="flex items-start justify-between">
+                <div
+                  className={`rounded-xl p-2.5 ${
+                    integration.available
+                      ? "bg-primary/10"
+                      : "bg-muted"
+                  }`}
+                >
+                  <integration.icon
+                    className={`h-5 w-5 ${
+                      integration.available
+                        ? "text-primary"
+                        : "text-muted-foreground"
+                    }`}
+                  />
+                </div>
+                <Badge
+                  variant={integration.available ? "default" : "secondary"}
+                  className="rounded-lg text-[10px] font-semibold px-2 py-0.5"
+                >
+                  {integration.badgeLabel}
+                </Badge>
+              </div>
 
-        <Card className="relative">
-          <Badge className="absolute top-4 right-4" variant="default">
-            Available
-          </Badge>
-          <CardHeader>
-            <div className="flex items-center gap-2">
-              <Mail className="h-5 w-5 text-muted-foreground" />
-              <CardTitle>Email Notifications</CardTitle>
-            </div>
-            <CardDescription>
-              Configure custom email alerts for price changes
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-sm text-muted-foreground">
-            Set up email notifications for specific products, price thresholds,
-            and more. Available on all plans.
-          </CardContent>
-        </Card>
+              {/* Content */}
+              <div className="space-y-1.5">
+                <h3 className="text-sm font-semibold text-foreground">
+                  {integration.name}
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  {integration.description}
+                </p>
+              </div>
 
-        <Card className={`relative ${!hasWebhook ? "opacity-60" : ""}`}>
-          <Badge
-            className="absolute top-4 right-4"
-            variant={hasWebhook ? "default" : "secondary"}
-          >
-            {hasWebhook ? "Available" : "Enterprise"}
-          </Badge>
-          <CardHeader>
-            <div className="flex items-center gap-2">
-              <Webhook className="h-5 w-5 text-muted-foreground" />
-              <CardTitle>Webhooks</CardTitle>
-            </div>
-            <CardDescription>
-              Connect to your own systems with custom webhooks
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-sm text-muted-foreground">
-            Send alert data to any endpoint for custom integrations and
-            workflows.
-          </CardContent>
-        </Card>
+              <p className="text-xs text-muted-foreground/80 leading-relaxed">
+                {integration.detail}
+              </p>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </div>
   );

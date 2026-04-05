@@ -3,53 +3,120 @@
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BarChart3, TrendingUp, DollarSign, Package } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { BarChart3, TrendingUp, DollarSign, Package, Crown, Lock, ArrowRight } from "lucide-react";
 import { UpgradePrompt } from "@/components/dashboard/UpgradePrompt";
 import { useSubscriptionLimits } from "@/components/dashboard/SubscriptionLimits";
 
 const Analytics = () => {
   const { tierConfig } = useSubscriptionLimits();
 
+  const statCards = [
+    {
+      label: "Total Stores Tracked",
+      icon: Package,
+      value: "0",
+      sub: "Start tracking competitors",
+      color: "text-primary",
+      bg: "bg-primary/10",
+    },
+    {
+      label: "Products Monitored",
+      icon: BarChart3,
+      value: "0",
+      sub: "Across all stores",
+      color: "text-primary",
+      bg: "bg-primary/10",
+    },
+    {
+      label: "Price Changes",
+      icon: TrendingUp,
+      value: "0",
+      sub: "Last 7 days",
+      color: "text-amber-600",
+      bg: "bg-amber-500/10",
+    },
+    {
+      label: "Avg. Competitor Price",
+      icon: DollarSign,
+      value: "\u00a30",
+      sub: "Across categories",
+      color: "text-primary",
+      bg: "bg-primary/10",
+    },
+  ];
+
   if (!tierConfig.data.analytics) {
     return (
-      <div className="space-y-6">
-        <div>
-          <h1 className="text-3xl font-bold text-foreground">Analytics</h1>
-          <p className="text-muted-foreground">
-            Track trends and analyze competitor data
+      <div className="space-y-8">
+        {/* Page header */}
+        <div className="space-y-1">
+          <div className="flex items-center gap-2.5">
+            <div className="rounded-lg bg-primary/10 p-2">
+              <BarChart3 className="h-4 w-4 text-primary" />
+            </div>
+            <h1 className="text-2xl font-semibold tracking-tight text-foreground">
+              Analytics
+            </h1>
+          </div>
+          <p className="text-sm text-muted-foreground pl-[44px]">
+            Track trends and analyse competitor data.
           </p>
         </div>
 
-        <UpgradePrompt
-          feature="Advanced Analytics"
-          requiredTier="pro"
-          description="Unlock price trend charts, competitor discount patterns, product performance comparisons, and market positioning insights."
-        />
+        {/* Upgrade prompt */}
+        <Card className="rounded-2xl border-primary/20 bg-gradient-to-br from-primary/[0.03] to-transparent">
+          <CardContent className="p-6">
+            <div className="flex flex-col items-center text-center gap-4 py-4">
+              <div className="rounded-xl bg-primary/10 p-3">
+                <Lock className="h-5 w-5 text-primary" />
+              </div>
+              <div className="space-y-1.5">
+                <h2 className="text-lg font-semibold tracking-tight text-foreground">
+                  Unlock Advanced Analytics
+                </h2>
+                <p className="text-sm text-muted-foreground max-w-md">
+                  Upgrade to Pro for price trend charts, competitor discount
+                  patterns, product performance comparisons, and market
+                  positioning insights.
+                </p>
+              </div>
+              <Button
+                size="sm"
+                className="mt-2 gap-1.5 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 text-xs font-semibold px-5"
+                onClick={() => (window.location.href = "/pricing")}
+              >
+                <Crown className="h-3.5 w-3.5" />
+                Upgrade to Pro
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Blurred preview */}
         <div className="relative">
-          <div className="absolute inset-0 z-10 backdrop-blur-sm rounded-lg" />
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 opacity-50">
-            {[
-              { label: "Total Stores Tracked", icon: Package, value: "--" },
-              { label: "Products Monitored", icon: BarChart3, value: "--" },
-              { label: "Price Changes", icon: TrendingUp, value: "--" },
-              { label: "Avg. Competitor Price", icon: DollarSign, value: "--" },
-            ].map((stat) => (
-              <Card key={stat.label}>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">
-                    {stat.label}
-                  </CardTitle>
-                  <stat.icon className="h-4 w-4 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">{stat.value}</div>
+          <div className="absolute inset-0 z-10 backdrop-blur-sm rounded-2xl" />
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 opacity-50">
+            {statCards.map((stat) => (
+              <Card
+                key={stat.label}
+                className="rounded-xl border-border/60 bg-card"
+              >
+                <CardContent className="flex items-center gap-3 p-4">
+                  <div className={`rounded-lg p-2 ${stat.bg}`}>
+                    <stat.icon className={`h-4 w-4 ${stat.color}`} />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-2xl font-semibold tracking-tight">
+                      {stat.value}
+                    </p>
+                    <p className="text-xs text-muted-foreground truncate">
+                      {stat.label}
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -60,90 +127,72 @@ const Analytics = () => {
   }
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold text-foreground">Analytics</h1>
-        <p className="text-muted-foreground">
-          Track trends and analyze competitor data
+    <div className="space-y-8">
+      {/* Page header */}
+      <div className="space-y-1">
+        <div className="flex items-center gap-2.5">
+          <div className="rounded-lg bg-primary/10 p-2">
+            <BarChart3 className="h-4 w-4 text-primary" />
+          </div>
+          <h1 className="text-2xl font-semibold tracking-tight text-foreground">
+            Analytics
+          </h1>
+        </div>
+        <p className="text-sm text-muted-foreground pl-[44px]">
+          Track trends and analyse competitor data.
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Total Stores Tracked
-            </CardTitle>
-            <Package className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">0</div>
-            <p className="text-xs text-muted-foreground">
-              Start tracking competitors
-            </p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Products Monitored
-            </CardTitle>
-            <BarChart3 className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">0</div>
-            <p className="text-xs text-muted-foreground">Across all stores</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Price Changes</CardTitle>
-            <TrendingUp className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">0</div>
-            <p className="text-xs text-muted-foreground">Last 7 days</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Avg. Competitor Price
-            </CardTitle>
-            <DollarSign className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">£0</div>
-            <p className="text-xs text-muted-foreground">Across categories</p>
-          </CardContent>
-        </Card>
+      {/* Stat cards */}
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        {statCards.map((stat) => (
+          <Card
+            key={stat.label}
+            className="rounded-xl border-border/60 bg-card"
+          >
+            <CardContent className="flex items-center gap-3 p-4">
+              <div className={`rounded-lg p-2 ${stat.bg}`}>
+                <stat.icon className={`h-4 w-4 ${stat.color}`} />
+              </div>
+              <div className="min-w-0">
+                <p className="text-2xl font-semibold tracking-tight">
+                  {stat.value}
+                </p>
+                <p className="text-xs text-muted-foreground truncate">
+                  {stat.label}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
       </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Advanced Analytics Coming Soon</CardTitle>
-          <CardDescription>
-            Track price trends, identify patterns, and get competitive insights
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li className="flex items-center gap-2">
-              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-              Price trend charts and historical data
-            </li>
-            <li className="flex items-center gap-2">
-              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-              Competitor discount pattern analysis
-            </li>
-            <li className="flex items-center gap-2">
-              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-              Product performance comparisons
-            </li>
-            <li className="flex items-center gap-2">
-              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-              Market positioning insights
-            </li>
+      {/* Coming soon card */}
+      <Card className="rounded-2xl border-border/60">
+        <CardContent className="p-6 space-y-4">
+          <div className="space-y-1">
+            <h2 className="text-sm font-semibold text-foreground">
+              Advanced Analytics Coming Soon
+            </h2>
+            <p className="text-xs text-muted-foreground">
+              Track price trends, identify patterns, and get competitive insights.
+            </p>
+          </div>
+          <ul className="space-y-2.5">
+            {[
+              "Price trend charts and historical data",
+              "Competitor discount pattern analysis",
+              "Product performance comparisons",
+              "Market positioning insights",
+            ].map((item) => (
+              <li
+                key={item}
+                className="flex items-center gap-2.5 text-sm text-muted-foreground"
+              >
+                <div className="h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                {item}
+              </li>
+            ))}
           </ul>
         </CardContent>
       </Card>

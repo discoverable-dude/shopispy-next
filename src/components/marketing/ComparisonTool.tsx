@@ -152,8 +152,8 @@ export function ComparisonTool() {
             className="mt-12"
           >
             {/* Cards row */}
-            <div className={`grid gap-4 ${
-              selected.length === 2 ? "grid-cols-2" : selected.length === 3 ? "grid-cols-3" : "grid-cols-4"
+            <div className={`grid gap-4 grid-cols-1 ${
+              selected.length === 2 ? "sm:grid-cols-2" : selected.length === 3 ? "sm:grid-cols-2 lg:grid-cols-3" : "sm:grid-cols-2 lg:grid-cols-4"
             }`}>
               {selected.map((brand) => {
                 const vertical = getVerticalForBrand(brand);

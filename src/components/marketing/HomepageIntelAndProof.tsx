@@ -55,9 +55,9 @@ export function HomepageIntelAndProof() {
         <div className="grid gap-8 lg:grid-cols-[1.2fr,1fr] lg:gap-12">
           {/* Left: Live intelligence */}
           <div>
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <h3 className="text-sm font-semibold">Live brand tracking</h3>
-              <div className="flex gap-1">
+              <div className="flex flex-wrap gap-1">
                 {VERTICALS.map((v) => (
                   <button
                     key={v.id}

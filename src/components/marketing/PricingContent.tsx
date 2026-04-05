@@ -166,7 +166,7 @@ export function PricingContent() {
                 Every plan includes the ShopiSpy market intelligence platform.
               </p>
             </div>
-            <div className="flex gap-6">
+            <div className="grid grid-cols-2 gap-4 sm:flex sm:gap-6">
               {[
                 { value: ALL_BRANDS.length.toString(), label: "Brands tracked" },
                 { value: VERTICALS.length.toString(), label: "Industries" },

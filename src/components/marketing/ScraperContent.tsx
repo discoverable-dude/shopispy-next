@@ -430,7 +430,7 @@ export function ScraperContent() {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="mt-5 grid grid-cols-4 gap-1.5"
+                  className="mt-5 grid grid-cols-3 gap-1.5 sm:grid-cols-4"
                 >
                   {Array.from({ length: Math.min(12, scanProgress.found) }).map((_, i) => (
                     <motion.div
