@@ -3,11 +3,9 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HomepageHero } from "@/components/marketing/HomepageHero";
 import { HomepageLogos } from "@/components/marketing/HomepageLogos";
-import { HomepageStats } from "@/components/marketing/HomepageStats";
-import { HomepageHowItWorks } from "@/components/marketing/HomepageHowItWorks";
+import { HomepageStatsAndProcess } from "@/components/marketing/HomepageStatsAndProcess";
 import { HomepageFeatures } from "@/components/marketing/HomepageFeatures";
-import { LiveIntelligence } from "@/components/marketing/LiveIntelligence";
-import { HomepageTestimonials } from "@/components/marketing/HomepageTestimonials";
+import { HomepageIntelAndProof } from "@/components/marketing/HomepageIntelAndProof";
 import { HomepageCTA } from "@/components/marketing/HomepageCTA";
 
 export const metadata: Metadata = {
@@ -23,11 +21,9 @@ export default function HomePage() {
       <Header />
       <HomepageHero />
       <HomepageLogos />
-      <HomepageStats />
-      <HomepageHowItWorks />
+      <HomepageStatsAndProcess />
       <HomepageFeatures />
-      <LiveIntelligence />
-      <HomepageTestimonials />
+      <HomepageIntelAndProof />
       <HomepageCTA />
       <Footer />
     </div>
