@@ -1,0 +1,137 @@
+{
+  "tifriegehanley.com": {
+    "fixed": "tiegehanley.com",
+    "ok": false,
+    "reason": "HTTP 404"
+  },
+  "bfrst.com": {
+    "fixed": "burstoralcare.com",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "lfrqcom.myshopify.com": {
+    "fixed": "livelarq.com",
+    "ok": false,
+    "reason": "HTTP 404"
+  },
+  "bfrioliteenergy.com": {
+    "fixed": "bioliteenergy.com",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "hfrario-usa.com": {
+    "fixed": "hario-usa.com",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "grfraza.co": {
+    "fixed": "graza.co",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "dfrrinktrade.com": {
+    "fixed": "drinktrade.com",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "dfruckychannel.com": {
+    "fixed": "duckychannel.com",
+    "ok": false,
+    "reason": "not JSON"
+  },
+  "lfreiagear.com": {
+    "fixed": "leiagear.com",
+    "ok": false,
+    "reason": "fetch failed"
+  },
+  "pfrehrdesigns.com": {
+    "fixed": "pehrdesigns.com",
+    "ok": false,
+    "reason": "HTTP 404"
+  },
+  "hatchwfraby.com": {
+    "fixed": "hatch.co",
+    "ok": false,
+    "reason": "HTTP 404"
+  },
+  "pipfrette.com": {
+    "fixed": "pipettebaby.com",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "ffrablefrpets.com": {
+    "fixed": "fablepets.com",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "gfrunnerkennels.com": {
+    "fixed": "gunnerkennels.com",
+    "ok": false,
+    "reason": "HTTP 404"
+  },
+  "rfrufflandkennels.com": {
+    "fixed": "rufflandkennels.com",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "roguefrfitness.com": {
+    "fixed": "roguefitness.com",
+    "ok": false,
+    "reason": "HTTP 404"
+  },
+  "tfrriggerpoint.com": {
+    "fixed": "tptherapy.com",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "kfrged.com": {
+    "fixed": "kaged.com",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "dorfrsey.com": {
+    "fixed": "dorsey.com",
+    "ok": false,
+    "reason": "HTTP 404"
+  },
+  "ablefr.com": {
+    "fixed": "livefashionable.com",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "dfragnedover.com": {
+    "fixed": "dagnedover.com",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "polfrene-paris.com": {
+    "fixed": "polene-paris.com",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "tfrelfar.net": {
+    "fixed": "shop.telfar.net",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "stfraud.clothing": {
+    "fixed": "staud.clothing",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "byfrfrfar.com": {
+    "fixed": "byfar.com",
+    "ok": false,
+    "reason": "HTTP 429"
+  },
+  "arfrket.com": {
+    "fixed": "arket.com",
+    "ok": false,
+    "reason": "HTTP 404"
+  },
+  "kfrancis.kosas.com": {
+    "fixed": "kosas.com",
+    "ok": false,
+    "reason": "HTTP 429"
+  }
+}

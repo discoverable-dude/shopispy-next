@@ -25,6 +25,10 @@ import {
   getAllVerticalSlugs,
   type ChangeType,
 } from "@/lib/brandUtils";
+import { fetchStatsForDomains, enrichBrand } from "@/lib/brandStats";
+
+// Revalidate every hour so live stats stay fresh without a full rebuild.
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   return getAllVerticalSlugs().map((slug) => ({ slug }));
@@ -52,11 +56,20 @@ export default async function IndustryPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const vertical = getVerticalBySlug(slug);
+  const staticVertical = getVerticalBySlug(slug);
 
-  if (!vertical) {
+  if (!staticVertical) {
     notFound();
   }
+
+  // Fetch live stats for all brands in this vertical
+  const statsMap = await fetchStatsForDomains(
+    staticVertical.brands.map((b) => b.domain)
+  );
+  const vertical = {
+    ...staticVertical,
+    brands: staticVertical.brands.map((b) => enrichBrand(b, statsMap)),
+  };
 
   const stats = getVerticalStats(vertical);
   const topBrands = getTopBrands(vertical, 10);

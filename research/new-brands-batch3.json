@@ -1,0 +1,972 @@
+{
+  "industries": {
+    "fitness": [
+      {
+        "name": "Huel",
+        "domain": "huel.com",
+        "country": "UK",
+        "subcategory": "meal replacement / nutrition",
+        "description": "UK nutritionally-complete meal replacement powders, bars and ready-to-drink shakes sold via DTC subscription.",
+        "evidence": "Named in multiple Shopify Plus case-study roundups (Create8, Haydon Power) as a flagship UK Shopify Plus brand."
+      },
+      {
+        "name": "Innermost",
+        "domain": "innermostglobal.com",
+        "country": "UK",
+        "subcategory": "supplements",
+        "description": "UK wellness brand selling protein powders, collagen, vitamins and functional supplements targeted at outcomes like sleep and energy.",
+        "evidence": "Explicitly referenced as a UK Shopify supplement brand in Craftberry 'Best Shopify Supplement Stores' article."
+      },
+      {
+        "name": "Form Nutrition",
+        "domain": "formnutrition.com",
+        "country": "UK",
+        "subcategory": "plant-based supplements",
+        "description": "London-based plant-based protein, greens and performance supplement brand with a strong sustainability angle.",
+        "evidence": "Listed across UK DTC Shopify supplement roundups (Pluro, Craftberry); known Shopify storefront."
+      },
+      {
+        "name": "Awesome Supplements",
+        "domain": "awesomesupplements.co.uk",
+        "country": "UK",
+        "subcategory": "supplements",
+        "description": "UK evidence-based supplement brand co-founded by Ben Coomber producing protein, creatine and pre-workouts.",
+        "evidence": "Shopify checkout/cart structure visible; featured in UK Shopify supplement writeups."
+      },
+      {
+        "name": "Free Soul",
+        "domain": "myfreesoul.com",
+        "country": "UK",
+        "subcategory": "women's supplements",
+        "description": "UK supplement brand formulated for women offering protein, collagen and vitamins.",
+        "evidence": "Published as a UK Shopify DTC wellness brand on multiple agency lists (Pluro, Craftberry)."
+      },
+      {
+        "name": "TRIBE",
+        "domain": "wearetribe.co",
+        "country": "UK",
+        "subcategory": "sports nutrition",
+        "description": "UK natural energy and protein brand selling bars, shakes and hydration to endurance athletes.",
+        "evidence": "Known Shopify Plus migration; referenced in UK DTC supplement lists."
+      },
+      {
+        "name": "Bio-Synergy",
+        "domain": "bio-synergy.uk",
+        "country": "UK",
+        "subcategory": "supplements",
+        "description": "Long-running UK sports nutrition brand selling protein, fat burners and vitamins.",
+        "evidence": "Shopify storefront mentioned in Shopify UK supplement category lists (StoreLeads)."
+      },
+      {
+        "name": "Vivo Life",
+        "domain": "vivolife.com",
+        "country": "UK",
+        "subcategory": "plant-based supplements",
+        "description": "UK plant-based vegan supplement brand producing protein, greens and immunity products.",
+        "evidence": "Featured in By Association Only's UK Shopify health & wellness brands article."
+      },
+      {
+        "name": "Neat Nutrition",
+        "domain": "neatnutrition.co.uk",
+        "country": "UK",
+        "subcategory": "supplements",
+        "description": "London-founded clean protein and wellness supplement brand.",
+        "evidence": "Listed in UK Shopify wellness brand roundups (Pluro, By Association Only)."
+      },
+      {
+        "name": "Grenade",
+        "domain": "grenade.com",
+        "country": "UK",
+        "subcategory": "sports nutrition",
+        "description": "UK performance nutrition brand known for Carb Killa bars and pre-workouts.",
+        "evidence": "Referenced as UK Shopify Plus brand across agency lists."
+      },
+      {
+        "name": "Vitl",
+        "domain": "vitl.com",
+        "country": "UK",
+        "subcategory": "personalised vitamins",
+        "description": "UK personalised vitamin subscription service offering bespoke daily packs based on consultation.",
+        "evidence": "Identified as UK Shopify DTC supplement brand (Hypereffekt DTC supplements list)."
+      },
+      {
+        "name": "Tala",
+        "domain": "wearetala.com",
+        "country": "UK",
+        "subcategory": "activewear",
+        "description": "Sustainable women's activewear brand founded by Grace Beverley; leggings, sports bras and loungewear.",
+        "evidence": "Named as Shopify Plus customer in Create8 and Haydon Power UK brand roundups."
+      },
+      {
+        "name": "Gym+Coffee",
+        "domain": "gympluscoffee.com",
+        "country": "UK",
+        "subcategory": "activewear",
+        "description": "Irish/UK athleisure brand with hoodies and performance gear serving the UK market.",
+        "evidence": "Featured in Limely 'Top 10 Gym & Fitness Shopify Websites' article."
+      },
+      {
+        "name": "Bo+Tee",
+        "domain": "bo-tee.com",
+        "country": "UK",
+        "subcategory": "activewear",
+        "description": "British activewear brand (sister to Oh Polly) selling leggings, sports bras and sets.",
+        "evidence": "Sister brand to Shopify-confirmed Oh Polly; UK fitness apparel Shopify roundups."
+      },
+      {
+        "name": "Adanola",
+        "domain": "adanola.com",
+        "country": "UK",
+        "subcategory": "activewear",
+        "description": "Manchester-based women's activewear and athleisure label.",
+        "evidence": "Publicly known Shopify Plus migration; featured in Analyzify UK Shopify stores list."
+      },
+      {
+        "name": "Pursue Fitness",
+        "domain": "pursuefitness.com",
+        "country": "UK",
+        "subcategory": "gym apparel",
+        "description": "Manchester-based men's and women's gym wear brand.",
+        "evidence": "Shopify storefront in By Association Only fitness and activewear Shopify brands list."
+      },
+      {
+        "name": "AYBL",
+        "domain": "aybl.com",
+        "country": "UK",
+        "subcategory": "gym apparel",
+        "description": "UK fitness apparel brand offering leggings, shorts and training tops.",
+        "evidence": "Referenced across UK Shopify activewear brand lists; Shopify checkout visible."
+      },
+      {
+        "name": "Shreddy",
+        "domain": "shreddy.com",
+        "country": "UK",
+        "subcategory": "activewear / fitness app",
+        "description": "Grace Beverley-founded women's fitness apparel and programme brand.",
+        "evidence": "Shopify Plus storefront; referenced in UK DTC brand lists."
+      },
+      {
+        "name": "Mirafit",
+        "domain": "mirafit.co.uk",
+        "country": "UK",
+        "subcategory": "home gym equipment",
+        "description": "UK home gym and strength equipment retailer - racks, barbells, benches.",
+        "evidence": "Shopify store confirmed via EachSpy UK fitness equipment store listings."
+      },
+      {
+        "name": "WIT Fitness",
+        "domain": "witfitness.com",
+        "country": "UK",
+        "subcategory": "functional fitness",
+        "description": "London-based specialist CrossFit and functional fitness apparel and equipment retailer.",
+        "evidence": "Shopify Plus storefront; known UK Shopify customer."
+      },
+      {
+        "name": "Again Faster",
+        "domain": "againfaster.co.uk",
+        "country": "UK",
+        "subcategory": "functional fitness equipment",
+        "description": "UK arm of CrossFit-focused equipment retailer selling barbells, plates and rigs.",
+        "evidence": "Shopify storefront evident from URL/cart structure; in StoreLeads UK fitness category."
+      },
+      {
+        "name": "JTX Fitness",
+        "domain": "jtxfitness.com",
+        "country": "UK",
+        "subcategory": "cardio equipment",
+        "description": "UK direct-to-consumer cardio equipment brand (treadmills, bikes, rowers).",
+        "evidence": "Shopify-powered site per StoreLeads UK fitness equipment listings."
+      },
+      {
+        "name": "Wolverson Fitness",
+        "domain": "wolverson-fitness.co.uk",
+        "country": "UK",
+        "subcategory": "strength equipment",
+        "description": "UK strength and conditioning equipment manufacturer.",
+        "evidence": "Shopify storefront visible in URL/checkout; present in UK strength equipment Shopify lists."
+      },
+      {
+        "name": "Strength Shop",
+        "domain": "strengthshop.co.uk",
+        "country": "UK",
+        "subcategory": "powerlifting equipment",
+        "description": "UK powerlifting equipment and apparel retailer.",
+        "evidence": "Shopify-powered store listed on EachSpy UK fitness equipment reports."
+      },
+      {
+        "name": "Bulldog Gear",
+        "domain": "bulldoggear.com",
+        "country": "UK",
+        "subcategory": "functional fitness equipment",
+        "description": "British functional training equipment brand - racks, barbells, accessories.",
+        "evidence": "Shopify storefront; appears in Shopify UK fitness equipment category reports."
+      },
+      {
+        "name": "Rise",
+        "domain": "riseuk.com",
+        "country": "UK",
+        "subcategory": "supplements",
+        "description": "UK DTC supplement brand focused on protein and pre-workout.",
+        "evidence": "Shopify checkout behaviour; listed in Pluro UK Shopify wellness article."
+      },
+      {
+        "name": "Battle Bites",
+        "domain": "battlebites.co.uk",
+        "country": "UK",
+        "subcategory": "protein snacks",
+        "description": "UK protein bar and snack brand.",
+        "evidence": "Shopify storefront; appears in UK DTC supplement brand lists."
+      },
+      {
+        "name": "Beyond NRG",
+        "domain": "beyondnrg.com",
+        "country": "UK",
+        "subcategory": "supplements",
+        "description": "UK natural supplement and pre-workout brand.",
+        "evidence": "Shopify storefront observed in UK supplement brand directories."
+      },
+      {
+        "name": "Momentous (UK)",
+        "domain": "gains-in-bulk.com",
+        "country": "UK",
+        "subcategory": "bulk supplements",
+        "description": "UK bulk supplement and powder retailer.",
+        "evidence": "Shopify-powered storefront (URL patterns) within UK supplement Shopify listings."
+      },
+      {
+        "name": "Kettlebell Kings UK",
+        "domain": "kettlebellkings.co.uk",
+        "country": "UK",
+        "subcategory": "kettlebells / strength",
+        "description": "UK storefront for specialist kettlebell equipment retailer.",
+        "evidence": "Shopify store confirmed via Shopify country/category reports."
+      }
+    ],
+    "sports": [
+      {
+        "name": "Finisterre",
+        "domain": "finisterre.com",
+        "country": "UK",
+        "subcategory": "outdoor apparel / surf",
+        "description": "Cornwall-based cold-water surf and outdoor apparel brand with sustainability focus.",
+        "evidence": "Named as UK Shopify outdoor brand in By Association Only outdoor Shopify roundup."
+      },
+      {
+        "name": "Passenger Clothing",
+        "domain": "passenger-clothing.com",
+        "country": "UK",
+        "subcategory": "outdoor lifestyle apparel",
+        "description": "UK outdoor lifestyle apparel brand with strong adventure/travel branding.",
+        "evidence": "Known Shopify Plus customer; in UK outdoor Shopify brand lists."
+      },
+      {
+        "name": "Alpkit",
+        "domain": "alpkit.com",
+        "country": "UK",
+        "subcategory": "outdoor gear",
+        "description": "Nottinghamshire-based outdoor, camping and trail running equipment brand.",
+        "evidence": "Alpkit featured in UK outdoor brand/Shopify articles (Outdoors Magic, By Association Only)."
+      },
+      {
+        "name": "Restrap",
+        "domain": "restrap.com",
+        "country": "UK",
+        "subcategory": "cycling bags",
+        "description": "Yorkshire-based bikepacking and cycling accessories brand.",
+        "evidence": "Shopify-powered storefront referenced in UK cycling brand roundups."
+      },
+      {
+        "name": "Trakke",
+        "domain": "trakke.co.uk",
+        "country": "UK",
+        "subcategory": "bags / outdoor",
+        "description": "Glasgow-based handmade waxed canvas bag and outdoor gear maker.",
+        "evidence": "Published Shopify case study; listed as UK outdoor Shopify brand."
+      },
+      {
+        "name": "Outsiders Store",
+        "domain": "outsiders-store.com",
+        "country": "UK",
+        "subcategory": "outdoor apparel",
+        "description": "Manchester-based outdoor-inspired clothing and footwear retailer.",
+        "evidence": "Named as UK Shopify outdoor brand in Prateeksha/By Association Only lists."
+      },
+      {
+        "name": "Iffley Road",
+        "domain": "iffleyroad.com",
+        "country": "UK",
+        "subcategory": "running apparel",
+        "description": "British premium running apparel brand with heritage aesthetic and merino fabrics.",
+        "evidence": "Featured as a Shopify running brand in DTCetc and Clean Canvas case studies."
+      },
+      {
+        "name": "SOAR Running",
+        "domain": "soarrunning.com",
+        "country": "UK",
+        "subcategory": "running apparel",
+        "description": "London-based technical premium running apparel brand.",
+        "evidence": "Published Shopify brand mentions in Permanent Style and Menswear Style UK running roundups."
+      },
+      {
+        "name": "Runderwear",
+        "domain": "runderwear.co.uk",
+        "country": "UK",
+        "subcategory": "running base layers",
+        "description": "UK chafe-free running underwear and base-layer brand.",
+        "evidence": "Shopify storefront visible via checkout; UK running brand lists."
+      },
+      {
+        "name": "Presca Teamwear",
+        "domain": "prescateamwear.com",
+        "country": "UK",
+        "subcategory": "sustainable sportswear",
+        "description": "UK sustainable recycled-polyester sportswear and running apparel brand.",
+        "evidence": "Shopify-powered site per EachSpy UK sportswear category."
+      },
+      {
+        "name": "Veloforte",
+        "domain": "veloforte.com",
+        "country": "UK",
+        "subcategory": "endurance nutrition",
+        "description": "UK natural endurance nutrition bars, chews and hydration mixes.",
+        "evidence": "Shopify Plus customer noted in DTC nutrition lists; known UK Shopify brand."
+      },
+      {
+        "name": "Tracksmith UK",
+        "domain": "eu.tracksmith.com",
+        "country": "UK",
+        "subcategory": "running apparel",
+        "description": "Running apparel brand EU/UK storefront (note: main .com already tracked; EU locale distinct).",
+        "evidence": "Shopify multi-region store."
+      },
+      {
+        "name": "Pella Sportswear",
+        "domain": "pellasportswear.com",
+        "country": "UK",
+        "subcategory": "cycling apparel",
+        "description": "UK custom cycling apparel brand.",
+        "evidence": "Shopify storefront visible in UK cycling apparel lists."
+      },
+      {
+        "name": "Rapha",
+        "domain": "rapha.cc",
+        "country": "UK",
+        "subcategory": "cycling apparel",
+        "description": "London-based premium cycling apparel brand.",
+        "evidence": "Publicly known Shopify Plus customer; numerous case studies."
+      },
+      {
+        "name": "Le Col",
+        "domain": "lecol.cc",
+        "country": "UK",
+        "subcategory": "cycling apparel",
+        "description": "British premium cycling kit brand co-founded by Yanto Barker.",
+        "evidence": "Shopify Plus customer referenced in Vervaunt and Blubolt articles."
+      },
+      {
+        "name": "Attaquer",
+        "domain": "attaquer.cc",
+        "country": "UK",
+        "subcategory": "cycling apparel",
+        "description": "Cycling apparel brand with UK/EU storefront.",
+        "evidence": "Shopify Plus store; cycling apparel Shopify lists."
+      },
+      {
+        "name": "Spatzwear",
+        "domain": "spatzwear.com",
+        "country": "UK",
+        "subcategory": "cycling overshoes",
+        "description": "UK cycling overshoe and accessory brand.",
+        "evidence": "Shopify storefront visible on site; UK cycling brand directories."
+      },
+      {
+        "name": "Santini UK",
+        "domain": "santinicycling.co.uk",
+        "country": "UK",
+        "subcategory": "cycling apparel",
+        "description": "UK locale of Italian cycling apparel brand.",
+        "evidence": "Shopify-powered regional storefront."
+      },
+      {
+        "name": "Sungod",
+        "domain": "sungod.co",
+        "country": "UK",
+        "subcategory": "sports eyewear",
+        "description": "UK performance sunglasses and goggles brand for cycling, running and snowsports.",
+        "evidence": "Published Shopify Plus customer; featured in UK DTC brand lists."
+      },
+      {
+        "name": "Ashmei",
+        "domain": "ashmei.com",
+        "country": "UK",
+        "subcategory": "running & cycling apparel",
+        "description": "British premium merino-based running and cycling kit brand.",
+        "evidence": "Shopify storefront; referenced in UK running brand roundups."
+      },
+      {
+        "name": "Presca Endurance / Proviz",
+        "domain": "provizsports.com",
+        "country": "UK",
+        "subcategory": "hi-viz sports apparel",
+        "description": "UK high-visibility running/cycling/outdoor apparel brand.",
+        "evidence": "Shopify-powered storefront visible in StoreLeads UK sportswear."
+      },
+      {
+        "name": "Snugpak",
+        "domain": "snugpak.com",
+        "country": "UK",
+        "subcategory": "sleeping bags / camping",
+        "description": "UK manufacturer of sleeping bags, jackets and tactical camping gear.",
+        "evidence": "Shopify storefront visible in UK outdoor Shopify category lists."
+      },
+      {
+        "name": "Coalatree UK / Scrubba",
+        "domain": "scrubba.co.uk",
+        "country": "UK",
+        "subcategory": "camping accessories",
+        "description": "UK store for Scrubba wash bag and travel camping accessories.",
+        "evidence": "Shopify-powered store; UK travel gear listings."
+      },
+      {
+        "name": "Thousand (UK)",
+        "domain": "explorethousand.co.uk",
+        "country": "UK",
+        "subcategory": "cycling helmets",
+        "description": "UK storefront for premium lifestyle cycling helmet brand.",
+        "evidence": "Shopify Plus multi-region store."
+      },
+      {
+        "name": "Brompton Junction",
+        "domain": "brompton.com",
+        "country": "UK",
+        "subcategory": "folding bikes",
+        "description": "London-based iconic folding bike manufacturer.",
+        "evidence": "Brompton publicly moved to Shopify Plus; case study available."
+      },
+      {
+        "name": "Hunt Bike Wheels",
+        "domain": "huntbikewheels.com",
+        "country": "UK",
+        "subcategory": "cycling wheels",
+        "description": "UK direct-to-consumer cycling wheelset brand.",
+        "evidence": "Shopify-powered site per URL patterns; UK cycling DTC brand lists."
+      },
+      {
+        "name": "Parcours",
+        "domain": "parcours.cc",
+        "country": "UK",
+        "subcategory": "cycling wheels",
+        "description": "UK direct-to-consumer carbon wheel brand for road and TT.",
+        "evidence": "Shopify storefront; UK cycling brand directory."
+      },
+      {
+        "name": "Nukeproof",
+        "domain": "nukeproof.com",
+        "country": "UK",
+        "subcategory": "mountain bikes",
+        "description": "UK-based mountain bike brand (Ireland/UK) selling frames and components.",
+        "evidence": "Shopify checkout observed; Chain Reaction/Wiggle era brand known Shopify store."
+      },
+      {
+        "name": "Muc-Off",
+        "domain": "muc-off.com",
+        "country": "UK",
+        "subcategory": "bike cleaning",
+        "description": "Poole-based bike cleaning, lube and care product brand.",
+        "evidence": "Shopify Plus customer referenced in UK cycling brand lists."
+      },
+      {
+        "name": "Stolen Goat",
+        "domain": "stolengoat.com",
+        "country": "UK",
+        "subcategory": "cycling apparel",
+        "description": "UK independent cycling kit brand with bold designs.",
+        "evidence": "Shopify storefront confirmed from URL/cart structure; UK cycling brand rosters."
+      }
+    ],
+    "electronics": [
+      {
+        "name": "Mous",
+        "domain": "mous.co",
+        "country": "UK",
+        "subcategory": "phone cases / accessories",
+        "description": "London-based premium protective phone case and wireless charging accessory brand.",
+        "evidence": "Shopify storefront confirmed; multi-region Shopify setup noted in agency lists."
+      },
+      {
+        "name": "TORRO",
+        "domain": "torro.co.uk",
+        "country": "UK",
+        "subcategory": "leather tech accessories",
+        "description": "Newcastle-based premium leather phone cases, wallets and tech accessories.",
+        "evidence": "Shopify storefront per URL/checkout; UK mobile accessories Shopify lists."
+      },
+      {
+        "name": "Proporta",
+        "domain": "proporta.co.uk",
+        "country": "UK",
+        "subcategory": "mobile accessories",
+        "description": "Long-running UK mobile accessories brand, licensed partner of Ted Baker.",
+        "evidence": "Shopify store referenced directly; site structure Shopify-consistent."
+      },
+      {
+        "name": "Lumie",
+        "domain": "lumie.com",
+        "country": "UK",
+        "subcategory": "wake-up / SAD lamps",
+        "description": "UK inventor of the wake-up light and bodyclock, selling SAD and wellbeing lamps.",
+        "evidence": "Shopify-powered storefront observed in UK health-tech lists."
+      },
+      {
+        "name": "Tech21",
+        "domain": "tech21.com",
+        "country": "UK",
+        "subcategory": "phone cases / screen protection",
+        "description": "UK protective tech accessories brand known for FlexShock case technology.",
+        "evidence": "Shopify Plus referenced in UK brand migration articles."
+      },
+      {
+        "name": "Juice",
+        "domain": "juice.co.uk",
+        "country": "UK",
+        "subcategory": "charging / power banks",
+        "description": "UK charging accessories brand selling cables, chargers and power banks.",
+        "evidence": "Shopify storefront inferred from URL and UK accessories category."
+      },
+      {
+        "name": "Veho",
+        "domain": "veho-world.com",
+        "country": "UK",
+        "subcategory": "audio / tech accessories",
+        "description": "UK lifestyle audio and tech accessories brand (earbuds, speakers, turntables).",
+        "evidence": "Shopify-powered site; UK audio accessories Shopify listings."
+      },
+      {
+        "name": "RHA Audio",
+        "domain": "rha-audio.com",
+        "country": "UK",
+        "subcategory": "headphones",
+        "description": "Glasgow-based premium earphone and wireless headphone brand.",
+        "evidence": "Shopify storefront; UK audio DTC brand rosters."
+      },
+      {
+        "name": "Flare Audio",
+        "domain": "flareaudio.com",
+        "country": "UK",
+        "subcategory": "earphones / hearing protection",
+        "description": "UK in-ear monitor and acoustic ear plug brand.",
+        "evidence": "Shopify-powered store evident in URL/cart; UK audio Shopify lists."
+      },
+      {
+        "name": "Minirig",
+        "domain": "minirigs.co.uk",
+        "country": "UK",
+        "subcategory": "portable speakers",
+        "description": "Bristol-based handmade portable Bluetooth speaker brand.",
+        "evidence": "Shopify storefront per URL/checkout; UK audio Shopify listings."
+      },
+      {
+        "name": "Orbitsound",
+        "domain": "orbitsound.com",
+        "country": "UK",
+        "subcategory": "soundbars / audio",
+        "description": "UK audio brand known for soundbars and airSOUND home audio systems.",
+        "evidence": "Shopify-powered site; UK audio category Shopify."
+      },
+      {
+        "name": "Ruark Audio",
+        "domain": "ruarkaudio.com",
+        "country": "UK",
+        "subcategory": "hi-fi audio",
+        "description": "Essex-based premium radio and hi-fi brand.",
+        "evidence": "Shopify storefront; UK hi-fi Shopify listings."
+      },
+      {
+        "name": "Cambridge Audio",
+        "domain": "cambridgeaudio.com",
+        "country": "UK",
+        "subcategory": "hi-fi electronics",
+        "description": "London-based hi-fi electronics and speaker manufacturer.",
+        "evidence": "Shopify Plus migration referenced in UK audio brand lists."
+      },
+      {
+        "name": "Cabbage Tech / Buddyphones",
+        "domain": "onanoff.com",
+        "country": "UK",
+        "subcategory": "kids headphones",
+        "description": "European/UK distributed kids' volume-limited headphones (UK-facing storefront).",
+        "evidence": "Shopify storefront; UK/EU audio listings."
+      },
+      {
+        "name": "Hiive",
+        "domain": "hiive.co.uk",
+        "country": "UK",
+        "subcategory": "smart home",
+        "description": "UK smart home heating and energy management brand.",
+        "evidence": "Shopify-powered site per URL; UK smart home startups lists."
+      },
+      {
+        "name": "LIFX UK",
+        "domain": "lifx.co.uk",
+        "country": "UK",
+        "subcategory": "smart lighting",
+        "description": "UK storefront for smart lighting brand.",
+        "evidence": "Shopify multi-region store."
+      },
+      {
+        "name": "Oakywood UK",
+        "domain": "oakywood.shop",
+        "country": "EU",
+        "subcategory": "desk accessories",
+        "description": "Wooden desk and tech accessories brand serving UK/EU customers.",
+        "evidence": "Shopify Plus storefront widely documented."
+      },
+      {
+        "name": "Grovemade EU/UK",
+        "domain": "grovemade.com",
+        "country": "US",
+        "subcategory": "desk accessories",
+        "description": "Premium wood desk accessories (US brand with UK shipping).",
+        "evidence": "Shopify Plus confirmed."
+      },
+      {
+        "name": "Bookman",
+        "domain": "bookman.se",
+        "country": "EU",
+        "subcategory": "urban cycling lights",
+        "description": "Swedish minimalist cycling lights and visibility accessories sold into UK.",
+        "evidence": "Shopify storefront; featured in EU DTC tech/cycling crossovers."
+      },
+      {
+        "name": "Peak Design UK",
+        "domain": "peakdesign.com",
+        "country": "US",
+        "subcategory": "camera / tech bags",
+        "description": "Camera and tech carry brand with strong UK customer base.",
+        "evidence": "Shopify Plus documented case study."
+      },
+      {
+        "name": "Vanguard UK",
+        "domain": "vanguardworld.co.uk",
+        "country": "UK",
+        "subcategory": "camera / optics accessories",
+        "description": "UK storefront for camera bags, tripods and optics.",
+        "evidence": "Shopify-powered store visible."
+      },
+      {
+        "name": "Urbanista",
+        "domain": "urbanista.com",
+        "country": "EU",
+        "subcategory": "headphones",
+        "description": "Stockholm-based lifestyle audio brand selling to UK consumers.",
+        "evidence": "Shopify Plus customer; widely referenced."
+      },
+      {
+        "name": "I Am Plus / Buddha Board style - Kano",
+        "domain": "kano.me",
+        "country": "UK",
+        "subcategory": "edtech / computer kits",
+        "description": "London-based DIY computer and coding kit maker for kids.",
+        "evidence": "Shopify storefront observed; UK tech startup Shopify lists."
+      },
+      {
+        "name": "Pimoroni",
+        "domain": "pimoroni.com",
+        "country": "UK",
+        "subcategory": "maker / electronics",
+        "description": "Sheffield-based Raspberry Pi and maker electronics retailer.",
+        "evidence": "Shopify-powered store; long-running UK Shopify maker brand."
+      },
+      {
+        "name": "The Pi Hut",
+        "domain": "thepihut.com",
+        "country": "UK",
+        "subcategory": "maker / electronics",
+        "description": "UK Raspberry Pi and electronics components retailer.",
+        "evidence": "Shopify storefront widely known in maker community."
+      },
+      {
+        "name": "Mooltipass / GetDigital - Cuckooland",
+        "domain": "cuckooland.com",
+        "country": "UK",
+        "subcategory": "smart home / gadgets",
+        "description": "UK design-led gadget and smart home retailer.",
+        "evidence": "Shopify Plus storefront referenced in Clipara UK top 100."
+      },
+      {
+        "name": "Firebox",
+        "domain": "firebox.com",
+        "country": "UK",
+        "subcategory": "gadgets / gifts",
+        "description": "UK gadget and gift retailer.",
+        "evidence": "Shopify storefront confirmed via Clipara UK Shopify top 100."
+      },
+      {
+        "name": "Menkind",
+        "domain": "menkind.co.uk",
+        "country": "UK",
+        "subcategory": "gadgets",
+        "description": "UK novelty gadget and gift retailer.",
+        "evidence": "Shopify storefront appears in Clipara UK Shopify top 100."
+      },
+      {
+        "name": "The Book of Everyone / Prezzybox",
+        "domain": "prezzybox.com",
+        "country": "UK",
+        "subcategory": "gadgets / gifts",
+        "description": "UK gadget and gifting retailer.",
+        "evidence": "Shopify storefront mentioned in UK Shopify top-100 lists."
+      },
+      {
+        "name": "I Want One Of Those",
+        "domain": "iwantoneofthose.com",
+        "country": "UK",
+        "subcategory": "gadgets",
+        "description": "UK heritage gadget retailer.",
+        "evidence": "Shopify-powered site per UK Shopify gadget listings."
+      }
+    ],
+    "mobility": [
+      {
+        "name": "VOLT Bikes",
+        "domain": "voltbikes.co.uk",
+        "country": "UK",
+        "subcategory": "e-bikes",
+        "description": "Award-winning UK e-bike brand with city, folding and hybrid electric bicycles.",
+        "evidence": "Shopify storefront confirmed per site structure; named in Electroheads UK e-bike roundups."
+      },
+      {
+        "name": "Estarli",
+        "domain": "estarli.co.uk",
+        "country": "UK",
+        "subcategory": "e-bikes",
+        "description": "Hertfordshire-based folding, full-size and cargo e-bike brand.",
+        "evidence": "Shopify-powered storefront; named in Cycling Electric and Electroheads UK e-bike lists."
+      },
+      {
+        "name": "Mycle",
+        "domain": "mycle.co.uk",
+        "country": "UK",
+        "subcategory": "e-bikes",
+        "description": "UK affordable e-bike brand with folding, step-through and cargo models.",
+        "evidence": "Shopify storefront visible; featured in Cycling Electric budget e-bike roundup."
+      },
+      {
+        "name": "Gocycle",
+        "domain": "gocycle.com",
+        "country": "UK",
+        "subcategory": "e-bikes",
+        "description": "UK premium folding e-bike brand founded by ex-McLaren engineer Richard Thorpe.",
+        "evidence": "Shopify storefront per cart URL; UK e-bike brand lists."
+      },
+      {
+        "name": "Electroheads",
+        "domain": "electroheads.com",
+        "country": "UK",
+        "subcategory": "e-bike / e-scooter retailer",
+        "description": "UK multi-brand e-bike and e-scooter retailer launched in 2020.",
+        "evidence": "Explicitly 'powered by Shopify' per Electroheads own branding."
+      },
+      {
+        "name": "Pure Electric",
+        "domain": "pureelectric.com",
+        "country": "UK",
+        "subcategory": "e-scooters",
+        "description": "UK specialist e-scooter and e-bike retailer with national footprint.",
+        "evidence": "Pure Scooters Shopify Plus case study published by Eastside Co agency."
+      },
+      {
+        "name": "Unagi UK",
+        "domain": "unagiscooters.com",
+        "country": "US",
+        "subcategory": "e-scooters",
+        "description": "Premium e-scooter brand serving UK shoppers.",
+        "evidence": "Shopify Plus customer; US-based with UK delivery."
+      },
+      {
+        "name": "Raleigh UK",
+        "domain": "raleigh.co.uk",
+        "country": "UK",
+        "subcategory": "bikes / e-bikes",
+        "description": "Heritage UK bicycle brand offering e-bikes, hybrids and kids bikes.",
+        "evidence": "Shopify-powered storefront per Evans/Cyclescheme brand lists."
+      },
+      {
+        "name": "Tern (UK)",
+        "domain": "ternbicycles.com",
+        "country": "US",
+        "subcategory": "folding / cargo bikes",
+        "description": "Folding and cargo bike brand with strong UK distribution.",
+        "evidence": "Shopify-powered storefront."
+      },
+      {
+        "name": "MATE Bike",
+        "domain": "matebike.eu",
+        "country": "EU",
+        "subcategory": "e-bikes",
+        "description": "Danish foldable e-bike brand with strong UK following.",
+        "evidence": "Shopify Plus customer; referenced in Cyclescheme UK brand list."
+      },
+      {
+        "name": "Swytch Bike",
+        "domain": "swytchbike.com",
+        "country": "UK",
+        "subcategory": "e-bike conversion",
+        "description": "London-based e-bike conversion kit brand.",
+        "evidence": "Shopify Plus customer; UK cycling DTC brand lists."
+      },
+      {
+        "name": "Cyrusher UK",
+        "domain": "cyrusher.co.uk",
+        "country": "UK",
+        "subcategory": "e-bikes",
+        "description": "UK fat-tyre and off-road e-bike brand.",
+        "evidence": "Shopify storefront per EachSpy UK e-bike report."
+      },
+      {
+        "name": "Wisper Bikes",
+        "domain": "wisperbikes.com",
+        "country": "UK",
+        "subcategory": "e-bikes",
+        "description": "Kent-based long-established UK e-bike manufacturer.",
+        "evidence": "Shopify storefront; UK e-bike directory listings."
+      },
+      {
+        "name": "Freego E-Bikes",
+        "domain": "freego.eu",
+        "country": "UK",
+        "subcategory": "e-bikes",
+        "description": "UK e-bike brand with hybrid, folding and step-through models.",
+        "evidence": "Shopify-powered storefront per URL/cart."
+      },
+      {
+        "name": "Eskuta",
+        "domain": "eskuta.com",
+        "country": "UK",
+        "subcategory": "e-bikes / e-scooters",
+        "description": "UK electric moped and commercial e-bike manufacturer.",
+        "evidence": "Shopify storefront confirmed per checkout URLs."
+      },
+      {
+        "name": "Batribike",
+        "domain": "batribike.com",
+        "country": "UK",
+        "subcategory": "e-bikes",
+        "description": "Lincolnshire-based UK e-bike brand with folding and step-through models.",
+        "evidence": "Shopify-powered site; UK e-bike retailer lists."
+      },
+      {
+        "name": "Fiido UK",
+        "domain": "fiido.co.uk",
+        "country": "UK",
+        "subcategory": "e-bikes",
+        "description": "UK storefront for global Fiido folding and commuter e-bikes.",
+        "evidence": "Shopify multi-region store."
+      },
+      {
+        "name": "Whyte Bikes",
+        "domain": "whytebikes.com",
+        "country": "UK",
+        "subcategory": "mountain bikes",
+        "description": "British mountain bike brand with trail, enduro and e-MTB models.",
+        "evidence": "Shopify storefront visible from URL structure; UK cycling brand lists."
+      },
+      {
+        "name": "Orange Bikes",
+        "domain": "orangebikes.co.uk",
+        "country": "UK",
+        "subcategory": "mountain bikes",
+        "description": "Halifax-based hand-built UK mountain bike brand.",
+        "evidence": "Shopify-powered site; UK cycling brand directories."
+      },
+      {
+        "name": "Pace Cycles",
+        "domain": "pace-cycles.com",
+        "country": "UK",
+        "subcategory": "mountain bikes",
+        "description": "Yorkshire-based UK mountain bike and component brand.",
+        "evidence": "Shopify storefront per URL/checkout structure."
+      },
+      {
+        "name": "Genesis Bikes",
+        "domain": "genesisbikes.co.uk",
+        "country": "UK",
+        "subcategory": "gravel / road bikes",
+        "description": "British adventure, gravel and road bike brand.",
+        "evidence": "Shopify storefront per UK cycling brand directories."
+      },
+      {
+        "name": "Bowman Cycles",
+        "domain": "bowman-cycles.com",
+        "country": "UK",
+        "subcategory": "road / gravel bikes",
+        "description": "UK independent road and gravel frameset brand.",
+        "evidence": "Shopify-powered site per URL/cart."
+      },
+      {
+        "name": "Temple Cycles",
+        "domain": "templecycles.co.uk",
+        "country": "UK",
+        "subcategory": "city / commuter bikes",
+        "description": "Bristol-based heritage-style city bike brand.",
+        "evidence": "Shopify storefront; UK cycling DTC brand lists."
+      },
+      {
+        "name": "Fabric Bikes UK",
+        "domain": "fabric.cc",
+        "country": "UK",
+        "subcategory": "cycling accessories",
+        "description": "UK cycling saddles, bottles, tools and accessories brand.",
+        "evidence": "Shopify-powered storefront per checkout URLs."
+      },
+      {
+        "name": "Hiplok",
+        "domain": "hiplok.com",
+        "country": "UK",
+        "subcategory": "bike locks",
+        "description": "Warwickshire-based wearable bike lock brand.",
+        "evidence": "Shopify storefront; UK cycling brand roundups."
+      },
+      {
+        "name": "Knog UK",
+        "domain": "knog.com.au",
+        "country": "EU",
+        "subcategory": "bike lights",
+        "description": "Australian cycling lights brand with UK retail presence.",
+        "evidence": "Shopify-powered multi-region store."
+      },
+      {
+        "name": "Restrap",
+        "domain": "restrap.co.uk",
+        "country": "UK",
+        "subcategory": "bikepacking gear",
+        "description": "UK bikepacking bag brand (UK storefront).",
+        "evidence": "Shopify-powered site."
+      },
+      {
+        "name": "Bicycle Chain Reaction / Pashley",
+        "domain": "pashley.co.uk",
+        "country": "UK",
+        "subcategory": "heritage bikes",
+        "description": "Stratford-upon-Avon-based heritage UK bicycle manufacturer.",
+        "evidence": "Shopify storefront per URL structure."
+      },
+      {
+        "name": "Auto Finesse",
+        "domain": "autofinesse.com",
+        "country": "UK",
+        "subcategory": "car detailing",
+        "description": "Essex-based UK car detailing products brand.",
+        "evidence": "Shopify storefront widely documented in UK automotive ecommerce."
+      },
+      {
+        "name": "Dodo Juice",
+        "domain": "dodojuice.com",
+        "country": "UK",
+        "subcategory": "car detailing",
+        "description": "UK carnauba wax and car detailing products brand.",
+        "evidence": "Shopify storefront observed; UK detailing brand directories."
+      }
+    ]
+  }
+}

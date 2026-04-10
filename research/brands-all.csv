@@ -1,0 +1,605 @@
+industry,industry_label,brand_name,domain,country,subcategory,description,source
+fashion,Fashion,Allbirds,allbirds.com,,,,verified
+fashion,Fashion,Away,awaytravel.com,,,,verified
+fashion,Fashion,Chubbies,chubbies.com,,,,verified
+fashion,Fashion,Cuts Clothing,cutsclothing.com,,,,verified
+fashion,Fashion,Daniel Wellington,danielwellington.com,,,,verified
+fashion,Fashion,Ekster,ekster.com,,,,verified
+fashion,Fashion,Fashion Nova,fashionnova.com,,,,verified
+fashion,Fashion,Greats,greats.com,,,,verified
+fashion,Fashion,Kith,kith.com,,,,verified
+fashion,Fashion,Knix,knix.com,,,,verified
+fashion,Fashion,Koio,koio.co,,,,verified
+fashion,Fashion,Lunya,lunya.co,,,,verified
+fashion,Fashion,Mack Weldon,mackweldon.com,,,,verified
+fashion,Fashion,Marine Layer,marinelayer.com,,,,verified
+fashion,Fashion,Monos,monos.com,,,,verified
+fashion,Fashion,OBEY Clothing,obeyclothing.com,,,,verified
+fashion,Fashion,OddBalls,myoddballs.com,,,,verified
+fashion,Fashion,Oliver Cabell,olivercabell.com,,,,verified
+fashion,Fashion,Only NY,onlyny.com,,,,verified
+fashion,Fashion,Outdoor Voices,outdoorvoices.com,,,,verified
+fashion,Fashion,Quay Australia,quayaustralia.com,,,,verified
+fashion,Fashion,Represent Clothing,representclo.com,,,,verified
+fashion,Fashion,Rothy's,rothys.com,,,,verified
+fashion,Fashion,Stance,stance.com,,,,verified
+fashion,Fashion,Steve Madden,stevemadden.com,,,,verified
+fashion,Fashion,Taylor Stitch,taylorstitch.com,,,,verified
+fashion,Fashion,Tentree,tentree.com,,,,verified
+fashion,Fashion,The Hundreds,thehundreds.com,,,,verified
+fashion,Fashion,ThirdLove,thirdlove.com,,,,verified
+fashion,Fashion,Thursday Boots,thursdayboots.com,,,,verified
+fashion,Fashion,Todd Snyder,toddsnyder.com,,,,verified
+fashion,Fashion,True Classic,trueclassictees.com,,,,verified
+fashion,Fashion,Vessi,vessi.com,,,,verified
+fashion,Fashion,Vincero,vincerowatches.com,,,,verified
+fashion,Fashion,Western Rise,westernrise.com,,,,verified
+fashion,Fashion,Aime Leon Dore,aimeleondore.com,US,streetwear,New York luxury streetwear and sportswear brand.,researched
+fashion,Fashion,Albaray,albaray.co.uk,UK,womenswear,British womenswear brand offering responsibly made contemporary clothing.,researched
+fashion,Fashion,Bo+Tee,bo-tee.com,UK,activewear,"British activewear sub-brand of Oh Polly selling leggings, sports bras and crop tops.",researched
+fashion,Fashion,Cole Buxton,colebuxton.com,UK,contemporary sportswear,"Contemporary British sportswear brand making hoodies, tees and sweatpants designed and produced in Britain.",researched
+fashion,Fashion,Community Clothing,communityclothing.co.uk,UK,heritage basics,Patrick Grant's social enterprise making affordable British-made staples.,researched
+fashion,Fashion,Damson Madder,damsonmadder.com,UK,womenswear,London female-led label known for whimsical silhouettes and bold prints.,researched
+fashion,Fashion,Finisterre,finisterre.com,UK,outdoor/outerwear,Cornwall-based cold-water surf and outdoor clothing brand with a sustainability focus.,researched
+fashion,Fashion,HYPE,justhype.co.uk,UK,streetwear,British streetwear brand known for graphic prints and youth-focused collections.,researched
+fashion,Fashion,Kestin,kestin.co,UK,menswear,Scottish menswear brand drawing on heritage workwear and contemporary menswear.,researched
+fashion,Fashion,Kitri,kitristudio.com,UK,womenswear,"London-based womenswear label founded by Haeni Kim, famed for statement printed dresses.",researched
+fashion,Fashion,Lazy Oaf,lazyoaf.com,UK,streetwear,"London independent streetwear label with playful, cartoon-inspired designs.",researched
+fashion,Fashion,Lucy & Yak,lucyandyak.com,UK,sustainable casualwear,"Independent UK brand famous for colourful organic cotton dungarees, jumpsuits and casualwear.",researched
+fashion,Fashion,ME+EM,meandem.com,UK,premium womenswear,British premium womenswear brand founded by Clare Hornby offering elevated everyday pieces.,researched
+fashion,Fashion,Never Fully Dressed,neverfullydressed.com,UK,womenswear,London-based womenswear label known for bold prints and wrap dresses.,researched
+fashion,Fashion,Nobody's Child,nobodyschild.com,UK,sustainable womenswear,London sustainable women's fashion label producing limited runs using upcycled fabrics.,researched
+fashion,Fashion,Oh Polly,ohpolly.com,UK,womenswear,"Glasgow-based women's fashion brand specialising in figure-flattering dresses, tops and swimwear.",researched
+fashion,Fashion,Oliver Bonas,oliverbonas.com,UK,lifestyle/fashion,"British lifestyle brand selling fashion, gifts and homewares.",researched
+fashion,Fashion,Olivia Rubin,oliviarubinlondon.com,UK,womenswear,"London designer brand known for playful, colour-driven dresses.",researched
+fashion,Fashion,Omnes,omnes.com,UK,sustainable womenswear,London sustainable womenswear label using recycled and deadstock materials.,researched
+fashion,Fashion,Passenger Clothing,passenger-clothing.com,UK,outdoor/lifestyle,UK outdoor lifestyle brand selling travel-inspired clothing.,researched
+fashion,Fashion,Pepper,wearpepper.com,US,intimates,Direct-to-consumer intimates brand tailored for women with smaller busts.,researched
+fashion,Fashion,Percival,percivalclo.com,UK,menswear,British menswear label focused on modern takes on classic clothing.,researched
+fashion,Fashion,Rapha,rapha.cc,UK,cycling apparel,London-based premium cycling clothing and accessories brand.,researched
+fashion,Fashion,Rixo,rixo.co.uk,UK,womenswear,London womenswear label known for hand-painted prints and vintage-inspired dresses.,researched
+fashion,Fashion,Saturdays NYC,saturdaysnyc.com,US,surf/casualwear,New York surf-inspired menswear and lifestyle brand.,researched
+fashion,Fashion,Son of a Tailor,sonofatailor.com,EU,custom menswear,Copenhagen-based made-to-measure tee shirt and knitwear brand.,researched
+fashion,Fashion,Sunspel,sunspel.com,UK,heritage menswear,"Heritage British clothing brand known for luxury cotton tees, underwear and polos.",researched
+fashion,Fashion,Wax London,waxlondon.com,UK,menswear,London menswear brand known for its patchwork Whiting overshirt and British-made clothing.,researched
+fashion,Fashion,YMC,youmustcreate.com,UK,contemporary clothing,London contemporary menswear and womenswear brand (You Must Create).,researched
+beauty,Beauty & Wellness,Beauty Bakerie,beautybakerie.com,,,,verified
+beauty,Beauty & Wellness,Blueland,blueland.com,,,,verified
+beauty,Beauty & Wellness,Cocokind,cocokind.com,,,,verified
+beauty,Beauty & Wellness,ColourPop,colourpop.com,,,,verified
+beauty,Beauty & Wellness,Dr. Squatch,drsquatch.com,,,,verified
+beauty,Beauty & Wellness,Fenty Beauty,fentybeauty.com,,,,verified
+beauty,Beauty & Wellness,Function of Beauty,functionofbeauty.com,,,,verified
+beauty,Beauty & Wellness,Geologie,geologie.com,,,,verified
+beauty,Beauty & Wellness,Glossier,glossier.com,,,,verified
+beauty,Beauty & Wellness,Glow Recipe,glowrecipe.com,,,,verified
+beauty,Beauty & Wellness,Golde,golde.co,,,,verified
+beauty,Beauty & Wellness,Grove Collaborative,grove.co,,,,verified
+beauty,Beauty & Wellness,Harry's,harrys.com,,,,verified
+beauty,Beauty & Wellness,Iconic London,iconiclondoninc.com,,,,verified
+beauty,Beauty & Wellness,Jeffree Star Cosmetics,jeffreestarcosmetics.com,,,,verified
+beauty,Beauty & Wellness,Josie Maran,josiemaran.com,,,,verified
+beauty,Beauty & Wellness,Kopari,koparibeauty.com,,,,verified
+beauty,Beauty & Wellness,Kylie Cosmetics,kyliecosmetics.com,,,,verified
+beauty,Beauty & Wellness,Lumin,luminskin.com,,,,verified
+beauty,Beauty & Wellness,Moon Juice,moonjuice.com,,,,verified
+beauty,Beauty & Wellness,Native,nativecos.com,,,,verified
+beauty,Beauty & Wellness,Oars + Alps,oarsandalps.com,,,,verified
+beauty,Beauty & Wellness,Olaplex,olaplex.com,,,,verified
+beauty,Beauty & Wellness,Olly,olly.com,,,,verified
+beauty,Beauty & Wellness,Ouai,theouai.com,,,,verified
+beauty,Beauty & Wellness,Pixi Beauty,pixibeauty.com,,,,verified
+beauty,Beauty & Wellness,Pura,pura.com,,,,verified
+beauty,Beauty & Wellness,Quip,getquip.com,,,,verified
+beauty,Beauty & Wellness,Rare Beauty,rarebeauty.com,,,,verified
+beauty,Beauty & Wellness,Ritual,ritual.com,,,,verified
+beauty,Beauty & Wellness,Saje Natural Wellness,saje.com,,,,verified
+beauty,Beauty & Wellness,Snow Teeth Whitening,trysnow.com,,,,verified
+beauty,Beauty & Wellness,Stila Cosmetics,stilacosmetics.com,,,,verified
+beauty,Beauty & Wellness,Summer Fridays,summerfridays.com,,,,verified
+beauty,Beauty & Wellness,The Beauty Chef,thebeautychef.com,,,,verified
+beauty,Beauty & Wellness,The Honey Pot,thehoneypot.co,,,,verified
+beauty,Beauty & Wellness,Tropic Skincare,tropicskincare.com,,,,verified
+beauty,Beauty & Wellness,Tru Earth,tru.earth,,,,verified
+beauty,Beauty & Wellness,Vital Proteins,vitalproteins.com,,,,verified
+beauty,Beauty & Wellness,Vitruvi,vitruvi.com,,,,verified
+beauty,Beauty & Wellness,Bare Biology,barebiology.com,UK,supplements,British premium omega-3 fish oil supplements brand.,researched
+beauty,Beauty & Wellness,Beauty Pie,beautypie.com,UK,cosmetics club,London beauty buyers' club offering luxury beauty products at cost to members.,researched
+beauty,Beauty & Wellness,Bloom & Blossom,bloomandblossom.com,UK,wellness/skincare,British wellness and skincare brand known for bath and body products.,researched
+beauty,Beauty & Wellness,Bouclème,boucleme.co.uk,UK,haircare,British haircare brand focused on products for curly hair.,researched
+beauty,Beauty & Wellness,Byoma,byoma.com,UK,barrier skincare,UK-founded affordable barrier-health skincare brand.,researched
+beauty,Beauty & Wellness,Charlotte Tilbury,charlottetilbury.com,UK,luxury makeup,British luxury makeup and skincare brand founded by Charlotte Tilbury.,researched
+beauty,Beauty & Wellness,Dr. Sam's,drsambunting.com,UK,dermatologist skincare,London dermatologist-founded skincare brand by Dr Sam Bunting.,researched
+beauty,Beauty & Wellness,Earl of East,earlofeast.com,UK,home fragrance,London candle and home fragrance brand.,researched
+beauty,Beauty & Wellness,Elemis,elemis.com,UK,skincare,Luxury British anti-ageing skincare brand.,researched
+beauty,Beauty & Wellness,Evolve Beauty,evolvebeauty.co.uk,UK,natural skincare,"Hertfordshire artisan natural, vegan, cruelty-free beauty brand.",researched
+beauty,Beauty & Wellness,Facetheory,facetheory.com,UK,accessible skincare,Sheffield-based vegan cruelty-free skincare brand at accessible prices.,researched
+beauty,Beauty & Wellness,Form Nutrition,formnutrition.com,UK,plant protein,London plant-based protein and supplements brand.,researched
+beauty,Beauty & Wellness,Haeckels,haeckels.co.uk,UK,natural skincare,Margate-based natural skincare brand using locally foraged seaweed and botanicals.,researched
+beauty,Beauty & Wellness,Huel,huel.com,UK,nutrition/supplements,UK nutritionally complete food and supplements brand.,researched
+beauty,Beauty & Wellness,Illamasqua,illamasqua.com,UK,makeup,British cult makeup brand with bold and artistic colour palettes.,researched
+beauty,Beauty & Wellness,Innermost,liveinnermost.com,UK,supplements,UK premium supplements and nutrition brand.,researched
+beauty,Beauty & Wellness,Medik8,medik8.com,UK,pro skincare,British professional skincare brand built on vitamin C/A/SPF philosophy.,researched
+beauty,Beauty & Wellness,Neom Organics,neomorganics.com,UK,wellbeing fragrance,Yorkshire-based wellbeing brand making natural candles and bath products.,researched
+beauty,Beauty & Wellness,Noughty Haircare,lovenoughty.co.uk,UK,haircare,UK vegan haircare brand powered by up to 97% natural ingredients.,researched
+beauty,Beauty & Wellness,Pai Skincare,paiskincare.com,UK,sensitive skincare,British organic skincare brand focused on sensitive skin.,researched
+beauty,Beauty & Wellness,REN Clean Skincare,renskincare.com,UK,clean skincare,UK clean skincare brand made in Britain.,researched
+beauty,Beauty & Wellness,Revolution Beauty,revolutionbeauty.com,UK,mass cosmetics,UK affordable cosmetics brand.,researched
+beauty,Beauty & Wellness,Ruby Hammer,rubyhammer.com,UK,makeup tools,UK makeup brand from celebrity makeup artist Ruby Hammer.,researched
+beauty,Beauty & Wellness,Skin + Me,skinandme.com,UK,personalised skincare,UK personalised prescription skincare brand using a quiz-first buying flow.,researched
+beauty,Beauty & Wellness,Skin Rocks,skinrocks.com,UK,skincare,Caroline Hirons' London-based skincare brand.,researched
+beauty,Beauty & Wellness,Trinny London,trinnylondon.com,UK,makeup,"British DTC makeup and skincare brand founded by Trinny Woodall, known for stackable packaging.",researched
+beauty,Beauty & Wellness,Tweezerman-alternative: Beauty Works,beautyworksonline.com,UK,haircare/extensions,UK hair extensions and haircare brand.,researched
+beauty,Beauty & Wellness,UpCircle Beauty,upcirclebeauty.com,UK,sustainable skincare,UK skincare brand making products from upcycled ingredients like coffee grounds.,researched
+beauty,Beauty & Wellness,Votary,votary.co.uk,UK,natural skincare,British skincare brand focused on plant-oil based facial oils and cleansers.,researched
+beauty,Beauty & Wellness,Wild,wearewild.com,UK,refillable personal care,UK refillable natural deodorant and personal care brand.,researched
+home,Home & Garden,Aer,aersf.com,,,,verified
+home,Home & Garden,Big Agnes,bigagnes.com,,,,verified
+home,Home & Garden,Boll & Branch,bollandbranch.com,,,,verified
+home,Home & Garden,Breeo,breeo.co,,,,verified
+home,Home & Garden,Brooklinen,brooklinen.com,,,,verified
+home,Home & Garden,Casper,casper.com,,,,verified
+home,Home & Garden,Chrome Industries,chromeindustries.com,,,,verified
+home,Home & Garden,Corkcicle,corkcicle.com,,,,verified
+home,Home & Garden,Fast Growing Trees,fastgrowingtrees.com,,,,verified
+home,Home & Garden,Floyd,floydhome.com,,,,verified
+home,Home & Garden,Gozney,gozney.com,,,,verified
+home,Home & Garden,Incase,incase.com,,,,verified
+home,Home & Garden,Maiden Home,maidenhome.com,,,,verified
+home,Home & Garden,Minaal,minaal.com,,,,verified
+home,Home & Garden,Nomatic,nomatic.com,,,,verified
+home,Home & Garden,Ooni,ooni.com,,,,verified
+home,Home & Garden,Outer,liveouter.com,,,,verified
+home,Home & Garden,Parachute Home,parachutehome.com,,,,verified
+home,Home & Garden,Peak Design,peakdesign.com,,,,verified
+home,Home & Garden,Rumpl,rumpl.com,,,,verified
+home,Home & Garden,S'well,swell.com,,,,verified
+home,Home & Garden,Sandmarc,sandmarc.com,,,,verified
+home,Home & Garden,Sea to Summit,seatosummit.com,,,,verified
+home,Home & Garden,Snow Peak,snowpeak.com,,,,verified
+home,Home & Garden,Society6,society6.com,,,,verified
+home,Home & Garden,Stanley 1913,stanley1913.com,,,,verified
+home,Home & Garden,Timbuk2,timbuk2.com,,,,verified
+home,Home & Garden,Tortuga,tortugabackpacks.com,,,,verified
+home,Home & Garden,Waterfield Designs,sfbags.com,,,,verified
+home,Home & Garden,Acupanel,theacousticcompany.co.uk,UK,decor,British brand making decorative acoustic wood wall and ceiling panels.,researched
+home,Home & Garden,Aery Living,aeryliving.com,UK,home fragrance,"UK aromatherapy candles, diffusers and bath brand.",researched
+home,Home & Garden,Bert & May,bertandmay.com,UK,decor,UK encaustic tiles and interiors brand.,researched
+home,Home & Garden,Case Furniture,casefurniture.com,UK,furniture,British contemporary designer furniture manufacturer.,researched
+home,Home & Garden,Cox & Cox,coxandcox.co.uk,UK,decor,UK homeware and interiors retailer.,researched
+home,Home & Garden,Danetti,danetti.com,UK,furniture,UK contemporary furniture brand based in Berkshire.,researched
+home,Home & Garden,Darcey's Candles,darceyscandles.co.uk,UK,home fragrance,Scottish luxury handcrafted soy wax candles and wax melts.,researched
+home,Home & Garden,Emma Bridgewater,emmabridgewater.co.uk,UK,tableware,Quintessentially British pottery and tableware brand from Stoke-on-Trent.,researched
+home,Home & Garden,Ettinger,ettinger.co.uk,UK,homeware,British luxury leather goods and home accessories brand.,researched
+home,Home & Garden,eve Sleep,evesleep.co.uk,UK,bedding,UK mattress and bedding DTC brand.,researched
+home,Home & Garden,Gold Moss,goldmoss.co.uk,UK,home fragrance,Scottish hand-poured soy candle and reed diffuser brand.,researched
+home,Home & Garden,Grove Bags,grove.co.uk,UK,garden,UK garden tools and accessories.,researched
+home,Home & Garden,Houseof,houseof.com,UK,lighting,UK contemporary lighting and homeware brand.,researched
+home,Home & Garden,Houseplant,houseplant.co.uk,UK,plants,UK online houseplant retailer.,researched
+home,Home & Garden,Labour and Wait,labourandwait.co.uk,UK,homeware,London traditional timeless homeware and hardware shop.,researched
+home,Home & Garden,LINLEY,davidlinley.com,UK,furniture,British luxury bespoke furniture and interior design brand.,researched
+home,Home & Garden,Niwaki,niwaki.com,UK,garden,UK Japanese garden tools and kitchenware brand.,researched
+home,Home & Garden,Patch Plants,patchplants.com,UK,plants,UK online indoor plant delivery brand.,researched
+home,Home & Garden,Piglet in Bed,pigletinbed.com,UK,bedding,UK linen bedding and loungewear brand.,researched
+home,Home & Garden,Robert Welch,robertwelch.com,UK,kitchenware,British family-run brand for designer cutlery and kitchen tools.,researched
+home,Home & Garden,Rockett St George,rockettstgeorge.co.uk,UK,decor,UK eclectic homeware and interiors retailer.,researched
+home,Home & Garden,Simba Sleep,simbasleep.com,UK,bedding,British hybrid mattress and bedding DTC brand founded in 2015.,researched
+home,Home & Garden,Soho Home,sohohome.com,UK,homeware,Soho House-owned UK homeware and furniture brand.,researched
+home,Home & Garden,Sophie Allport,sophieallport.com,UK,homeware,"UK homeware brand known for illustrated fine-bone china, textiles and kitchenware.",researched
+home,Home & Garden,Swoon Editions,swooneditions.com,UK,furniture,UK design-led furniture DTC brand.,researched
+home,Home & Garden,Tala,tala.co.uk,UK,lighting,UK sustainable LED lighting brand.,researched
+home,Home & Garden,TOAST,toa.st,UK,homeware,"UK lifestyle brand selling clothing, homeware and handmade tableware.",researched
+home,Home & Garden,Whitehall Garden Centres,whitehallgardencentre.co.uk,UK,garden,"Family-run UK garden centre selling plants, furniture and decor.",researched
+food,Food & Beverage,Beekeeper's Naturals,beekeepersnaturals.com,,,,verified
+food,Food & Beverage,ButcherBox,butcherbox.com,,,,verified
+food,Food & Beverage,Chemex,chemexcoffeemaker.com,,,,verified
+food,Food & Beverage,Chomps,chomps.com,,,,verified
+food,Food & Beverage,Counter Culture,counterculturecoffee.com,,,,verified
+food,Food & Beverage,Daily Harvest,daily-harvest.com,,,,verified
+food,Food & Beverage,Death Wish Coffee,deathwishcoffee.com,,,,verified
+food,Food & Beverage,Fellow,fellowproducts.com,,,,verified
+food,Food & Beverage,Fly by Jing,flybyjing.com,,,,verified
+food,Food & Beverage,Four Sigmatic,foursigmatic.com,,,,verified
+food,Food & Beverage,Ghia,drinkghia.com,,,,verified
+food,Food & Beverage,Great Jones,greatjonesgoods.com,,,,verified
+food,Food & Beverage,Heatonist,heatonist.com,,,,verified
+food,Food & Beverage,HexClad,hexclad.com,,,,verified
+food,Food & Beverage,Laird Superfood,lairdsuperfood.com,,,,verified
+food,Food & Beverage,Liquid Death,liquiddeath.com,,,,verified
+food,Food & Beverage,Magic Spoon,magicspoon.com,,,,verified
+food,Food & Beverage,Material Kitchen,materialkitchen.com,,,,verified
+food,Food & Beverage,Milk Bar,milkbarstore.com,,,,verified
+food,Food & Beverage,Misen,misen.com,,,,verified
+food,Food & Beverage,MUDWTR,mudwtr.com,,,,verified
+food,Food & Beverage,Olipop,drinkolipop.com,,,,verified
+food,Food & Beverage,Partake Foods,partakefoods.com,,,,verified
+food,Food & Beverage,Poppi,drinkpoppi.com,,,,verified
+food,Food & Beverage,Red Bull Shop,redbullshopus.com,,,,verified
+food,Food & Beverage,Snake River Farms,snakeriverfarms.com,,,,verified
+food,Food & Beverage,Soylent,soylent.com,,,,verified
+food,Food & Beverage,Splendid Spoon,splendidspoon.com,,,,verified
+food,Food & Beverage,Stumptown Coffee,stumptowncoffee.com,,,,verified
+food,Food & Beverage,Verve Coffee,vervecoffee.com,,,,verified
+food,Food & Beverage,allplants,allplants.com,UK,meal kits,UK plant-based frozen ready-meal subscription service.,researched
+food,Food & Beverage,Beavertown Brewery,beavertownbrewery.co.uk,UK,beverages,"London craft brewery selling beers, seltzers and merch direct to consumer.",researched
+food,Food & Beverage,Bird & Blend Tea Co.,birdandblendtea.com,UK,tea,UK blended loose leaf tea company with creative flavour blends.,researched
+food,Food & Beverage,Blank Street Coffee,blankstreet.co.uk,UK,coffee,UK coffee shop chain selling beans and merch online.,researched
+food,Food & Beverage,Bluebird Tea Co,bluebirdteaco.com,UK,tea,UK loose leaf tea brand (part of Bird & Blend group).,researched
+food,Food & Beverage,Candy Kittens,candykittens.co.uk,UK,snacks,UK gourmet vegan gummy sweets brand.,researched
+food,Food & Beverage,ChicP,chicp.co.uk,UK,snacks,UK sustainable hummus and dips brand.,researched
+food,Food & Beverage,DASH Water,dash-water.com,UK,beverages,UK sparkling water infused with wonky fruit.,researched
+food,Food & Beverage,Days Brewing,daysbrewing.com,UK,beverages,UK alcohol-free craft beer brand.,researched
+food,Food & Beverage,Doisy & Dam,doisyanddam.com,UK,snacks,UK ethical chocolate brand with superfood-infused bars.,researched
+food,Food & Beverage,Exhale Coffee,exhalecoffee.com,UK,coffee,UK high-antioxidant functional coffee brand.,researched
+food,Food & Beverage,Grind,grind.co.uk,UK,coffee,"London-born coffee brand selling compostable coffee pods, beans and subscriptions.",researched
+food,Food & Beverage,IMPOSSIBREW,impossibrew.co.uk,UK,beverages,UK functional alcohol-free beer with a proprietary social blend.,researched
+food,Food & Beverage,JING Tea,jingtea.com,UK,tea,UK premium single-origin loose leaf tea and teaware.,researched
+food,Food & Beverage,Mallow & Marsh,mallowandmarsh.com,UK,snacks,UK marshmallow snacks and treats brand.,researched
+food,Food & Beverage,Minor Figures,minorfigures.com,UK,beverages,UK oat milk and cold-brew coffee brand.,researched
+food,Food & Beverage,Nutribuddy,nutribuddy.com,UK,snacks,UK meal shake and healthy breakfast brand.,researched
+food,Food & Beverage,Pact Coffee,pactcoffee.com,UK,coffee,UK direct-trade specialty coffee subscription.,researched
+food,Food & Beverage,Pasta Evangelists,pastaevangelists.com,UK,meal kits,UK luxury fresh pasta meal-kit delivery service.,researched
+food,Food & Beverage,Pentire Drinks,pentiredrinks.com,UK,beverages,Cornish non-alcoholic botanical aperitif distilled from coastal plants.,researched
+food,Food & Beverage,Pinter,pinter.com,UK,beverages,UK make-your-own craft beer appliance and ingredient kits.,researched
+food,Food & Beverage,Pip & Nut,pipandnut.com,UK,snacks,"UK nut butter brand selling almond, peanut and cashew butters plus snack packs.",researched
+food,Food & Beverage,Press London,press-london.com,UK,beverages,Cold-pressed juice and cleanse programme brand based in London.,researched
+food,Food & Beverage,Rave Coffee,ravecoffee.co.uk,UK,coffee,Cotswolds-based specialty coffee roaster with subscription.,researched
+food,Food & Beverage,Seedlip,seedlipdrinks.com,UK,beverages,British non-alcoholic distilled spirit brand.,researched
+food,Food & Beverage,Sipful,sipful.co.uk,UK,beverages,UK functional wellness drinks brand.,researched
+food,Food & Beverage,Square Mile Coffee Roasters,shop.squaremilecoffee.com,UK,coffee,London specialty coffee roaster founded by James Hoffmann.,researched
+food,Food & Beverage,Three Spirit,threespiritdrinks.com,UK,beverages,UK non-alcoholic functional drinks with adaptogens and nootropics.,researched
+food,Food & Beverage,TRIP Drinks,drinktrip.com,UK,beverages,UK CBD sparkling drinks and functional beverages.,researched
+electronics,Electronics & Tech,Arduino,store.arduino.cc,,,,verified
+electronics,Electronics & Tech,Boox,shop.boox.com,,,,verified
+electronics,Electronics & Tech,Elegoo,elegoo.com,,,,verified
+electronics,Electronics & Tech,Glorious Gaming,gloriousgaming.com,,,,verified
+electronics,Electronics & Tech,Jackery,jackery.com,,,,verified
+electronics,Electronics & Tech,Keychron,keychron.com,,,,verified
+electronics,Electronics & Tech,Loop Earplugs,loopearplugs.com,,,,verified
+electronics,Electronics & Tech,Master & Dynamic,masterdynamic.com,,,,verified
+electronics,Electronics & Tech,Native Union,nativeunion.com,,,,verified
+electronics,Electronics & Tech,NZXT,nzxt.com,,,,verified
+electronics,Electronics & Tech,Paperlike,paperlike.com,,,,verified
+electronics,Electronics & Tech,Pela Case,pelacase.com,,,,verified
+electronics,Electronics & Tech,Ridge Wallet,ridgewallet.com,,,,verified
+electronics,Electronics & Tech,Secretlab,secretlab.co,,,,verified
+electronics,Electronics & Tech,Shokz,shokz.com,,,,verified
+electronics,Electronics & Tech,Supernote,supernote.com,,,,verified
+electronics,Electronics & Tech,Twelve South,twelvesouth.com,,,,verified
+electronics,Electronics & Tech,Bookman,bookman.se,EU,urban cycling lights,Swedish minimalist cycling lights and visibility accessories sold into UK.,researched
+electronics,Electronics & Tech,Cabbage Tech / Buddyphones,onanoff.com,UK,kids headphones,European/UK distributed kids' volume-limited headphones (UK-facing storefront).,researched
+electronics,Electronics & Tech,Cambridge Audio,cambridgeaudio.com,UK,hi-fi electronics,London-based hi-fi electronics and speaker manufacturer.,researched
+electronics,Electronics & Tech,Firebox,firebox.com,UK,gadgets / gifts,UK gadget and gift retailer.,researched
+electronics,Electronics & Tech,Flare Audio,flareaudio.com,UK,earphones / hearing protection,UK in-ear monitor and acoustic ear plug brand.,researched
+electronics,Electronics & Tech,Grovemade EU/UK,grovemade.com,US,desk accessories,Premium wood desk accessories (US brand with UK shipping).,researched
+electronics,Electronics & Tech,Hiive,hiive.co.uk,UK,smart home,UK smart home heating and energy management brand.,researched
+electronics,Electronics & Tech,I Am Plus / Buddha Board style - Kano,kano.me,UK,edtech / computer kits,London-based DIY computer and coding kit maker for kids.,researched
+electronics,Electronics & Tech,I Want One Of Those,iwantoneofthose.com,UK,gadgets,UK heritage gadget retailer.,researched
+electronics,Electronics & Tech,Juice,juice.co.uk,UK,charging / power banks,"UK charging accessories brand selling cables, chargers and power banks.",researched
+electronics,Electronics & Tech,LIFX UK,lifx.co.uk,UK,smart lighting,UK storefront for smart lighting brand.,researched
+electronics,Electronics & Tech,Lumie,lumie.com,UK,wake-up / SAD lamps,"UK inventor of the wake-up light and bodyclock, selling SAD and wellbeing lamps.",researched
+electronics,Electronics & Tech,Menkind,menkind.co.uk,UK,gadgets,UK novelty gadget and gift retailer.,researched
+electronics,Electronics & Tech,Minirig,minirigs.co.uk,UK,portable speakers,Bristol-based handmade portable Bluetooth speaker brand.,researched
+electronics,Electronics & Tech,Mooltipass / GetDigital - Cuckooland,cuckooland.com,UK,smart home / gadgets,UK design-led gadget and smart home retailer.,researched
+electronics,Electronics & Tech,Mous,mous.co,UK,phone cases / accessories,London-based premium protective phone case and wireless charging accessory brand.,researched
+electronics,Electronics & Tech,Oakywood UK,oakywood.shop,EU,desk accessories,Wooden desk and tech accessories brand serving UK/EU customers.,researched
+electronics,Electronics & Tech,Orbitsound,orbitsound.com,UK,soundbars / audio,UK audio brand known for soundbars and airSOUND home audio systems.,researched
+electronics,Electronics & Tech,Pimoroni,pimoroni.com,UK,maker / electronics,Sheffield-based Raspberry Pi and maker electronics retailer.,researched
+electronics,Electronics & Tech,Proporta,proporta.co.uk,UK,mobile accessories,"Long-running UK mobile accessories brand, licensed partner of Ted Baker.",researched
+electronics,Electronics & Tech,RHA Audio,rha-audio.com,UK,headphones,Glasgow-based premium earphone and wireless headphone brand.,researched
+electronics,Electronics & Tech,Ruark Audio,ruarkaudio.com,UK,hi-fi audio,Essex-based premium radio and hi-fi brand.,researched
+electronics,Electronics & Tech,Tech21,tech21.com,UK,phone cases / screen protection,UK protective tech accessories brand known for FlexShock case technology.,researched
+electronics,Electronics & Tech,The Book of Everyone / Prezzybox,prezzybox.com,UK,gadgets / gifts,UK gadget and gifting retailer.,researched
+electronics,Electronics & Tech,The Pi Hut,thepihut.com,UK,maker / electronics,UK Raspberry Pi and electronics components retailer.,researched
+electronics,Electronics & Tech,TORRO,torro.co.uk,UK,leather tech accessories,"Newcastle-based premium leather phone cases, wallets and tech accessories.",researched
+electronics,Electronics & Tech,Urbanista,urbanista.com,EU,headphones,Stockholm-based lifestyle audio brand selling to UK consumers.,researched
+electronics,Electronics & Tech,Vanguard UK,vanguardworld.co.uk,UK,camera / optics accessories,"UK storefront for camera bags, tripods and optics.",researched
+electronics,Electronics & Tech,Veho,veho-world.com,UK,audio / tech accessories,"UK lifestyle audio and tech accessories brand (earbuds, speakers, turntables).",researched
+sports,Sports & Outdoors,Black Diamond,blackdiamondequipment.com,,,,verified
+sports,Sports & Outdoors,Cotopaxi,cotopaxi.com,,,,verified
+sports,Sports & Outdoors,ENO,eaglesnestoutfittersinc.com,,,,verified
+sports,Sports & Outdoors,Filson,filson.com,,,,verified
+sports,Sports & Outdoors,GSI Outdoors,gsioutdoors.com,,,,verified
+sports,Sports & Outdoors,Gymshark,gymshark.com,,,,verified
+sports,Sports & Outdoors,Kammok,kammok.com,,,,verified
+sports,Sports & Outdoors,Kifaru,kifaru.net,,,,verified
+sports,Sports & Outdoors,Kuiu,kuiu.com,,,,verified
+sports,Sports & Outdoors,Simms Fishing,simmsfishing.com,,,,verified
+sports,Sports & Outdoors,Stone Glacier,stoneglacier.com,,,,verified
+sports,Sports & Outdoors,Topo Designs,topodesigns.com,,,,verified
+sports,Sports & Outdoors,Vertx,vertx.com,,,,verified
+sports,Sports & Outdoors,Alpkit,alpkit.com,UK,outdoor gear,"Nottinghamshire-based outdoor, camping and trail running equipment brand.",researched
+sports,Sports & Outdoors,Ashmei,ashmei.com,UK,running & cycling apparel,British premium merino-based running and cycling kit brand.,researched
+sports,Sports & Outdoors,Attaquer,attaquer.cc,UK,cycling apparel,Cycling apparel brand with UK/EU storefront.,researched
+sports,Sports & Outdoors,Brompton Junction,brompton.com,UK,folding bikes,London-based iconic folding bike manufacturer.,researched
+sports,Sports & Outdoors,Coalatree UK / Scrubba,scrubba.co.uk,UK,camping accessories,UK store for Scrubba wash bag and travel camping accessories.,researched
+sports,Sports & Outdoors,Hunt Bike Wheels,huntbikewheels.com,UK,cycling wheels,UK direct-to-consumer cycling wheelset brand.,researched
+sports,Sports & Outdoors,Iffley Road,iffleyroad.com,UK,running apparel,British premium running apparel brand with heritage aesthetic and merino fabrics.,researched
+sports,Sports & Outdoors,Le Col,lecol.cc,UK,cycling apparel,British premium cycling kit brand co-founded by Yanto Barker.,researched
+sports,Sports & Outdoors,Muc-Off,muc-off.com,UK,bike cleaning,"Poole-based bike cleaning, lube and care product brand.",researched
+sports,Sports & Outdoors,Nukeproof,nukeproof.com,UK,mountain bikes,UK-based mountain bike brand (Ireland/UK) selling frames and components.,researched
+sports,Sports & Outdoors,Outsiders Store,outsiders-store.com,UK,outdoor apparel,Manchester-based outdoor-inspired clothing and footwear retailer.,researched
+sports,Sports & Outdoors,Parcours,parcours.cc,UK,cycling wheels,UK direct-to-consumer carbon wheel brand for road and TT.,researched
+sports,Sports & Outdoors,Pella Sportswear,pellasportswear.com,UK,cycling apparel,UK custom cycling apparel brand.,researched
+sports,Sports & Outdoors,Presca Endurance / Proviz,provizsports.com,UK,hi-viz sports apparel,UK high-visibility running/cycling/outdoor apparel brand.,researched
+sports,Sports & Outdoors,Presca Teamwear,prescateamwear.com,UK,sustainable sportswear,UK sustainable recycled-polyester sportswear and running apparel brand.,researched
+sports,Sports & Outdoors,Restrap,restrap.com,UK,cycling bags,Yorkshire-based bikepacking and cycling accessories brand.,researched
+sports,Sports & Outdoors,Runderwear,runderwear.co.uk,UK,running base layers,UK chafe-free running underwear and base-layer brand.,researched
+sports,Sports & Outdoors,Santini UK,santinicycling.co.uk,UK,cycling apparel,UK locale of Italian cycling apparel brand.,researched
+sports,Sports & Outdoors,Snugpak,snugpak.com,UK,sleeping bags / camping,"UK manufacturer of sleeping bags, jackets and tactical camping gear.",researched
+sports,Sports & Outdoors,SOAR Running,soarrunning.com,UK,running apparel,London-based technical premium running apparel brand.,researched
+sports,Sports & Outdoors,Spatzwear,spatzwear.com,UK,cycling overshoes,UK cycling overshoe and accessory brand.,researched
+sports,Sports & Outdoors,Stolen Goat,stolengoat.com,UK,cycling apparel,UK independent cycling kit brand with bold designs.,researched
+sports,Sports & Outdoors,Sungod,sungod.co,UK,sports eyewear,"UK performance sunglasses and goggles brand for cycling, running and snowsports.",researched
+sports,Sports & Outdoors,Thousand (UK),explorethousand.co.uk,UK,cycling helmets,UK storefront for premium lifestyle cycling helmet brand.,researched
+sports,Sports & Outdoors,Tracksmith UK,eu.tracksmith.com,UK,running apparel,Running apparel brand EU/UK storefront (note: main .com already tracked; EU locale distinct).,researched
+sports,Sports & Outdoors,Trakke,trakke.co.uk,UK,bags / outdoor,Glasgow-based handmade waxed canvas bag and outdoor gear maker.,researched
+sports,Sports & Outdoors,Veloforte,veloforte.com,UK,endurance nutrition,"UK natural endurance nutrition bars, chews and hydration mixes.",researched
+kids,Kids & Baby,Baby Brezza,babybrezza.com,,,,verified
+kids,Kids & Baby,Boba,boba.com,,,,verified
+kids,Kids & Baby,Boppy,boppy.com,,,,verified
+kids,Kids & Baby,Copper Pearl,copperpearl.com,,,,verified
+kids,Kids & Baby,Earth Mama,earthmamaorganics.com,,,,verified
+kids,Kids & Baby,Elvie,elvie.com,,,,verified
+kids,Kids & Baby,Gathre,gathre.com,,,,verified
+kids,Kids & Baby,Haakaa,haakaa.com,,,,verified
+kids,Kids & Baby,Jamie Kay,jamiekay.com,,,,verified
+kids,Kids & Baby,Lalo,meetlalo.com,,,,verified
+kids,Kids & Baby,LILLEbaby,lillebaby.com,,,,verified
+kids,Kids & Baby,Little Sleepies,littlesleepies.com,,,,verified
+kids,Kids & Baby,Little Unicorn,littleunicorn.com,,,,verified
+kids,Kids & Baby,Mushie,mushie.com,,,,verified
+kids,Kids & Baby,Mustela,mustelausa.com,,,,verified
+kids,Kids & Baby,Nanit,nanit.com,,,,verified
+kids,Kids & Baby,Nugget,nuggetcomfort.com,,,,verified
+kids,Kids & Baby,Owlet,owletcare.com,,,,verified
+kids,Kids & Baby,Primary,primary.com,,,,verified
+kids,Kids & Baby,Quincy Mae,quincymae.com,,,,verified
+kids,Kids & Baby,Tubby Todd,tubbytodd.com,,,,verified
+kids,Kids & Baby,Tula,babytula.com,,,,verified
+kids,Kids & Baby,Willow,onewillow.com,,,,verified
+kids,Kids & Baby,Babipur,babipur.co.uk,UK,kids retail,UK ethical baby and children's product retailer.,researched
+kids,Kids & Baby,Bambino Mio,bambinomio.com,UK,baby care,UK reusable nappy and baby product brand.,researched
+kids,Kids & Baby,Blue Brontide,bluebrontide.com,UK,toys,UK eco-friendly handmade wooden toys and tableware for kids.,researched
+kids,Kids & Baby,Bobo Choses UK,bobochoses.com,EU,kids clothing,Spanish kids clothing brand with strong UK presence.,researched
+kids,Kids & Baby,Cheeky Wipes,cheekywipes.com,UK,baby care,UK reusable baby wipes and cloth nappies.,researched
+kids,Kids & Baby,Ergobaby UK,ergobaby.co.uk,UK,baby gear,UK baby carrier brand site.,researched
+kids,Kids & Baby,Frugi,welovefrugi.com,UK,kids clothing,UK organic cotton children and baby clothing brand.,researched
+kids,Kids & Baby,Happy Little Folks,happylittlefolks.com,UK,toys,UK handcrafted wooden toys and children's gifts.,researched
+kids,Kids & Baby,JoJo Maman Bebe,jojomamanbebe.com,UK,maternity,UK maternity and baby clothing retailer.,researched
+kids,Kids & Baby,Kidly,kidly.co.uk,UK,kids retail,"UK curated children's brand retailer for clothes, toys and nursery.",researched
+kids,Kids & Baby,KIT & KIN,kitandkin.com,UK,baby care,UK eco nappies and baby skincare brand co-founded by Emma Bunton.,researched
+kids,Kids & Baby,Little Berry Button,littleberrybutton.co.uk,UK,nursery,"UK nursery decor, wooden toys and new baby gifts.",researched
+kids,Kids & Baby,Little Bird Told Me,littlebirdtoldme.com,UK,kids clothing,UK children's wear from Nick Cave's daughter; designed with vintage flair.,researched
+kids,Kids & Baby,Little Green Radicals,littlegreenradicals.co.uk,UK,kids clothing,UK fair trade organic children's clothing brand.,researched
+kids,Kids & Baby,Mama Designs,mamadesigns.co.uk,UK,baby gear,UK baby sleeping bags and nursery products.,researched
+kids,Kids & Baby,Mamas & Papas,mamasandpapas.com,UK,baby gear,"UK nursery, pushchair and baby gear retailer.",researched
+kids,Kids & Baby,MORI,babymori.com,UK,baby clothing,UK organic cotton and bamboo baby sleepwear and daywear.,researched
+kids,Kids & Baby,My 1st Years,my1styears.com,UK,baby gifts,UK personalised baby gifts and clothing.,researched
+kids,Kids & Baby,Nibbling,nibbling.co.uk,UK,baby gear,UK silicone teething jewellery and baby accessories brand.,researched
+kids,Kids & Baby,Orange Tree Toys,orangetreetoys.co.uk,UK,toys,Cotswolds-based British wooden toy and nursery decor brand.,researched
+kids,Kids & Baby,Pine + Pear co,pineandpear.co.uk,UK,nursery,"UK nursery decor, wooden toys and baby essentials.",researched
+kids,Kids & Baby,Scandiborn,scandiborn.co.uk,UK,nursery,"UK Scandinavian-inspired kids clothing, toys and nursery decor.",researched
+kids,Kids & Baby,Seraphine,seraphine.com,UK,maternity,UK premium maternity wear brand.,researched
+kids,Kids & Baby,Soren's House,sorenshouse.co.uk,UK,toys,UK natural and sustainable wooden toys for babies and kids.,researched
+kids,Kids & Baby,Tender Leaf Toys,tenderleaftoys.com,UK,toys,UK designed sustainable wooden toy brand.,researched
+kids,Kids & Baby,The Bonnie Mob,thebonniemob.com,UK,baby clothing,UK sustainable kids and baby clothing brand from Brighton.,researched
+kids,Kids & Baby,The Little Green Sheep,thelittlegreensheep.co.uk,UK,nursery,UK organic baby nursery bedding and mattress brand.,researched
+kids,Kids & Baby,The Little Loft,thelittleloft.co.uk,UK,nursery,UK nursery decor and children's room accessories.,researched
+kids,Kids & Baby,The Thrifty Stork,thethriftystork.co.uk,UK,kids retail,UK independent ethical organic baby and kids clothing retailer.,researched
+kids,Kids & Baby,Turtledove London,turtledovelondon.com,UK,baby clothing,UK organic and sustainable baby and kids clothing.,researched
+pets,Pets,A Pup Above,apupabove.com,,,,verified
+pets,Pets,Diggs,diggs.pet,,,,verified
+pets,Pets,Found My Animal,foundmyanimal.com,,,,verified
+pets,Pets,Harry Barker,harrybarker.com,,,,verified
+pets,Pets,Impact Dog Crates,impactdogcrates.com,,,,verified
+pets,Pets,Jinx,thinkjinx.com,,,,verified
+pets,Pets,Maxbone,maxbone.com,,,,verified
+pets,Pets,Open Farm,openfarmpet.com,,,,verified
+pets,Pets,P.L.A.Y.,petplay.com,,,,verified
+pets,Pets,Rifle Paper Co Pets,riflepaperco.com,,,,verified
+pets,Pets,Ruffwear,ruffwear.com,,,,verified
+pets,Pets,Sleepypod,sleepypod.com,,,,verified
+pets,Pets,Stella & Chewy's,stellaandchewys.com,,,,verified
+pets,Pets,The Foggy Dog,thefoggydog.com,,,,verified
+pets,Pets,Tuft + Paw,tuftandpaw.com,,,,verified
+pets,Pets,Up Country,upcountryinc.com,,,,verified
+pets,Pets,West Paw,westpaw.com,,,,verified
+pets,Pets,Wild One,wildone.com,,,,verified
+pets,Pets,Wolfgang Man & Beast,wolfgangusa.com,,,,verified
+pets,Pets,Zee.Dog,zeedog.com,,,,verified
+pets,Pets,Ziwi Peak,ziwipets.com,,,,verified
+pets,Pets,Barbour Dog,barbour.com,UK,accessories,"British heritage brand with dog coats, collars and beds.",researched
+pets,Pets,Barking Heads,barkingheads.co.uk,UK,pet food,UK natural dog and cat food brand.,researched
+pets,Pets,Bella & Duke,bellaandduke.com,UK,raw pet food,UK raw food subscription for dogs and cats.,researched
+pets,Pets,Butternut Box,butternutbox.com,UK,dog food,UK fresh dog food subscription service.,researched
+pets,Pets,Different Dog,differentdog.com,UK,dog food,UK fresh cooked dog food delivery service.,researched
+pets,Pets,Edgard & Cooper,edgardcooper.com,EU,pet food,Belgian/UK natural dog and cat food brand.,researched
+pets,Pets,Forthglade,forthglade.com,UK,dog food,UK natural wet dog food and treats brand.,researched
+pets,Pets,Hiro + Wolf,hiroandwolf.com,UK,accessories,"UK East London dog collars, leads and accessories with global prints.",researched
+pets,Pets,Holland Cooper Dog,hollandscountryclothing.co.uk,UK,accessories,"UK tweed dog collars, coats and country accessories.",researched
+pets,Pets,Hownd,hownd.co.uk,UK,dog food,UK vegan pet food and grooming products.,researched
+pets,Pets,Katkin,katkin.com,UK,cat food,UK fresh cat food delivery service using human-grade meat.,researched
+pets,Pets,Kip & Twiggy's,kipandtwiggys.com,UK,dog food,UK natural dog treats.,researched
+pets,Pets,Lily's Kitchen,lilyskitchen.co.uk,UK,pet food,UK natural pet food brand.,researched
+pets,Pets,LISH London,lishlondon.com,UK,accessories,"UK luxury canine couture brand - sweaters, collars, beds.",researched
+pets,Pets,Mutts & Hounds,muttsandhounds.co.uk,UK,accessories,"UK luxury dog beds, collars, leads and carriers made in Britain.",researched
+pets,Pets,Natural Instinct,naturalinstinct.com,UK,raw pet food,UK raw pet food brand.,researched
+pets,Pets,Pets Purest,petspurest.com,UK,supplements,UK natural pet supplements and treats.,researched
+pets,Pets,Pooch & Mutt,poochandmutt.co.uk,UK,dog food,"UK natural dog food, treats and supplements brand.",researched
+pets,Pets,Poppy's Picnic,poppyspicnic.co.uk,UK,dog food,UK raw dog food and complete meal brand.,researched
+pets,Pets,ProDog Raw,prodograw.com,UK,raw pet food,UK raw dog food and supplement brand.,researched
+pets,Pets,Purrform,purrform.co.uk,UK,cat food,UK raw cat food brand.,researched
+pets,Pets,Ralph & Co,ralphandco.co.uk,UK,accessories,UK luxury dog beds and accessories.,researched
+pets,Pets,Scrumbles,scrumbles.co.uk,UK,pet food,UK gut-friendly dog and cat food brand.,researched
+pets,Pets,Swoof,swoof.co.uk,UK,accessories,UK luxury dog department store with exclusive brands.,researched
+pets,Pets,Tails.com,tails.com,UK,dog food,UK tailored dry dog food subscription.,researched
+pets,Pets,Teddy Maximus,teddymaximus.com,UK,accessories,British-style personalised dog accessories including harnesses and coats.,researched
+pets,Pets,Tribal Pet Foods,tribalpetfoods.co.uk,UK,dog food,UK cold-pressed dog food brand.,researched
+pets,Pets,Vet's Kitchen,vetskitchen.co.uk,UK,dog food,UK grain-free nutritionally balanced pet food.,researched
+pets,Pets,Woof Dog Store,woofdogstore.com,UK,accessories,"UK dog beds, leashes, toys and accessories.",researched
+pets,Pets,YuMove,yumove.co.uk,UK,supplements,UK joint supplement brand for dogs and cats.,researched
+fitness,Health & Fitness,1st Phorm,1stphorm.com,,,,verified
+fitness,Health & Fitness,Alani Nu,alaninu.com,,,,verified
+fitness,Health & Fitness,Assault Fitness,assaultfitness.com,,,,verified
+fitness,Health & Fitness,Bells of Steel,bellsofsteel.com,,,,verified
+fitness,Health & Fitness,Bloom Nutrition,bloomnu.com,,,,verified
+fitness,Health & Fitness,BOSU,bosu.com,,,,verified
+fitness,Health & Fitness,BPN,bareperformancenutrition.com,,,,verified
+fitness,Health & Fitness,Cellucor,cellucor.com,,,,verified
+fitness,Health & Fitness,Fringe Sport,fringesport.com,,,,verified
+fitness,Health & Fitness,Ghost Lifestyle,ghostlifestyle.com,,,,verified
+fitness,Health & Fitness,Gorilla Mind,gorillamind.com,,,,verified
+fitness,Health & Fitness,Hyperice,hyperice.com,,,,verified
+fitness,Health & Fitness,Jacked Factory,jackedfactory.com,,,,verified
+fitness,Health & Fitness,Momentous,livemomentous.com,,,,verified
+fitness,Health & Fitness,Optimum Nutrition,optimumnutrition.com,,,,verified
+fitness,Health & Fitness,Peloton,apparel.onepeloton.com,,,,verified
+fitness,Health & Fitness,PEScience,pescience.com,,,,verified
+fitness,Health & Fitness,Power Systems,power-systems.com,,,,verified
+fitness,Health & Fitness,PRx Performance,prxperformance.com,,,,verified
+fitness,Health & Fitness,Redcon1,redcon1.com,,,,verified
+fitness,Health & Fitness,Rep Fitness,repfitness.com,,,,verified
+fitness,Health & Fitness,Swolverine,swolverine.com,,,,verified
+fitness,Health & Fitness,Therabody,therabody.com,,,,verified
+fitness,Health & Fitness,Tonal,tonal.com,,,,verified
+fitness,Health & Fitness,Transparent Labs,transparentlabs.com,,,,verified
+fitness,Health & Fitness,TRX,trxtraining.com,,,,verified
+fitness,Health & Fitness,XWERKS,xwerks.com,,,,verified
+fitness,Health & Fitness,Adanola,adanola.com,UK,activewear,Manchester-based women's activewear and athleisure label.,researched
+fitness,Health & Fitness,Again Faster,againfaster.co.uk,UK,functional fitness equipment,"UK arm of CrossFit-focused equipment retailer selling barbells, plates and rigs.",researched
+fitness,Health & Fitness,Awesome Supplements,awesomesupplements.co.uk,UK,supplements,"UK evidence-based supplement brand co-founded by Ben Coomber producing protein, creatine and pre-workouts.",researched
+fitness,Health & Fitness,AYBL,aybl.com,UK,gym apparel,"UK fitness apparel brand offering leggings, shorts and training tops.",researched
+fitness,Health & Fitness,Battle Bites,battlebites.co.uk,UK,protein snacks,UK protein bar and snack brand.,researched
+fitness,Health & Fitness,Beyond NRG,beyondnrg.com,UK,supplements,UK natural supplement and pre-workout brand.,researched
+fitness,Health & Fitness,Bio-Synergy,bio-synergy.uk,UK,supplements,"Long-running UK sports nutrition brand selling protein, fat burners and vitamins.",researched
+fitness,Health & Fitness,Bulldog Gear,bulldoggear.com,UK,functional fitness equipment,"British functional training equipment brand - racks, barbells, accessories.",researched
+fitness,Health & Fitness,Free Soul,myfreesoul.com,UK,women's supplements,"UK supplement brand formulated for women offering protein, collagen and vitamins.",researched
+fitness,Health & Fitness,Grenade,grenade.com,UK,sports nutrition,UK performance nutrition brand known for Carb Killa bars and pre-workouts.,researched
+fitness,Health & Fitness,Gym+Coffee,gympluscoffee.com,UK,activewear,Irish/UK athleisure brand with hoodies and performance gear serving the UK market.,researched
+fitness,Health & Fitness,Innermost,innermostglobal.com,UK,supplements,"UK wellness brand selling protein powders, collagen, vitamins and functional supplements targeted at outcomes like sleep and energy.",researched
+fitness,Health & Fitness,JTX Fitness,jtxfitness.com,UK,cardio equipment,"UK direct-to-consumer cardio equipment brand (treadmills, bikes, rowers).",researched
+fitness,Health & Fitness,Kettlebell Kings UK,kettlebellkings.co.uk,UK,kettlebells / strength,UK storefront for specialist kettlebell equipment retailer.,researched
+fitness,Health & Fitness,Mirafit,mirafit.co.uk,UK,home gym equipment,"UK home gym and strength equipment retailer - racks, barbells, benches.",researched
+fitness,Health & Fitness,Momentous (UK),gains-in-bulk.com,UK,bulk supplements,UK bulk supplement and powder retailer.,researched
+fitness,Health & Fitness,Neat Nutrition,neatnutrition.co.uk,UK,supplements,London-founded clean protein and wellness supplement brand.,researched
+fitness,Health & Fitness,Pursue Fitness,pursuefitness.com,UK,gym apparel,Manchester-based men's and women's gym wear brand.,researched
+fitness,Health & Fitness,Rise,riseuk.com,UK,supplements,UK DTC supplement brand focused on protein and pre-workout.,researched
+fitness,Health & Fitness,Shreddy,shreddy.com,UK,activewear / fitness app,Grace Beverley-founded women's fitness apparel and programme brand.,researched
+fitness,Health & Fitness,Strength Shop,strengthshop.co.uk,UK,powerlifting equipment,UK powerlifting equipment and apparel retailer.,researched
+fitness,Health & Fitness,Tala,wearetala.com,UK,activewear,"Sustainable women's activewear brand founded by Grace Beverley; leggings, sports bras and loungewear.",researched
+fitness,Health & Fitness,TRIBE,wearetribe.co,UK,sports nutrition,"UK natural energy and protein brand selling bars, shakes and hydration to endurance athletes.",researched
+fitness,Health & Fitness,Vitl,vitl.com,UK,personalised vitamins,UK personalised vitamin subscription service offering bespoke daily packs based on consultation.,researched
+fitness,Health & Fitness,Vivo Life,vivolife.com,UK,plant-based supplements,"UK plant-based vegan supplement brand producing protein, greens and immunity products.",researched
+fitness,Health & Fitness,WIT Fitness,witfitness.com,UK,functional fitness,London-based specialist CrossFit and functional fitness apparel and equipment retailer.,researched
+fitness,Health & Fitness,Wolverson Fitness,wolverson-fitness.co.uk,UK,strength equipment,UK strength and conditioning equipment manufacturer.,researched
+jewellery,Jewellery & Accessories,Argent,argentwork.com,,,,verified
+jewellery,Jewellery & Accessories,Aurate,auratenewyork.com,,,,verified
+jewellery,Jewellery & Accessories,BaubleBar,baublebar.com,,,,verified
+jewellery,Jewellery & Accessories,Brandon Blackwood,brandonblackwood.com,,,,verified
+jewellery,Jewellery & Accessories,Brother Vellies,brothervellies.com,,,,verified
+jewellery,Jewellery & Accessories,Cult Gaia,cultgaia.com,,,,verified
+jewellery,Jewellery & Accessories,Cuyana,cuyana.com,,,,verified
+jewellery,Jewellery & Accessories,Everlane,everlane.com,,,,verified
+jewellery,Jewellery & Accessories,For Days,fordays.com,,,,verified
+jewellery,Jewellery & Accessories,Girlfriend Collective,girlfriend.com,,,,verified
+jewellery,Jewellery & Accessories,Gorjana,gorjana.com,,,,verified
+jewellery,Jewellery & Accessories,Jenny Bird,jenny-bird.com,,,,verified
+jewellery,Jewellery & Accessories,JW Pei,jwpei.com,,,,verified
+jewellery,Jewellery & Accessories,Loeffler Randall,loefflerrandall.com,,,,verified
+jewellery,Jewellery & Accessories,M.M.LaFleur,mmlafleur.com,,,,verified
+jewellery,Jewellery & Accessories,Mansur Gavriel,mansurgavriel.com,,,,verified
+jewellery,Jewellery & Accessories,Ministry of Supply,ministryofsupply.com,,,,verified
+jewellery,Jewellery & Accessories,Missoma,missoma.com,,,,verified
+jewellery,Jewellery & Accessories,Nanushka,nanushka.com,,,,verified
+jewellery,Jewellery & Accessories,Nisolo,nisolo.com,,,,verified
+jewellery,Jewellery & Accessories,Pangaia,thepangaia.com,,,,verified
+jewellery,Jewellery & Accessories,Ring Concierge,ringconcierge.com,,,,verified
+jewellery,Jewellery & Accessories,Senreve,senreve.com,,,,verified
+jewellery,Jewellery & Accessories,SOKO,shopsoko.com,,,,verified
+jewellery,Jewellery & Accessories,Stone and Strand,stoneandstrand.com,,,,verified
+jewellery,Jewellery & Accessories,The Row,therow.com,,,,verified
+jewellery,Jewellery & Accessories,Uncommon James,uncommonjames.com,,,,verified
+jewellery,Jewellery & Accessories,Universal Standard,universalstandard.com,,,,verified
+jewellery,Jewellery & Accessories,Vitaly,vitalydesign.com,,,,verified
+jewellery,Jewellery & Accessories,Abbott Lyon,abbottlyon.com,UK,personalised jewellery,UK personalised jewellery and watches brand.,researched
+jewellery,Jewellery & Accessories,Alighieri,alighieri.com,UK,fine jewellery,"London jewellery brand by Rosh Mahtani inspired by Dante, hand-cast in the UK.",researched
+jewellery,Jewellery & Accessories,Anya Hindmarch,anyahindmarch.com,UK,luxury bags,British luxury leather goods and handbags brand.,researched
+jewellery,Jewellery & Accessories,Aspinal of London,aspinaloflondon.com,UK,luxury leather goods,British luxury handbag and leather accessories brand.,researched
+jewellery,Jewellery & Accessories,Astrid & Miyu,astridandmiyu.com,UK,demi-fine jewellery,London contemporary demi-fine jewellery brand known for ear stacks and piercing services.,researched
+jewellery,Jewellery & Accessories,Cambridge Satchel,cambridgesatchel.com,UK,leather bags,British leather satchel and bag maker founded by Julie Deane.,researched
+jewellery,Jewellery & Accessories,Carl Friedrik,carlfriedrik.com,UK,leather goods,"London premium leather luggage, bags and wallets brand.",researched
+jewellery,Jewellery & Accessories,Christopher Ward,christopherward.com,UK,watches,British direct-to-consumer Swiss-made watch brand.,researched
+jewellery,Jewellery & Accessories,CRAFTD London,craftdlondon.com,UK,men's jewellery,London men's premium jewellery brand known for chains and rings.,researched
+jewellery,Jewellery & Accessories,Daisy London,daisyjewellery.com,UK,fashion jewellery,"London jewellery brand founded 2009 known for classic, everyday pieces.",researched
+jewellery,Jewellery & Accessories,Edge of Ember,edgeofember.com,UK,ethical fine jewellery,London ethical jewellery label using recycled materials and lab-grown diamonds.,researched
+jewellery,Jewellery & Accessories,Farer,farer.com,UK,watches,"London-designed, Swiss-made independent watch brand.",researched
+jewellery,Jewellery & Accessories,Hannah Martin,hannahmartinlondon.com,UK,fine jewellery,London fine jewellery designer known for sculptural unisex pieces.,researched
+jewellery,Jewellery & Accessories,Larsson & Jennings,larssonandjennings.com,UK,watches,London minimalist DTC watch and jewellery brand.,researched
+jewellery,Jewellery & Accessories,Lily & Roo,lilyandroo.com,UK,fine jewellery,British solid gold and silver jewellery brand.,researched
+jewellery,Jewellery & Accessories,Maxwell-Scott,maxwellscottbags.com,UK,leather bags,British Italian-crafted leather handbags and luggage brand.,researched
+jewellery,Jewellery & Accessories,Olivia Burton,oliviaburton.com,UK,watches & jewellery,London watch and jewellery brand known for floral dials and delicate designs.,researched
+jewellery,Jewellery & Accessories,Otiumberg,otiumberg.com,UK,demi-fine jewellery,London demi-fine jewellery brand by sisters Christie and Rosanna Wollenberg.,researched
+jewellery,Jewellery & Accessories,Pandora (UK),pandorajewellery.co.uk,UK,charm jewellery,Global charm jewellery brand with strong UK DTC presence.,researched
+jewellery,Jewellery & Accessories,Pomellato-alternative: Roxanne First,roxannefirst.com,UK,fine jewellery,London colourful fine jewellery brand by Roxanne Rajcoomar-Hadden.,researched
+jewellery,Jewellery & Accessories,Rachel Jackson London,racheljacksonlondon.com,UK,demi-fine jewellery,"London jewellery brand worn by Rita Ora, Ellie Goulding and Kylie Jenner.",researched
+jewellery,Jewellery & Accessories,Shrimps,shrimps.com,UK,bags & accessories,"London label known for faux-fur bags, beaded accessories and playful ready-to-wear.",researched
+jewellery,Jewellery & Accessories,Stow London,stowlondon.co.uk,UK,luxury leather goods,London luxury personalised leather travel accessories brand.,researched
+jewellery,Jewellery & Accessories,Strathberry,strathberry.com,UK,luxury bags,"Edinburgh luxury handbag brand, worn by the Princess of Wales.",researched
+jewellery,Jewellery & Accessories,Tatty Devine,tattydevine.com,UK,statement jewellery,"London statement acrylic jewellery brand, handmade in the UK.",researched
+jewellery,Jewellery & Accessories,Thomas Sabo UK,thomassabo.com,EU,charm jewellery,German silver jewellery and watches brand with strong UK DTC presence.,researched
+jewellery,Jewellery & Accessories,Tilly Sveaas,tillysveaas.co.uk,UK,demi-fine jewellery,London demi-fine jewellery brand famed for T-bar necklaces.,researched
+jewellery,Jewellery & Accessories,Troubadour Goods,troubadourgoods.com,UK,bags & accessories,London premium work bag and accessories brand.,researched
+jewellery,Jewellery & Accessories,Vashi,vashi.com,UK,fine jewellery,London bespoke diamond and fine jewellery brand.,researched
+jewellery,Jewellery & Accessories,Wanderlust Life,wanderlustlife.co.uk,UK,handmade jewellery,Devon-based independent B Corp handmade jewellery studio.,researched
+mobility,Automotive & Mobility,Ariel Rider,arielrider.com,,,,verified
+mobility,Automotive & Mobility,Aventon,aventon.com,,,,verified
+mobility,Automotive & Mobility,Backfire,backfireboards.com,,,,verified
+mobility,Automotive & Mobility,Evil Bikes,evil-bikes.com,,,,verified
+mobility,Automotive & Mobility,Evolve Skateboards,evolveskateboardsusa.com,,,,verified
+mobility,Automotive & Mobility,Exway,exwayboard.com,,,,verified
+mobility,Automotive & Mobility,Hovsco,hovsco.com,,,,verified
+mobility,Automotive & Mobility,Islabikes,islabikes.com,,,,verified
+mobility,Automotive & Mobility,Juiced Bikes,juicedbikes.com,,,,verified
+mobility,Automotive & Mobility,Lectric,lectricebikes.com,,,,verified
+mobility,Automotive & Mobility,Meepo,meepoboard.com,,,,verified
+mobility,Automotive & Mobility,Ownboard,ownboard.net,,,,verified
+mobility,Automotive & Mobility,Pivot,pivotcycles.com,,,,verified
+mobility,Automotive & Mobility,Priority Bicycles,prioritybicycles.com,,,,verified
+mobility,Automotive & Mobility,Pure Cycles,purecycles.com,,,,verified
+mobility,Automotive & Mobility,Retrospec,retrospec.com,,,,verified
+mobility,Automotive & Mobility,Santa Cruz,santacruzbicycles.com,,,,verified
+mobility,Automotive & Mobility,Sole Bicycles,solebicycles.com,,,,verified
+mobility,Automotive & Mobility,State Bicycle,statebicycle.com,,,,verified
+mobility,Automotive & Mobility,Super73,super73.com,,,,verified
+mobility,Automotive & Mobility,WowGo,wowgoboard.com,,,,verified
+mobility,Automotive & Mobility,Auto Finesse,autofinesse.com,UK,car detailing,Essex-based UK car detailing products brand.,researched
+mobility,Automotive & Mobility,Batribike,batribike.com,UK,e-bikes,Lincolnshire-based UK e-bike brand with folding and step-through models.,researched
+mobility,Automotive & Mobility,Bicycle Chain Reaction / Pashley,pashley.co.uk,UK,heritage bikes,Stratford-upon-Avon-based heritage UK bicycle manufacturer.,researched
+mobility,Automotive & Mobility,Bowman Cycles,bowman-cycles.com,UK,road / gravel bikes,UK independent road and gravel frameset brand.,researched
+mobility,Automotive & Mobility,Cyrusher UK,cyrusher.co.uk,UK,e-bikes,UK fat-tyre and off-road e-bike brand.,researched
+mobility,Automotive & Mobility,Dodo Juice,dodojuice.com,UK,car detailing,UK carnauba wax and car detailing products brand.,researched
+mobility,Automotive & Mobility,Electroheads,electroheads.com,UK,e-bike / e-scooter retailer,UK multi-brand e-bike and e-scooter retailer launched in 2020.,researched
+mobility,Automotive & Mobility,Eskuta,eskuta.com,UK,e-bikes / e-scooters,UK electric moped and commercial e-bike manufacturer.,researched
+mobility,Automotive & Mobility,Estarli,estarli.co.uk,UK,e-bikes,"Hertfordshire-based folding, full-size and cargo e-bike brand.",researched
+mobility,Automotive & Mobility,Fabric Bikes UK,fabric.cc,UK,cycling accessories,"UK cycling saddles, bottles, tools and accessories brand.",researched
+mobility,Automotive & Mobility,Fiido UK,fiido.co.uk,UK,e-bikes,UK storefront for global Fiido folding and commuter e-bikes.,researched
+mobility,Automotive & Mobility,Freego E-Bikes,freego.eu,UK,e-bikes,"UK e-bike brand with hybrid, folding and step-through models.",researched
+mobility,Automotive & Mobility,Genesis Bikes,genesisbikes.co.uk,UK,gravel / road bikes,"British adventure, gravel and road bike brand.",researched
+mobility,Automotive & Mobility,Gocycle,gocycle.com,UK,e-bikes,UK premium folding e-bike brand founded by ex-McLaren engineer Richard Thorpe.,researched
+mobility,Automotive & Mobility,Hiplok,hiplok.com,UK,bike locks,Warwickshire-based wearable bike lock brand.,researched
+mobility,Automotive & Mobility,Knog UK,knog.com.au,EU,bike lights,Australian cycling lights brand with UK retail presence.,researched
+mobility,Automotive & Mobility,MATE Bike,matebike.eu,EU,e-bikes,Danish foldable e-bike brand with strong UK following.,researched
+mobility,Automotive & Mobility,Mycle,mycle.co.uk,UK,e-bikes,"UK affordable e-bike brand with folding, step-through and cargo models.",researched
+mobility,Automotive & Mobility,Orange Bikes,orangebikes.co.uk,UK,mountain bikes,Halifax-based hand-built UK mountain bike brand.,researched
+mobility,Automotive & Mobility,Pace Cycles,pace-cycles.com,UK,mountain bikes,Yorkshire-based UK mountain bike and component brand.,researched
+mobility,Automotive & Mobility,Pure Electric,pureelectric.com,UK,e-scooters,UK specialist e-scooter and e-bike retailer with national footprint.,researched
+mobility,Automotive & Mobility,Raleigh UK,raleigh.co.uk,UK,bikes / e-bikes,"Heritage UK bicycle brand offering e-bikes, hybrids and kids bikes.",researched
+mobility,Automotive & Mobility,Restrap,restrap.co.uk,UK,bikepacking gear,UK bikepacking bag brand (UK storefront).,researched
+mobility,Automotive & Mobility,Swytch Bike,swytchbike.com,UK,e-bike conversion,London-based e-bike conversion kit brand.,researched
+mobility,Automotive & Mobility,Temple Cycles,templecycles.co.uk,UK,city / commuter bikes,Bristol-based heritage-style city bike brand.,researched
+mobility,Automotive & Mobility,Tern (UK),ternbicycles.com,US,folding / cargo bikes,Folding and cargo bike brand with strong UK distribution.,researched
+mobility,Automotive & Mobility,Unagi UK,unagiscooters.com,US,e-scooters,Premium e-scooter brand serving UK shoppers.,researched
+mobility,Automotive & Mobility,VOLT Bikes,voltbikes.co.uk,UK,e-bikes,"Award-winning UK e-bike brand with city, folding and hybrid electric bicycles.",researched
+mobility,Automotive & Mobility,Whyte Bikes,whytebikes.com,UK,mountain bikes,"British mountain bike brand with trail, enduro and e-MTB models.",researched
+mobility,Automotive & Mobility,Wisper Bikes,wisperbikes.com,UK,e-bikes,Kent-based long-established UK e-bike manufacturer.,researched

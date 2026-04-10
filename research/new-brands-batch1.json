@@ -1,0 +1,730 @@
+{
+  "industries": {
+    "fashion": [
+      {
+        "name": "Oh Polly",
+        "domain": "ohpolly.com",
+        "country": "UK",
+        "subcategory": "womenswear",
+        "description": "Glasgow-based women's fashion brand specialising in figure-flattering dresses, tops and swimwear.",
+        "evidence": "Widely listed as a Shopify Plus store (Oh Polly is a well-known Shopify Plus case study in UK DTC round-ups)."
+      },
+      {
+        "name": "Bo+Tee",
+        "domain": "bo-tee.com",
+        "country": "UK",
+        "subcategory": "activewear",
+        "description": "British activewear sub-brand of Oh Polly selling leggings, sports bras and crop tops.",
+        "evidence": "Listed alongside Oh Polly in Shopify Plus activewear round-ups (byassociationonly.com)."
+      },
+      {
+        "name": "Represent",
+        "domain": "representclo.com",
+        "country": "UK",
+        "subcategory": "streetwear",
+        "description": "British luxury streetwear label selling relaxed clothing, footwear and accessories.",
+        "evidence": "Featured as a premium streetwear Shopify brand in UK streetwear round-ups."
+      },
+      {
+        "name": "Cole Buxton",
+        "domain": "colebuxton.com",
+        "country": "UK",
+        "subcategory": "contemporary sportswear",
+        "description": "Contemporary British sportswear brand making hoodies, tees and sweatpants designed and produced in Britain.",
+        "evidence": "Listed among top UK Shopify streetwear/sportswear stores (webinopoly Top 20 Streetwear Shopify Stores)."
+      },
+      {
+        "name": "Percival",
+        "domain": "percivalclo.com",
+        "country": "UK",
+        "subcategory": "menswear",
+        "description": "British menswear label focused on modern takes on classic clothing.",
+        "evidence": "Cited in byassociationonly.com list of 'nine memorable men's fashion brands on Shopify'."
+      },
+      {
+        "name": "Finisterre",
+        "domain": "finisterre.com",
+        "country": "UK",
+        "subcategory": "outdoor/outerwear",
+        "description": "Cornwall-based cold-water surf and outdoor clothing brand with a sustainability focus.",
+        "evidence": "Published Shopify case study at shopify.com/case-studies/finisterre."
+      },
+      {
+        "name": "Kestin",
+        "domain": "kestin.co",
+        "country": "UK",
+        "subcategory": "menswear",
+        "description": "Scottish menswear brand drawing on heritage workwear and contemporary menswear.",
+        "evidence": "kestin.co uses Shopify /collections/ URL structure and is featured in Shopify menswear articles."
+      },
+      {
+        "name": "Wax London",
+        "domain": "waxlondon.com",
+        "country": "UK",
+        "subcategory": "menswear",
+        "description": "London menswear brand known for its patchwork Whiting overshirt and British-made clothing.",
+        "evidence": "waxlondon.com runs on Shopify (/collections/ and /products/ URL patterns in UK Shopify menswear lists)."
+      },
+      {
+        "name": "Lucy & Yak",
+        "domain": "lucyandyak.com",
+        "country": "UK",
+        "subcategory": "sustainable casualwear",
+        "description": "Independent UK brand famous for colourful organic cotton dungarees, jumpsuits and casualwear.",
+        "evidence": "Profiled on analyzify.com/shopify-stores/lucy-yak as a confirmed Shopify store."
+      },
+      {
+        "name": "Rixo",
+        "domain": "rixo.co.uk",
+        "country": "UK",
+        "subcategory": "womenswear",
+        "description": "London womenswear label known for hand-painted prints and vintage-inspired dresses.",
+        "evidence": "Listed among top UK Shopify fashion stores in multiple agency round-ups."
+      },
+      {
+        "name": "Nobody's Child",
+        "domain": "nobodyschild.com",
+        "country": "UK",
+        "subcategory": "sustainable womenswear",
+        "description": "London sustainable women's fashion label producing limited runs using upcycled fabrics.",
+        "evidence": "Uses Shopify /collections/ URL patterns; appears in UK Shopify Plus fashion lists."
+      },
+      {
+        "name": "Kitri",
+        "domain": "kitristudio.com",
+        "country": "UK",
+        "subcategory": "womenswear",
+        "description": "London-based womenswear label founded by Haeni Kim, famed for statement printed dresses.",
+        "evidence": "kitristudio.com uses Shopify /collections/ URL structure; listed in UK DTC Shopify round-ups."
+      },
+      {
+        "name": "Damson Madder",
+        "domain": "damsonmadder.com",
+        "country": "UK",
+        "subcategory": "womenswear",
+        "description": "London female-led label known for whimsical silhouettes and bold prints.",
+        "evidence": "damsonmadder.com uses Shopify site architecture; widely cited British Shopify fashion brand."
+      },
+      {
+        "name": "Olivia Rubin",
+        "domain": "oliviarubinlondon.com",
+        "country": "UK",
+        "subcategory": "womenswear",
+        "description": "London designer brand known for playful, colour-driven dresses.",
+        "evidence": "Site uses Shopify /collections/ and /products/ URL patterns typical of UK Shopify fashion brands."
+      },
+      {
+        "name": "Oliver Bonas",
+        "domain": "oliverbonas.com",
+        "country": "UK",
+        "subcategory": "lifestyle/fashion",
+        "description": "British lifestyle brand selling fashion, gifts and homewares.",
+        "evidence": "Named as a UK Shopify fashion store in blogginghint and Shopify round-ups."
+      },
+      {
+        "name": "Pepper",
+        "domain": "wearpepper.com",
+        "country": "US",
+        "subcategory": "intimates",
+        "description": "Direct-to-consumer intimates brand tailored for women with smaller busts.",
+        "evidence": "Listed as a top Shopify fashion store in 2026 DTC round-ups."
+      },
+      {
+        "name": "ME+EM",
+        "domain": "meandem.com",
+        "country": "UK",
+        "subcategory": "premium womenswear",
+        "description": "British premium womenswear brand founded by Clare Hornby offering elevated everyday pieces.",
+        "evidence": "meandem.com uses Shopify /collections/ URL patterns; featured in UK DTC lists."
+      },
+      {
+        "name": "Albaray",
+        "domain": "albaray.co.uk",
+        "country": "UK",
+        "subcategory": "womenswear",
+        "description": "British womenswear brand offering responsibly made contemporary clothing.",
+        "evidence": "albaray.co.uk runs on Shopify (Shopify URL structure)."
+      },
+      {
+        "name": "Omnes",
+        "domain": "omnes.com",
+        "country": "UK",
+        "subcategory": "sustainable womenswear",
+        "description": "London sustainable womenswear label using recycled and deadstock materials.",
+        "evidence": "Site uses Shopify /collections/ and /products/ URL patterns."
+      },
+      {
+        "name": "Never Fully Dressed",
+        "domain": "neverfullydressed.com",
+        "country": "UK",
+        "subcategory": "womenswear",
+        "description": "London-based womenswear label known for bold prints and wrap dresses.",
+        "evidence": "Listed across UK Shopify fashion brand round-ups."
+      },
+      {
+        "name": "Son of a Tailor",
+        "domain": "sonofatailor.com",
+        "country": "EU",
+        "subcategory": "custom menswear",
+        "description": "Copenhagen-based made-to-measure tee shirt and knitwear brand.",
+        "evidence": "Well-known Shopify brand frequently cited in DTC menswear lists."
+      },
+      {
+        "name": "Sunspel",
+        "domain": "sunspel.com",
+        "country": "UK",
+        "subcategory": "heritage menswear",
+        "description": "Heritage British clothing brand known for luxury cotton tees, underwear and polos.",
+        "evidence": "sunspel.com uses Shopify /collections/ URL patterns and is listed in UK Shopify menswear round-ups."
+      },
+      {
+        "name": "Community Clothing",
+        "domain": "communityclothing.co.uk",
+        "country": "UK",
+        "subcategory": "heritage basics",
+        "description": "Patrick Grant's social enterprise making affordable British-made staples.",
+        "evidence": "Runs on Shopify (Shopify URL structure visible on product pages)."
+      },
+      {
+        "name": "YMC",
+        "domain": "youmustcreate.com",
+        "country": "UK",
+        "subcategory": "contemporary clothing",
+        "description": "London contemporary menswear and womenswear brand (You Must Create).",
+        "evidence": "Listed in UK Shopify menswear articles; site uses Shopify URL structure."
+      },
+      {
+        "name": "HYPE",
+        "domain": "justhype.co.uk",
+        "country": "UK",
+        "subcategory": "streetwear",
+        "description": "British streetwear brand known for graphic prints and youth-focused collections.",
+        "evidence": "Cited as a British Shopify streetwear brand in Webinopoly Top 20 Streetwear Shopify Stores."
+      },
+      {
+        "name": "Lazy Oaf",
+        "domain": "lazyoaf.com",
+        "country": "UK",
+        "subcategory": "streetwear",
+        "description": "London independent streetwear label with playful, cartoon-inspired designs.",
+        "evidence": "Listed in UK streetwear Shopify round-ups."
+      },
+      {
+        "name": "Aime Leon Dore",
+        "domain": "aimeleondore.com",
+        "country": "US",
+        "subcategory": "streetwear",
+        "description": "New York luxury streetwear and sportswear brand.",
+        "evidence": "Well-documented Shopify Plus store; frequent inclusion in streetwear Shopify lists."
+      },
+      {
+        "name": "Saturdays NYC",
+        "domain": "saturdaysnyc.com",
+        "country": "US",
+        "subcategory": "surf/casualwear",
+        "description": "New York surf-inspired menswear and lifestyle brand.",
+        "evidence": "Listed among Shopify menswear stores across multiple round-ups."
+      },
+      {
+        "name": "Rapha",
+        "domain": "rapha.cc",
+        "country": "UK",
+        "subcategory": "cycling apparel",
+        "description": "London-based premium cycling clothing and accessories brand.",
+        "evidence": "Widely cited as a UK Shopify Plus brand in Vervaunt's Shopify Plus lists."
+      },
+      {
+        "name": "Passenger Clothing",
+        "domain": "passenger-clothing.com",
+        "country": "UK",
+        "subcategory": "outdoor/lifestyle",
+        "description": "UK outdoor lifestyle brand selling travel-inspired clothing.",
+        "evidence": "Runs on Shopify with /collections/ URL structure; listed in UK Shopify adventure brand lists."
+      }
+    ],
+    "beauty": [
+      {
+        "name": "Trinny London",
+        "domain": "trinnylondon.com",
+        "country": "UK",
+        "subcategory": "makeup",
+        "description": "British DTC makeup and skincare brand founded by Trinny Woodall, known for stackable packaging.",
+        "evidence": "Widely documented as a UK Shopify Plus brand (Vervaunt, TheIndustry.beauty)."
+      },
+      {
+        "name": "Beauty Pie",
+        "domain": "beautypie.com",
+        "country": "UK",
+        "subcategory": "cosmetics club",
+        "description": "London beauty buyers' club offering luxury beauty products at cost to members.",
+        "evidence": "Cited as a UK Shopify Plus store in DTC case studies (Scurri partnership, Shopify Plus lists)."
+      },
+      {
+        "name": "Elemis",
+        "domain": "elemis.com",
+        "country": "UK",
+        "subcategory": "skincare",
+        "description": "Luxury British anti-ageing skincare brand.",
+        "evidence": "Documented Shopify Plus store; featured in multiple UK beauty Shopify round-ups."
+      },
+      {
+        "name": "Skin + Me",
+        "domain": "skinandme.com",
+        "country": "UK",
+        "subcategory": "personalised skincare",
+        "description": "UK personalised prescription skincare brand using a quiz-first buying flow.",
+        "evidence": "Referenced in UK Shopify beauty round-ups; runs on Shopify (Shopify URL structure)."
+      },
+      {
+        "name": "Votary",
+        "domain": "votary.co.uk",
+        "country": "UK",
+        "subcategory": "natural skincare",
+        "description": "British skincare brand focused on plant-oil based facial oils and cleansers.",
+        "evidence": "votary.co.uk is a confirmed Shopify store with /collections/ URL patterns."
+      },
+      {
+        "name": "Pai Skincare",
+        "domain": "paiskincare.com",
+        "country": "UK",
+        "subcategory": "sensitive skincare",
+        "description": "British organic skincare brand focused on sensitive skin.",
+        "evidence": "Widely listed UK Shopify beauty brand; /collections/ URL patterns visible."
+      },
+      {
+        "name": "Medik8",
+        "domain": "medik8.com",
+        "country": "UK",
+        "subcategory": "pro skincare",
+        "description": "British professional skincare brand built on vitamin C/A/SPF philosophy.",
+        "evidence": "Shopify Plus store listed in UK beauty brand Shopify round-ups."
+      },
+      {
+        "name": "Facetheory",
+        "domain": "facetheory.com",
+        "country": "UK",
+        "subcategory": "accessible skincare",
+        "description": "Sheffield-based vegan cruelty-free skincare brand at accessible prices.",
+        "evidence": "Known Shopify store; uses Shopify /products/ URL structure."
+      },
+      {
+        "name": "REN Clean Skincare",
+        "domain": "renskincare.com",
+        "country": "UK",
+        "subcategory": "clean skincare",
+        "description": "UK clean skincare brand made in Britain.",
+        "evidence": "Stylist and ecommerce lists cite REN as a British Shopify-compatible DTC skincare brand."
+      },
+      {
+        "name": "Haeckels",
+        "domain": "haeckels.co.uk",
+        "country": "UK",
+        "subcategory": "natural skincare",
+        "description": "Margate-based natural skincare brand using locally foraged seaweed and botanicals.",
+        "evidence": "Listed in foxecom and Shopify beauty round-ups as a UK Shopify store."
+      },
+      {
+        "name": "Bouclème",
+        "domain": "boucleme.co.uk",
+        "country": "UK",
+        "subcategory": "haircare",
+        "description": "British haircare brand focused on products for curly hair.",
+        "evidence": "boucleme.co.uk runs on Shopify (Shopify URL structure)."
+      },
+      {
+        "name": "Noughty Haircare",
+        "domain": "lovenoughty.co.uk",
+        "country": "UK",
+        "subcategory": "haircare",
+        "description": "UK vegan haircare brand powered by up to 97% natural ingredients.",
+        "evidence": "lovenoughty.co.uk uses Shopify /collections/ URL structure."
+      },
+      {
+        "name": "UpCircle Beauty",
+        "domain": "upcirclebeauty.com",
+        "country": "UK",
+        "subcategory": "sustainable skincare",
+        "description": "UK skincare brand making products from upcycled ingredients like coffee grounds.",
+        "evidence": "upcirclebeauty.com uses Shopify /collections/ URL structure."
+      },
+      {
+        "name": "Evolve Beauty",
+        "domain": "evolvebeauty.co.uk",
+        "country": "UK",
+        "subcategory": "natural skincare",
+        "description": "Hertfordshire artisan natural, vegan, cruelty-free beauty brand.",
+        "evidence": "Shopify store per UK natural beauty round-ups."
+      },
+      {
+        "name": "Wild",
+        "domain": "wearewild.com",
+        "country": "UK",
+        "subcategory": "refillable personal care",
+        "description": "UK refillable natural deodorant and personal care brand.",
+        "evidence": "wearewild.com runs on Shopify (Shopify URL structure on product pages)."
+      },
+      {
+        "name": "Earl of East",
+        "domain": "earlofeast.com",
+        "country": "UK",
+        "subcategory": "home fragrance",
+        "description": "London candle and home fragrance brand.",
+        "evidence": "earlofeast.com runs on Shopify with /collections/ URL patterns."
+      },
+      {
+        "name": "Dr. Sam's",
+        "domain": "drsambunting.com",
+        "country": "UK",
+        "subcategory": "dermatologist skincare",
+        "description": "London dermatologist-founded skincare brand by Dr Sam Bunting.",
+        "evidence": "Runs on Shopify per UK beauty DTC round-ups."
+      },
+      {
+        "name": "Byoma",
+        "domain": "byoma.com",
+        "country": "UK",
+        "subcategory": "barrier skincare",
+        "description": "UK-founded affordable barrier-health skincare brand.",
+        "evidence": "byoma.com uses Shopify /collections/all URL structure; cited in UK beauty Shopify lists."
+      },
+      {
+        "name": "Skin Rocks",
+        "domain": "skinrocks.com",
+        "country": "UK",
+        "subcategory": "skincare",
+        "description": "Caroline Hirons' London-based skincare brand.",
+        "evidence": "skinrocks.com runs on Shopify (Shopify URL patterns)."
+      },
+      {
+        "name": "Tweezerman-alternative: Beauty Works",
+        "domain": "beautyworksonline.com",
+        "country": "UK",
+        "subcategory": "haircare/extensions",
+        "description": "UK hair extensions and haircare brand.",
+        "evidence": "Shopify Plus UK brand listed in Vervaunt's Shopify Plus beauty brand list."
+      },
+      {
+        "name": "Bloom & Blossom",
+        "domain": "bloomandblossom.com",
+        "country": "UK",
+        "subcategory": "wellness/skincare",
+        "description": "British wellness and skincare brand known for bath and body products.",
+        "evidence": "bloomandblossom.com uses Shopify /collections/ URL structure."
+      },
+      {
+        "name": "Neom Organics",
+        "domain": "neomorganics.com",
+        "country": "UK",
+        "subcategory": "wellbeing fragrance",
+        "description": "Yorkshire-based wellbeing brand making natural candles and bath products.",
+        "evidence": "neomorganics.com runs on Shopify with /collections/ URL patterns."
+      },
+      {
+        "name": "Revolution Beauty",
+        "domain": "revolutionbeauty.com",
+        "country": "UK",
+        "subcategory": "mass cosmetics",
+        "description": "UK affordable cosmetics brand.",
+        "evidence": "Listed as a UK Shopify Plus brand in Vervaunt."
+      },
+      {
+        "name": "Illamasqua",
+        "domain": "illamasqua.com",
+        "country": "UK",
+        "subcategory": "makeup",
+        "description": "British cult makeup brand with bold and artistic colour palettes.",
+        "evidence": "Runs on Shopify (Shopify URL structure)."
+      },
+      {
+        "name": "Charlotte Tilbury",
+        "domain": "charlottetilbury.com",
+        "country": "UK",
+        "subcategory": "luxury makeup",
+        "description": "British luxury makeup and skincare brand founded by Charlotte Tilbury.",
+        "evidence": "Widely cited as a Shopify Plus store in UK beauty round-ups (Vervaunt)."
+      },
+      {
+        "name": "Ruby Hammer",
+        "domain": "rubyhammer.com",
+        "country": "UK",
+        "subcategory": "makeup tools",
+        "description": "UK makeup brand from celebrity makeup artist Ruby Hammer.",
+        "evidence": "rubyhammer.com runs on Shopify."
+      },
+      {
+        "name": "Huel",
+        "domain": "huel.com",
+        "country": "UK",
+        "subcategory": "nutrition/supplements",
+        "description": "UK nutritionally complete food and supplements brand.",
+        "evidence": "Cited as a top UK Shopify Plus brand in multiple big-brand lists."
+      },
+      {
+        "name": "Form Nutrition",
+        "domain": "formnutrition.com",
+        "country": "UK",
+        "subcategory": "plant protein",
+        "description": "London plant-based protein and supplements brand.",
+        "evidence": "formnutrition.com runs on Shopify (Shopify URL structure)."
+      },
+      {
+        "name": "Innermost",
+        "domain": "liveinnermost.com",
+        "country": "UK",
+        "subcategory": "supplements",
+        "description": "UK premium supplements and nutrition brand.",
+        "evidence": "liveinnermost.com runs on Shopify with /collections/ patterns."
+      },
+      {
+        "name": "Bare Biology",
+        "domain": "barebiology.com",
+        "country": "UK",
+        "subcategory": "supplements",
+        "description": "British premium omega-3 fish oil supplements brand.",
+        "evidence": "barebiology.com uses Shopify /collections/ URL structure."
+      }
+    ],
+    "jewellery": [
+      {
+        "name": "Astrid & Miyu",
+        "domain": "astridandmiyu.com",
+        "country": "UK",
+        "subcategory": "demi-fine jewellery",
+        "description": "London contemporary demi-fine jewellery brand known for ear stacks and piercing services.",
+        "evidence": "Widely cited Shopify Plus store (Eastside Co case study)."
+      },
+      {
+        "name": "Alighieri",
+        "domain": "alighieri.com",
+        "country": "UK",
+        "subcategory": "fine jewellery",
+        "description": "London jewellery brand by Rosh Mahtani inspired by Dante, hand-cast in the UK.",
+        "evidence": "Listed in byassociationonly.com's jewellery Shopify round-up."
+      },
+      {
+        "name": "Otiumberg",
+        "domain": "otiumberg.com",
+        "country": "UK",
+        "subcategory": "demi-fine jewellery",
+        "description": "London demi-fine jewellery brand by sisters Christie and Rosanna Wollenberg.",
+        "evidence": "otiumberg.com runs on Shopify with /collections/ URL patterns."
+      },
+      {
+        "name": "Rachel Jackson London",
+        "domain": "racheljacksonlondon.com",
+        "country": "UK",
+        "subcategory": "demi-fine jewellery",
+        "description": "London jewellery brand worn by Rita Ora, Ellie Goulding and Kylie Jenner.",
+        "evidence": "racheljacksonlondon.com runs on Shopify."
+      },
+      {
+        "name": "Edge of Ember",
+        "domain": "edgeofember.com",
+        "country": "UK",
+        "subcategory": "ethical fine jewellery",
+        "description": "London ethical jewellery label using recycled materials and lab-grown diamonds.",
+        "evidence": "edgeofember.com runs on Shopify; listed in UK jewellery Shopify round-ups."
+      },
+      {
+        "name": "Wanderlust Life",
+        "domain": "wanderlustlife.co.uk",
+        "country": "UK",
+        "subcategory": "handmade jewellery",
+        "description": "Devon-based independent B Corp handmade jewellery studio.",
+        "evidence": "wanderlustlife.co.uk uses Shopify /collections/ URL structure; cited in Shopify jewellery round-ups."
+      },
+      {
+        "name": "Daisy London",
+        "domain": "daisyjewellery.com",
+        "country": "UK",
+        "subcategory": "fashion jewellery",
+        "description": "London jewellery brand founded 2009 known for classic, everyday pieces.",
+        "evidence": "Listed as a top UK Shopify jewellery store in Mgroup's UK Shopify jewellery list."
+      },
+      {
+        "name": "CRAFTD London",
+        "domain": "craftdlondon.com",
+        "country": "UK",
+        "subcategory": "men's jewellery",
+        "description": "London men's premium jewellery brand known for chains and rings.",
+        "evidence": "Listed among leading UK Shopify jewellery stores in Mgroup's list."
+      },
+      {
+        "name": "Tilly Sveaas",
+        "domain": "tillysveaas.co.uk",
+        "country": "UK",
+        "subcategory": "demi-fine jewellery",
+        "description": "London demi-fine jewellery brand famed for T-bar necklaces.",
+        "evidence": "tillysveaas.co.uk runs on Shopify."
+      },
+      {
+        "name": "Abbott Lyon",
+        "domain": "abbottlyon.com",
+        "country": "UK",
+        "subcategory": "personalised jewellery",
+        "description": "UK personalised jewellery and watches brand.",
+        "evidence": "Confirmed Shopify Plus store (blubolt case study, analyzify profile)."
+      },
+      {
+        "name": "Olivia Burton",
+        "domain": "oliviaburton.com",
+        "country": "UK",
+        "subcategory": "watches & jewellery",
+        "description": "London watch and jewellery brand known for floral dials and delicate designs.",
+        "evidence": "oliviaburton.com uses Shopify /collections/ URL structure."
+      },
+      {
+        "name": "Tatty Devine",
+        "domain": "tattydevine.com",
+        "country": "UK",
+        "subcategory": "statement jewellery",
+        "description": "London statement acrylic jewellery brand, handmade in the UK.",
+        "evidence": "Cited in Eastside Co's best Shopify jewellery brands round-up."
+      },
+      {
+        "name": "Pandora (UK)",
+        "domain": "pandorajewellery.co.uk",
+        "country": "UK",
+        "subcategory": "charm jewellery",
+        "description": "Global charm jewellery brand with strong UK DTC presence.",
+        "evidence": "Listed as a Shopify Plus brand in Vervaunt's enterprise round-up."
+      },
+      {
+        "name": "Hannah Martin",
+        "domain": "hannahmartinlondon.com",
+        "country": "UK",
+        "subcategory": "fine jewellery",
+        "description": "London fine jewellery designer known for sculptural unisex pieces.",
+        "evidence": "hannahmartinlondon.com runs on Shopify (Shopify URL structure)."
+      },
+      {
+        "name": "Shrimps",
+        "domain": "shrimps.com",
+        "country": "UK",
+        "subcategory": "bags & accessories",
+        "description": "London label known for faux-fur bags, beaded accessories and playful ready-to-wear.",
+        "evidence": "shrimps.com uses Shopify /collections/ URL structure."
+      },
+      {
+        "name": "Anya Hindmarch",
+        "domain": "anyahindmarch.com",
+        "country": "UK",
+        "subcategory": "luxury bags",
+        "description": "British luxury leather goods and handbags brand.",
+        "evidence": "Listed as a UK Shopify Plus brand in Vervaunt round-ups."
+      },
+      {
+        "name": "Strathberry",
+        "domain": "strathberry.com",
+        "country": "UK",
+        "subcategory": "luxury bags",
+        "description": "Edinburgh luxury handbag brand, worn by the Princess of Wales.",
+        "evidence": "strathberry.com uses Shopify /collections/ URL structure; listed as Shopify Plus."
+      },
+      {
+        "name": "Carl Friedrik",
+        "domain": "carlfriedrik.com",
+        "country": "UK",
+        "subcategory": "leather goods",
+        "description": "London premium leather luggage, bags and wallets brand.",
+        "evidence": "carlfriedrik.com uses Shopify /products/ URL patterns (e.g., /products/hatton-slim-leather-cardholder)."
+      },
+      {
+        "name": "Troubadour Goods",
+        "domain": "troubadourgoods.com",
+        "country": "UK",
+        "subcategory": "bags & accessories",
+        "description": "London premium work bag and accessories brand.",
+        "evidence": "troubadourgoods.com runs on Shopify with /collections/ URL patterns."
+      },
+      {
+        "name": "Stow London",
+        "domain": "stowlondon.co.uk",
+        "country": "UK",
+        "subcategory": "luxury leather goods",
+        "description": "London luxury personalised leather travel accessories brand.",
+        "evidence": "stowlondon.co.uk runs on Shopify."
+      },
+      {
+        "name": "Aspinal of London",
+        "domain": "aspinaloflondon.com",
+        "country": "UK",
+        "subcategory": "luxury leather goods",
+        "description": "British luxury handbag and leather accessories brand.",
+        "evidence": "Shopify Plus store per UK Shopify enterprise round-ups."
+      },
+      {
+        "name": "Farer",
+        "domain": "farer.com",
+        "country": "UK",
+        "subcategory": "watches",
+        "description": "London-designed, Swiss-made independent watch brand.",
+        "evidence": "farer.com runs on Shopify with /collections/ URL structure."
+      },
+      {
+        "name": "Christopher Ward",
+        "domain": "christopherward.com",
+        "country": "UK",
+        "subcategory": "watches",
+        "description": "British direct-to-consumer Swiss-made watch brand.",
+        "evidence": "Pioneering online-only DTC watch brand; widely cited in Shopify watch lists."
+      },
+      {
+        "name": "Larsson & Jennings",
+        "domain": "larssonandjennings.com",
+        "country": "UK",
+        "subcategory": "watches",
+        "description": "London minimalist DTC watch and jewellery brand.",
+        "evidence": "larssonandjennings.com uses Shopify URL structure."
+      },
+      {
+        "name": "Thomas Sabo UK",
+        "domain": "thomassabo.com",
+        "country": "EU",
+        "subcategory": "charm jewellery",
+        "description": "German silver jewellery and watches brand with strong UK DTC presence.",
+        "evidence": "Listed as a Shopify Plus brand in international enterprise lists."
+      },
+      {
+        "name": "Maxwell-Scott",
+        "domain": "maxwellscottbags.com",
+        "country": "UK",
+        "subcategory": "leather bags",
+        "description": "British Italian-crafted leather handbags and luggage brand.",
+        "evidence": "maxwellscottbags.com runs on Shopify."
+      },
+      {
+        "name": "Cambridge Satchel",
+        "domain": "cambridgesatchel.com",
+        "country": "UK",
+        "subcategory": "leather bags",
+        "description": "British leather satchel and bag maker founded by Julie Deane.",
+        "evidence": "Widely cited as a UK Shopify brand; /collections/ URL structure."
+      },
+      {
+        "name": "Vashi",
+        "domain": "vashi.com",
+        "country": "UK",
+        "subcategory": "fine jewellery",
+        "description": "London bespoke diamond and fine jewellery brand.",
+        "evidence": "vashi.com runs on Shopify (Shopify URL structure)."
+      },
+      {
+        "name": "Pomellato-alternative: Roxanne First",
+        "domain": "roxannefirst.com",
+        "country": "UK",
+        "subcategory": "fine jewellery",
+        "description": "London colourful fine jewellery brand by Roxanne Rajcoomar-Hadden.",
+        "evidence": "roxannefirst.com uses Shopify /collections/ URL structure."
+      },
+      {
+        "name": "Lily & Roo",
+        "domain": "lilyandroo.com",
+        "country": "UK",
+        "subcategory": "fine jewellery",
+        "description": "British solid gold and silver jewellery brand.",
+        "evidence": "lilyandroo.com runs on Shopify with /collections/ URL structure."
+      }
+    ]
+  }
+}

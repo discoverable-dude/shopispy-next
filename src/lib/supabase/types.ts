@@ -565,6 +565,156 @@ export type Database = {
         }
         Relationships: []
       }
+      price_history: {
+        Row: {
+          id: string
+          variant_id: number
+          product_id: number
+          store_id: string
+          price: number | null
+          compare_at_price: number | null
+          recorded_at: string
+        }
+        Insert: {
+          id?: string
+          variant_id: number
+          product_id: number
+          store_id: string
+          price?: number | null
+          compare_at_price?: number | null
+          recorded_at?: string
+        }
+        Update: {
+          id?: string
+          variant_id?: number
+          product_id?: number
+          store_id?: string
+          price?: number | null
+          compare_at_price?: number | null
+          recorded_at?: string
+        }
+        Relationships: []
+      }
+      inventory_history: {
+        Row: {
+          id: string
+          variant_id: number
+          product_id: number
+          store_id: string
+          inventory_quantity: number | null
+          available: boolean | null
+          recorded_at: string
+        }
+        Insert: {
+          id?: string
+          variant_id: number
+          product_id: number
+          store_id: string
+          inventory_quantity?: number | null
+          available?: boolean | null
+          recorded_at?: string
+        }
+        Update: {
+          id?: string
+          variant_id?: number
+          product_id?: number
+          store_id?: string
+          inventory_quantity?: number | null
+          available?: boolean | null
+          recorded_at?: string
+        }
+        Relationships: []
+      }
+      product_changes: {
+        Row: {
+          id: string
+          store_id: string
+          product_id: number
+          change_type: string
+          product_title: string | null
+          old_value: string | null
+          new_value: string | null
+          metadata: Json | null
+          detected_at: string
+        }
+        Insert: {
+          id?: string
+          store_id: string
+          product_id: number
+          change_type: string
+          product_title?: string | null
+          old_value?: string | null
+          new_value?: string | null
+          metadata?: Json | null
+          detected_at?: string
+        }
+        Update: {
+          id?: string
+          store_id?: string
+          product_id?: number
+          change_type?: string
+          product_title?: string | null
+          old_value?: string | null
+          new_value?: string | null
+          metadata?: Json | null
+          detected_at?: string
+        }
+        Relationships: []
+      }
+      market_reports: {
+        Row: {
+          id: string
+          user_id: string
+          report_type: string
+          period_start: string
+          period_end: string
+          report_data: Json
+          email_sent: boolean
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          report_type: string
+          period_start: string
+          period_end: string
+          report_data?: Json
+          email_sent?: boolean
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          report_type?: string
+          period_start?: string
+          period_end?: string
+          report_data?: Json
+          email_sent?: boolean
+          created_at?: string
+        }
+        Relationships: []
+      }
+      store_slugs: {
+        Row: {
+          id: string
+          store_id: string
+          slug: string
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          store_id: string
+          slug: string
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          store_id?: string
+          slug?: string
+          created_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

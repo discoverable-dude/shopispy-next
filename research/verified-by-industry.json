@@ -1,0 +1,1217 @@
+{
+  "sports": {
+    "label": "Sports & Outdoors",
+    "brands": [
+      {
+        "name": "Gymshark",
+        "domain": "gymshark.com"
+      },
+      {
+        "name": "Cotopaxi",
+        "domain": "cotopaxi.com"
+      },
+      {
+        "name": "Gymshark",
+        "domain": "gymshark.com"
+      },
+      {
+        "name": "Black Diamond",
+        "domain": "blackdiamondequipment.com"
+      },
+      {
+        "name": "GSI Outdoors",
+        "domain": "gsioutdoors.com"
+      },
+      {
+        "name": "ENO",
+        "domain": "eaglesnestoutfittersinc.com"
+      },
+      {
+        "name": "Kammok",
+        "domain": "kammok.com"
+      },
+      {
+        "name": "Topo Designs",
+        "domain": "topodesigns.com"
+      },
+      {
+        "name": "Kifaru",
+        "domain": "kifaru.net"
+      },
+      {
+        "name": "Stone Glacier",
+        "domain": "stoneglacier.com"
+      },
+      {
+        "name": "Kuiu",
+        "domain": "kuiu.com"
+      },
+      {
+        "name": "Simms Fishing",
+        "domain": "simmsfishing.com"
+      },
+      {
+        "name": "Filson",
+        "domain": "filson.com"
+      },
+      {
+        "name": "Vertx",
+        "domain": "vertx.com"
+      }
+    ]
+  },
+  "fashion": {
+    "label": "Fashion",
+    "brands": [
+      {
+        "name": "Fashion Nova",
+        "domain": "fashionnova.com"
+      },
+      {
+        "name": "Kith",
+        "domain": "kith.com"
+      },
+      {
+        "name": "Steve Madden",
+        "domain": "stevemadden.com"
+      },
+      {
+        "name": "Allbirds",
+        "domain": "allbirds.com"
+      },
+      {
+        "name": "Taylor Stitch",
+        "domain": "taylorstitch.com"
+      },
+      {
+        "name": "OddBalls",
+        "domain": "myoddballs.com"
+      },
+      {
+        "name": "Tentree",
+        "domain": "tentree.com"
+      },
+      {
+        "name": "Chubbies",
+        "domain": "chubbies.com"
+      },
+      {
+        "name": "Represent Clothing",
+        "domain": "representclo.com"
+      },
+      {
+        "name": "Outdoor Voices",
+        "domain": "outdoorvoices.com"
+      },
+      {
+        "name": "True Classic",
+        "domain": "trueclassictees.com"
+      },
+      {
+        "name": "Cuts Clothing",
+        "domain": "cutsclothing.com"
+      },
+      {
+        "name": "Stance",
+        "domain": "stance.com"
+      },
+      {
+        "name": "Knix",
+        "domain": "knix.com"
+      },
+      {
+        "name": "ThirdLove",
+        "domain": "thirdlove.com"
+      },
+      {
+        "name": "Lunya",
+        "domain": "lunya.co"
+      },
+      {
+        "name": "Rothy's",
+        "domain": "rothys.com"
+      },
+      {
+        "name": "Thursday Boots",
+        "domain": "thursdayboots.com"
+      },
+      {
+        "name": "Greats",
+        "domain": "greats.com"
+      },
+      {
+        "name": "Vessi",
+        "domain": "vessi.com"
+      },
+      {
+        "name": "Daniel Wellington",
+        "domain": "danielwellington.com"
+      },
+      {
+        "name": "Away",
+        "domain": "awaytravel.com"
+      },
+      {
+        "name": "Monos",
+        "domain": "monos.com"
+      },
+      {
+        "name": "Ekster",
+        "domain": "ekster.com"
+      },
+      {
+        "name": "Todd Snyder",
+        "domain": "toddsnyder.com"
+      },
+      {
+        "name": "Marine Layer",
+        "domain": "marinelayer.com"
+      },
+      {
+        "name": "Western Rise",
+        "domain": "westernrise.com"
+      },
+      {
+        "name": "Mack Weldon",
+        "domain": "mackweldon.com"
+      },
+      {
+        "name": "OBEY Clothing",
+        "domain": "obeyclothing.com"
+      },
+      {
+        "name": "The Hundreds",
+        "domain": "thehundreds.com"
+      },
+      {
+        "name": "Only NY",
+        "domain": "onlyny.com"
+      },
+      {
+        "name": "Koio",
+        "domain": "koio.co"
+      },
+      {
+        "name": "Oliver Cabell",
+        "domain": "olivercabell.com"
+      },
+      {
+        "name": "Quay Australia",
+        "domain": "quayaustralia.com"
+      },
+      {
+        "name": "Vincero",
+        "domain": "vincerowatches.com"
+      }
+    ]
+  },
+  "electronics": {
+    "label": "Electronics & Tech",
+    "brands": [
+      {
+        "name": "Ridge Wallet",
+        "domain": "ridgewallet.com"
+      },
+      {
+        "name": "Keychron",
+        "domain": "keychron.com"
+      },
+      {
+        "name": "Secretlab",
+        "domain": "secretlab.co"
+      },
+      {
+        "name": "Ridge Wallet",
+        "domain": "ridgewallet.com"
+      },
+      {
+        "name": "Secretlab",
+        "domain": "secretlab.co"
+      },
+      {
+        "name": "Pela Case",
+        "domain": "pelacase.com"
+      },
+      {
+        "name": "Master & Dynamic",
+        "domain": "masterdynamic.com"
+      },
+      {
+        "name": "Jackery",
+        "domain": "jackery.com"
+      },
+      {
+        "name": "Loop Earplugs",
+        "domain": "loopearplugs.com"
+      },
+      {
+        "name": "Keychron",
+        "domain": "keychron.com"
+      },
+      {
+        "name": "Shokz",
+        "domain": "shokz.com"
+      },
+      {
+        "name": "Paperlike",
+        "domain": "paperlike.com"
+      },
+      {
+        "name": "NZXT",
+        "domain": "nzxt.com"
+      },
+      {
+        "name": "Glorious Gaming",
+        "domain": "gloriousgaming.com"
+      },
+      {
+        "name": "Arduino",
+        "domain": "store.arduino.cc"
+      },
+      {
+        "name": "Native Union",
+        "domain": "nativeunion.com"
+      },
+      {
+        "name": "Twelve South",
+        "domain": "twelvesouth.com"
+      },
+      {
+        "name": "Supernote",
+        "domain": "supernote.com"
+      },
+      {
+        "name": "Boox",
+        "domain": "shop.boox.com"
+      },
+      {
+        "name": "Elegoo",
+        "domain": "elegoo.com"
+      }
+    ]
+  },
+  "beauty": {
+    "label": "Beauty & Wellness",
+    "brands": [
+      {
+        "name": "Fenty Beauty",
+        "domain": "fentybeauty.com"
+      },
+      {
+        "name": "Rare Beauty",
+        "domain": "rarebeauty.com"
+      },
+      {
+        "name": "Kylie Cosmetics",
+        "domain": "kyliecosmetics.com"
+      },
+      {
+        "name": "Glossier",
+        "domain": "glossier.com"
+      },
+      {
+        "name": "ColourPop",
+        "domain": "colourpop.com"
+      },
+      {
+        "name": "Olaplex",
+        "domain": "olaplex.com"
+      },
+      {
+        "name": "Tropic Skincare",
+        "domain": "tropicskincare.com"
+      },
+      {
+        "name": "The Beauty Chef",
+        "domain": "thebeautychef.com"
+      },
+      {
+        "name": "Summer Fridays",
+        "domain": "summerfridays.com"
+      },
+      {
+        "name": "Jeffree Star Cosmetics",
+        "domain": "jeffreestarcosmetics.com"
+      },
+      {
+        "name": "Iconic London",
+        "domain": "iconiclondoninc.com"
+      },
+      {
+        "name": "Glow Recipe",
+        "domain": "glowrecipe.com"
+      },
+      {
+        "name": "Dr. Squatch",
+        "domain": "drsquatch.com"
+      },
+      {
+        "name": "Harry's",
+        "domain": "harrys.com"
+      },
+      {
+        "name": "Ouai",
+        "domain": "theouai.com"
+      },
+      {
+        "name": "Function of Beauty",
+        "domain": "functionofbeauty.com"
+      },
+      {
+        "name": "Ritual",
+        "domain": "ritual.com"
+      },
+      {
+        "name": "Vital Proteins",
+        "domain": "vitalproteins.com"
+      },
+      {
+        "name": "Quip",
+        "domain": "getquip.com"
+      },
+      {
+        "name": "Snow Teeth Whitening",
+        "domain": "trysnow.com"
+      },
+      {
+        "name": "Blueland",
+        "domain": "blueland.com"
+      },
+      {
+        "name": "Cocokind",
+        "domain": "cocokind.com"
+      },
+      {
+        "name": "Pixi Beauty",
+        "domain": "pixibeauty.com"
+      },
+      {
+        "name": "Stila Cosmetics",
+        "domain": "stilacosmetics.com"
+      },
+      {
+        "name": "Beauty Bakerie",
+        "domain": "beautybakerie.com"
+      },
+      {
+        "name": "Josie Maran",
+        "domain": "josiemaran.com"
+      },
+      {
+        "name": "The Honey Pot",
+        "domain": "thehoneypot.co"
+      },
+      {
+        "name": "Lumin",
+        "domain": "luminskin.com"
+      },
+      {
+        "name": "Geologie",
+        "domain": "geologie.com"
+      },
+      {
+        "name": "Oars + Alps",
+        "domain": "oarsandalps.com"
+      },
+      {
+        "name": "Native",
+        "domain": "nativecos.com"
+      },
+      {
+        "name": "Kopari",
+        "domain": "koparibeauty.com"
+      },
+      {
+        "name": "Moon Juice",
+        "domain": "moonjuice.com"
+      },
+      {
+        "name": "Golde",
+        "domain": "golde.co"
+      },
+      {
+        "name": "Olly",
+        "domain": "olly.com"
+      },
+      {
+        "name": "Pura",
+        "domain": "pura.com"
+      },
+      {
+        "name": "Vitruvi",
+        "domain": "vitruvi.com"
+      },
+      {
+        "name": "Saje Natural Wellness",
+        "domain": "saje.com"
+      },
+      {
+        "name": "Grove Collaborative",
+        "domain": "grove.co"
+      },
+      {
+        "name": "Tru Earth",
+        "domain": "tru.earth"
+      }
+    ]
+  },
+  "food": {
+    "label": "Food & Beverage",
+    "brands": [
+      {
+        "name": "MUDWTR",
+        "domain": "mudwtr.com"
+      },
+      {
+        "name": "Liquid Death",
+        "domain": "liquiddeath.com"
+      },
+      {
+        "name": "Magic Spoon",
+        "domain": "magicspoon.com"
+      },
+      {
+        "name": "Death Wish Coffee",
+        "domain": "deathwishcoffee.com"
+      },
+      {
+        "name": "Red Bull Shop",
+        "domain": "redbullshopus.com"
+      },
+      {
+        "name": "Fly by Jing",
+        "domain": "flybyjing.com"
+      },
+      {
+        "name": "Stumptown Coffee",
+        "domain": "stumptowncoffee.com"
+      },
+      {
+        "name": "Partake Foods",
+        "domain": "partakefoods.com"
+      },
+      {
+        "name": "Heatonist",
+        "domain": "heatonist.com"
+      },
+      {
+        "name": "Milk Bar",
+        "domain": "milkbarstore.com"
+      },
+      {
+        "name": "Chomps",
+        "domain": "chomps.com"
+      },
+      {
+        "name": "Soylent",
+        "domain": "soylent.com"
+      },
+      {
+        "name": "Daily Harvest",
+        "domain": "daily-harvest.com"
+      },
+      {
+        "name": "HexClad",
+        "domain": "hexclad.com"
+      },
+      {
+        "name": "Fellow",
+        "domain": "fellowproducts.com"
+      },
+      {
+        "name": "Chemex",
+        "domain": "chemexcoffeemaker.com"
+      },
+      {
+        "name": "Splendid Spoon",
+        "domain": "splendidspoon.com"
+      },
+      {
+        "name": "ButcherBox",
+        "domain": "butcherbox.com"
+      },
+      {
+        "name": "Snake River Farms",
+        "domain": "snakeriverfarms.com"
+      },
+      {
+        "name": "Great Jones",
+        "domain": "greatjonesgoods.com"
+      },
+      {
+        "name": "Misen",
+        "domain": "misen.com"
+      },
+      {
+        "name": "Material Kitchen",
+        "domain": "materialkitchen.com"
+      },
+      {
+        "name": "Ghia",
+        "domain": "drinkghia.com"
+      },
+      {
+        "name": "Olipop",
+        "domain": "drinkolipop.com"
+      },
+      {
+        "name": "Poppi",
+        "domain": "drinkpoppi.com"
+      },
+      {
+        "name": "Beekeeper's Naturals",
+        "domain": "beekeepersnaturals.com"
+      },
+      {
+        "name": "MUDWTR",
+        "domain": "mudwtr.com"
+      },
+      {
+        "name": "Four Sigmatic",
+        "domain": "foursigmatic.com"
+      },
+      {
+        "name": "Laird Superfood",
+        "domain": "lairdsuperfood.com"
+      },
+      {
+        "name": "Verve Coffee",
+        "domain": "vervecoffee.com"
+      },
+      {
+        "name": "Counter Culture",
+        "domain": "counterculturecoffee.com"
+      }
+    ]
+  },
+  "home": {
+    "label": "Home & Garden",
+    "brands": [
+      {
+        "name": "Casper",
+        "domain": "casper.com"
+      },
+      {
+        "name": "Stanley 1913",
+        "domain": "stanley1913.com"
+      },
+      {
+        "name": "Brooklinen",
+        "domain": "brooklinen.com"
+      },
+      {
+        "name": "Parachute Home",
+        "domain": "parachutehome.com"
+      },
+      {
+        "name": "Boll & Branch",
+        "domain": "bollandbranch.com"
+      },
+      {
+        "name": "Fast Growing Trees",
+        "domain": "fastgrowingtrees.com"
+      },
+      {
+        "name": "Outer",
+        "domain": "liveouter.com"
+      },
+      {
+        "name": "Ooni",
+        "domain": "ooni.com"
+      },
+      {
+        "name": "Rumpl",
+        "domain": "rumpl.com"
+      },
+      {
+        "name": "Peak Design",
+        "domain": "peakdesign.com"
+      },
+      {
+        "name": "Nomatic",
+        "domain": "nomatic.com"
+      },
+      {
+        "name": "Floyd",
+        "domain": "floydhome.com"
+      },
+      {
+        "name": "Corkcicle",
+        "domain": "corkcicle.com"
+      },
+      {
+        "name": "S'well",
+        "domain": "swell.com"
+      },
+      {
+        "name": "Breeo",
+        "domain": "breeo.co"
+      },
+      {
+        "name": "Gozney",
+        "domain": "gozney.com"
+      },
+      {
+        "name": "Snow Peak",
+        "domain": "snowpeak.com"
+      },
+      {
+        "name": "Big Agnes",
+        "domain": "bigagnes.com"
+      },
+      {
+        "name": "Sea to Summit",
+        "domain": "seatosummit.com"
+      },
+      {
+        "name": "Aer",
+        "domain": "aersf.com"
+      },
+      {
+        "name": "Timbuk2",
+        "domain": "timbuk2.com"
+      },
+      {
+        "name": "Chrome Industries",
+        "domain": "chromeindustries.com"
+      },
+      {
+        "name": "Society6",
+        "domain": "society6.com"
+      },
+      {
+        "name": "Sandmarc",
+        "domain": "sandmarc.com"
+      },
+      {
+        "name": "Maiden Home",
+        "domain": "maidenhome.com"
+      },
+      {
+        "name": "Incase",
+        "domain": "incase.com"
+      },
+      {
+        "name": "Tortuga",
+        "domain": "tortugabackpacks.com"
+      },
+      {
+        "name": "Waterfield Designs",
+        "domain": "sfbags.com"
+      },
+      {
+        "name": "Minaal",
+        "domain": "minaal.com"
+      }
+    ]
+  },
+  "kids": {
+    "label": "Kids & Baby",
+    "brands": [
+      {
+        "name": "Primary",
+        "domain": "primary.com"
+      },
+      {
+        "name": "Little Sleepies",
+        "domain": "littlesleepies.com"
+      },
+      {
+        "name": "Nugget",
+        "domain": "nuggetcomfort.com"
+      },
+      {
+        "name": "Owlet",
+        "domain": "owletcare.com"
+      },
+      {
+        "name": "Lalo",
+        "domain": "meetlalo.com"
+      },
+      {
+        "name": "Jamie Kay",
+        "domain": "jamiekay.com"
+      },
+      {
+        "name": "Quincy Mae",
+        "domain": "quincymae.com"
+      },
+      {
+        "name": "Little Unicorn",
+        "domain": "littleunicorn.com"
+      },
+      {
+        "name": "Copper Pearl",
+        "domain": "copperpearl.com"
+      },
+      {
+        "name": "Mushie",
+        "domain": "mushie.com"
+      },
+      {
+        "name": "Gathre",
+        "domain": "gathre.com"
+      },
+      {
+        "name": "Tula",
+        "domain": "babytula.com"
+      },
+      {
+        "name": "Boba",
+        "domain": "boba.com"
+      },
+      {
+        "name": "LILLEbaby",
+        "domain": "lillebaby.com"
+      },
+      {
+        "name": "Baby Brezza",
+        "domain": "babybrezza.com"
+      },
+      {
+        "name": "Elvie",
+        "domain": "elvie.com"
+      },
+      {
+        "name": "Willow",
+        "domain": "onewillow.com"
+      },
+      {
+        "name": "Haakaa",
+        "domain": "haakaa.com"
+      },
+      {
+        "name": "Boppy",
+        "domain": "boppy.com"
+      },
+      {
+        "name": "Nanit",
+        "domain": "nanit.com"
+      },
+      {
+        "name": "Tubby Todd",
+        "domain": "tubbytodd.com"
+      },
+      {
+        "name": "Mustela",
+        "domain": "mustelausa.com"
+      },
+      {
+        "name": "Earth Mama",
+        "domain": "earthmamaorganics.com"
+      }
+    ]
+  },
+  "pets": {
+    "label": "Pets",
+    "brands": [
+      {
+        "name": "Wild One",
+        "domain": "wildone.com"
+      },
+      {
+        "name": "Open Farm",
+        "domain": "openfarmpet.com"
+      },
+      {
+        "name": "Stella & Chewy's",
+        "domain": "stellaandchewys.com"
+      },
+      {
+        "name": "Ziwi Peak",
+        "domain": "ziwipets.com"
+      },
+      {
+        "name": "A Pup Above",
+        "domain": "apupabove.com"
+      },
+      {
+        "name": "Jinx",
+        "domain": "thinkjinx.com"
+      },
+      {
+        "name": "West Paw",
+        "domain": "westpaw.com"
+      },
+      {
+        "name": "P.L.A.Y.",
+        "domain": "petplay.com"
+      },
+      {
+        "name": "Ruffwear",
+        "domain": "ruffwear.com"
+      },
+      {
+        "name": "Sleepypod",
+        "domain": "sleepypod.com"
+      },
+      {
+        "name": "Maxbone",
+        "domain": "maxbone.com"
+      },
+      {
+        "name": "Found My Animal",
+        "domain": "foundmyanimal.com"
+      },
+      {
+        "name": "Zee.Dog",
+        "domain": "zeedog.com"
+      },
+      {
+        "name": "Wolfgang Man & Beast",
+        "domain": "wolfgangusa.com"
+      },
+      {
+        "name": "Up Country",
+        "domain": "upcountryinc.com"
+      },
+      {
+        "name": "The Foggy Dog",
+        "domain": "thefoggydog.com"
+      },
+      {
+        "name": "Harry Barker",
+        "domain": "harrybarker.com"
+      },
+      {
+        "name": "Rifle Paper Co Pets",
+        "domain": "riflepaperco.com"
+      },
+      {
+        "name": "Diggs",
+        "domain": "diggs.pet"
+      },
+      {
+        "name": "Impact Dog Crates",
+        "domain": "impactdogcrates.com"
+      },
+      {
+        "name": "Tuft + Paw",
+        "domain": "tuftandpaw.com"
+      }
+    ]
+  },
+  "fitness": {
+    "label": "Health & Fitness",
+    "brands": [
+      {
+        "name": "Therabody",
+        "domain": "therabody.com"
+      },
+      {
+        "name": "Tonal",
+        "domain": "tonal.com"
+      },
+      {
+        "name": "Peloton",
+        "domain": "apparel.onepeloton.com"
+      },
+      {
+        "name": "Hyperice",
+        "domain": "hyperice.com"
+      },
+      {
+        "name": "Rep Fitness",
+        "domain": "repfitness.com"
+      },
+      {
+        "name": "PRx Performance",
+        "domain": "prxperformance.com"
+      },
+      {
+        "name": "Fringe Sport",
+        "domain": "fringesport.com"
+      },
+      {
+        "name": "Bells of Steel",
+        "domain": "bellsofsteel.com"
+      },
+      {
+        "name": "Assault Fitness",
+        "domain": "assaultfitness.com"
+      },
+      {
+        "name": "TRX",
+        "domain": "trxtraining.com"
+      },
+      {
+        "name": "BOSU",
+        "domain": "bosu.com"
+      },
+      {
+        "name": "Power Systems",
+        "domain": "power-systems.com"
+      },
+      {
+        "name": "Momentous",
+        "domain": "livemomentous.com"
+      },
+      {
+        "name": "Transparent Labs",
+        "domain": "transparentlabs.com"
+      },
+      {
+        "name": "Jacked Factory",
+        "domain": "jackedfactory.com"
+      },
+      {
+        "name": "Ghost Lifestyle",
+        "domain": "ghostlifestyle.com"
+      },
+      {
+        "name": "Gorilla Mind",
+        "domain": "gorillamind.com"
+      },
+      {
+        "name": "Alani Nu",
+        "domain": "alaninu.com"
+      },
+      {
+        "name": "Bloom Nutrition",
+        "domain": "bloomnu.com"
+      },
+      {
+        "name": "1st Phorm",
+        "domain": "1stphorm.com"
+      },
+      {
+        "name": "Optimum Nutrition",
+        "domain": "optimumnutrition.com"
+      },
+      {
+        "name": "PEScience",
+        "domain": "pescience.com"
+      },
+      {
+        "name": "Redcon1",
+        "domain": "redcon1.com"
+      },
+      {
+        "name": "BPN",
+        "domain": "bareperformancenutrition.com"
+      },
+      {
+        "name": "XWERKS",
+        "domain": "xwerks.com"
+      },
+      {
+        "name": "Swolverine",
+        "domain": "swolverine.com"
+      },
+      {
+        "name": "Cellucor",
+        "domain": "cellucor.com"
+      }
+    ]
+  },
+  "jewellery": {
+    "label": "Jewellery & Accessories",
+    "brands": [
+      {
+        "name": "Gorjana",
+        "domain": "gorjana.com"
+      },
+      {
+        "name": "Vitaly",
+        "domain": "vitalydesign.com"
+      },
+      {
+        "name": "Missoma",
+        "domain": "missoma.com"
+      },
+      {
+        "name": "Jenny Bird",
+        "domain": "jenny-bird.com"
+      },
+      {
+        "name": "BaubleBar",
+        "domain": "baublebar.com"
+      },
+      {
+        "name": "Uncommon James",
+        "domain": "uncommonjames.com"
+      },
+      {
+        "name": "Aurate",
+        "domain": "auratenewyork.com"
+      },
+      {
+        "name": "Stone and Strand",
+        "domain": "stoneandstrand.com"
+      },
+      {
+        "name": "Ring Concierge",
+        "domain": "ringconcierge.com"
+      },
+      {
+        "name": "SOKO",
+        "domain": "shopsoko.com"
+      },
+      {
+        "name": "Nisolo",
+        "domain": "nisolo.com"
+      },
+      {
+        "name": "Cuyana",
+        "domain": "cuyana.com"
+      },
+      {
+        "name": "Senreve",
+        "domain": "senreve.com"
+      },
+      {
+        "name": "Mansur Gavriel",
+        "domain": "mansurgavriel.com"
+      },
+      {
+        "name": "Cult Gaia",
+        "domain": "cultgaia.com"
+      },
+      {
+        "name": "JW Pei",
+        "domain": "jwpei.com"
+      },
+      {
+        "name": "Brandon Blackwood",
+        "domain": "brandonblackwood.com"
+      },
+      {
+        "name": "Nanushka",
+        "domain": "nanushka.com"
+      },
+      {
+        "name": "Loeffler Randall",
+        "domain": "loefflerrandall.com"
+      },
+      {
+        "name": "Brother Vellies",
+        "domain": "brothervellies.com"
+      },
+      {
+        "name": "Everlane",
+        "domain": "everlane.com"
+      },
+      {
+        "name": "Girlfriend Collective",
+        "domain": "girlfriend.com"
+      },
+      {
+        "name": "For Days",
+        "domain": "fordays.com"
+      },
+      {
+        "name": "Pangaia",
+        "domain": "thepangaia.com"
+      },
+      {
+        "name": "Ministry of Supply",
+        "domain": "ministryofsupply.com"
+      },
+      {
+        "name": "M.M.LaFleur",
+        "domain": "mmlafleur.com"
+      },
+      {
+        "name": "Argent",
+        "domain": "argentwork.com"
+      },
+      {
+        "name": "Universal Standard",
+        "domain": "universalstandard.com"
+      },
+      {
+        "name": "The Row",
+        "domain": "therow.com"
+      }
+    ]
+  },
+  "mobility": {
+    "label": "Automotive & Mobility",
+    "brands": [
+      {
+        "name": "Lectric",
+        "domain": "lectricebikes.com"
+      },
+      {
+        "name": "Super73",
+        "domain": "super73.com"
+      },
+      {
+        "name": "Evolve Skateboards",
+        "domain": "evolveskateboardsusa.com"
+      },
+      {
+        "name": "Meepo",
+        "domain": "meepoboard.com"
+      },
+      {
+        "name": "Backfire",
+        "domain": "backfireboards.com"
+      },
+      {
+        "name": "Exway",
+        "domain": "exwayboard.com"
+      },
+      {
+        "name": "WowGo",
+        "domain": "wowgoboard.com"
+      },
+      {
+        "name": "Ownboard",
+        "domain": "ownboard.net"
+      },
+      {
+        "name": "Hovsco",
+        "domain": "hovsco.com"
+      },
+      {
+        "name": "Aventon",
+        "domain": "aventon.com"
+      },
+      {
+        "name": "Juiced Bikes",
+        "domain": "juicedbikes.com"
+      },
+      {
+        "name": "Ariel Rider",
+        "domain": "arielrider.com"
+      },
+      {
+        "name": "Priority Bicycles",
+        "domain": "prioritybicycles.com"
+      },
+      {
+        "name": "State Bicycle",
+        "domain": "statebicycle.com"
+      },
+      {
+        "name": "Retrospec",
+        "domain": "retrospec.com"
+      },
+      {
+        "name": "Pure Cycles",
+        "domain": "purecycles.com"
+      },
+      {
+        "name": "Sole Bicycles",
+        "domain": "solebicycles.com"
+      },
+      {
+        "name": "Islabikes",
+        "domain": "islabikes.com"
+      },
+      {
+        "name": "Santa Cruz",
+        "domain": "santacruzbicycles.com"
+      },
+      {
+        "name": "Evil Bikes",
+        "domain": "evil-bikes.com"
+      },
+      {
+        "name": "Pivot",
+        "domain": "pivotcycles.com"
+      }
+    ]
+  }
+}

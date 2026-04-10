@@ -1,0 +1,261 @@
+[
+  {
+    "original": "kfrancis.kosas.com",
+    "cleaned": "kancis.kosas.com",
+    "name": "Kosas Cosmetics",
+    "industry": "beauty",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "tifriegehanley.com",
+    "cleaned": "tiiegehanley.com",
+    "name": "Tiege Hanley",
+    "industry": "beauty",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "bfrst.com",
+    "cleaned": "bst.com",
+    "name": "Burst Oral Care",
+    "industry": "beauty",
+    "reason": "not JSON"
+  },
+  {
+    "original": "lfrqcom.myshopify.com",
+    "cleaned": "lqcom.myshopify.com",
+    "name": "Larq",
+    "industry": "home",
+    "reason": "HTTP 404"
+  },
+  {
+    "original": "bfrioliteenergy.com",
+    "cleaned": "bioliteenergy.com",
+    "name": "BioLite",
+    "industry": "home",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "fromourplace.com",
+    "cleaned": "omourplace.com",
+    "name": "Our Place",
+    "industry": "food",
+    "reason": "HTTP 503"
+  },
+  {
+    "original": "hfrario-usa.com",
+    "cleaned": "hario-usa.com",
+    "name": "Hario",
+    "industry": "food",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "grfraza.co",
+    "cleaned": "graza.co",
+    "name": "Graza",
+    "industry": "food",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "dfrrinktrade.com",
+    "cleaned": "drinktrade.com",
+    "name": "Trade Coffee",
+    "industry": "food",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "frame.work",
+    "cleaned": "ame.work",
+    "name": "Framework Laptop",
+    "industry": "electronics",
+    "reason": "HTTP 403"
+  },
+  {
+    "original": "fractal-design.com",
+    "cleaned": "actal-design.com",
+    "name": "Fractal Design",
+    "industry": "electronics",
+    "reason": "not JSON"
+  },
+  {
+    "original": "dfruckychannel.com",
+    "cleaned": "duckychannel.com",
+    "name": "Ducky",
+    "industry": "electronics",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "lfreiagear.com",
+    "cleaned": "leiagear.com",
+    "name": "Lume Pad",
+    "industry": "electronics",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "pfrehrdesigns.com",
+    "cleaned": "pehrdesigns.com",
+    "name": "Pehr",
+    "industry": "kids",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "hatchwfraby.com",
+    "cleaned": "hatchwaby.com",
+    "name": "Hatch",
+    "industry": "kids",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "pipfrette.com",
+    "cleaned": "pipette.com",
+    "name": "Pipette",
+    "industry": "kids",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "ffrablefrpets.com",
+    "cleaned": "fablefrpets.com",
+    "name": "Fable",
+    "industry": "pets",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "ffrablefrpets.com",
+    "cleaned": "ffrablepets.com",
+    "name": "Fable",
+    "industry": "pets",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "gfrunnerkennels.com",
+    "cleaned": "gunnerkennels.com",
+    "name": "Gunner Kennels",
+    "industry": "pets",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "rfrufflandkennels.com",
+    "cleaned": "rufflandkennels.com",
+    "name": "Ruffland",
+    "industry": "pets",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "ffrablefrpets.com",
+    "cleaned": "fablefrpets.com",
+    "name": "Fable",
+    "industry": "pets",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "ffrablefrpets.com",
+    "cleaned": "ffrablepets.com",
+    "name": "Fable",
+    "industry": "pets",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "roguefrfitness.com",
+    "cleaned": "roguefitness.com",
+    "name": "Rogue Fitness",
+    "industry": "fitness",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "tfrriggerpoint.com",
+    "cleaned": "triggerpoint.com",
+    "name": "TriggerPoint",
+    "industry": "fitness",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "kfrged.com",
+    "cleaned": "kged.com",
+    "name": "Kaged",
+    "industry": "fitness",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "roguefrfitness.com/echo",
+    "cleaned": "roguefitness.com/echo",
+    "name": "Rogue Echo",
+    "industry": "fitness",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "roguefrfitness.com/lacrosse",
+    "cleaned": "roguefitness.com/lacrosse",
+    "name": "Lacrosse Ball",
+    "industry": "fitness",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "dorfrsey.com",
+    "cleaned": "dorsey.com",
+    "name": "Dorsey",
+    "industry": "jewellery",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "ablefr.com",
+    "cleaned": "able.com",
+    "name": "Able",
+    "industry": "jewellery",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "dfragnedover.com",
+    "cleaned": "dagnedover.com",
+    "name": "Dagne Dover",
+    "industry": "jewellery",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "polfrene-paris.com",
+    "cleaned": "polene-paris.com",
+    "name": "Polene",
+    "industry": "jewellery",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "tfrelfar.net",
+    "cleaned": "telfar.net",
+    "name": "Telfar",
+    "industry": "jewellery",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "stfraud.clothing",
+    "cleaned": "staud.clothing",
+    "name": "Staud",
+    "industry": "jewellery",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "byfrfrfar.com",
+    "cleaned": "byfrfar.com",
+    "name": "By Far",
+    "industry": "jewellery",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "byfrfrfar.com",
+    "cleaned": "byfrfar.com",
+    "name": "By Far",
+    "industry": "jewellery",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "arfrket.com",
+    "cleaned": "arket.com",
+    "name": "Arket",
+    "industry": "jewellery",
+    "reason": "fetch failed"
+  },
+  {
+    "original": "frogbikes.com",
+    "cleaned": "ogbikes.com",
+    "name": "Frog Bikes",
+    "industry": "mobility",
+    "reason": "HTTP 404"
+  }
+]

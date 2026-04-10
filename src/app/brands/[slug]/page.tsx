@@ -21,6 +21,10 @@ import {
   getChangeTypeColor,
   getChangeTypeLabel,
 } from "@/lib/brandUtils";
+import { fetchStatsForDomains, enrichBrand } from "@/lib/brandStats";
+
+// Revalidate every hour so live stats stay fresh without a full rebuild.
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   return getAllBrandSlugs().map((slug) => ({ slug }));
@@ -37,7 +41,7 @@ export async function generateMetadata({
 
   return {
     title: `${brand.name} Shopify Store Tracker | ShopiSpy`,
-    description: `Track ${brand.name} (${brand.domain}) on ShopiSpy. Monitor ${brand.products} products, get price alerts, and discover new product launches.`,
+    description: `Track ${brand.name} (${brand.domain}) on ShopiSpy. Monitor their catalog, get price alerts, and discover new product launches in real time.`,
     alternates: { canonical: `/brands/${slug}` },
   };
 }
@@ -48,11 +52,22 @@ export default async function BrandPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const brand = getBrandBySlug(slug);
+  const staticBrand = getBrandBySlug(slug);
 
-  if (!brand) {
+  if (!staticBrand) {
     notFound();
   }
+
+  // Fetch live stats for the current brand + all brands in its vertical
+  // (needed for verticalStats calculation + related brand cards).
+  const allVerticalDomains = staticBrand.vertical.brands.map((b) => b.domain);
+  const statsMap = await fetchStatsForDomains(allVerticalDomains);
+
+  // Enrich the brand with live data
+  const brand = { ...enrichBrand(staticBrand, statsMap), vertical: {
+    ...staticBrand.vertical,
+    brands: staticBrand.vertical.brands.map((b) => enrichBrand(b, statsMap)),
+  }};
 
   const changeType = categoriseChange(brand.latestChange);
   const changeColor = getChangeTypeColor(changeType);

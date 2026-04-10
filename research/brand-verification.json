@@ -1,0 +1,5052 @@
+{
+  "verifiedAt": "2026-04-10T01:56:14.363Z",
+  "total": 550,
+  "verified": 290,
+  "failed": 260,
+  "results": [
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Gymshark",
+      "domain": "gymshark.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Fashion Nova",
+      "domain": "fashionnova.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "SKIMS",
+      "domain": "skims.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Alo Yoga",
+      "domain": "aloyoga.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Kith",
+      "domain": "kith.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Steve Madden",
+      "domain": "stevemadden.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "FIGS",
+      "domain": "wearfigs.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Allbirds",
+      "domain": "allbirds.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Bombas",
+      "domain": "bombas.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Taylor Stitch",
+      "domain": "taylorstitch.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "OddBalls",
+      "domain": "myoddballs.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Tentree",
+      "domain": "tentree.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Chubbies",
+      "domain": "chubbies.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Represent Clothing",
+      "domain": "representclo.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Outdoor Voices",
+      "domain": "outdoorvoices.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "True Classic",
+      "domain": "trueclassictees.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Buck Mason",
+      "domain": "buckmason.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Vuori",
+      "domain": "vuori.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Rhone",
+      "domain": "rhone.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Cuts Clothing",
+      "domain": "cutsclothing.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "MeUndies",
+      "domain": "meundies.com",
+      "ok": false,
+      "status": 429,
+      "reason": "HTTP 429"
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Stance",
+      "domain": "stance.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Happy Socks",
+      "domain": "happysocks.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Knix",
+      "domain": "knix.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "ThirdLove",
+      "domain": "thirdlove.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Savage X Fenty",
+      "domain": "savagex.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Lunya",
+      "domain": "lunya.co",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Rothy's",
+      "domain": "rothys.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Thursday Boots",
+      "domain": "thursdayboots.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Greats",
+      "domain": "greats.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Vessi",
+      "domain": "vessi.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "MVMT Watches",
+      "domain": "mvmtwatches.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Daniel Wellington",
+      "domain": "danielwellington.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Away",
+      "domain": "awaytravel.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Monos",
+      "domain": "monos.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Bellroy",
+      "domain": "bellroy.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Ridge Wallet",
+      "domain": "ridgewallet.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Ekster",
+      "domain": "ekster.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Todd Snyder",
+      "domain": "toddsnyder.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Marine Layer",
+      "domain": "marinelayer.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Public Rec",
+      "domain": "publicrec.com",
+      "ok": false,
+      "status": 200,
+      "reason": "no products array"
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Western Rise",
+      "domain": "westernrise.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Mack Weldon",
+      "domain": "mackweldon.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "OBEY Clothing",
+      "domain": "obeyclothing.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "The Hundreds",
+      "domain": "thehundreds.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Only NY",
+      "domain": "onlyny.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Koio",
+      "domain": "koio.co",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Oliver Cabell",
+      "domain": "olivercabell.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Quay Australia",
+      "domain": "quayaustralia.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fashion",
+      "industryLabel": "Fashion",
+      "name": "Vincero",
+      "domain": "vincerowatches.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Fenty Beauty",
+      "domain": "fentybeauty.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Rare Beauty",
+      "domain": "rarebeauty.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Kylie Cosmetics",
+      "domain": "kyliecosmetics.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Glossier",
+      "domain": "glossier.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "ColourPop",
+      "domain": "colourpop.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Hismile",
+      "domain": "hismile.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Olaplex",
+      "domain": "olaplex.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Tropic Skincare",
+      "domain": "tropicskincare.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "The Beauty Chef",
+      "domain": "thebeautychef.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Summer Fridays",
+      "domain": "summerfridays.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Jeffree Star Cosmetics",
+      "domain": "jeffreestarcosmetics.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Iconic London",
+      "domain": "iconiclondoninc.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Kosas Cosmetics",
+      "domain": "kfrancis.kosas.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Glow Recipe",
+      "domain": "glowrecipe.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Dr. Squatch",
+      "domain": "drsquatch.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Harry's",
+      "domain": "harrys.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Ouai",
+      "domain": "theouai.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Function of Beauty",
+      "domain": "functionofbeauty.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Ritual",
+      "domain": "ritual.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Athletic Greens",
+      "domain": "drinkag1.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "MUDWTR",
+      "domain": "mudwtr.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Vital Proteins",
+      "domain": "vitalproteins.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Quip",
+      "domain": "getquip.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Snow Teeth Whitening",
+      "domain": "trysnow.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Blueland",
+      "domain": "blueland.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Cocokind",
+      "domain": "cocokind.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Pixi Beauty",
+      "domain": "pixibeauty.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Stila Cosmetics",
+      "domain": "stilacosmetics.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Beauty Bakerie",
+      "domain": "beautybakerie.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Josie Maran",
+      "domain": "josiemaran.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "The Honey Pot",
+      "domain": "thehoneypot.co",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Lumin",
+      "domain": "luminskin.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Geologie",
+      "domain": "geologie.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Tiege Hanley",
+      "domain": "tifriegehanley.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Oars + Alps",
+      "domain": "oarsandalps.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Native",
+      "domain": "nativecos.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Kopari",
+      "domain": "koparibeauty.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Prose",
+      "domain": "prose.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Hims & Hers",
+      "domain": "forhims.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Moon Juice",
+      "domain": "moonjuice.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Golde",
+      "domain": "golde.co",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Hum Nutrition",
+      "domain": "humnutrition.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Olly",
+      "domain": "olly.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Pura",
+      "domain": "pura.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Vitruvi",
+      "domain": "vitruvi.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Saje Natural Wellness",
+      "domain": "saje.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Grove Collaborative",
+      "domain": "grove.co",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Tru Earth",
+      "domain": "tru.earth",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Lume",
+      "domain": "lumedeodorant.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "beauty",
+      "industryLabel": "Beauty & Wellness",
+      "name": "Burst Oral Care",
+      "domain": "bfrst.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Ruggable",
+      "domain": "ruggable.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Casper",
+      "domain": "casper.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Arhaus",
+      "domain": "arhaus.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Stanley 1913",
+      "domain": "stanley1913.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Brooklinen",
+      "domain": "brooklinen.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Parachute Home",
+      "domain": "parachutehome.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Boll & Branch",
+      "domain": "bollandbranch.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Fast Growing Trees",
+      "domain": "fastgrowingtrees.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Leesa",
+      "domain": "leesa.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Burrow",
+      "domain": "burrow.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Article",
+      "domain": "article.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Outer",
+      "domain": "liveouter.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Yeti",
+      "domain": "yeti.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Hydro Flask",
+      "domain": "hydroflask.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Solo Stove",
+      "domain": "solostove.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Ooni",
+      "domain": "ooni.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Rumpl",
+      "domain": "rumpl.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Peak Design",
+      "domain": "peakdesign.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Nomatic",
+      "domain": "nomatic.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Elgato",
+      "domain": "elgato.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Keychron",
+      "domain": "keychron.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Secretlab",
+      "domain": "secretlab.co",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Purple",
+      "domain": "purple.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Joybird",
+      "domain": "joybird.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Floyd",
+      "domain": "floydhome.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Interior Define",
+      "domain": "interiordefine.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Neighbor",
+      "domain": "neighbor.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "RTIC",
+      "domain": "rticoutdoors.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Corkcicle",
+      "domain": "corkcicle.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Larq",
+      "domain": "lfrqcom.myshopify.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "S'well",
+      "domain": "swell.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Traeger",
+      "domain": "traeger.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Breeo",
+      "domain": "breeo.co",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Gozney",
+      "domain": "gozney.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "BioLite",
+      "domain": "bfrioliteenergy.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Snow Peak",
+      "domain": "snowpeak.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Big Agnes",
+      "domain": "bigagnes.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Sea to Summit",
+      "domain": "seatosummit.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Aer",
+      "domain": "aersf.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Timbuk2",
+      "domain": "timbuk2.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Chrome Industries",
+      "domain": "chromeindustries.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Society6",
+      "domain": "society6.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Sandmarc",
+      "domain": "sandmarc.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Polaroid",
+      "domain": "polaroid.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Weber",
+      "domain": "weber.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Maiden Home",
+      "domain": "maidenhome.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Incase",
+      "domain": "incase.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Tortuga",
+      "domain": "tortugabackpacks.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Waterfield Designs",
+      "domain": "sfbags.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "home",
+      "industryLabel": "Home & Garden",
+      "name": "Minaal",
+      "domain": "minaal.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Liquid Death",
+      "domain": "liquiddeath.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Huel",
+      "domain": "huel.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Magic Spoon",
+      "domain": "magicspoon.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Death Wish Coffee",
+      "domain": "deathwishcoffee.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Red Bull Shop",
+      "domain": "redbullshopus.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Fly by Jing",
+      "domain": "flybyjing.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Owala",
+      "domain": "owala.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Stumptown Coffee",
+      "domain": "stumptowncoffee.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Partake Foods",
+      "domain": "partakefoods.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Heatonist",
+      "domain": "heatonist.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Milk Bar",
+      "domain": "milkbarstore.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Chomps",
+      "domain": "chomps.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Soylent",
+      "domain": "soylent.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Daily Harvest",
+      "domain": "daily-harvest.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Our Place",
+      "domain": "fromourplace.com",
+      "ok": false,
+      "status": 503,
+      "reason": "HTTP 503"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Caraway",
+      "domain": "carawayhome.com",
+      "ok": false,
+      "status": 429,
+      "reason": "HTTP 429"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Made In Cookware",
+      "domain": "madeincookware.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "HexClad",
+      "domain": "hexclad.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Fellow",
+      "domain": "fellowproducts.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Aeropress",
+      "domain": "aeropress.com",
+      "ok": false,
+      "status": 503,
+      "reason": "HTTP 503"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Chemex",
+      "domain": "chemexcoffeemaker.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Chamberlain Coffee",
+      "domain": "chamberlaincoffee.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Levain Bakery",
+      "domain": "levainbakery.com",
+      "ok": false,
+      "status": 503,
+      "reason": "HTTP 503"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Splendid Spoon",
+      "domain": "splendidspoon.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Sakara Life",
+      "domain": "sakara.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "ButcherBox",
+      "domain": "butcherbox.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Crowd Cow",
+      "domain": "crowdcow.com",
+      "ok": false,
+      "status": 406,
+      "reason": "HTTP 406"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Snake River Farms",
+      "domain": "snakeriverfarms.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Thrive Market",
+      "domain": "thrivemarket.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Misfits Market",
+      "domain": "misfitsmarket.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Great Jones",
+      "domain": "greatjonesgoods.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Misen",
+      "domain": "misen.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Material Kitchen",
+      "domain": "materialkitchen.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Baratza",
+      "domain": "baratza.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Flair Espresso",
+      "domain": "flairespresso.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Hario",
+      "domain": "hfrario-usa.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Timemore",
+      "domain": "timemore.com",
+      "ok": false,
+      "status": 503,
+      "reason": "HTTP 503"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Graza",
+      "domain": "grfraza.co",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Ghia",
+      "domain": "drinkghia.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Olipop",
+      "domain": "drinkolipop.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Poppi",
+      "domain": "drinkpoppi.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Beekeeper's Naturals",
+      "domain": "beekeepersnaturals.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "MUDWTR",
+      "domain": "mudwtr.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Four Sigmatic",
+      "domain": "foursigmatic.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Laird Superfood",
+      "domain": "lairdsuperfood.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Trade Coffee",
+      "domain": "dfrrinktrade.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Verve Coffee",
+      "domain": "vervecoffee.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Intelligentsia",
+      "domain": "intelligentsia.com",
+      "ok": false,
+      "status": 503,
+      "reason": "HTTP 503"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Counter Culture",
+      "domain": "counterculturecoffee.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "food",
+      "industryLabel": "Food & Beverage",
+      "name": "Blue Bottle Coffee",
+      "domain": "bluebottlecoffee.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Nomad Goods",
+      "domain": "nomadgoods.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Ridge Wallet",
+      "domain": "ridgewallet.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Cowboy",
+      "domain": "cowboy.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Secretlab",
+      "domain": "secretlab.co",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Pela Case",
+      "domain": "pelacase.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Master & Dynamic",
+      "domain": "masterdynamic.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Jackery",
+      "domain": "jackery.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Moment",
+      "domain": "shopmoment.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Nanoleaf",
+      "domain": "nanoleaf.me",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Elgato",
+      "domain": "elgato.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Loop Earplugs",
+      "domain": "loopearplugs.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "MVMT Watches",
+      "domain": "mvmtwatches.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Keychron",
+      "domain": "keychron.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Shokz",
+      "domain": "shokz.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "RhinoShield",
+      "domain": "rhinoshield.io",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Framework Laptop",
+      "domain": "frame.work",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Razer",
+      "domain": "razer.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Logitech G",
+      "domain": "logitechg.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Raspberry Pi",
+      "domain": "raspberrypi.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Sennheiser",
+      "domain": "sennheiser.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Paperlike",
+      "domain": "paperlike.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "SteelSeries",
+      "domain": "steelseries.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Corsair",
+      "domain": "corsair.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "NZXT",
+      "domain": "nzxt.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Fractal Design",
+      "domain": "fractal-design.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Glorious Gaming",
+      "domain": "gloriousgaming.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Ducky",
+      "domain": "dfruckychannel.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Arduino",
+      "domain": "store.arduino.cc",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "System76",
+      "domain": "system76.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Purism",
+      "domain": "puri.sm",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Pine64",
+      "domain": "pine64.org",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Native Union",
+      "domain": "nativeunion.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Anker",
+      "domain": "anker.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Twelve South",
+      "domain": "twelvesouth.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "CalDigit",
+      "domain": "caldigit.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Dbrand",
+      "domain": "dbrand.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Analogue",
+      "domain": "analogue.co",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Teenage Engineering",
+      "domain": "teenage.engineering",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Nothing",
+      "domain": "nothing.tech",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Remarkable",
+      "domain": "remarkable.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Supernote",
+      "domain": "supernote.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Boox",
+      "domain": "shop.boox.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Oura",
+      "domain": "ouraring.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Whoop",
+      "domain": "whoop.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Bambu Lab",
+      "domain": "bambulab.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Prusa",
+      "domain": "prusa3d.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Creality",
+      "domain": "store.creality.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Elegoo",
+      "domain": "elegoo.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Lume Pad",
+      "domain": "lfreiagear.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "electronics",
+      "industryLabel": "Electronics & Tech",
+      "name": "Insta360",
+      "domain": "store.insta360.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "HOKA",
+      "domain": "hoka.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Tracksmith",
+      "domain": "tracksmith.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Cotopaxi",
+      "domain": "cotopaxi.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "G/FORE",
+      "domain": "gfore.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Gymshark",
+      "domain": "gymshark.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "On Running",
+      "domain": "on.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Brooks Running",
+      "domain": "brooksrunning.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Salomon",
+      "domain": "salomon.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Arc'teryx",
+      "domain": "arcteryx.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Patagonia",
+      "domain": "patagonia.com",
+      "ok": false,
+      "status": 410,
+      "reason": "HTTP 410"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "The North Face",
+      "domain": "thenorthface.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "REI Co-op",
+      "domain": "rei.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Backcountry",
+      "domain": "backcountry.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Moosejaw",
+      "domain": "moosejaw.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Rab",
+      "domain": "rab.equipment",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Mountain Hardwear",
+      "domain": "mountainhardwear.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Black Diamond",
+      "domain": "blackdiamondequipment.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Petzl",
+      "domain": "petzl.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Osprey",
+      "domain": "osprey.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Gregory",
+      "domain": "gregorypacks.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Deuter",
+      "domain": "deuter.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "MSR",
+      "domain": "msrgear.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Jetboil",
+      "domain": "jetboil.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "GSI Outdoors",
+      "domain": "gsioutdoors.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Camp Chef",
+      "domain": "campchef.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "ENO",
+      "domain": "eaglesnestoutfittersinc.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Kammok",
+      "domain": "kammok.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Topo Designs",
+      "domain": "topodesigns.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Mystery Ranch",
+      "domain": "mysteryranch.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Kifaru",
+      "domain": "kifaru.net",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Stone Glacier",
+      "domain": "stoneglacier.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "First Lite",
+      "domain": "firstlite.com",
+      "ok": false,
+      "status": 429,
+      "reason": "HTTP 429"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Sitka Gear",
+      "domain": "sitkagear.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Kuiu",
+      "domain": "kuiu.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Simms Fishing",
+      "domain": "simmsfishing.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Orvis",
+      "domain": "orvis.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Filson",
+      "domain": "filson.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Duluth Trading",
+      "domain": "duluthtrading.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Carhartt WIP",
+      "domain": "carhartt-wip.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "5.11 Tactical",
+      "domain": "511tactical.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Vertx",
+      "domain": "vertx.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Viktos",
+      "domain": "viktos.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Under Armour",
+      "domain": "underarmour.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "New Balance",
+      "domain": "newbalance.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Puma",
+      "domain": "puma.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Fabletics",
+      "domain": "fabletics.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Sweaty Betty",
+      "domain": "sweatybetty.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Lululemon",
+      "domain": "lululemon.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Athleta",
+      "domain": "athleta.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "sports",
+      "industryLabel": "Sports & Outdoors",
+      "name": "Vuori",
+      "domain": "vuori.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Lovevery",
+      "domain": "lovevery.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Primary",
+      "domain": "primary.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Little Sleepies",
+      "domain": "littlesleepies.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Nugget",
+      "domain": "nuggetcomfort.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "KiwiCo",
+      "domain": "kiwico.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Owlet",
+      "domain": "owletcare.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Lalo",
+      "domain": "meetlalo.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Aden + Anais",
+      "domain": "adenandanais.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Monica + Andy",
+      "domain": "monicaandandy.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Maisonette",
+      "domain": "maisonette.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Hanna Andersson",
+      "domain": "hannaandersson.com",
+      "ok": false,
+      "status": 410,
+      "reason": "HTTP 410"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Tea Collection",
+      "domain": "teacollection.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Cat & Jack",
+      "domain": "catandjack.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Boden Mini",
+      "domain": "bodenusa.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Petit Bateau",
+      "domain": "petit-bateau.us",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Rylee + Cru",
+      "domain": "ryleeandcru.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Jamie Kay",
+      "domain": "jamiekay.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Quincy Mae",
+      "domain": "quincymae.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Kyte Baby",
+      "domain": "kytebaby.com",
+      "ok": false,
+      "status": 503,
+      "reason": "HTTP 503"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Little Unicorn",
+      "domain": "littleunicorn.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Copper Pearl",
+      "domain": "copperpearl.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Mushie",
+      "domain": "mushie.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Pehr",
+      "domain": "pfrehrdesigns.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Gathre",
+      "domain": "gathre.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Stokke",
+      "domain": "stokke.com",
+      "ok": false,
+      "status": 410,
+      "reason": "HTTP 410"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "UPPAbaby",
+      "domain": "uppababy.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Bugaboo",
+      "domain": "bugaboo.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Nuna",
+      "domain": "nunababy.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Cybex",
+      "domain": "cybex-online.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Doona",
+      "domain": "doona.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "BabyBjorn",
+      "domain": "babybjorn.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Ergobaby",
+      "domain": "ergobaby.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Tula",
+      "domain": "babytula.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Boba",
+      "domain": "boba.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "LILLEbaby",
+      "domain": "lillebaby.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Baby Brezza",
+      "domain": "babybrezza.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Elvie",
+      "domain": "elvie.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Willow",
+      "domain": "onewillow.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Haakaa",
+      "domain": "haakaa.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Boppy",
+      "domain": "boppy.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "DockATot",
+      "domain": "dockatot.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Snoo",
+      "domain": "happiestbaby.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Nanit",
+      "domain": "nanit.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Hatch",
+      "domain": "hatchwfraby.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Tubby Todd",
+      "domain": "tubbytodd.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Mustela",
+      "domain": "mustelausa.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Pipette",
+      "domain": "pipfrette.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Babyganics",
+      "domain": "babyganics.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Earth Mama",
+      "domain": "earthmamaorganics.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "kids",
+      "industryLabel": "Kids & Baby",
+      "name": "Honest Company",
+      "domain": "honest.com",
+      "ok": false,
+      "status": 410,
+      "reason": "HTTP 410"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "BarkBox",
+      "domain": "barkbox.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Wild One",
+      "domain": "wildone.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Fi",
+      "domain": "tryfi.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Ollie",
+      "domain": "myollie.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "The Farmer's Dog",
+      "domain": "thefarmersdog.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Sundays for Dogs",
+      "domain": "sundaysfordogs.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Open Farm",
+      "domain": "openfarmpet.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Stella & Chewy's",
+      "domain": "stellaandchewys.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Orijen",
+      "domain": "orijenpetfoods.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Acana",
+      "domain": "acana.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Ziwi Peak",
+      "domain": "ziwipets.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Nom Nom",
+      "domain": "nomnomnow.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "JustFoodForDogs",
+      "domain": "justfoodfordogs.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "PetPlate",
+      "domain": "petplate.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Spot & Tango",
+      "domain": "spotandtango.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "A Pup Above",
+      "domain": "apupabove.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Jinx",
+      "domain": "thinkjinx.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Portland Pet Food",
+      "domain": "portlandpetfood.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Chippin",
+      "domain": "chippin.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Yummers",
+      "domain": "yummers.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Kong",
+      "domain": "kongcompany.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "West Paw",
+      "domain": "westpaw.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "P.L.A.Y.",
+      "domain": "petplay.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Ruffwear",
+      "domain": "ruffwear.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Kurgo",
+      "domain": "kurgo.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Sleepypod",
+      "domain": "sleepypod.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Fable",
+      "domain": "ffrablefrpets.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Maxbone",
+      "domain": "maxbone.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Found My Animal",
+      "domain": "foundmyanimal.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Zee.Dog",
+      "domain": "zeedog.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Wolfgang Man & Beast",
+      "domain": "wolfgangusa.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Wildebeest",
+      "domain": "wildebeest.co",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Up Country",
+      "domain": "upcountryinc.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "The Foggy Dog",
+      "domain": "thefoggydog.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Harry Barker",
+      "domain": "harrybarker.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Rifle Paper Co Pets",
+      "domain": "riflepaperco.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Waggo",
+      "domain": "waggo.com",
+      "ok": false,
+      "status": 503,
+      "reason": "HTTP 503"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Diggs",
+      "domain": "diggs.pet",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Gunner Kennels",
+      "domain": "gfrunnerkennels.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Impact Dog Crates",
+      "domain": "impactdogcrates.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Ruffland",
+      "domain": "rfrufflandkennels.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Dakota 283",
+      "domain": "dakota283.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Whistle",
+      "domain": "whistle.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "FitBark",
+      "domain": "fitbark.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Tractive",
+      "domain": "tractive.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "PitPat",
+      "domain": "pitpat.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Catit",
+      "domain": "catit.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Litter-Robot",
+      "domain": "litter-robot.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Tuft + Paw",
+      "domain": "tuftandpaw.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "pets",
+      "industryLabel": "Pets",
+      "name": "Fable",
+      "domain": "ffrablefrpets.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Therabody",
+      "domain": "therabody.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Whoop",
+      "domain": "whoop.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Oura",
+      "domain": "ouraring.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Tonal",
+      "domain": "tonal.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Peloton",
+      "domain": "apparel.onepeloton.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Hyperice",
+      "domain": "hyperice.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "NormaTec",
+      "domain": "hyperice.com/normatec",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Rogue Fitness",
+      "domain": "roguefrfitness.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Rep Fitness",
+      "domain": "repfitness.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Titan Fitness",
+      "domain": "titanfitness.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "PRx Performance",
+      "domain": "prxperformance.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Fringe Sport",
+      "domain": "fringesport.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Bells of Steel",
+      "domain": "bellsofsteel.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Eleiko",
+      "domain": "eleiko.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Concept2",
+      "domain": "concept2.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Assault Fitness",
+      "domain": "assaultfitness.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Xebex",
+      "domain": "xebexfitness.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "TRX",
+      "domain": "trxtraining.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "BOSU",
+      "domain": "bosu.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "TriggerPoint",
+      "domain": "tfrriggerpoint.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Theraband",
+      "domain": "theraband.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Perform Better",
+      "domain": "performbetter.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Power Systems",
+      "domain": "power-systems.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Tempo",
+      "domain": "tempo.fit",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Mirror",
+      "domain": "mirror.co",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Future",
+      "domain": "future.co",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Caliber",
+      "domain": "caliberstrong.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Ladder",
+      "domain": "ladder.sport",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Momentous",
+      "domain": "livemomentous.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Transparent Labs",
+      "domain": "transparentlabs.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Jacked Factory",
+      "domain": "jackedfactory.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Ghost Lifestyle",
+      "domain": "ghostlifestyle.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Gorilla Mind",
+      "domain": "gorillamind.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Raw Nutrition",
+      "domain": "rawnutrition.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Alani Nu",
+      "domain": "alaninu.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Bloom Nutrition",
+      "domain": "bloomnu.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "1st Phorm",
+      "domain": "1stphorm.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Legion Athletics",
+      "domain": "legionathletics.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Kaged",
+      "domain": "kfrged.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Optimum Nutrition",
+      "domain": "optimumnutrition.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "MyProtein",
+      "domain": "myprotein.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Bulk",
+      "domain": "bulk.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "PEScience",
+      "domain": "pescience.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Redcon1",
+      "domain": "redcon1.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "BPN",
+      "domain": "bareperformancenutrition.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "XWERKS",
+      "domain": "xwerks.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Swolverine",
+      "domain": "swolverine.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Cellucor",
+      "domain": "cellucor.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Rogue Echo",
+      "domain": "roguefrfitness.com/echo",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "fitness",
+      "industryLabel": "Health & Fitness",
+      "name": "Lacrosse Ball",
+      "domain": "roguefrfitness.com/lacrosse",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Mejuri",
+      "domain": "mejuri.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Gorjana",
+      "domain": "gorjana.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Ana Luisa",
+      "domain": "analuisa.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Vitaly",
+      "domain": "vitalydesign.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Missoma",
+      "domain": "missoma.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Monica Vinader",
+      "domain": "monicavinader.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Jenny Bird",
+      "domain": "jenny-bird.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Kendra Scott",
+      "domain": "kendrascott.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "BaubleBar",
+      "domain": "baublebar.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Uncommon James",
+      "domain": "uncommonjames.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Brilliant Earth",
+      "domain": "brilliantearth.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Catbird",
+      "domain": "catbirdnyc.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Aurate",
+      "domain": "auratenewyork.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Stone and Strand",
+      "domain": "stoneandstrand.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Ring Concierge",
+      "domain": "ringconcierge.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Dorsey",
+      "domain": "dorfrsey.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "SOKO",
+      "domain": "shopsoko.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Able",
+      "domain": "ablefr.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Nisolo",
+      "domain": "nisolo.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Sezane",
+      "domain": "sezane.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Cuyana",
+      "domain": "cuyana.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Dagne Dover",
+      "domain": "dfragnedover.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Senreve",
+      "domain": "senreve.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Polene",
+      "domain": "polfrene-paris.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Mansur Gavriel",
+      "domain": "mansurgavriel.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Cult Gaia",
+      "domain": "cultgaia.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "JW Pei",
+      "domain": "jwpei.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Telfar",
+      "domain": "tfrelfar.net",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Brandon Blackwood",
+      "domain": "brandonblackwood.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Staud",
+      "domain": "stfraud.clothing",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "By Far",
+      "domain": "byfrfrfar.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Nanushka",
+      "domain": "nanushka.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Loeffler Randall",
+      "domain": "loefflerrandall.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Brother Vellies",
+      "domain": "brothervellies.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Rag & Bone",
+      "domain": "rag-bone.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "AllSaints",
+      "domain": "allsaints.com",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "COS",
+      "domain": "cos.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "& Other Stories",
+      "domain": "stories.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Arket",
+      "domain": "arfrket.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Everlane",
+      "domain": "everlane.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Reformation",
+      "domain": "thereformation.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Girlfriend Collective",
+      "domain": "girlfriend.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "For Days",
+      "domain": "fordays.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Pangaia",
+      "domain": "thepangaia.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Ministry of Supply",
+      "domain": "ministryofsupply.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "M.M.LaFleur",
+      "domain": "mmlafleur.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Argent",
+      "domain": "argentwork.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Of Mercer",
+      "domain": "ofmercer.com",
+      "ok": false,
+      "status": 402,
+      "reason": "HTTP 402"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "Universal Standard",
+      "domain": "universalstandard.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "jewellery",
+      "industryLabel": "Jewellery & Accessories",
+      "name": "The Row",
+      "domain": "therow.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Cowboy",
+      "domain": "cowboy.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "VanMoof",
+      "domain": "vanmoof.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Lectric",
+      "domain": "lectricebikes.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify",
+      "productCount": 1
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "RadPower",
+      "domain": "radpowerbikes.com",
+      "ok": false,
+      "status": 503,
+      "reason": "HTTP 503"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Super73",
+      "domain": "super73.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Cake",
+      "domain": "ridecake.com",
+      "ok": false,
+      "status": 500,
+      "reason": "HTTP 500"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Niu",
+      "domain": "niu.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Gogoro",
+      "domain": "gogoro.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Lime",
+      "domain": "li.me/shop",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Bird",
+      "domain": "shop.bird.co",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Segway",
+      "domain": "store.segway.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Boosted",
+      "domain": "boostedboards.com",
+      "ok": false,
+      "status": 0,
+      "reason": "timeout"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Evolve Skateboards",
+      "domain": "evolveskateboardsusa.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Meepo",
+      "domain": "meepoboard.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Backfire",
+      "domain": "backfireboards.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Exway",
+      "domain": "exwayboard.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "WowGo",
+      "domain": "wowgoboard.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Ownboard",
+      "domain": "ownboard.net",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Hovsco",
+      "domain": "hovsco.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Aventon",
+      "domain": "aventon.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Ride1Up",
+      "domain": "ride1up.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Juiced Bikes",
+      "domain": "juicedbikes.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Ariel Rider",
+      "domain": "arielrider.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Wing Bikes",
+      "domain": "wingbikes.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Batch Bicycles",
+      "domain": "batchbicycles.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Priority Bicycles",
+      "domain": "prioritybicycles.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "State Bicycle",
+      "domain": "statebicycle.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Retrospec",
+      "domain": "retrospec.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Pure Cycles",
+      "domain": "purecycles.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Sole Bicycles",
+      "domain": "solebicycles.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Woom Bikes",
+      "domain": "woom.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Frog Bikes",
+      "domain": "frogbikes.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Islabikes",
+      "domain": "islabikes.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Commencal",
+      "domain": "commencal.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "YT Industries",
+      "domain": "yt-industries.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Canyon",
+      "domain": "canyon.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Ribble",
+      "domain": "ribblecycles.co.uk",
+      "ok": false,
+      "status": 403,
+      "reason": "HTTP 403"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Factor Bikes",
+      "domain": "factorbikes.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Cervelo",
+      "domain": "cervelo.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Specialized",
+      "domain": "specialized.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Trek",
+      "domain": "trekbikes.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Giant",
+      "domain": "giant-bicycles.com",
+      "ok": false,
+      "status": 200,
+      "reason": "not JSON"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Cannondale",
+      "domain": "cannondale.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Santa Cruz",
+      "domain": "santacruzbicycles.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Yeti Cycles",
+      "domain": "yeticycles.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Evil Bikes",
+      "domain": "evil-bikes.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Pivot",
+      "domain": "pivotcycles.com",
+      "ok": true,
+      "status": 200,
+      "reason": "shopify"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Ibis",
+      "domain": "ibiscycles.com",
+      "ok": false,
+      "status": 404,
+      "reason": "HTTP 404"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Niner",
+      "domain": "ninerbikes.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    },
+    {
+      "industry": "mobility",
+      "industryLabel": "Automotive & Mobility",
+      "name": "Guerrilla Gravity",
+      "domain": "guerrillagravity.com",
+      "ok": false,
+      "status": 0,
+      "reason": "fetch failed"
+    }
+  ]
+}

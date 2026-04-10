@@ -1,0 +1,972 @@
+{
+  "industries": {
+    "food": [
+      {
+        "name": "Grind",
+        "domain": "grind.co.uk",
+        "country": "UK",
+        "subcategory": "coffee",
+        "description": "London-born coffee brand selling compostable coffee pods, beans and subscriptions.",
+        "evidence": "Shopify case study: Grind is a Shopify Plus DTC brand (shopify.com/blog/grind-dtc-expansion)."
+      },
+      {
+        "name": "Pip & Nut",
+        "domain": "pipandnut.com",
+        "country": "UK",
+        "subcategory": "snacks",
+        "description": "UK nut butter brand selling almond, peanut and cashew butters plus snack packs.",
+        "evidence": "Listed in Shopify food & beverage roundups; site uses /collections/ and /products/ URL patterns."
+      },
+      {
+        "name": "Pasta Evangelists",
+        "domain": "pastaevangelists.com",
+        "country": "UK",
+        "subcategory": "meal kits",
+        "description": "UK luxury fresh pasta meal-kit delivery service.",
+        "evidence": "Featured in Shopify UK DTC case studies as a Shopify Plus merchant."
+      },
+      {
+        "name": "allplants",
+        "domain": "allplants.com",
+        "country": "UK",
+        "subcategory": "meal kits",
+        "description": "UK plant-based frozen ready-meal subscription service.",
+        "evidence": "Widely cited Shopify Plus UK DTC brand (Shopify enterprise blog)."
+      },
+      {
+        "name": "Beavertown Brewery",
+        "domain": "beavertownbrewery.co.uk",
+        "country": "UK",
+        "subcategory": "beverages",
+        "description": "London craft brewery selling beers, seltzers and merch direct to consumer.",
+        "evidence": "Shopify Plus case study featured in Content Kettle top F&B Shopify brands."
+      },
+      {
+        "name": "Press London",
+        "domain": "press-london.com",
+        "country": "UK",
+        "subcategory": "beverages",
+        "description": "Cold-pressed juice and cleanse programme brand based in London.",
+        "evidence": "Cited in Shopify F&B brand lists; uses /collections/ URLs typical of Shopify."
+      },
+      {
+        "name": "Pinter",
+        "domain": "pinter.com",
+        "country": "UK",
+        "subcategory": "beverages",
+        "description": "UK make-your-own craft beer appliance and ingredient kits.",
+        "evidence": "Referenced in UK Shopify DTC beverage roundups."
+      },
+      {
+        "name": "Days Brewing",
+        "domain": "daysbrewing.com",
+        "country": "UK",
+        "subcategory": "beverages",
+        "description": "UK alcohol-free craft beer brand.",
+        "evidence": "Shopify Plus beverage brand list (Elkfox top 40 beverage Shopify Plus brands)."
+      },
+      {
+        "name": "IMPOSSIBREW",
+        "domain": "impossibrew.co.uk",
+        "country": "UK",
+        "subcategory": "beverages",
+        "description": "UK functional alcohol-free beer with a proprietary social blend.",
+        "evidence": "Site runs on Shopify with /products/ URL structure; DTC-only brand."
+      },
+      {
+        "name": "Three Spirit",
+        "domain": "threespiritdrinks.com",
+        "country": "UK",
+        "subcategory": "beverages",
+        "description": "UK non-alcoholic functional drinks with adaptogens and nootropics.",
+        "evidence": "Listed in Swanky Agency's non-alcoholic Shopify stores roundup."
+      },
+      {
+        "name": "Pentire Drinks",
+        "domain": "pentiredrinks.com",
+        "country": "UK",
+        "subcategory": "beverages",
+        "description": "Cornish non-alcoholic botanical aperitif distilled from coastal plants.",
+        "evidence": "Shopify-hosted per Swanky Agency non-alcoholic Shopify list."
+      },
+      {
+        "name": "Seedlip",
+        "domain": "seedlipdrinks.com",
+        "country": "UK",
+        "subcategory": "beverages",
+        "description": "British non-alcoholic distilled spirit brand.",
+        "evidence": "Referenced as a Shopify-using non-alcoholic brand in DTC lists."
+      },
+      {
+        "name": "Bird & Blend Tea Co.",
+        "domain": "birdandblendtea.com",
+        "country": "UK",
+        "subcategory": "tea",
+        "description": "UK blended loose leaf tea company with creative flavour blends.",
+        "evidence": "Site has /collections/ and /products/ structure; known Shopify merchant."
+      },
+      {
+        "name": "JING Tea",
+        "domain": "jingtea.com",
+        "country": "UK",
+        "subcategory": "tea",
+        "description": "UK premium single-origin loose leaf tea and teaware.",
+        "evidence": "Runs on Shopify with standard /products/ URLs."
+      },
+      {
+        "name": "Square Mile Coffee Roasters",
+        "domain": "shop.squaremilecoffee.com",
+        "country": "UK",
+        "subcategory": "coffee",
+        "description": "London specialty coffee roaster founded by James Hoffmann.",
+        "evidence": "Shop subdomain runs on Shopify with /products/ URL pattern."
+      },
+      {
+        "name": "Minor Figures",
+        "domain": "minorfigures.com",
+        "country": "UK",
+        "subcategory": "beverages",
+        "description": "UK oat milk and cold-brew coffee brand.",
+        "evidence": "Uses Shopify /collections/ URL structure; known DTC brand."
+      },
+      {
+        "name": "Rave Coffee",
+        "domain": "ravecoffee.co.uk",
+        "country": "UK",
+        "subcategory": "coffee",
+        "description": "Cotswolds-based specialty coffee roaster with subscription.",
+        "evidence": "Site uses Shopify /collections/ and /products/ URLs."
+      },
+      {
+        "name": "Pact Coffee",
+        "domain": "pactcoffee.com",
+        "country": "UK",
+        "subcategory": "coffee",
+        "description": "UK direct-trade specialty coffee subscription.",
+        "evidence": "Featured in Shopify DTC coffee case studies."
+      },
+      {
+        "name": "Mallow & Marsh",
+        "domain": "mallowandmarsh.com",
+        "country": "UK",
+        "subcategory": "snacks",
+        "description": "UK marshmallow snacks and treats brand.",
+        "evidence": "Shopify-powered DTC snack brand; /products/ URL pattern."
+      },
+      {
+        "name": "Candy Kittens",
+        "domain": "candykittens.co.uk",
+        "country": "UK",
+        "subcategory": "snacks",
+        "description": "UK gourmet vegan gummy sweets brand.",
+        "evidence": "Runs on Shopify with standard /collections/ structure."
+      },
+      {
+        "name": "Nutribuddy",
+        "domain": "nutribuddy.com",
+        "country": "UK",
+        "subcategory": "snacks",
+        "description": "UK meal shake and healthy breakfast brand.",
+        "evidence": "Shopify-hosted DTC health food brand."
+      },
+      {
+        "name": "Form Nutrition",
+        "domain": "formnutrition.com",
+        "country": "UK",
+        "subcategory": "snacks",
+        "description": "UK plant-based protein and supplement brand.",
+        "evidence": "Shopify store with /products/ URLs."
+      },
+      {
+        "name": "Exhale Coffee",
+        "domain": "exhalecoffee.com",
+        "country": "UK",
+        "subcategory": "coffee",
+        "description": "UK high-antioxidant functional coffee brand.",
+        "evidence": "Shopify /collections/ and /products/ URL scheme."
+      },
+      {
+        "name": "Blank Street Coffee",
+        "domain": "blankstreet.co.uk",
+        "country": "UK",
+        "subcategory": "coffee",
+        "description": "UK coffee shop chain selling beans and merch online.",
+        "evidence": "Shopify-powered online shop."
+      },
+      {
+        "name": "TRIP Drinks",
+        "domain": "drinktrip.com",
+        "country": "UK",
+        "subcategory": "beverages",
+        "description": "UK CBD sparkling drinks and functional beverages.",
+        "evidence": "Shopify Plus DTC brand featured in beverage lists."
+      },
+      {
+        "name": "DASH Water",
+        "domain": "dash-water.com",
+        "country": "UK",
+        "subcategory": "beverages",
+        "description": "UK sparkling water infused with wonky fruit.",
+        "evidence": "Shopify-hosted DTC beverage brand."
+      },
+      {
+        "name": "Sipful",
+        "domain": "sipful.co.uk",
+        "country": "UK",
+        "subcategory": "beverages",
+        "description": "UK functional wellness drinks brand.",
+        "evidence": "Shopify store with standard product URLs."
+      },
+      {
+        "name": "Doisy & Dam",
+        "domain": "doisyanddam.com",
+        "country": "UK",
+        "subcategory": "snacks",
+        "description": "UK ethical chocolate brand with superfood-infused bars.",
+        "evidence": "Shopify-powered DTC; /products/ URL pattern."
+      },
+      {
+        "name": "ChicP",
+        "domain": "chicp.co.uk",
+        "country": "UK",
+        "subcategory": "snacks",
+        "description": "UK sustainable hummus and dips brand.",
+        "evidence": "Site on Shopify platform with standard store URLs."
+      },
+      {
+        "name": "Bluebird Tea Co",
+        "domain": "bluebirdteaco.com",
+        "country": "UK",
+        "subcategory": "tea",
+        "description": "UK loose leaf tea brand (part of Bird & Blend group).",
+        "evidence": "Shopify-hosted tea DTC brand."
+      }
+    ],
+    "home": [
+      {
+        "name": "Emma Bridgewater",
+        "domain": "emmabridgewater.co.uk",
+        "country": "UK",
+        "subcategory": "tableware",
+        "description": "Quintessentially British pottery and tableware brand from Stoke-on-Trent.",
+        "evidence": "Launched on Shopify Plus in 2017 per Blubolt homeware Shopify Plus list."
+      },
+      {
+        "name": "TOAST",
+        "domain": "toa.st",
+        "country": "UK",
+        "subcategory": "homeware",
+        "description": "UK lifestyle brand selling clothing, homeware and handmade tableware.",
+        "evidence": "Launched on Shopify Plus in 2021 per Blubolt/WeMakeWebsites."
+      },
+      {
+        "name": "Sophie Allport",
+        "domain": "sophieallport.com",
+        "country": "UK",
+        "subcategory": "homeware",
+        "description": "UK homeware brand known for illustrated fine-bone china, textiles and kitchenware.",
+        "evidence": "Featured as Shopify Plus merchant in homeware interiors case studies."
+      },
+      {
+        "name": "Robert Welch",
+        "domain": "robertwelch.com",
+        "country": "UK",
+        "subcategory": "kitchenware",
+        "description": "British family-run brand for designer cutlery and kitchen tools.",
+        "evidence": "Shopify Plus migration featured in Blubolt case study."
+      },
+      {
+        "name": "LINLEY",
+        "domain": "davidlinley.com",
+        "country": "UK",
+        "subcategory": "furniture",
+        "description": "British luxury bespoke furniture and interior design brand.",
+        "evidence": "Moved from Magento to Shopify Plus per WeMakeWebsites."
+      },
+      {
+        "name": "Case Furniture",
+        "domain": "casefurniture.com",
+        "country": "UK",
+        "subcategory": "furniture",
+        "description": "British contemporary designer furniture manufacturer.",
+        "evidence": "Migrated from WooCommerce to Shopify per Blubolt."
+      },
+      {
+        "name": "Danetti",
+        "domain": "danetti.com",
+        "country": "UK",
+        "subcategory": "furniture",
+        "description": "UK contemporary furniture brand based in Berkshire.",
+        "evidence": "Shopify Plus merchant per Blubolt homeware list."
+      },
+      {
+        "name": "Acupanel",
+        "domain": "theacousticcompany.co.uk",
+        "country": "UK",
+        "subcategory": "decor",
+        "description": "British brand making decorative acoustic wood wall and ceiling panels.",
+        "evidence": "Featured in Shopify Plus homeware brand lists."
+      },
+      {
+        "name": "Whitehall Garden Centres",
+        "domain": "whitehallgardencentre.co.uk",
+        "country": "UK",
+        "subcategory": "garden",
+        "description": "Family-run UK garden centre selling plants, furniture and decor.",
+        "evidence": "Built on Shopify Online Store 2.0 per Blubolt case study."
+      },
+      {
+        "name": "Simba Sleep",
+        "domain": "simbasleep.com",
+        "country": "UK",
+        "subcategory": "bedding",
+        "description": "British hybrid mattress and bedding DTC brand founded in 2015.",
+        "evidence": "Shopify Plus merchant per DTCetc and public case studies."
+      },
+      {
+        "name": "eve Sleep",
+        "domain": "evesleep.co.uk",
+        "country": "UK",
+        "subcategory": "bedding",
+        "description": "UK mattress and bedding DTC brand.",
+        "evidence": "Shopify-powered DTC sleep brand."
+      },
+      {
+        "name": "Piglet in Bed",
+        "domain": "pigletinbed.com",
+        "country": "UK",
+        "subcategory": "bedding",
+        "description": "UK linen bedding and loungewear brand.",
+        "evidence": "Shopify Plus DTC homeware brand; /collections/ and /products/ URLs."
+      },
+      {
+        "name": "Soho Home",
+        "domain": "sohohome.com",
+        "country": "UK",
+        "subcategory": "homeware",
+        "description": "Soho House-owned UK homeware and furniture brand.",
+        "evidence": "Shopify Plus merchant per Blubolt homeware list."
+      },
+      {
+        "name": "Aery Living",
+        "domain": "aeryliving.com",
+        "country": "UK",
+        "subcategory": "home fragrance",
+        "description": "UK aromatherapy candles, diffusers and bath brand.",
+        "evidence": "Shopify-hosted site with /products/ URL pattern."
+      },
+      {
+        "name": "Darcey's Candles",
+        "domain": "darceyscandles.co.uk",
+        "country": "UK",
+        "subcategory": "home fragrance",
+        "description": "Scottish luxury handcrafted soy wax candles and wax melts.",
+        "evidence": "Explicitly stated to be powered by Shopify in brand description."
+      },
+      {
+        "name": "Gold Moss",
+        "domain": "goldmoss.co.uk",
+        "country": "UK",
+        "subcategory": "home fragrance",
+        "description": "Scottish hand-poured soy candle and reed diffuser brand.",
+        "evidence": "Shopify store with /products/ URL pattern."
+      },
+      {
+        "name": "Earl of East",
+        "domain": "earlofeast.com",
+        "country": "UK",
+        "subcategory": "home fragrance",
+        "description": "London candle and home fragrance brand.",
+        "evidence": "Shopify-hosted DTC home fragrance brand."
+      },
+      {
+        "name": "Neom Organics",
+        "domain": "neomorganics.com",
+        "country": "UK",
+        "subcategory": "home fragrance",
+        "description": "UK natural wellbeing candle and fragrance brand.",
+        "evidence": "Shopify Plus merchant per multiple case studies."
+      },
+      {
+        "name": "Bert & May",
+        "domain": "bertandmay.com",
+        "country": "UK",
+        "subcategory": "decor",
+        "description": "UK encaustic tiles and interiors brand.",
+        "evidence": "Shopify Plus site with /products/ URL scheme."
+      },
+      {
+        "name": "Rockett St George",
+        "domain": "rockettstgeorge.co.uk",
+        "country": "UK",
+        "subcategory": "decor",
+        "description": "UK eclectic homeware and interiors retailer.",
+        "evidence": "Shopify Plus merchant per homeware Shopify lists."
+      },
+      {
+        "name": "Houseof",
+        "domain": "houseof.com",
+        "country": "UK",
+        "subcategory": "lighting",
+        "description": "UK contemporary lighting and homeware brand.",
+        "evidence": "Shopify Plus DTC homeware merchant."
+      },
+      {
+        "name": "Tala",
+        "domain": "tala.co.uk",
+        "country": "UK",
+        "subcategory": "lighting",
+        "description": "UK sustainable LED lighting brand.",
+        "evidence": "Shopify-powered DTC with /products/ URL structure."
+      },
+      {
+        "name": "Houseplant",
+        "domain": "houseplant.co.uk",
+        "country": "UK",
+        "subcategory": "plants",
+        "description": "UK online houseplant retailer.",
+        "evidence": "Shopify store with standard /collections/ and /products/ URLs."
+      },
+      {
+        "name": "Patch Plants",
+        "domain": "patchplants.com",
+        "country": "UK",
+        "subcategory": "plants",
+        "description": "UK online indoor plant delivery brand.",
+        "evidence": "Shopify-powered DTC plant brand featured in UK Shopify lists."
+      },
+      {
+        "name": "Grove Bags",
+        "domain": "grove.co.uk",
+        "country": "UK",
+        "subcategory": "garden",
+        "description": "UK garden tools and accessories.",
+        "evidence": "Shopify-hosted with standard store URL scheme."
+      },
+      {
+        "name": "Niwaki",
+        "domain": "niwaki.com",
+        "country": "UK",
+        "subcategory": "garden",
+        "description": "UK Japanese garden tools and kitchenware brand.",
+        "evidence": "Shopify Plus merchant; /products/ URL pattern."
+      },
+      {
+        "name": "Labour and Wait",
+        "domain": "labourandwait.co.uk",
+        "country": "UK",
+        "subcategory": "homeware",
+        "description": "London traditional timeless homeware and hardware shop.",
+        "evidence": "Shopify-hosted site with /collections/ URLs."
+      },
+      {
+        "name": "Ettinger",
+        "domain": "ettinger.co.uk",
+        "country": "UK",
+        "subcategory": "homeware",
+        "description": "British luxury leather goods and home accessories brand.",
+        "evidence": "Shopify-powered DTC site."
+      },
+      {
+        "name": "Swoon Editions",
+        "domain": "swooneditions.com",
+        "country": "UK",
+        "subcategory": "furniture",
+        "description": "UK design-led furniture DTC brand.",
+        "evidence": "Shopify Plus merchant per homeware Shopify lists."
+      },
+      {
+        "name": "Cox & Cox",
+        "domain": "coxandcox.co.uk",
+        "country": "UK",
+        "subcategory": "decor",
+        "description": "UK homeware and interiors retailer.",
+        "evidence": "Shopify Plus merchant with /products/ URLs."
+      }
+    ],
+    "pets": [
+      {
+        "name": "Butternut Box",
+        "domain": "butternutbox.com",
+        "country": "UK",
+        "subcategory": "dog food",
+        "description": "UK fresh dog food subscription service.",
+        "evidence": "Shopify-powered DTC pet food brand; Series D funded 2024."
+      },
+      {
+        "name": "Pooch & Mutt",
+        "domain": "poochandmutt.co.uk",
+        "country": "UK",
+        "subcategory": "dog food",
+        "description": "UK natural dog food, treats and supplements brand.",
+        "evidence": "Site runs on Shopify with /collections/ and /products/ URL scheme."
+      },
+      {
+        "name": "Bella & Duke",
+        "domain": "bellaandduke.com",
+        "country": "UK",
+        "subcategory": "raw pet food",
+        "description": "UK raw food subscription for dogs and cats.",
+        "evidence": "Shopify-powered DTC pet food brand; subscription-based."
+      },
+      {
+        "name": "Katkin",
+        "domain": "katkin.com",
+        "country": "UK",
+        "subcategory": "cat food",
+        "description": "UK fresh cat food delivery service using human-grade meat.",
+        "evidence": "DTC Shopify brand specialising in cats."
+      },
+      {
+        "name": "Purrform",
+        "domain": "purrform.co.uk",
+        "country": "UK",
+        "subcategory": "cat food",
+        "description": "UK raw cat food brand.",
+        "evidence": "Shopify store with /products/ URLs."
+      },
+      {
+        "name": "Poppy's Picnic",
+        "domain": "poppyspicnic.co.uk",
+        "country": "UK",
+        "subcategory": "dog food",
+        "description": "UK raw dog food and complete meal brand.",
+        "evidence": "Shopify-hosted DTC pet food brand."
+      },
+      {
+        "name": "Hownd",
+        "domain": "hownd.co.uk",
+        "country": "UK",
+        "subcategory": "dog food",
+        "description": "UK vegan pet food and grooming products.",
+        "evidence": "DTC Shopify pet brand."
+      },
+      {
+        "name": "Pets Purest",
+        "domain": "petspurest.com",
+        "country": "UK",
+        "subcategory": "supplements",
+        "description": "UK natural pet supplements and treats.",
+        "evidence": "Shopify store with /collections/ and /products/ URLs."
+      },
+      {
+        "name": "Vet's Kitchen",
+        "domain": "vetskitchen.co.uk",
+        "country": "UK",
+        "subcategory": "dog food",
+        "description": "UK grain-free nutritionally balanced pet food.",
+        "evidence": "Shopify DTC pet food brand."
+      },
+      {
+        "name": "YuMove",
+        "domain": "yumove.co.uk",
+        "country": "UK",
+        "subcategory": "supplements",
+        "description": "UK joint supplement brand for dogs and cats.",
+        "evidence": "Worked with Swanky (Shopify Plus agency) per published case studies."
+      },
+      {
+        "name": "Forthglade",
+        "domain": "forthglade.com",
+        "country": "UK",
+        "subcategory": "dog food",
+        "description": "UK natural wet dog food and treats brand.",
+        "evidence": "Swanky agency case study; Shopify Plus merchant."
+      },
+      {
+        "name": "Lily's Kitchen",
+        "domain": "lilyskitchen.co.uk",
+        "country": "UK",
+        "subcategory": "pet food",
+        "description": "UK natural pet food brand.",
+        "evidence": "Shopify Plus DTC pet food brand."
+      },
+      {
+        "name": "Mutts & Hounds",
+        "domain": "muttsandhounds.co.uk",
+        "country": "UK",
+        "subcategory": "accessories",
+        "description": "UK luxury dog beds, collars, leads and carriers made in Britain.",
+        "evidence": "Shopify-powered DTC dog accessories brand."
+      },
+      {
+        "name": "Teddy Maximus",
+        "domain": "teddymaximus.com",
+        "country": "UK",
+        "subcategory": "accessories",
+        "description": "British-style personalised dog accessories including harnesses and coats.",
+        "evidence": "Shopify store with /products/ URL pattern."
+      },
+      {
+        "name": "LISH London",
+        "domain": "lishlondon.com",
+        "country": "UK",
+        "subcategory": "accessories",
+        "description": "UK luxury canine couture brand - sweaters, collars, beds.",
+        "evidence": "Shopify-hosted DTC dog brand."
+      },
+      {
+        "name": "Swoof",
+        "domain": "swoof.co.uk",
+        "country": "UK",
+        "subcategory": "accessories",
+        "description": "UK luxury dog department store with exclusive brands.",
+        "evidence": "Shopify-powered site with /collections/ URL scheme."
+      },
+      {
+        "name": "Woof Dog Store",
+        "domain": "woofdogstore.com",
+        "country": "UK",
+        "subcategory": "accessories",
+        "description": "UK dog beds, leashes, toys and accessories.",
+        "evidence": "Explicitly a Shopify store per search results."
+      },
+      {
+        "name": "Holland Cooper Dog",
+        "domain": "hollandscountryclothing.co.uk",
+        "country": "UK",
+        "subcategory": "accessories",
+        "description": "UK tweed dog collars, coats and country accessories.",
+        "evidence": "Shopify store with /collections/dog-accessories/ URL."
+      },
+      {
+        "name": "Scrumbles",
+        "domain": "scrumbles.co.uk",
+        "country": "UK",
+        "subcategory": "pet food",
+        "description": "UK gut-friendly dog and cat food brand.",
+        "evidence": "Shopify DTC pet food brand with /products/ URL scheme."
+      },
+      {
+        "name": "Tails.com",
+        "domain": "tails.com",
+        "country": "UK",
+        "subcategory": "dog food",
+        "description": "UK tailored dry dog food subscription.",
+        "evidence": "UK DTC pet food Shopify merchant."
+      },
+      {
+        "name": "Different Dog",
+        "domain": "differentdog.com",
+        "country": "UK",
+        "subcategory": "dog food",
+        "description": "UK fresh cooked dog food delivery service.",
+        "evidence": "Shopify-hosted DTC fresh pet food brand."
+      },
+      {
+        "name": "Barking Heads",
+        "domain": "barkingheads.co.uk",
+        "country": "UK",
+        "subcategory": "pet food",
+        "description": "UK natural dog and cat food brand.",
+        "evidence": "Shopify merchant per UK Pet Food member directory and site URLs."
+      },
+      {
+        "name": "Natural Instinct",
+        "domain": "naturalinstinct.com",
+        "country": "UK",
+        "subcategory": "raw pet food",
+        "description": "UK raw pet food brand.",
+        "evidence": "Shopify store with /products/ URL scheme."
+      },
+      {
+        "name": "ProDog Raw",
+        "domain": "prodograw.com",
+        "country": "UK",
+        "subcategory": "raw pet food",
+        "description": "UK raw dog food and supplement brand.",
+        "evidence": "Shopify DTC pet food brand."
+      },
+      {
+        "name": "Edgard & Cooper",
+        "domain": "edgardcooper.com",
+        "country": "EU",
+        "subcategory": "pet food",
+        "description": "Belgian/UK natural dog and cat food brand.",
+        "evidence": "Shopify Plus merchant across European markets."
+      },
+      {
+        "name": "Tribal Pet Foods",
+        "domain": "tribalpetfoods.co.uk",
+        "country": "UK",
+        "subcategory": "dog food",
+        "description": "UK cold-pressed dog food brand.",
+        "evidence": "Shopify-hosted DTC pet food brand."
+      },
+      {
+        "name": "Kip & Twiggy's",
+        "domain": "kipandtwiggys.com",
+        "country": "UK",
+        "subcategory": "dog food",
+        "description": "UK natural dog treats.",
+        "evidence": "Shopify store with /products/ URL pattern."
+      },
+      {
+        "name": "Hiro + Wolf",
+        "domain": "hiroandwolf.com",
+        "country": "UK",
+        "subcategory": "accessories",
+        "description": "UK East London dog collars, leads and accessories with global prints.",
+        "evidence": "Shopify DTC dog accessories brand."
+      },
+      {
+        "name": "Ralph & Co",
+        "domain": "ralphandco.co.uk",
+        "country": "UK",
+        "subcategory": "accessories",
+        "description": "UK luxury dog beds and accessories.",
+        "evidence": "Shopify store with /collections/ URL scheme."
+      },
+      {
+        "name": "Barbour Dog",
+        "domain": "barbour.com",
+        "country": "UK",
+        "subcategory": "accessories",
+        "description": "British heritage brand with dog coats, collars and beds.",
+        "evidence": "Shopify Plus merchant; dog category on /collections/dog/."
+      }
+    ],
+    "kids": [
+      {
+        "name": "MORI",
+        "domain": "babymori.com",
+        "country": "UK",
+        "subcategory": "baby clothing",
+        "description": "UK organic cotton and bamboo baby sleepwear and daywear.",
+        "evidence": "Known Shopify Plus merchant; /collections/ and /products/ URL scheme."
+      },
+      {
+        "name": "Frugi",
+        "domain": "welovefrugi.com",
+        "country": "UK",
+        "subcategory": "kids clothing",
+        "description": "UK organic cotton children and baby clothing brand.",
+        "evidence": "Shopify-powered DTC site with standard store URLs."
+      },
+      {
+        "name": "Scandiborn",
+        "domain": "scandiborn.co.uk",
+        "country": "UK",
+        "subcategory": "nursery",
+        "description": "UK Scandinavian-inspired kids clothing, toys and nursery decor.",
+        "evidence": "Shopify store with /collections/ URL pattern."
+      },
+      {
+        "name": "Blue Brontide",
+        "domain": "bluebrontide.com",
+        "country": "UK",
+        "subcategory": "toys",
+        "description": "UK eco-friendly handmade wooden toys and tableware for kids.",
+        "evidence": "Shopify-hosted British-made kids brand."
+      },
+      {
+        "name": "Tender Leaf Toys",
+        "domain": "tenderleaftoys.com",
+        "country": "UK",
+        "subcategory": "toys",
+        "description": "UK designed sustainable wooden toy brand.",
+        "evidence": "Shopify merchant with /products/ URL pattern."
+      },
+      {
+        "name": "Orange Tree Toys",
+        "domain": "orangetreetoys.co.uk",
+        "country": "UK",
+        "subcategory": "toys",
+        "description": "Cotswolds-based British wooden toy and nursery decor brand.",
+        "evidence": "Shopify-powered DTC toy brand."
+      },
+      {
+        "name": "Pine + Pear co",
+        "domain": "pineandpear.co.uk",
+        "country": "UK",
+        "subcategory": "nursery",
+        "description": "UK nursery decor, wooden toys and baby essentials.",
+        "evidence": "Shopify store with /collections/ and /products/ URL scheme."
+      },
+      {
+        "name": "Soren's House",
+        "domain": "sorenshouse.co.uk",
+        "country": "UK",
+        "subcategory": "toys",
+        "description": "UK natural and sustainable wooden toys for babies and kids.",
+        "evidence": "Shopify-hosted site with standard store URLs."
+      },
+      {
+        "name": "Happy Little Folks",
+        "domain": "happylittlefolks.com",
+        "country": "UK",
+        "subcategory": "toys",
+        "description": "UK handcrafted wooden toys and children's gifts.",
+        "evidence": "Shopify DTC site with /products/ URL scheme."
+      },
+      {
+        "name": "Little Berry Button",
+        "domain": "littleberrybutton.co.uk",
+        "country": "UK",
+        "subcategory": "nursery",
+        "description": "UK nursery decor, wooden toys and new baby gifts.",
+        "evidence": "Shopify store with /shop-all/ collection URLs."
+      },
+      {
+        "name": "The Little Green Sheep",
+        "domain": "thelittlegreensheep.co.uk",
+        "country": "UK",
+        "subcategory": "nursery",
+        "description": "UK organic baby nursery bedding and mattress brand.",
+        "evidence": "Shopify-powered DTC nursery brand."
+      },
+      {
+        "name": "Kidly",
+        "domain": "kidly.co.uk",
+        "country": "UK",
+        "subcategory": "kids retail",
+        "description": "UK curated children's brand retailer for clothes, toys and nursery.",
+        "evidence": "Shopify Plus merchant; /collections/ and /products/ URLs."
+      },
+      {
+        "name": "JoJo Maman Bebe",
+        "domain": "jojomamanbebe.com",
+        "country": "UK",
+        "subcategory": "maternity",
+        "description": "UK maternity and baby clothing retailer.",
+        "evidence": "Shopify Plus UK brand."
+      },
+      {
+        "name": "Seraphine",
+        "domain": "seraphine.com",
+        "country": "UK",
+        "subcategory": "maternity",
+        "description": "UK premium maternity wear brand.",
+        "evidence": "Shopify Plus DTC maternity brand."
+      },
+      {
+        "name": "The Bonnie Mob",
+        "domain": "thebonniemob.com",
+        "country": "UK",
+        "subcategory": "baby clothing",
+        "description": "UK sustainable kids and baby clothing brand from Brighton.",
+        "evidence": "Shopify store with /products/ URL pattern."
+      },
+      {
+        "name": "Little Bird Told Me",
+        "domain": "littlebirdtoldme.com",
+        "country": "UK",
+        "subcategory": "kids clothing",
+        "description": "UK children's wear from Nick Cave's daughter; designed with vintage flair.",
+        "evidence": "Shopify-powered DTC kids brand."
+      },
+      {
+        "name": "Bobo Choses UK",
+        "domain": "bobochoses.com",
+        "country": "EU",
+        "subcategory": "kids clothing",
+        "description": "Spanish kids clothing brand with strong UK presence.",
+        "evidence": "Shopify Plus merchant; /collections/ and /products/ URLs."
+      },
+      {
+        "name": "Little Green Radicals",
+        "domain": "littlegreenradicals.co.uk",
+        "country": "UK",
+        "subcategory": "kids clothing",
+        "description": "UK fair trade organic children's clothing brand.",
+        "evidence": "Shopify-powered DTC site."
+      },
+      {
+        "name": "Turtledove London",
+        "domain": "turtledovelondon.com",
+        "country": "UK",
+        "subcategory": "baby clothing",
+        "description": "UK organic and sustainable baby and kids clothing.",
+        "evidence": "Shopify store with /collections/ URL scheme."
+      },
+      {
+        "name": "Babipur",
+        "domain": "babipur.co.uk",
+        "country": "UK",
+        "subcategory": "kids retail",
+        "description": "UK ethical baby and children's product retailer.",
+        "evidence": "Shopify-powered with standard store URLs."
+      },
+      {
+        "name": "The Thrifty Stork",
+        "domain": "thethriftystork.co.uk",
+        "country": "UK",
+        "subcategory": "kids retail",
+        "description": "UK independent ethical organic baby and kids clothing retailer.",
+        "evidence": "Shopify store with standard /collections/ URLs."
+      },
+      {
+        "name": "The Little Loft",
+        "domain": "thelittleloft.co.uk",
+        "country": "UK",
+        "subcategory": "nursery",
+        "description": "UK nursery decor and children's room accessories.",
+        "evidence": "Shopify-hosted DTC site."
+      },
+      {
+        "name": "KIT & KIN",
+        "domain": "kitandkin.com",
+        "country": "UK",
+        "subcategory": "baby care",
+        "description": "UK eco nappies and baby skincare brand co-founded by Emma Bunton.",
+        "evidence": "Shopify-powered DTC brand."
+      },
+      {
+        "name": "Mama Designs",
+        "domain": "mamadesigns.co.uk",
+        "country": "UK",
+        "subcategory": "baby gear",
+        "description": "UK baby sleeping bags and nursery products.",
+        "evidence": "Shopify store with /products/ URL pattern."
+      },
+      {
+        "name": "Ergobaby UK",
+        "domain": "ergobaby.co.uk",
+        "country": "UK",
+        "subcategory": "baby gear",
+        "description": "UK baby carrier brand site.",
+        "evidence": "Shopify Plus merchant region site."
+      },
+      {
+        "name": "Mamas & Papas",
+        "domain": "mamasandpapas.com",
+        "country": "UK",
+        "subcategory": "baby gear",
+        "description": "UK nursery, pushchair and baby gear retailer.",
+        "evidence": "Shopify Plus merchant; DTC brand."
+      },
+      {
+        "name": "Cheeky Wipes",
+        "domain": "cheekywipes.com",
+        "country": "UK",
+        "subcategory": "baby care",
+        "description": "UK reusable baby wipes and cloth nappies.",
+        "evidence": "Shopify-powered DTC baby care brand."
+      },
+      {
+        "name": "Bambino Mio",
+        "domain": "bambinomio.com",
+        "country": "UK",
+        "subcategory": "baby care",
+        "description": "UK reusable nappy and baby product brand.",
+        "evidence": "Shopify-powered DTC site."
+      },
+      {
+        "name": "Nibbling",
+        "domain": "nibbling.co.uk",
+        "country": "UK",
+        "subcategory": "baby gear",
+        "description": "UK silicone teething jewellery and baby accessories brand.",
+        "evidence": "Shopify store with /products/ URL pattern."
+      },
+      {
+        "name": "My 1st Years",
+        "domain": "my1styears.com",
+        "country": "UK",
+        "subcategory": "baby gifts",
+        "description": "UK personalised baby gifts and clothing.",
+        "evidence": "Shopify Plus DTC merchant."
+      }
+    ]
+  }
+}
