@@ -65,17 +65,23 @@ export async function fetchStatsForDomains(
   );
   const storeIds = stores.map((s) => s.id);
 
-  // 2. Product counts per store — use a single count query per store is too slow,
-  // so fetch all product IDs with store_id and tally in memory.
-  const { data: products } = await supabase
-    .from("products")
-    .select("store_id")
-    .in("store_id", storeIds);
-
+  // 2. Exact product count per store. A bulk select().in() is capped at 1000
+  // rows by PostgREST, which silently undercounts once stores hold real data
+  // (all 1000 slots fill from the first store). Count each store with a HEAD
+  // count query instead, chunked to bound concurrency.
   const productCounts = new Map<string, number>();
-  for (const p of products || []) {
-    const id = p.store_id as string;
-    productCounts.set(id, (productCounts.get(id) || 0) + 1);
+  const COUNT_CONCURRENCY = 25;
+  for (let i = 0; i < storeIds.length; i += COUNT_CONCURRENCY) {
+    const chunk = storeIds.slice(i, i + COUNT_CONCURRENCY);
+    await Promise.all(
+      chunk.map(async (id) => {
+        const { count } = await supabase
+          .from("products")
+          .select("id", { count: "exact", head: true })
+          .eq("store_id", id);
+        productCounts.set(id, count ?? 0);
+      })
+    );
   }
 
   // 3. Latest fetch time per store
