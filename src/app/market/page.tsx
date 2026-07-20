@@ -297,7 +297,10 @@ export default function MarketPage() {
                               />
                             ))}
                           </div>
-                          <ArrowRight className="h-4 w-4 text-muted-foreground opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-0.5" />
+                          <span className="flex items-center gap-1 text-xs font-medium text-muted-foreground/50 transition-colors group-hover:text-primary">
+                            View
+                            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                          </span>
                         </div>
                       </CardContent>
                     </Card>

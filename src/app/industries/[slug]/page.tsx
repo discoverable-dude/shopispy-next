@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ChevronRight } from "lucide-react";
 import { VERTICALS } from "@/lib/brands";
 import {
   getVerticalBySlug,
@@ -387,7 +387,10 @@ export default async function IndustryPage({
                               </p>
                               <p className="text-xs text-muted-foreground">{brand.domain}</p>
                             </div>
-                            <p className="shrink-0 text-sm font-semibold tabular-nums">{brand.products}</p>
+                            <div className="flex shrink-0 items-center gap-1.5">
+                              <p className="text-sm font-semibold tabular-nums">{brand.products}</p>
+                              <ChevronRight className="h-4 w-4 text-muted-foreground/40 transition-all group-hover:translate-x-0.5 group-hover:text-primary" />
+                            </div>
                           </div>
                           <div className="mt-3 flex items-center justify-between">
                             <Badge

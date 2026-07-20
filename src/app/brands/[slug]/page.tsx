@@ -21,6 +21,7 @@ import {
   getChangeTypeLabel,
 } from "@/lib/brandUtils";
 import { fetchStatsForDomains, enrichBrand } from "@/lib/brandStats";
+import { ChevronRight } from "lucide-react";
 
 // Revalidate every hour so live stats stay fresh without a full rebuild.
 export const revalidate = 3600;
@@ -394,7 +395,10 @@ export default async function BrandPage({
                                 </p>
                                 <p className="text-xs text-muted-foreground">{rel.domain}</p>
                               </div>
-                              <p className="shrink-0 text-sm font-semibold tabular-nums">{rel.products}</p>
+                              <div className="flex shrink-0 items-center gap-1.5">
+                                <p className="text-sm font-semibold tabular-nums">{rel.products}</p>
+                                <ChevronRight className="h-4 w-4 text-muted-foreground/40 transition-all group-hover:translate-x-0.5 group-hover:text-primary" />
+                              </div>
                             </div>
                             <div className="mt-3 flex items-center justify-between">
                               <Badge
