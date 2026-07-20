@@ -12,7 +12,6 @@ import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
 import {
   getBrandBySlug,
-  getAllBrandSlugs,
   getRelatedBrands,
   getVerticalStats,
   slugify,
@@ -27,7 +26,10 @@ import { fetchStatsForDomains, enrichBrand } from "@/lib/brandStats";
 export const revalidate = 3600;
 
 export async function generateStaticParams() {
-  return getAllBrandSlugs().map((slug) => ({ slug }));
+  // Render on first request, not at build (748 brand pages × DB queries at
+  // build was heavy and froze stale/0 data). Live-fetch on first visit, then
+  // cache per `revalidate`; dynamicParams (default true) serves any slug.
+  return [];
 }
 
 export async function generateMetadata({

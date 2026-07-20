@@ -1,4 +1,4 @@
-import { createClient } from "./supabase/server";
+import { createPublicClient } from "./supabase/public";
 import type { Brand } from "./brands";
 
 export interface BrandStats {
@@ -46,7 +46,7 @@ export async function fetchStatsForDomains(
 
   let supabase;
   try {
-    supabase = await createClient();
+    supabase = createPublicClient();
   } catch {
     // If Supabase is unavailable (e.g. build-time without env vars), return empty stats
     return result;

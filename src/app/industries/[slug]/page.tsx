@@ -22,7 +22,6 @@ import {
   categoriseChange,
   getChangeTypeColor,
   getChangeTypeLabel,
-  getAllVerticalSlugs,
   type ChangeType,
 } from "@/lib/brandUtils";
 import { fetchStatsForDomains, enrichBrand } from "@/lib/brandStats";
@@ -31,7 +30,11 @@ import { fetchStatsForDomains, enrichBrand } from "@/lib/brandStats";
 export const revalidate = 3600;
 
 export async function generateStaticParams() {
-  return getAllVerticalSlugs().map((slug) => ({ slug }));
+  // Render on first request, not at build time: the build does zero DB work
+  // (no IO spike, can't bake stale/0 data), and each page fetches live Supabase
+  // data on first visit, then caches per `revalidate`. dynamicParams (default
+  // true) serves any slug on-demand.
+  return [];
 }
 
 export async function generateMetadata({
