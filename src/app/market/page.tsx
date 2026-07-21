@@ -4,17 +4,16 @@ import { ArrowRight, Plus, ShoppingBag, BarChart3, Megaphone, Users, Download, Z
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BrandIcon } from "@/components/marketing/BrandIcon";
-import { VERTICALS, ALL_BRANDS, TOTAL_PRODUCTS } from "@/lib/brands";
+import { VERTICALS, ALL_BRANDS } from "@/lib/brands";
 import {
-  getVerticalStats,
   categoriseChange,
   getChangeTypeColor,
   getChangeTypeLabel,
   slugify,
-  getProductCount,
   getTopBrands,
   type ChangeType,
 } from "@/lib/brandUtils";
+import { fetchLiveCounts } from "@/lib/productData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -41,8 +40,13 @@ function PlusIcon({ className }: { className?: string }) {
   );
 }
 
-export default function MarketPage() {
+export const revalidate = 300;
+
+export default async function MarketPage() {
+  const { byDomain, byVertical } = await fetchLiveCounts();
+  const countFor = (b: { domain: string }) => byDomain.get(b.domain) ?? 0;
   const totalBrands = ALL_BRANDS.length;
+  const totalProducts = [...byVertical.values()].reduce((a, v) => a + v.total, 0);
 
   // Activity breakdown
   const changeBreakdown: Record<ChangeType, number> = {
@@ -77,24 +81,31 @@ export default function MarketPage() {
     barColor: barColorMap[type],
   }));
 
-  // Top 15 by size
+  // Top 15 by size (real live counts)
   const topBySize = [...ALL_BRANDS]
-    .sort((a, b) => getProductCount(b) - getProductCount(a))
+    .sort((a, b) => countFor(b) - countFor(a))
     .slice(0, 15);
-  const maxProducts = getProductCount(topBySize[0]);
+  const maxProducts = countFor(topBySize[0]) || 1;
   const storeData: StoreBar[] = topBySize.map((b) => ({
     name: b.name,
     domain: b.domain,
     slug: slugify(b.name),
-    products: b.products,
-    count: getProductCount(b),
+    products: countFor(b).toLocaleString(),
+    count: countFor(b),
   }));
 
-  // Industry data
+  // Industry data (real per-vertical totals)
   const industryData = VERTICALS.map((v) => {
-    const stats = getVerticalStats(v);
+    const t = byVertical.get(v.label) ?? { total: 0, brandsWithData: 0 };
     const top3 = getTopBrands(v, 3);
-    return { ...v, ...stats, top3 };
+    return {
+      ...v,
+      total: t.total,
+      brandCount: v.brands.length,
+      recentlyUpdated: t.brandsWithData,
+      avg: v.brands.length ? Math.round(t.total / v.brands.length) : 0,
+      top3,
+    };
   }).sort((a, b) => b.total - a.total);
   const maxIndustryProducts = industryData[0]?.total || 1;
 
@@ -142,7 +153,7 @@ export default function MarketPage() {
               Track pricing, product launches, and competitive movements across{" "}
               <strong className="text-foreground">{totalBrands}+ brands</strong>,{" "}
               <strong className="text-foreground">{VERTICALS.length} industries</strong>, and{" "}
-              <strong className="text-foreground">{TOTAL_PRODUCTS.toLocaleString()} products</strong>.
+              <strong className="text-foreground">{totalProducts.toLocaleString()} products</strong>.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -164,7 +175,7 @@ export default function MarketPage() {
           <MarketHeroClient
             brandCount={totalBrands}
             industryCount={VERTICALS.length}
-            productCount={TOTAL_PRODUCTS}
+            productCount={totalProducts}
           />
         </div>
       </section>

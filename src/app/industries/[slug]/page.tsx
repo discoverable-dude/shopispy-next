@@ -27,7 +27,7 @@ import {
 import { fetchStatsForDomains, enrichBrand } from "@/lib/brandStats";
 
 // Revalidate every hour so live stats stay fresh without a full rebuild.
-export const revalidate = 3600;
+export const revalidate = 300;
 
 export async function generateStaticParams() {
   // Render on first request, not at build time: the build does zero DB work

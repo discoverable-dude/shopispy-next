@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/industries" },
 };
 
-export const revalidate = 3600;
+export const revalidate = 300;
 
 export default async function IndustriesPage() {
   // Real per-vertical product totals from the DB (static VERTICALS have no counts).
