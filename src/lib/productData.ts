@@ -87,6 +87,51 @@ export async function fetchBrandCatalog(domain: string, limit = 24): Promise<Bra
   return { products, insights };
 }
 
+// ── Recent activity across a set of brands (industry detail feed) ───────────
+export interface ActivityItem {
+  brand: string;
+  domain: string;
+  changeType: string;
+  productTitle: string | null;
+  oldValue: string | null;
+  newValue: string | null;
+  detectedAt: string;
+}
+
+export async function fetchVerticalActivity(
+  brands: { name: string; domain: string }[],
+  limit = 12
+): Promise<ActivityItem[]> {
+  const supabase = createPublicClient();
+  const domainToName = new Map(brands.map((b) => [normalizeDomain(b.domain), b.name]));
+
+  const { data: stores } = await supabase
+    .from("stores").select("id, store_url").in("store_url", [...domainToName.keys()]);
+  if (!stores || stores.length === 0) return [];
+  const storeIdToDomain = new Map(stores.map((s) => [s.id, normalizeDomain(s.store_url)]));
+
+  const { data: changes } = await supabase
+    .from("product_changes")
+    .select("store_id, change_type, product_title, old_value, new_value, detected_at")
+    .in("store_id", stores.map((s) => s.id))
+    .order("detected_at", { ascending: false })
+    .limit(limit);
+  if (!changes) return [];
+
+  return changes.map((c: any) => {
+    const domain = storeIdToDomain.get(c.store_id) || "";
+    return {
+      brand: domainToName.get(domain) || domain,
+      domain,
+      changeType: c.change_type,
+      productTitle: c.product_title,
+      oldValue: c.old_value,
+      newValue: c.new_value,
+      detectedAt: c.detected_at,
+    };
+  });
+}
+
 // ── Real per-vertical product totals (for the index + market pages) ─────────
 // Index/market pages otherwise sum static "—" counts → 0. This aggregates the
 // latest product_fetches.total_products per store, mapped to its vertical.

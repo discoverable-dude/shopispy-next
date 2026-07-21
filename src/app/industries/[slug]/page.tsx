@@ -25,6 +25,7 @@ import {
   type ChangeType,
 } from "@/lib/brandUtils";
 import { fetchStatsForDomains, enrichBrand } from "@/lib/brandStats";
+import { fetchVerticalActivity } from "@/lib/productData";
 
 // Revalidate every hour so live stats stay fresh without a full rebuild.
 export const revalidate = 300;
@@ -65,10 +66,11 @@ export default async function IndustryPage({
     notFound();
   }
 
-  // Fetch live stats for all brands in this vertical
-  const statsMap = await fetchStatsForDomains(
-    staticVertical.brands.map((b) => b.domain)
-  );
+  // Fetch live stats + recent activity for all brands in this vertical
+  const [statsMap, activity] = await Promise.all([
+    fetchStatsForDomains(staticVertical.brands.map((b) => b.domain)),
+    fetchVerticalActivity(staticVertical.brands, 10),
+  ]);
   const vertical = {
     ...staticVertical,
     brands: staticVertical.brands.map((b) => enrichBrand(b, statsMap)),
@@ -159,6 +161,57 @@ export default async function IndustryPage({
           <section className="mb-16">
             <IndustryStatsClient stats={statsData} />
           </section>
+
+          {/* ── Recent Activity Feed ── */}
+          {activity.length > 0 && (
+            <FadeInView>
+              <section className="mb-16">
+                <h2 className="mb-1 text-xl font-bold tracking-tight">
+                  Latest activity in {vertical.label}
+                </h2>
+                <p className="mb-6 text-sm text-muted-foreground">
+                  New launches and catalog changes detected across these brands.
+                </p>
+                <Card>
+                  <CardContent className="divide-y divide-border/60 p-0">
+                    {activity.map((a, i) => {
+                      const label =
+                        a.changeType === "new_product"
+                          ? "New"
+                          : a.changeType === "price_change"
+                          ? "Price"
+                          : a.changeType === "removed_product"
+                          ? "Removed"
+                          : a.changeType === "stock_change"
+                          ? "Stock"
+                          : "Update";
+                      return (
+                        <Link
+                          key={i}
+                          href={`/brands/${slugify(a.brand)}`}
+                          className="group flex items-center gap-3 px-5 py-3 transition-colors hover:bg-muted/40"
+                        >
+                          <Badge variant="secondary" className="shrink-0 text-[10px]">
+                            {label}
+                          </Badge>
+                          <span
+                            className="min-w-0 flex-1 truncate text-sm"
+                            title={a.productTitle || undefined}
+                          >
+                            {a.productTitle || "Catalog update"}
+                          </span>
+                          <span className="hidden shrink-0 text-xs text-muted-foreground group-hover:text-primary sm:inline">
+                            {a.brand}
+                          </span>
+                          <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground/40 transition-all group-hover:translate-x-0.5 group-hover:text-primary" />
+                        </Link>
+                      );
+                    })}
+                  </CardContent>
+                </Card>
+              </section>
+            </FadeInView>
+          )}
 
           {/* ── Why Track Competitors ── */}
           <FadeInView>

@@ -90,7 +90,7 @@ export default async function MarketPage() {
     name: b.name,
     domain: b.domain,
     slug: slugify(b.name),
-    products: countFor(b).toLocaleString(),
+    products: countFor(b) >= 5000 ? "5,000+" : countFor(b).toLocaleString(),
     count: countFor(b),
   }));
 
