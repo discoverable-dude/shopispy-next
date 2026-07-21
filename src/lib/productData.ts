@@ -158,6 +158,18 @@ export async function fetchLiveCounts(): Promise<LiveCounts> {
   const latestByStore = new Map<string, number>();
   for (const f of fetches) if (!latestByStore.has(f.store_id)) latestByStore.set(f.store_id, f.total_products || 0);
 
+  // Big stores (hit the 5,000-page cap) get an exact products-table count so
+  // their full deep-scraped catalog shows instead of the capped total_products.
+  const bigStoreIds = [...latestByStore.entries()].filter(([, c]) => c >= 5000).map(([id]) => id);
+  for (let i = 0; i < bigStoreIds.length; i += 25) {
+    await Promise.all(
+      bigStoreIds.slice(i, i + 25).map(async (id) => {
+        const { count } = await supabase.from("products").select("id", { count: "exact", head: true }).eq("store_id", id);
+        if (count != null) latestByStore.set(id, count);
+      })
+    );
+  }
+
   const byDomain = new Map<string, number>();
   const byVertical = new Map<string, { total: number; brandsWithData: number }>();
   for (const [storeId, count] of latestByStore) {
