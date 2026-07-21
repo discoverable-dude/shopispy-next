@@ -196,7 +196,7 @@ export default async function IndustryPage({
                         {stats.recentlyUpdated}
                       </p>
                       <p className="mt-1 text-sm font-medium text-muted-foreground">
-                        brands updated in the last 3 hours
+                        brands updated in the last 24 hours
                       </p>
                       <Separator className="my-4" />
                       <p className="mb-3 text-sm text-muted-foreground">

@@ -36,8 +36,11 @@ export function getVerticalStats(vertical: Vertical) {
   const avg = Math.round(total / counts.length);
   const max = Math.max(...counts);
   const min = Math.min(...counts);
+  // "Recently active" = scraped within the last 24h. formatTimeAgo emits
+  // "just now" / "<n>m" / "<n>h" (hours are always < 24; a day becomes "<n>d"),
+  // so anything ending in m/h — or "just now" — is inside the 24h window.
   const recentlyUpdated = vertical.brands.filter(
-    (b) => b.lastUpdate.includes("1h") || b.lastUpdate.includes("2h") || b.lastUpdate.includes("3h")
+    (b) => b.lastUpdate === "just now" || /^\d+[mh]$/.test(b.lastUpdate)
   ).length;
 
   return { total, avg, max, min, brandCount: vertical.brands.length, recentlyUpdated };
@@ -75,7 +78,7 @@ export function getChangeTypeLabel(type: ChangeType): string {
     new_products: "New Products",
     restock: "Restock",
     sale: "Sale",
-    other: "Update",
+    other: "Tracking",
   };
   return labels[type];
 }
