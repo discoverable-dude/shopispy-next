@@ -1,0 +1,129 @@
+import { createPublicClient } from "./supabase/public";
+import { VERTICALS } from "./brands";
+
+function normalizeDomain(domain: string): string {
+  return domain.toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").replace(/\/$/, "");
+}
+
+async function pageAll<T>(
+  run: (from: number, to: number) => PromiseLike<{ data: T[] | null }>
+): Promise<T[]> {
+  const out: T[] = [];
+  for (let from = 0; ; from += 1000) {
+    const { data } = await run(from, from + 999);
+    if (!data || data.length === 0) break;
+    out.push(...data);
+    if (data.length < 1000) break;
+  }
+  return out;
+}
+
+// ── Real products for a brand (title, price, discount, image) ───────────────
+export interface BrandProduct {
+  id: number;
+  title: string;
+  url: string;
+  price: number | null;
+  compareAt: number | null;
+  onSale: boolean;
+  image: string | null;
+}
+
+export interface BrandCatalog {
+  products: BrandProduct[];
+  insights: {
+    sampleSize: number;
+    minPrice: number | null;
+    maxPrice: number | null;
+    avgPrice: number | null;
+    onSaleCount: number;
+  };
+}
+
+export async function fetchBrandCatalog(domain: string, limit = 24): Promise<BrandCatalog> {
+  const empty: BrandCatalog = {
+    products: [],
+    insights: { sampleSize: 0, minPrice: null, maxPrice: null, avgPrice: null, onSaleCount: 0 },
+  };
+  const supabase = createPublicClient();
+  const d = normalizeDomain(domain);
+
+  const { data: store } = await supabase
+    .from("stores").select("id").eq("store_url", d).limit(1).maybeSingle();
+  if (!store) return empty;
+
+  const { data } = await supabase
+    .from("products")
+    .select("id, title, handle, created_at, product_variants(price, compare_at_price), product_images(src)")
+    .eq("store_id", store.id)
+    .order("created_at", { ascending: false, nullsFirst: false })
+    .limit(limit);
+  if (!data || data.length === 0) return empty;
+
+  const products: BrandProduct[] = data.map((p: any) => {
+    const prices = (p.product_variants || []).map((v: any) => v.price).filter((x: any) => x != null);
+    const compares = (p.product_variants || []).map((v: any) => v.compare_at_price).filter((x: any) => x != null);
+    const price = prices.length ? Math.min(...prices) : null;
+    const compareAt = compares.length ? Math.max(...compares) : null;
+    return {
+      id: p.id,
+      title: p.title,
+      url: `https://${d}/products/${p.handle}`,
+      price,
+      compareAt,
+      onSale: !!(price != null && compareAt != null && compareAt > price),
+      image: p.product_images?.[0]?.src || null,
+    };
+  });
+
+  const withPrice = products.map((p) => p.price).filter((x): x is number => x != null);
+  const insights = {
+    sampleSize: products.length,
+    minPrice: withPrice.length ? Math.min(...withPrice) : null,
+    maxPrice: withPrice.length ? Math.max(...withPrice) : null,
+    avgPrice: withPrice.length ? Math.round((withPrice.reduce((a, b) => a + b, 0) / withPrice.length) * 100) / 100 : null,
+    onSaleCount: products.filter((p) => p.onSale).length,
+  };
+  return { products, insights };
+}
+
+// ── Real per-vertical product totals (for the index + market pages) ─────────
+// Index/market pages otherwise sum static "—" counts → 0. This aggregates the
+// latest product_fetches.total_products per store, mapped to its vertical.
+export interface LiveCounts {
+  byDomain: Map<string, number>; // normalized domain -> latest product count
+  byVertical: Map<string, { total: number; brandsWithData: number }>;
+}
+
+export async function fetchLiveCounts(): Promise<LiveCounts> {
+  const supabase = createPublicClient();
+
+  const domainToVertical = new Map<string, string>();
+  for (const v of VERTICALS) for (const b of v.brands) domainToVertical.set(normalizeDomain(b.domain), v.label);
+
+  const stores = await pageAll<{ id: string; store_url: string }>((from, to) =>
+    supabase.from("stores").select("id, store_url").range(from, to)
+  );
+  const storeIdToDomain = new Map(stores.map((s) => [s.id, normalizeDomain(s.store_url)]));
+
+  const fetches = await pageAll<{ store_id: string; total_products: number | null }>((from, to) =>
+    supabase.from("product_fetches").select("store_id, total_products, fetched_at")
+      .order("fetched_at", { ascending: false }).range(from, to)
+  );
+  const latestByStore = new Map<string, number>();
+  for (const f of fetches) if (!latestByStore.has(f.store_id)) latestByStore.set(f.store_id, f.total_products || 0);
+
+  const byDomain = new Map<string, number>();
+  const byVertical = new Map<string, { total: number; brandsWithData: number }>();
+  for (const [storeId, count] of latestByStore) {
+    const domain = storeIdToDomain.get(storeId) || "";
+    byDomain.set(domain, Math.max(byDomain.get(domain) || 0, count));
+    const vertical = domainToVertical.get(domain);
+    if (!vertical) continue;
+    const cur = byVertical.get(vertical) || { total: 0, brandsWithData: 0 };
+    cur.total += count;
+    if (count > 0) cur.brandsWithData += 1;
+    byVertical.set(vertical, cur);
+  }
+  return { byDomain, byVertical };
+}

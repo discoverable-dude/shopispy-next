@@ -4,7 +4,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BrandIcon } from "@/components/marketing/BrandIcon";
 import { VERTICALS, ALL_BRANDS, TOTAL_PRODUCTS } from "@/lib/brands";
-import { slugify, getVerticalStats, getTopBrands } from "@/lib/brandUtils";
+import { slugify, getTopBrands } from "@/lib/brandUtils";
+import { fetchLiveCounts } from "@/lib/productData";
 import { IndustriesGrid } from "@/components/marketing/IndustriesGrid";
 import { ArrowRight, Download } from "lucide-react";
 
@@ -15,18 +16,21 @@ export const metadata: Metadata = {
   alternates: { canonical: "/industries" },
 };
 
-export default function IndustriesPage() {
-  // Pre-compute data for each vertical
+export const revalidate = 3600;
+
+export default async function IndustriesPage() {
+  // Real per-vertical product totals from the DB (static VERTICALS have no counts).
+  const { byVertical } = await fetchLiveCounts();
   const verticalData = VERTICALS.map((v) => {
-    const stats = getVerticalStats(v);
     const top5 = getTopBrands(v, 5);
+    const t = byVertical.get(v.label);
     return {
       id: v.id,
       label: v.label,
       slug: slugify(v.label),
       brandCount: v.brands.length,
-      totalProducts: stats.total,
-      recentlyUpdated: stats.recentlyUpdated,
+      totalProducts: t?.total ?? 0,
+      recentlyUpdated: t?.brandsWithData ?? 0,
       topBrands: top5.map((b) => ({ name: b.name, domain: b.domain })),
     };
   });

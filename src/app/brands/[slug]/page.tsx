@@ -22,6 +22,7 @@ import {
 } from "@/lib/brandUtils";
 import { fetchStatsForDomains, enrichBrand } from "@/lib/brandStats";
 import { ChevronRight } from "lucide-react";
+import { fetchBrandCatalog } from "@/lib/productData";
 
 // Revalidate every hour so live stats stay fresh without a full rebuild.
 export const revalidate = 3600;
@@ -64,7 +65,10 @@ export default async function BrandPage({
   // Fetch live stats for the current brand + all brands in its vertical
   // (needed for verticalStats calculation + related brand cards).
   const allVerticalDomains = staticBrand.vertical.brands.map((b) => b.domain);
-  const statsMap = await fetchStatsForDomains(allVerticalDomains);
+  const [statsMap, catalog] = await Promise.all([
+    fetchStatsForDomains(allVerticalDomains),
+    fetchBrandCatalog(staticBrand.domain, 12),
+  ]);
 
   // Enrich the brand with live data
   const brand = { ...enrichBrand(staticBrand, statsMap), vertical: {
@@ -333,6 +337,97 @@ export default async function BrandPage({
               </Card>
             </section>
           </FadeInView>
+
+          {/* ── Live Catalog ── */}
+          {catalog.products.length > 0 && (
+            <FadeInView>
+              <section className="mb-16">
+                <div className="mb-6 flex items-end justify-between">
+                  <div>
+                    <h2 className="text-xl font-bold tracking-tight">Latest products</h2>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      Live from {brand.name}&apos;s catalog · sample of {catalog.insights.sampleSize}
+                    </p>
+                  </div>
+                  <a
+                    href={`https://${brand.domain}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 text-sm text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    Visit store →
+                  </a>
+                </div>
+
+                <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                  {[
+                    { label: "Lowest price", value: catalog.insights.minPrice?.toFixed(2) ?? "—" },
+                    { label: "Avg price", value: catalog.insights.avgPrice?.toFixed(2) ?? "—" },
+                    { label: "Highest price", value: catalog.insights.maxPrice?.toFixed(2) ?? "—" },
+                    { label: "On sale (sample)", value: `${catalog.insights.onSaleCount}/${catalog.insights.sampleSize}` },
+                  ].map((s) => (
+                    <Card key={s.label}>
+                      <CardContent className="p-4">
+                        <p className="text-xs text-muted-foreground">{s.label}</p>
+                        <p className="mt-1 text-lg font-bold tabular-nums">{s.value}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+                  {catalog.products.map((p) => (
+                    <a
+                      key={p.id}
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group block overflow-hidden rounded-xl border border-border/60 transition-all hover:border-primary/30 hover:shadow-sm"
+                    >
+                      <div className="aspect-square overflow-hidden bg-muted/40">
+                        {p.image ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={p.image}
+                            alt={p.title}
+                            loading="lazy"
+                            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                        ) : (
+                          <div className="flex h-full w-full items-center justify-center text-xs text-muted-foreground">
+                            No image
+                          </div>
+                        )}
+                      </div>
+                      <div className="p-3">
+                        <p
+                          className="truncate text-sm font-medium transition-colors group-hover:text-primary"
+                          title={p.title}
+                        >
+                          {p.title}
+                        </p>
+                        <div className="mt-1 flex items-center gap-2">
+                          {p.price != null && (
+                            <span className="text-sm font-semibold tabular-nums">{p.price.toFixed(2)}</span>
+                          )}
+                          {p.onSale && p.compareAt != null && (
+                            <span className="text-xs text-muted-foreground line-through tabular-nums">
+                              {p.compareAt.toFixed(2)}
+                            </span>
+                          )}
+                          {p.onSale && (
+                            <Badge variant="secondary" className="ml-auto text-[10px] text-green-600">
+                              Sale
+                            </Badge>
+                          )}
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </section>
+            </FadeInView>
+          )}
 
           {/* ── Recent Activity ── */}
           <FadeInView>
