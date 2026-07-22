@@ -65,39 +65,35 @@ export async function fetchStatsForDomains(
   );
   const storeIds = stores.map((s) => s.id);
 
-  // 2. Exact product count per store. A bulk select().in() is capped at 1000
-  // rows by PostgREST, which silently undercounts once stores hold real data
-  // (all 1000 slots fill from the first store). Count each store with a HEAD
-  // count query instead, chunked to bound concurrency.
-  const productCounts = new Map<string, number>();
-  const COUNT_CONCURRENCY = 25;
-  for (let i = 0; i < storeIds.length; i += COUNT_CONCURRENCY) {
-    const chunk = storeIds.slice(i, i + COUNT_CONCURRENCY);
-    await Promise.all(
-      chunk.map(async (id) => {
-        const { count } = await supabase
-          .from("products")
-          .select("id", { count: "exact", head: true })
-          .eq("store_id", id);
-        productCounts.set(id, count ?? 0);
-      })
-    );
-  }
-
-  // 3. Latest fetch time per store
+  // 2 + 3. One query for the latest fetch per store gives BOTH the product
+  // count (total_products) and the last-fetched time. This replaces a per-store
+  // count(exact) loop (~90 queries per industry page) that timed out the SSR
+  // render under DB load.
   const { data: fetches } = await supabase
     .from("product_fetches")
-    .select("store_id, fetched_at")
+    .select("store_id, total_products, fetched_at")
     .in("store_id", storeIds)
     .order("fetched_at", { ascending: false });
 
+  const productCounts = new Map<string, number>();
   const latestFetchByStore = new Map<string, string>();
   for (const f of fetches || []) {
     const id = f.store_id as string;
     if (!latestFetchByStore.has(id)) {
       latestFetchByStore.set(id, f.fetched_at as string);
+      productCounts.set(id, (f.total_products as number) || 0);
     }
   }
+
+  // Big stores (hit the 5,000 cap) get an exact count so their full deep-scraped
+  // catalog shows — only a handful per vertical, so this stays cheap.
+  const bigIds = [...productCounts.entries()].filter(([, c]) => c >= 5000).map(([id]) => id);
+  await Promise.all(
+    bigIds.map(async (id) => {
+      const { count } = await supabase.from("products").select("id", { count: "exact", head: true }).eq("store_id", id);
+      if (count != null) productCounts.set(id, count);
+    })
+  );
 
   // 4. Latest change per store (most recent detected_at)
   const { data: changes } = await supabase
