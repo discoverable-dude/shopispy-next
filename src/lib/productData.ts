@@ -29,62 +29,103 @@ export interface BrandProduct {
   image: string | null;
 }
 
+export interface CatalogHighlight {
+  title: string;
+  url: string;
+  date: string | null;
+  price: number | null;
+}
+
 export interface BrandCatalog {
   products: BrandProduct[];
   insights: {
-    sampleSize: number;
+    priceSample: number;
     minPrice: number | null;
     maxPrice: number | null;
     avgPrice: number | null;
     onSaleCount: number;
+    newest: CatalogHighlight | null;
+    oldest: CatalogHighlight | null;
+    topCategories: { name: string; count: number }[];
   };
 }
 
-export async function fetchBrandCatalog(domain: string, limit = 24): Promise<BrandCatalog> {
-  const empty: BrandCatalog = {
-    products: [],
-    insights: { sampleSize: 0, minPrice: null, maxPrice: null, avgPrice: null, onSaleCount: 0 },
-  };
+const EMPTY_CATALOG: BrandCatalog = {
+  products: [],
+  insights: { priceSample: 0, minPrice: null, maxPrice: null, avgPrice: null, onSaleCount: 0, newest: null, oldest: null, topCategories: [] },
+};
+
+// Lowest ("from") price across a product's variants.
+function productPrice(p: any): { price: number | null; onSale: boolean } {
+  const prices = (p.product_variants || []).map((v: any) => v.price).filter((x: any) => x != null);
+  const compares = (p.product_variants || []).map((v: any) => v.compare_at_price).filter((x: any) => x != null);
+  const price = prices.length ? Math.min(...prices) : null;
+  const compareAt = compares.length ? Math.max(...compares) : null;
+  return { price, onSale: !!(price != null && compareAt != null && compareAt > price) };
+}
+
+export async function fetchBrandCatalog(domain: string, gridLimit = 12): Promise<BrandCatalog> {
   const supabase = createPublicClient();
   const d = normalizeDomain(domain);
+  const highlight = (p: any): CatalogHighlight | null =>
+    p ? { title: p.title, url: `https://${d}/products/${p.handle}`, date: p.created_at ?? null, price: productPrice(p).price } : null;
 
   const { data: store } = await supabase
     .from("stores").select("id").eq("store_url", d).limit(1).maybeSingle();
-  if (!store) return empty;
+  if (!store) return EMPTY_CATALOG;
 
-  const { data } = await supabase
-    .from("products")
-    .select("id, title, handle, created_at, product_variants(price, compare_at_price), product_images(src)")
-    .eq("store_id", store.id)
-    .order("created_at", { ascending: false, nullsFirst: false })
-    .limit(limit);
-  if (!data || data.length === 0) return empty;
+  // Bounded, parallel — one store, so this stays cheap.
+  const [gridRes, oldestRes, priceRes, catRes] = await Promise.all([
+    supabase.from("products")
+      .select("id, title, handle, created_at, product_variants(price, compare_at_price), product_images(src)")
+      .eq("store_id", store.id).order("created_at", { ascending: false, nullsFirst: false }).limit(24),
+    supabase.from("products")
+      .select("title, handle, created_at, product_variants(price)")
+      .eq("store_id", store.id).order("created_at", { ascending: true, nullsFirst: false }).limit(1),
+    supabase.from("products")
+      .select("product_variants(price, compare_at_price)").eq("store_id", store.id).limit(800),
+    supabase.from("products").select("product_type").eq("store_id", store.id).limit(5000),
+  ]);
 
-  const products: BrandProduct[] = data.map((p: any) => {
-    const prices = (p.product_variants || []).map((v: any) => v.price).filter((x: any) => x != null);
+  const gridData = gridRes.data || [];
+  if (gridData.length === 0) return EMPTY_CATALOG;
+
+  const products: BrandProduct[] = gridData.slice(0, gridLimit).map((p: any) => {
+    const { price, onSale } = productPrice(p);
     const compares = (p.product_variants || []).map((v: any) => v.compare_at_price).filter((x: any) => x != null);
-    const price = prices.length ? Math.min(...prices) : null;
-    const compareAt = compares.length ? Math.max(...compares) : null;
     return {
-      id: p.id,
-      title: p.title,
-      url: `https://${d}/products/${p.handle}`,
-      price,
-      compareAt,
-      onSale: !!(price != null && compareAt != null && compareAt > price),
+      id: p.id, title: p.title, url: `https://${d}/products/${p.handle}`,
+      price, compareAt: compares.length ? Math.max(...compares) : null, onSale,
       image: p.product_images?.[0]?.src || null,
     };
   });
 
-  const withPrice = products.map((p) => p.price).filter((x): x is number => x != null);
-  const insights = {
-    sampleSize: products.length,
-    minPrice: withPrice.length ? Math.min(...withPrice) : null,
-    maxPrice: withPrice.length ? Math.max(...withPrice) : null,
-    avgPrice: withPrice.length ? Math.round((withPrice.reduce((a, b) => a + b, 0) / withPrice.length) * 100) / 100 : null,
-    onSaleCount: products.filter((p) => p.onSale).length,
+  // Price range across a broader sample (per-product "from" price).
+  const sample = (priceRes.data || []).map((p: any) => productPrice(p));
+  const prices = sample.map((s) => s.price).filter((x): x is number => x != null);
+  const onSaleCount = sample.filter((s) => s.onSale).length;
+
+  // Top categories by product_type.
+  const catCounts = new Map<string, number>();
+  for (const p of catRes.data || []) {
+    const t = (p.product_type || "").trim();
+    if (t) catCounts.set(t, (catCounts.get(t) || 0) + 1);
+  }
+  const topCategories = [...catCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 6).map(([name, count]) => ({ name, count }));
+
+  return {
+    products,
+    insights: {
+      priceSample: prices.length,
+      minPrice: prices.length ? Math.min(...prices) : null,
+      maxPrice: prices.length ? Math.max(...prices) : null,
+      avgPrice: prices.length ? Math.round((prices.reduce((a, b) => a + b, 0) / prices.length) * 100) / 100 : null,
+      onSaleCount,
+      newest: highlight(gridData[0]),
+      oldest: highlight((oldestRes.data || [])[0]),
+      topCategories,
+    },
   };
-  return { products, insights };
 }
 
 // ── Recent activity across a set of brands (industry detail feed) ───────────

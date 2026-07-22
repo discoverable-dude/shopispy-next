@@ -344,9 +344,9 @@ export default async function BrandPage({
               <section className="mb-16">
                 <div className="mb-6 flex items-end justify-between">
                   <div>
-                    <h2 className="text-xl font-bold tracking-tight">Latest products</h2>
+                    <h2 className="text-xl font-bold tracking-tight">Catalog insights</h2>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      Live from {brand.name}&apos;s catalog · sample of {catalog.insights.sampleSize}
+                      Live from {brand.name}&apos;s catalog
                     </p>
                   </div>
                   <a
@@ -359,12 +359,12 @@ export default async function BrandPage({
                   </a>
                 </div>
 
-                <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                <div className="mb-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
                   {[
                     { label: "Lowest price", value: catalog.insights.minPrice?.toFixed(2) ?? "—" },
                     { label: "Avg price", value: catalog.insights.avgPrice?.toFixed(2) ?? "—" },
                     { label: "Highest price", value: catalog.insights.maxPrice?.toFixed(2) ?? "—" },
-                    { label: "On sale (sample)", value: `${catalog.insights.onSaleCount}/${catalog.insights.sampleSize}` },
+                    { label: "On sale", value: `${catalog.insights.onSaleCount}/${catalog.insights.priceSample}` },
                   ].map((s) => (
                     <Card key={s.label}>
                       <CardContent className="p-4">
@@ -374,6 +374,49 @@ export default async function BrandPage({
                     </Card>
                   ))}
                 </div>
+
+                <div className="mb-8 grid gap-4 md:grid-cols-3">
+                  {[
+                    { label: "Newest product", item: catalog.insights.newest },
+                    { label: "Oldest product", item: catalog.insights.oldest },
+                  ].map(({ label, item }) => (
+                    <Card key={label}>
+                      <CardContent className="p-4">
+                        <p className="text-xs text-muted-foreground">{label}</p>
+                        {item ? (
+                          <a href={item.url} target="_blank" rel="noopener noreferrer" className="group mt-1 block">
+                            <p className="truncate text-sm font-medium group-hover:text-primary" title={item.title}>{item.title}</p>
+                            <p className="mt-0.5 text-xs text-muted-foreground">
+                              {item.date ? new Date(item.date).toLocaleDateString("en-GB", { month: "short", year: "numeric" }) : "—"}
+                              {item.price != null ? ` · ${item.price.toFixed(2)}` : ""}
+                            </p>
+                          </a>
+                        ) : (
+                          <p className="mt-1 text-sm text-muted-foreground">—</p>
+                        )}
+                      </CardContent>
+                    </Card>
+                  ))}
+                  <Card>
+                    <CardContent className="p-4">
+                      <p className="text-xs text-muted-foreground">Top categories</p>
+                      {catalog.insights.topCategories.length > 0 ? (
+                        <div className="mt-2 flex flex-wrap gap-1.5">
+                          {catalog.insights.topCategories.map((c) => (
+                            <Badge key={c.name} variant="secondary" className="gap-1 text-[10px]">
+                              {c.name}
+                              <span className="tabular-nums text-muted-foreground">{c.count}</span>
+                            </Badge>
+                          ))}
+                        </div>
+                      ) : (
+                        <p className="mt-1 text-sm text-muted-foreground">Uncategorised</p>
+                      )}
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-muted-foreground">Latest products</h3>
 
                 <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
                   {catalog.products.map((p) => (
