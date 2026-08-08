@@ -5,6 +5,22 @@ function normalizeDomain(domain: string): string {
   return domain.toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").replace(/\/$/, "");
 }
 
+// Robust price stats: drop £0 (free/placeholder variants) and extreme high
+// outliers (bundles / data errors > 15× the median) so min/avg/max reflect the
+// real catalog, not a single £13k anomaly.
+function cleanPriceStats(prices: number[]): { min: number | null; avg: number | null; max: number | null } {
+  const p = prices.filter((x) => x != null && x > 0).sort((a, b) => a - b);
+  if (p.length === 0) return { min: null, avg: null, max: null };
+  const median = p[Math.floor(p.length / 2)];
+  const filtered = p.filter((x) => x <= median * 15);
+  const use = filtered.length ? filtered : p;
+  return {
+    min: use[0],
+    max: use[use.length - 1],
+    avg: Math.round((use.reduce((a, b) => a + b, 0) / use.length) * 100) / 100,
+  };
+}
+
 async function pageAll<T>(
   run: (from: number, to: number) => PromiseLike<{ data: T[] | null }>
 ): Promise<T[]> {
@@ -113,13 +129,14 @@ export async function fetchBrandCatalog(domain: string, gridLimit = 12): Promise
   }
   const topCategories = [...catCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 6).map(([name, count]) => ({ name, count }));
 
+  const ps = cleanPriceStats(prices);
   return {
     products,
     insights: {
-      priceSample: prices.length,
-      minPrice: prices.length ? Math.min(...prices) : null,
-      maxPrice: prices.length ? Math.max(...prices) : null,
-      avgPrice: prices.length ? Math.round((prices.reduce((a, b) => a + b, 0) / prices.length) * 100) / 100 : null,
+      priceSample: prices.filter((x) => x > 0).length,
+      minPrice: ps.min,
+      maxPrice: ps.max,
+      avgPrice: ps.avg,
       onSaleCount,
       newest: highlight(gridData[0]),
       oldest: highlight((oldestRes.data || [])[0]),
@@ -287,10 +304,11 @@ export async function fetchBrandBenchmarks(
         const t = (p.product_type || "").trim();
         if (t) cats.set(t, (cats.get(t) || 0) + 1);
       }
+      const ps = cleanPriceStats(prices);
       result.set(domain, {
-        minPrice: prices.length ? Math.min(...prices) : null,
-        maxPrice: prices.length ? Math.max(...prices) : null,
-        avgPrice: prices.length ? Math.round((prices.reduce((a, b) => a + b, 0) / prices.length) * 100) / 100 : null,
+        minPrice: ps.min,
+        maxPrice: ps.max,
+        avgPrice: ps.avg,
         onSalePct: rows.length ? Math.round((onSale / rows.length) * 100) : 0,
         topCategory: [...cats.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || "",
       });
