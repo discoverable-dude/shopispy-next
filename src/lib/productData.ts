@@ -287,10 +287,15 @@ export async function fetchBrandBenchmarks(
     await Promise.all(domains.slice(i, i + CONC).map(async (domain) => {
       const storeId = storeByDomain.get(domain);
       if (!storeId) { result.set(domain, empty); return; }
-      const { data } = await supabase
-        .from("products").select("product_type, product_variants(price, compare_at_price)")
-        .eq("store_id", storeId).limit(600);
-      const rows = (data || []) as any[];
+      // Retry once — under the parallel load a query can transiently return
+      // empty, which would blank an otherwise-populated brand.
+      let rows: any[] = [];
+      for (let attempt = 0; attempt < 2 && rows.length === 0; attempt++) {
+        const { data } = await supabase
+          .from("products").select("product_type, product_variants(price, compare_at_price)")
+          .eq("store_id", storeId).limit(600);
+        rows = (data || []) as any[];
+      }
       const prices: number[] = [];
       let onSale = 0;
       const cats = new Map<string, number>();
