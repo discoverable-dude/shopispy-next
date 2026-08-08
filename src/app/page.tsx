@@ -7,6 +7,7 @@ import { HomepageFeatures } from "@/components/marketing/HomepageFeatures";
 import { HomepageStatsAndProcess } from "@/components/marketing/HomepageStatsAndProcess";
 import { HomepageIntelAndProof } from "@/components/marketing/HomepageIntelAndProof";
 import { HomepageCTA } from "@/components/marketing/HomepageCTA";
+import { fetchHeadlineStats } from "@/lib/productData";
 
 export const metadata: Metadata = {
   title: "ShopiSpy - Shopify Competitor Intelligence Tool",
@@ -15,14 +16,17 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-export default function HomePage() {
+export const revalidate = 300;
+
+export default async function HomePage() {
+  const stats = await fetchHeadlineStats();
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <HomepageHero />
       <HomepageLogos />
       <HomepageFeatures />
-      <HomepageStatsAndProcess />
+      <HomepageStatsAndProcess stats={stats} />
       <HomepageIntelAndProof />
       <HomepageCTA />
       <Footer />

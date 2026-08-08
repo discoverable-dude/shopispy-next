@@ -225,3 +225,21 @@ export async function fetchLiveCounts(): Promise<LiveCounts> {
   }
   return { byDomain, byVertical };
 }
+
+// ── Real headline stats for marketing pages (homepage, /reports, hero lines) ─
+export interface HeadlineStats {
+  totalProducts: number;
+  liveBrands: number;
+  totalBrands: number;
+  verticals: number;
+}
+
+export async function fetchHeadlineStats(): Promise<HeadlineStats> {
+  const { byDomain, byVertical } = await fetchLiveCounts();
+  let totalProducts = 0;
+  for (const c of byVertical.values()) totalProducts += c.total;
+  let liveBrands = 0;
+  for (const c of byDomain.values()) if (c > 0) liveBrands++;
+  const totalBrands = VERTICALS.reduce((n, v) => n + v.brands.length, 0);
+  return { totalProducts, liveBrands, totalBrands, verticals: VERTICALS.length };
+}

@@ -4,8 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Search, Database, Bell } from "lucide-react";
 import { FadeInView } from "@/components/motion";
-import { ALL_BRANDS, TOTAL_PRODUCTS, VERTICALS } from "@/lib/brands";
 import { Card, CardContent } from "@/components/ui/card";
+import type { HeadlineStats } from "@/lib/productData";
 
 function Counter({ end, suffix = "" }: { end: number; suffix?: string }) {
   const ref = useRef(null);
@@ -76,7 +76,7 @@ const steps = [
   },
 ];
 
-export function HomepageStatsAndProcess() {
+export function HomepageStatsAndProcess({ stats }: { stats: HeadlineStats }) {
   const [activeStep, setActiveStep] = useState(0);
 
   // Auto-advance steps
@@ -92,20 +92,20 @@ export function HomepageStatsAndProcess() {
           {/* Left: Stats + social proof */}
           <FadeInView>
             <div>
-              <p className="text-sm font-medium uppercase tracking-widest text-primary">Trusted by 10,000+ brands</p>
+              <p className="text-sm font-medium uppercase tracking-widest text-primary">Live Shopify market data</p>
               <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-                The numbers speak for themselves
+                Real numbers, refreshed daily
               </h2>
               <p className="mt-4 text-muted-foreground">
-                From solo merchants to enterprise teams — ShopiSpy powers competitive intelligence
-                for Shopify brands worldwide.
+                ShopiSpy tracks catalogs, prices, and launches across {stats.liveBrands} live Shopify
+                brands in {stats.verticals} industries — updated every day, not estimated.
               </p>
 
               <div className="mt-10 grid grid-cols-2 gap-6">
                 {[
-                  { value: ALL_BRANDS.length, suffix: " stores", label: "Brands tracked" },
-                  { value: TOTAL_PRODUCTS, suffix: "+", label: "Products scanned" },
-                  { value: VERTICALS.length, suffix: " verticals", label: "Industries covered" },
+                  { value: stats.liveBrands, suffix: " brands", label: "Brands tracked live" },
+                  { value: stats.totalProducts, suffix: "+", label: "Products tracked" },
+                  { value: stats.verticals, suffix: " verticals", label: "Industries covered" },
                   { value: 99, suffix: ".9%", label: "Uptime SLA" },
                 ].map((stat) => (
                   <Card key={stat.label} className="rounded-xl border-border/60 bg-muted/20">

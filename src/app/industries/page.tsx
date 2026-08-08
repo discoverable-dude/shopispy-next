@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BrandIcon } from "@/components/marketing/BrandIcon";
-import { VERTICALS, ALL_BRANDS, TOTAL_PRODUCTS } from "@/lib/brands";
+import { VERTICALS, ALL_BRANDS } from "@/lib/brands";
 import { slugify, getTopBrands } from "@/lib/brandUtils";
 import { fetchLiveCounts } from "@/lib/productData";
 import { IndustriesGrid } from "@/components/marketing/IndustriesGrid";
@@ -21,6 +21,7 @@ export const revalidate = 300;
 export default async function IndustriesPage() {
   // Real per-vertical product totals from the DB (static VERTICALS have no counts).
   const { byVertical } = await fetchLiveCounts();
+  const totalProducts = [...byVertical.values()].reduce((a, v) => a + v.total, 0);
   const verticalData = VERTICALS.map((v) => {
     const top5 = getTopBrands(v, 5);
     const t = byVertical.get(v.label);
@@ -50,7 +51,7 @@ export default async function IndustriesPage() {
             Shopify intelligence <span className="text-gradient">by industry</span>
           </h1>
           <p className="mt-4 mx-auto max-w-xl text-muted-foreground">
-            Browse {TOTAL_PRODUCTS.toLocaleString()} tracked products across {VERTICALS.length} verticals.
+            Browse {totalProducts.toLocaleString()} tracked products across {VERTICALS.length} verticals.
             Drill into any industry for top brands, pricing data, and competitive insights.
           </p>
           <div className="mt-6 flex justify-center gap-3">
