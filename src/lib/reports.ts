@@ -1,7 +1,7 @@
 // Single source of truth for the paid downloadable reports.
 // Used by the checkout route, the download gate, and the buy buttons in the UI.
 
-export type ReportId = "company" | "industry";
+export type ReportId = "company" | "industry" | "market";
 
 export interface ReportSpec {
   id: ReportId;
@@ -31,8 +31,16 @@ export const REPORTS: Record<ReportId, ReportSpec> = {
     display: "£99",
     blurb: "Every brand in the vertical benchmarked side by side — product counts, price bands, sale intensity, top category and latest activity.",
   },
+  market: {
+    id: "market",
+    label: "Complete Market Report",
+    amount: 49900,
+    currency: "gbp",
+    display: "£499",
+    blurb: "Every tracked brand across all 16 industries in one file — the full competitive picture, benchmarked and ranked.",
+  },
 };
 
 export function isReportId(v: unknown): v is ReportId {
-  return v === "company" || v === "industry";
+  return v === "company" || v === "industry" || v === "market";
 }

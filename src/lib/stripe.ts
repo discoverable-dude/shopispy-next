@@ -44,7 +44,9 @@ export async function createReportCheckout(
   const downloadPath =
     report === "company"
       ? `/api/reports/company?domain=${encodeURIComponent(target)}`
-      : `/api/reports/industry?slug=${encodeURIComponent(target)}`;
+      : report === "industry"
+        ? `/api/reports/industry?slug=${encodeURIComponent(target)}`
+        : `/api/reports/market`;
 
   return stripe.checkout.sessions.create({
     mode: "payment",
@@ -63,7 +65,7 @@ export async function createReportCheckout(
     ],
     metadata: { report, target },
     success_url: `${origin}/reports/success?session_id={CHECKOUT_SESSION_ID}&next=${encodeURIComponent(downloadPath)}`,
-    cancel_url: `${origin}${report === "company" ? `/brands` : `/industries`}`,
+    cancel_url: `${origin}${report === "company" ? `/brands` : `/reports`}`,
   });
 }
 
