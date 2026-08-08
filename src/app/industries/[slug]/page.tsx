@@ -147,9 +147,9 @@ export default async function IndustryPage({
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="h-12 rounded-xl">
-                  <Link href={`/industries/${slug}#all-brands`}>
-                    Download report
-                  </Link>
+                  <a href={`/api/reports/industry?slug=${slug}`} download>
+                    Download benchmark (CSV)
+                  </a>
                 </Button>
               </div>
             </FadeInView>

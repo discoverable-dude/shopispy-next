@@ -106,8 +106,8 @@ export function LiveIntelligence() {
             See what the biggest brands are doing
           </h2>
           <p className="mt-4 mx-auto max-w-2xl text-muted-foreground">
-            ShopiSpy tracks thousands of Shopify stores. Here&apos;s a live snapshot across
-            popular brands.
+            ShopiSpy tracks 700+ top Shopify brands. Here&apos;s a live snapshot across
+            the market.
           </p>
         </FadeInView>
 

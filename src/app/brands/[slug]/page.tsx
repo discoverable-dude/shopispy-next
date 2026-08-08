@@ -284,9 +284,16 @@ export default async function BrandPage({
                       </div>
                       <h3 className="font-semibold">Full catalog export</h3>
                       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                        Download {brand.name}&apos;s complete {brand.products}-product catalog as CSV, Excel, or JSON.
-                        Perfect for analysis and competitive research.
+                        Download {brand.name}&apos;s complete {brand.products}-product catalog as CSV —
+                        titles, prices, categories, stock, and links. Perfect for competitive research.
                       </p>
+                      <a
+                        href={`/api/reports/company?domain=${brand.domain}`}
+                        download
+                        className="mt-4 inline-flex h-9 items-center gap-1.5 rounded-lg bg-blue-600 px-4 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+                      >
+                        Download CSV
+                      </a>
                     </CardContent>
                   </Card>
                 </StaggerItem>

@@ -45,8 +45,8 @@ export function HomepageCTA() {
                 Ready to outsmart your competition?
               </h2>
               <p className="mt-4 mx-auto max-w-xl text-lg text-muted-foreground">
-                Join 10,000+ Shopify brands using ShopiSpy to track
-                competitors, monitor pricing, and stay ahead of market changes.
+                Track your competitors on Shopify with ShopiSpy — monitor
+                pricing, catch new launches, and stay ahead of market changes.
               </p>
 
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
