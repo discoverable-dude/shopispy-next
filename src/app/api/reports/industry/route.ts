@@ -2,6 +2,7 @@ import { VERTICALS } from "@/lib/brands";
 import { slugify } from "@/lib/brandUtils";
 import { fetchStatsForDomains } from "@/lib/brandStats";
 import { fetchBrandBenchmarks } from "@/lib/productData";
+import { hasPaidForReport } from "@/lib/stripe";
 
 export const maxDuration = 30;
 
@@ -19,6 +20,13 @@ export async function GET(request: Request) {
   const slug = searchParams.get("slug");
   const vertical = VERTICALS.find((v) => slugify(v.label) === slug || v.id === slug);
   if (!vertical) return new Response("Industry not found", { status: 404 });
+
+  // Paywall: require a paid Stripe session for this exact report, or an admin key.
+  const adminKey = process.env.ADMIN_SETUP_KEY;
+  const isAdmin = adminKey && searchParams.get("key") === adminKey;
+  if (!isAdmin && !(await hasPaidForReport(searchParams.get("session_id"), "industry", slug!))) {
+    return new Response("Payment required — purchase this report to download.", { status: 402 });
+  }
 
   const [statsMap, benchmarks] = await Promise.all([
     fetchStatsForDomains(vertical.brands.map((b) => b.domain)),
@@ -50,7 +58,7 @@ export async function GET(request: Request) {
     headers: {
       "Content-Type": "text/csv; charset=utf-8",
       "Content-Disposition": `attachment; filename="${filename}"`,
-      "Cache-Control": "public, max-age=3600",
+      "Cache-Control": "private, no-store",
     },
   });
 }

@@ -23,6 +23,7 @@ import {
 import { fetchStatsForDomains, enrichBrand } from "@/lib/brandStats";
 import { ChevronRight } from "lucide-react";
 import { fetchBrandCatalog } from "@/lib/productData";
+import { BuyReportButton } from "@/components/reports/BuyReportButton";
 
 // Revalidate every hour so live stats stay fresh without a full rebuild.
 export const revalidate = 300;
@@ -282,18 +283,18 @@ export default async function BrandPage({
                       <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/10 text-lg font-bold text-blue-600">
                         &darr;
                       </div>
-                      <h3 className="font-semibold">Full catalog export</h3>
+                      <h3 className="font-semibold">Full catalog export &mdash; £19</h3>
                       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                         Download {brand.name}&apos;s complete {brand.products}-product catalog as CSV —
                         titles, prices, categories, stock, and links. Perfect for competitive research.
                       </p>
-                      <a
-                        href={`/api/reports/company?domain=${brand.domain}`}
-                        download
-                        className="mt-4 inline-flex h-9 items-center gap-1.5 rounded-lg bg-blue-600 px-4 text-sm font-medium text-white transition-colors hover:bg-blue-700"
-                      >
-                        Download CSV
-                      </a>
+                      <BuyReportButton
+                        report="company"
+                        target={brand.domain}
+                        label={brand.name}
+                        price="£19"
+                        className="mt-4 inline-flex h-9 items-center gap-1.5 rounded-lg bg-blue-600 px-4 text-sm font-medium text-white transition-colors hover:bg-blue-700 disabled:opacity-60"
+                      />
                     </CardContent>
                   </Card>
                 </StaggerItem>

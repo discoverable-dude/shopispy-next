@@ -1,4 +1,5 @@
 import { createPublicClient } from "@/lib/supabase/public";
+import { hasPaidForReport } from "@/lib/stripe";
 
 function normalizeDomain(domain: string): string {
   return domain.toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").replace(/\/$/, "");
@@ -13,6 +14,13 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const domainParam = searchParams.get("domain");
   if (!domainParam) return new Response("domain query param required", { status: 400 });
+
+  // Paywall: require a paid Stripe session for this exact report, or an admin key.
+  const adminKey = process.env.ADMIN_SETUP_KEY;
+  const isAdmin = adminKey && searchParams.get("key") === adminKey;
+  if (!isAdmin && !(await hasPaidForReport(searchParams.get("session_id"), "company", domainParam))) {
+    return new Response("Payment required — purchase this report to download.", { status: 402 });
+  }
 
   const d = normalizeDomain(domainParam);
   const supabase = createPublicClient();
@@ -55,7 +63,7 @@ export async function GET(request: Request) {
     headers: {
       "Content-Type": "text/csv; charset=utf-8",
       "Content-Disposition": `attachment; filename="${filename}"`,
-      "Cache-Control": "public, max-age=3600",
+      "Cache-Control": "private, no-store",
     },
   });
 }
