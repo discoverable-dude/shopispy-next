@@ -243,3 +243,58 @@ export async function fetchHeadlineStats(): Promise<HeadlineStats> {
   const totalBrands = VERTICALS.reduce((n, v) => n + v.brands.length, 0);
   return { totalProducts, liveBrands, totalBrands, verticals: VERTICALS.length };
 }
+
+// ── Per-brand price + category benchmark (enriches the industry report) ──────
+export interface BrandBenchmark {
+  minPrice: number | null;
+  avgPrice: number | null;
+  maxPrice: number | null;
+  onSalePct: number;
+  topCategory: string;
+}
+
+export async function fetchBrandBenchmarks(
+  brands: { domain: string }[]
+): Promise<Map<string, BrandBenchmark>> {
+  const supabase = createPublicClient();
+  const result = new Map<string, BrandBenchmark>();
+  const domains = brands.map((b) => normalizeDomain(b.domain));
+
+  const { data: stores } = await supabase
+    .from("stores").select("id, store_url").in("store_url", domains);
+  const storeByDomain = new Map((stores || []).map((s: any) => [normalizeDomain(s.store_url), s.id]));
+
+  const empty: BrandBenchmark = { minPrice: null, avgPrice: null, maxPrice: null, onSalePct: 0, topCategory: "" };
+  const CONC = 12;
+  for (let i = 0; i < domains.length; i += CONC) {
+    await Promise.all(domains.slice(i, i + CONC).map(async (domain) => {
+      const storeId = storeByDomain.get(domain);
+      if (!storeId) { result.set(domain, empty); return; }
+      const { data } = await supabase
+        .from("products").select("product_type, product_variants(price, compare_at_price)")
+        .eq("store_id", storeId).limit(600);
+      const rows = (data || []) as any[];
+      const prices: number[] = [];
+      let onSale = 0;
+      const cats = new Map<string, number>();
+      for (const p of rows) {
+        const pr = (p.product_variants || []).map((v: any) => v.price).filter((x: any) => x != null);
+        const cp = (p.product_variants || []).map((v: any) => v.compare_at_price).filter((x: any) => x != null);
+        const price = pr.length ? Math.min(...pr) : null;
+        const comp = cp.length ? Math.max(...cp) : null;
+        if (price != null) prices.push(price);
+        if (price != null && comp != null && comp > price) onSale++;
+        const t = (p.product_type || "").trim();
+        if (t) cats.set(t, (cats.get(t) || 0) + 1);
+      }
+      result.set(domain, {
+        minPrice: prices.length ? Math.min(...prices) : null,
+        maxPrice: prices.length ? Math.max(...prices) : null,
+        avgPrice: prices.length ? Math.round((prices.reduce((a, b) => a + b, 0) / prices.length) * 100) / 100 : null,
+        onSalePct: rows.length ? Math.round((onSale / rows.length) * 100) : 0,
+        topCategory: [...cats.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || "",
+      });
+    }));
+  }
+  return result;
+}
