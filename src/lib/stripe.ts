@@ -18,6 +18,12 @@ export function stripeConfigured(): boolean {
   return Boolean(process.env.STRIPE_SECRET_KEY);
 }
 
+// Embedded Checkout needs a client-side publishable key; without it we serve the
+// hosted redirect flow instead (secret key only).
+export function embeddedCheckoutEnabled(): boolean {
+  return Boolean(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+}
+
 function siteOrigin(request: Request): string {
   // Derive the origin from the request so the post-payment redirect always
   // returns the buyer to the exact domain they checked out from — the vercel.app
@@ -50,27 +56,43 @@ export async function createReportCheckout(
         ? `/api/reports/industry?slug=${encodeURIComponent(target)}`
         : `/api/reports/market`;
 
-  return stripe.checkout.sessions.create({
-    // "embedded" is correct for the pinned apiVersion 2023-10-16; the SDK's
-    // types target a newer version that renamed it, hence the cast.
-    ui_mode: "embedded" as any,
-    mode: "payment",
-    line_items: [
-      {
-        quantity: 1,
-        price_data: {
-          currency: spec.currency,
-          unit_amount: spec.amount,
-          product_data: {
-            name: `ShopiSpy ${spec.label} — ${label}`,
-            description: spec.blurb,
-          },
+  const successPath = `${origin}/reports/success?session_id={CHECKOUT_SESSION_ID}&next=${encodeURIComponent(downloadPath)}`;
+
+  const lineItems = [
+    {
+      quantity: 1,
+      price_data: {
+        currency: spec.currency,
+        unit_amount: spec.amount,
+        product_data: {
+          name: `ShopiSpy ${spec.label} — ${label}`,
+          description: spec.blurb,
         },
       },
-    ],
+    },
+  ];
+
+  // Use the inline embedded form when a publishable key is configured; otherwise
+  // fall back to the hosted (redirect) Checkout, which needs no client key.
+  if (embeddedCheckoutEnabled()) {
+    return stripe.checkout.sessions.create({
+      // "embedded" is correct for the pinned apiVersion 2023-10-16; the SDK's
+      // types target a newer version that renamed it, hence the cast.
+      ui_mode: "embedded" as any,
+      mode: "payment",
+      line_items: lineItems,
+      metadata: { report, target },
+      // Embedded Checkout redirects the host page here once payment completes.
+      return_url: successPath,
+    });
+  }
+
+  return stripe.checkout.sessions.create({
+    mode: "payment",
+    line_items: lineItems,
     metadata: { report, target },
-    // Embedded Checkout redirects the host page here once payment completes.
-    return_url: `${origin}/reports/success?session_id={CHECKOUT_SESSION_ID}&next=${encodeURIComponent(downloadPath)}`,
+    success_url: successPath,
+    cancel_url: `${origin}${report === "company" ? `/brands` : `/reports`}`,
   });
 }
 

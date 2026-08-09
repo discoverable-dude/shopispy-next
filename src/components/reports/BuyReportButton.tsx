@@ -32,11 +32,19 @@ export function BuyReportButton({ report, target, label, price, className, child
         body: JSON.stringify({ report, target, label }),
       });
       const data = await res.json();
-      if (!res.ok || !data.clientSecret) {
+      if (!res.ok) {
         setError(data.error || "Could not start checkout.");
         return;
       }
-      setClientSecret(data.clientSecret);
+      if (data.clientSecret) {
+        // Embedded flow: mount Stripe's form inline.
+        setClientSecret(data.clientSecret);
+      } else if (data.url) {
+        // Hosted fallback (no publishable key): redirect to Stripe.
+        window.location.href = data.url;
+      } else {
+        setError("Could not start checkout.");
+      }
     } catch {
       setError("Something went wrong. Please try again.");
     } finally {

@@ -25,7 +25,10 @@ export async function POST(request: Request) {
 
   try {
     const session = await createReportCheckout(request, report, target, label || target);
-    return Response.json({ clientSecret: session.client_secret });
+    // Embedded sessions carry a client_secret; hosted sessions carry a url.
+    return session.client_secret
+      ? Response.json({ clientSecret: session.client_secret })
+      : Response.json({ url: session.url });
   } catch (err: any) {
     console.error("[checkout] failed:", err?.message);
     return Response.json({ error: "Could not start checkout" }, { status: 500 });
