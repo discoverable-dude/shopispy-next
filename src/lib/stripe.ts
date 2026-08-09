@@ -19,12 +19,14 @@ export function stripeConfigured(): boolean {
 }
 
 function siteOrigin(request: Request): string {
-  // Prefer the configured public URL; fall back to the request origin so the
-  // flow still works on preview deploys / localhost.
-  return (
-    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-    new URL(request.url).origin
-  );
+  // Derive the origin from the request so the post-payment redirect always
+  // returns the buyer to the exact domain they checked out from — the vercel.app
+  // alias today, shopi-spy.com automatically after cutover. We deliberately do
+  // NOT use NEXT_PUBLIC_SITE_URL here: it points at the old Vite site (which has
+  // no /reports/success page) and can carry stray whitespace.
+  const proto = request.headers.get("x-forwarded-proto") || "https";
+  const host = request.headers.get("host") || new URL(request.url).host;
+  return `${proto}://${host}`.replace(/\/$/, "");
 }
 
 // Create a one-off Checkout Session for a single report. `target` is the
