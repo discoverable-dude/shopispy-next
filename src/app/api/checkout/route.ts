@@ -25,7 +25,7 @@ export async function POST(request: Request) {
 
   try {
     const session = await createReportCheckout(request, report, target, label || target);
-    return Response.json({ url: session.url });
+    return Response.json({ clientSecret: session.client_secret });
   } catch (err: any) {
     console.error("[checkout] failed:", err?.message);
     return Response.json({ error: "Could not start checkout" }, { status: 500 });

@@ -51,6 +51,9 @@ export async function createReportCheckout(
         : `/api/reports/market`;
 
   return stripe.checkout.sessions.create({
+    // "embedded" is correct for the pinned apiVersion 2023-10-16; the SDK's
+    // types target a newer version that renamed it, hence the cast.
+    ui_mode: "embedded" as any,
     mode: "payment",
     line_items: [
       {
@@ -66,8 +69,8 @@ export async function createReportCheckout(
       },
     ],
     metadata: { report, target },
-    success_url: `${origin}/reports/success?session_id={CHECKOUT_SESSION_ID}&next=${encodeURIComponent(downloadPath)}`,
-    cancel_url: `${origin}${report === "company" ? `/brands` : `/reports`}`,
+    // Embedded Checkout redirects the host page here once payment completes.
+    return_url: `${origin}/reports/success?session_id={CHECKOUT_SESSION_ID}&next=${encodeURIComponent(downloadPath)}`,
   });
 }
 
