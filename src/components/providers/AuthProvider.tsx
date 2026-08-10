@@ -17,6 +17,10 @@ interface AuthContextType {
   checkSubscription: () => Promise<void>;
 }
 
+// Emails granted full enterprise access (unlimited stores) without a Stripe
+// subscription — internal/testing and comped client accounts. Lowercase only.
+const COMP_EMAILS = new Set<string>(["clients@discoverable.co.uk"]);
+
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const useAuth = () => {
@@ -131,6 +135,17 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const checkSubscription = async () => {
     try {
+      // Comped / internal accounts get full (enterprise) access without a Stripe
+      // subscription — used for our own testing and any comped client accounts.
+      const { data: { user: authUser } } = await supabase.auth.getUser();
+      const email = authUser?.email?.toLowerCase();
+      if (email && COMP_EMAILS.has(email)) {
+        setSubscribed(true);
+        setSubscriptionTier("enterprise");
+        setSubscriptionEnd(null);
+        return;
+      }
+
       const { data, error } = await supabase.functions.invoke("check-subscription");
       if (!error && data) {
         setSubscribed(data.subscribed || false);
