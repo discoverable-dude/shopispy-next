@@ -24,6 +24,23 @@ export function embeddedCheckoutEnabled(): boolean {
   return Boolean(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 }
 
+// Resolve a catalogue Price by its stable lookup_key. Returns null if the
+// catalogue isn't set up yet (caller falls back to inline pricing). Found ids
+// are cached; misses are not, so a newly-created price is picked up promptly.
+const _priceIdCache = new Map<string, string>();
+async function resolvePriceId(lookupKey: string): Promise<string | null> {
+  const cached = _priceIdCache.get(lookupKey);
+  if (cached) return cached;
+  try {
+    const res = await getStripe().prices.list({ lookup_keys: [lookupKey], active: true, limit: 1 });
+    const id = res.data[0]?.id;
+    if (id) _priceIdCache.set(lookupKey, id);
+    return id ?? null;
+  } catch {
+    return null;
+  }
+}
+
 function siteOrigin(request: Request): string {
   // Derive the origin from the request so the post-payment redirect always
   // returns the buyer to the exact domain they checked out from — the vercel.app
@@ -58,19 +75,24 @@ export async function createReportCheckout(
 
   const successPath = `${origin}/reports/success?session_id={CHECKOUT_SESSION_ID}&next=${encodeURIComponent(downloadPath)}`;
 
-  const lineItems = [
-    {
-      quantity: 1,
-      price_data: {
-        currency: spec.currency,
-        unit_amount: spec.amount,
-        product_data: {
-          name: `ShopiSpy ${spec.label} — ${label}`,
-          description: spec.blurb,
+  // Prefer the catalogue Price (named product, clean Stripe reporting). If it
+  // isn't set up yet, fall back to inline pricing so checkout still works.
+  const catalogPriceId = await resolvePriceId(spec.lookup);
+  const lineItems = catalogPriceId
+    ? [{ quantity: 1, price: catalogPriceId }]
+    : [
+        {
+          quantity: 1,
+          price_data: {
+            currency: spec.currency,
+            unit_amount: spec.amount,
+            product_data: {
+              name: `ShopiSpy ${spec.label} — ${label}`,
+              description: spec.blurb,
+            },
+          },
         },
-      },
-    },
-  ];
+      ];
 
   // Use the inline embedded form when a publishable key is configured; otherwise
   // fall back to the hosted (redirect) Checkout, which needs no client key.

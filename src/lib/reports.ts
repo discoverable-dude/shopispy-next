@@ -12,6 +12,10 @@ export interface ReportSpec {
   // Human-readable price for the UI.
   display: string;
   blurb: string;
+  // Stripe Price lookup_key for the catalogue product (see
+  // scripts/setup-stripe-catalog.mjs). Checkout prefers this; if the price
+  // isn't found it falls back to inline pricing from `amount`.
+  lookup: string;
 }
 
 export const REPORTS: Record<ReportId, ReportSpec> = {
@@ -22,6 +26,7 @@ export const REPORTS: Record<ReportId, ReportSpec> = {
     currency: "gbp",
     display: "£19",
     blurb: "Full product-level catalogue export for one brand — every product, price, sale flag, stock status and image URL.",
+    lookup: "shopispy_report_company",
   },
   industry: {
     id: "industry",
@@ -30,6 +35,7 @@ export const REPORTS: Record<ReportId, ReportSpec> = {
     currency: "gbp",
     display: "£99",
     blurb: "Every brand in the vertical benchmarked side by side — product counts, price bands, sale intensity, top category and latest activity.",
+    lookup: "shopispy_report_industry",
   },
   market: {
     id: "market",
@@ -38,6 +44,7 @@ export const REPORTS: Record<ReportId, ReportSpec> = {
     currency: "gbp",
     display: "£499",
     blurb: "Every tracked brand across all 16 industries in one file — the full competitive picture, benchmarked and ranked.",
+    lookup: "shopispy_report_market",
   },
 };
 
