@@ -2,11 +2,15 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AutoDownload } from "@/components/reports/AutoDownload";
+import { isSafeDownloadPath } from "@/lib/reports";
 
 export const dynamic = "force-dynamic";
 
 // Stripe redirects here after a successful report purchase. The `next` param is
-// the download path; we append the paid session_id so the gated route serves it.
+// attacker-controllable (it's just a URL query string), so it MUST be checked
+// against isSafeDownloadPath before we ever build a redirect/link target from
+// it — otherwise `next=https://evil.com` or `next=javascript:...` turns this
+// page into an open redirect / DOM-XSS on our own domain.
 export default async function ReportSuccessPage({
   searchParams,
 }: {
@@ -14,7 +18,8 @@ export default async function ReportSuccessPage({
 }) {
   const sp = await searchParams;
   const sessionId = typeof sp.session_id === "string" ? sp.session_id : "";
-  const next = typeof sp.next === "string" ? sp.next : "";
+  const rawNext = typeof sp.next === "string" ? sp.next : "";
+  const next = isSafeDownloadPath(rawNext) ? rawNext : "";
 
   const downloadUrl =
     sessionId && next

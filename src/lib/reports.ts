@@ -51,3 +51,20 @@ export const REPORTS: Record<ReportId, ReportSpec> = {
 export function isReportId(v: unknown): v is ReportId {
   return v === "company" || v === "industry" || v === "market";
 }
+
+// The exact set of download paths our own checkout flow ever generates (see
+// createReportCheckout in src/lib/stripe.ts). /reports/success reflects a
+// `next` query param back into a redirect + link target, so it must be
+// checked against this allowlist before use — never trust it as-is, or an
+// attacker-crafted `next` (an absolute URL, a `javascript:` URI, `//host/...`)
+// becomes an open redirect / DOM-XSS on our own domain.
+const ALLOWED_DOWNLOAD_PREFIXES = ["/api/reports/company", "/api/reports/industry", "/api/reports/market"];
+
+export function isSafeDownloadPath(path: string): boolean {
+  if (typeof path !== "string" || path.length === 0) return false;
+  // Reject protocol-relative ("//evil.com") and anything not a plain
+  // same-origin path — a leading single "/" followed by our known prefix is
+  // the only shape we accept.
+  if (path.startsWith("//")) return false;
+  return ALLOWED_DOWNLOAD_PREFIXES.some((p) => path === p || path.startsWith(`${p}?`));
+}
