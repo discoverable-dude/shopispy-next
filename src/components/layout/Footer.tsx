@@ -1,9 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import Image from "next/image";
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import { Logo } from "@/components/brand/Logo";
 
 const footerColumns = [
   {
@@ -35,17 +31,6 @@ const footerColumns = [
 ];
 
 export function Footer() {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const logoSrc =
-    mounted && resolvedTheme === "dark"
-      ? "/images/shopispy-logo-dark.png"
-      : "/images/shopispy-logo-light.png";
-
   return (
     <footer className="border-t border-border/60">
       <div className="mx-auto max-w-5xl px-6 py-12">
@@ -53,13 +38,7 @@ export function Footer() {
           {/* Logo + tagline */}
           <div className="lg:col-span-1">
             <Link href="/">
-              <Image
-                src={logoSrc}
-                alt="ShopiSpy"
-                width={110}
-                height={28}
-                className="h-7 w-auto"
-              />
+              <Logo markSize={26} />
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               Shopify competitor intelligence. Track prices, monitor products,

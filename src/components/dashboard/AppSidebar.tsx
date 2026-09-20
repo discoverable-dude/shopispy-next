@@ -3,11 +3,10 @@
 import { Home, Store, Bell, Settings, BarChart3, Plug, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTheme } from "next-themes";
 import { useAuth } from "@/components/providers/AuthProvider";
 import { useEffect, useState } from "react";
 import { getSupabaseClient } from "@/lib/supabase/client";
-import Image from "next/image";
+import { Logo, LogoMark } from "@/components/brand/Logo";
 
 import {
   Sidebar,
@@ -33,7 +32,6 @@ const items = [
 export function AppSidebar() {
   const supabase = getSupabaseClient();
   const { state } = useSidebar();
-  const { theme } = useTheme();
   const { user } = useAuth();
   const pathname = usePathname();
   const isCollapsed = state === "collapsed";
@@ -60,14 +58,12 @@ export function AppSidebar() {
     <Sidebar className={isCollapsed ? "w-14" : "w-64"} collapsible="icon">
       <SidebarContent>
         {/* Logo */}
-        <div className={`flex items-center ${isCollapsed ? "justify-center py-3" : "px-1 py-1"}`}>
-          <Image
-            src={isCollapsed ? "/favicon.png" : (theme === "dark" ? "/images/shopispy-logo-dark.png" : "/images/shopispy-logo-light.png")}
-            alt="ShopiSpy"
-            width={isCollapsed ? 32 : 160}
-            height={isCollapsed ? 32 : 80}
-            className={isCollapsed ? "h-8 w-8" : "h-20 w-auto"}
-          />
+        <div className={`flex items-center ${isCollapsed ? "justify-center py-3" : "px-2 py-4"}`}>
+          {isCollapsed ? (
+            <LogoMark size={28} />
+          ) : (
+            <Logo markSize={26} wordmarkClassName="text-lg" />
+          )}
         </div>
 
         <SidebarGroup>

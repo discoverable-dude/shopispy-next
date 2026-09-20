@@ -1,35 +1,23 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useAuth } from "@/components/providers/AuthProvider";
-import { useTheme } from "next-themes";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { Logo } from "@/components/brand/Logo";
 
 export function Header() {
   const pathname = usePathname();
   const { user, signOut } = useAuth();
-  const { resolvedTheme } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { scrollY } = useScroll();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 50);
   });
-
-  const logoSrc =
-    mounted && resolvedTheme === "dark"
-      ? "/images/shopispy-logo-dark.png"
-      : "/images/shopispy-logo-light.png";
 
   const navLinks = user
     ? [
@@ -86,15 +74,9 @@ export function Header() {
         >
           {/* Logo — left */}
           <Link href="/" className="relative z-10 flex shrink-0 items-center">
-            <Image
-              src={logoSrc}
-              alt="ShopiSpy"
-              width={120}
-              height={30}
-              className={`w-auto transition-all duration-200 ${
-                scrolled ? "h-6" : "h-7"
-              }`}
-              priority
+            <Logo
+              markSize={scrolled ? 24 : 28}
+              wordmarkClassName={`transition-all duration-200 ${scrolled ? "text-lg" : "text-xl"}`}
             />
           </Link>
 

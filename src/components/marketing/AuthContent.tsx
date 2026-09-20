@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Loader2 } from "lucide-react";
@@ -13,6 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import { useAuth } from "@/components/providers/AuthProvider";
 import { useToast } from "@/hooks/use-toast";
+import { Logo } from "@/components/brand/Logo";
 
 export function AuthContent() {
   const [email, setEmail] = useState("");
@@ -132,20 +132,7 @@ export function AuthContent() {
         className="w-full max-w-md space-y-6"
       >
         <div className="space-y-2 text-center">
-          <Image
-            src="/images/shopispy-logo-dark.png"
-            alt="ShopiSpy"
-            width={160}
-            height={40}
-            className="mx-auto h-10 w-auto dark:hidden"
-          />
-          <Image
-            src="/images/shopispy-logo-light.png"
-            alt="ShopiSpy"
-            width={160}
-            height={40}
-            className="mx-auto hidden h-10 w-auto dark:block"
-          />
+          <Logo className="justify-center" markSize={34} wordmarkClassName="text-2xl" />
           <h1 className="text-3xl font-bold">Welcome to ShopiSpy</h1>
           <p className="text-muted-foreground">Sign in to your account or create a new one</p>
         </div>

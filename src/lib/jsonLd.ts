@@ -4,7 +4,7 @@ export function organizationJsonLd() {
     "@type": "Organization",
     name: "ShopiSpy",
     url: "https://www.shopi-spy.com",
-    logo: "https://www.shopi-spy.com/images/shopispy-logo-dark.png",
+    logo: "https://www.shopi-spy.com/images/shopispy-logo.png",
     description:
       "Shopify competitor intelligence tool. Track competitor prices, get alerts on changes, and make data-driven pricing decisions.",
     sameAs: ["https://twitter.com/shopispy"],
@@ -95,7 +95,7 @@ export function articleJsonLd({
       name: "ShopiSpy",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.shopi-spy.com/images/shopispy-logo-dark.png",
+        url: "https://www.shopi-spy.com/images/shopispy-logo.png",
       },
     },
   };
