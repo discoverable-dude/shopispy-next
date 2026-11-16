@@ -79,7 +79,7 @@ interface ProbeResponse {
 
 // One HTTPS GET with: connect-time public-IP enforcement, no redirect
 // following, a hard timeout, and a response size cap.
-function httpsGet(host: string, path: string): Promise<ProbeResponse> {
+function httpsGet(host: string, path: string, budgetMs: number): Promise<ProbeResponse> {
   return new Promise((resolve, reject) => {
     const req = https.request(
       {
@@ -88,7 +88,11 @@ function httpsGet(host: string, path: string): Promise<ProbeResponse> {
         path,
         method: "GET",
         lookup: publicOnlyLookup,
-        timeout: 6000,
+        // Hard wall-clock cap for the WHOLE request (connect + headers + body).
+        // The plain `timeout` option is only an idle timeout, which a server
+        // that trickles one byte at a time never trips.
+        signal: AbortSignal.timeout(budgetMs),
+        timeout: 4000, // also drop connections that go idle
         headers: { "User-Agent": "ShopiSpy/1.0 (+https://www.shopi-spy.com)", Accept: "application/json" },
       },
       (res) => {
@@ -121,13 +125,19 @@ function httpsGet(host: string, path: string): Promise<ProbeResponse> {
 
 // Is this a Shopify storefront? Shopify exposes /products.json publicly.
 // Follows at most 3 redirects, re-validating every hop's hostname.
+const PROBE_TOTAL_BUDGET_MS = 10000; // across all redirect hops
+const PROBE_PER_HOP_MS = 5000;
+
 export async function probeShopify(domain: string): Promise<boolean> {
   let host = domain;
+  const deadline = Date.now() + PROBE_TOTAL_BUDGET_MS;
   for (let hop = 0; hop < 4; hop++) {
+    const remaining = deadline - Date.now();
+    if (remaining <= 250) return false;
     const clean = cleanHostname(host, hop === 0); // first hop is the visitor's input; later hops keep "www."
     if (!clean) return false;
     try {
-      const res = await httpsGet(clean, "/products.json?limit=1");
+      const res = await httpsGet(clean, "/products.json?limit=1", Math.min(PROBE_PER_HOP_MS, remaining));
       if (res.status >= 300 && res.status < 400) {
         if (!res.location) return false;
         const next = new URL(res.location, `https://${clean}/`);
