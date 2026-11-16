@@ -2,17 +2,18 @@
 // A visitor types a domain and our server fetches it, so everything here is
 // written to stop that being used to reach internal addresses (SSRF).
 
-import dns from "node:dns/promises";
+import dns from "node:dns";
+import https from "node:https";
 import net from "node:net";
 
 const BAD_SUFFIX = /\.(local|localhost|internal|lan|home|corp|test|example|invalid|onion)$/;
 
-// "https://www.Brand.com/products/x?y" -> "brand.com". null if not a plain public hostname.
-export function normalizeDomainInput(raw: string): string | null {
+function cleanHostname(raw: string, stripWww: boolean): string | null {
   if (typeof raw !== "string") return null;
   let s = raw.trim().toLowerCase();
   if (s.length === 0 || s.length > 253) return null;
-  s = s.replace(/^https?:\/\//, "").replace(/^www\./, "");
+  s = s.replace(/^https?:\/\//, "");
+  if (stripWww) s = s.replace(/^www\./, "");
   s = s.split(/[/?#]/)[0];
   if (s.includes("@") || s.includes(":")) return null; // no userinfo, ports or IPv6 literals
   if (net.isIP(s)) return null;
@@ -22,6 +23,11 @@ export function normalizeDomainInput(raw: string): string | null {
   if (!/^[a-z]{2,24}$/.test(labels[labels.length - 1])) return null;
   if (BAD_SUFFIX.test(s)) return null;
   return s;
+}
+
+// "https://www.Brand.com/products/x?y" -> "brand.com". null if not a plain public hostname.
+export function normalizeDomainInput(raw: string): string | null {
+  return cleanHostname(raw, true);
 }
 
 function isPrivateIPv4(ip: string): boolean {
@@ -47,54 +53,103 @@ function isPrivateIp(ip: string): boolean {
   return v6.startsWith("fc") || v6.startsWith("fd") || v6.startsWith("fe8") || v6.startsWith("fe9") || v6.startsWith("fea") || v6.startsWith("feb");
 }
 
-async function assertPublicHost(host: string): Promise<void> {
-  const addrs = await dns.lookup(host, { all: true });
-  if (addrs.length === 0 || addrs.some((a) => isPrivateIp(a.address))) throw new Error("non-public host");
+// Connect-time guard. Checking DNS first and then letting fetch() resolve the
+// name again leaves a window (DNS rebinding): the first answer is public, the
+// second points at an internal address. Instead the check runs inside the
+// socket's own lookup, so the address we validate is the address we connect to.
+const publicOnlyLookup = ((hostname: string, options: any, callback: any) => {
+  dns.lookup(hostname, options, (err: any, address: any, family: any) => {
+    if (err) return callback(err, address, family);
+    const list: string[] = Array.isArray(address) ? address.map((a: any) => a.address) : [address];
+    if (list.length === 0 || list.some((ip) => isPrivateIp(ip))) {
+      return callback(new Error("non-public address"), address, family);
+    }
+    callback(null, address, family);
+  });
+}) as any;
+
+const MAX_BODY_BYTES = 512 * 1024;
+
+interface ProbeResponse {
+  status: number;
+  location?: string;
+  contentType: string;
+  body: string;
+}
+
+// One HTTPS GET with: connect-time public-IP enforcement, no redirect
+// following, a hard timeout, and a response size cap.
+function httpsGet(host: string, path: string): Promise<ProbeResponse> {
+  return new Promise((resolve, reject) => {
+    const req = https.request(
+      {
+        host,
+        port: 443,
+        path,
+        method: "GET",
+        lookup: publicOnlyLookup,
+        timeout: 6000,
+        headers: { "User-Agent": "ShopiSpy/1.0 (+https://www.shopi-spy.com)", Accept: "application/json" },
+      },
+      (res) => {
+        const status = res.statusCode || 0;
+        const contentType = String(res.headers["content-type"] || "");
+        if (status >= 300 && status < 400) {
+          res.resume();
+          resolve({ status, location: res.headers.location, contentType, body: "" });
+          return;
+        }
+        const chunks: Buffer[] = [];
+        let size = 0;
+        res.on("data", (c: Buffer) => {
+          size += c.length;
+          if (size > MAX_BODY_BYTES) {
+            req.destroy(new Error("response too large"));
+            return;
+          }
+          chunks.push(c);
+        });
+        res.on("end", () => resolve({ status, contentType, body: Buffer.concat(chunks).toString("utf8") }));
+        res.on("error", reject);
+      }
+    );
+    req.on("timeout", () => req.destroy(new Error("timeout")));
+    req.on("error", reject);
+    req.end();
+  });
 }
 
 // Is this a Shopify storefront? Shopify exposes /products.json publicly.
-// Follows at most 3 redirects, re-validating every hop host.
+// Follows at most 3 redirects, re-validating every hop's hostname.
 export async function probeShopify(domain: string): Promise<boolean> {
   let host = domain;
   for (let hop = 0; hop < 4; hop++) {
-    const clean = normalizeDomainInput(host);
+    const clean = cleanHostname(host, hop === 0); // first hop is the visitor's input; later hops keep "www."
     if (!clean) return false;
     try {
-      await assertPublicHost(clean);
-    } catch {
-      return false;
-    }
-    const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), 6000);
-    try {
-      const res = await fetch(`https://${clean}/products.json?limit=1`, {
-        redirect: "manual",
-        signal: ctrl.signal,
-        headers: { "User-Agent": "ShopiSpy/1.0 (+https://www.shopi-spy.com)", Accept: "application/json" },
-      });
+      const res = await httpsGet(clean, "/products.json?limit=1");
       if (res.status >= 300 && res.status < 400) {
-        const loc = res.headers.get("location");
-        if (!loc) return false;
-        const next = new URL(loc, `https://${clean}/`);
+        if (!res.location) return false;
+        const next = new URL(res.location, `https://${clean}/`);
         if (next.protocol !== "https:") return false;
         host = next.hostname;
         continue;
       }
-      if (!res.ok) return false;
-      if (!(res.headers.get("content-type") || "").includes("json")) return false;
-      const body = await res.json();
+      if (res.status < 200 || res.status >= 300) return false;
+      if (!res.contentType.includes("json")) return false;
+      const body = JSON.parse(res.body);
       return Array.isArray(body?.products);
     } catch {
       return false;
-    } finally {
-      clearTimeout(timer);
     }
   }
   return false;
 }
 
 export function isValidEmail(e: unknown): e is string {
-  return typeof e === "string" && e.length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e);
+  // Conservative character set: no angle brackets, quotes, backticks or other
+  // markup characters, so the address is safe to echo into logs and chat messages.
+  return typeof e === "string" && e.length <= 254 && /^[A-Za-z0-9._%+-]{1,64}@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,24}$/.test(e);
 }
 
 // Every way the same store may already be written in the stores table.
