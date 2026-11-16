@@ -29,10 +29,6 @@ function json(body: unknown, status = 200) {
   return Response.json(body, { status, headers: { "Cache-Control": "no-store" } });
 }
 
-function tableMissing(err: any): boolean {
-  return !!err && (err.code === "42P01" || err.code === "PGRST205" || /snapshot_requests/.test(err.message || ""));
-}
-
 // Client IP from headers the platform sets itself. On Vercel x-real-ip and
 // x-vercel-forwarded-for are written by the edge and cannot be forged by the
 // caller; the leftmost x-forwarded-for entry can be, so it is only used as the
@@ -127,16 +123,16 @@ export async function POST(request: Request) {
   const ipQ = await sb.from("snapshot_requests").select("id", { count: "exact", head: true }).eq("ip_hash", ipHash).gte("created_at", hourAgo);
   const emQ = await sb.from("snapshot_requests").select("id", { count: "exact", head: true }).eq("email", email).gte("created_at", dayAgo);
   const allQ = await sb.from("snapshot_requests").select("id", { count: "exact", head: true }).in("status", ["queued", "added"]).gte("created_at", dayAgo);
-  const missing = tableMissing(ipQ.error) || tableMissing(emQ.error) || tableMissing(allQ.error);
-
-  if (missing && !AUTO_ADD) {
+  // Fail CLOSED: if any limit query errors for ANY reason (missing table, timeout,
+  // permissions) we cannot enforce the caps, so refuse rather than let it through.
+  // (HEAD count queries return no error body, so we cannot rely on an error code.)
+  const missing = !!(ipQ.error || emQ.error || allQ.error) || ipQ.count == null || emQ.count == null || allQ.count == null;
+  if (missing) {
     return json({ error: "Brand requests are not switched on yet. Please check back shortly." }, 503);
   }
-  if (!missing) {
-    if ((ipQ.count || 0) >= PER_IP_PER_HOUR) return json({ error: "Too many requests from your connection. Please try again in an hour." }, 429);
-    if ((emQ.count || 0) >= PER_EMAIL_PER_DAY) return json({ error: "You have reached today's request limit. Please try again tomorrow." }, 429);
-    if ((allQ.count || 0) >= GLOBAL_REQUESTS_PER_DAY) return json({ error: "We have had a lot of requests today. Please try again tomorrow." }, 429);
-  }
+  if ((ipQ.count || 0) >= PER_IP_PER_HOUR) return json({ error: "Too many requests from your connection. Please try again in an hour." }, 429);
+  if ((emQ.count || 0) >= PER_EMAIL_PER_DAY) return json({ error: "You have reached today's request limit. Please try again tomorrow." }, 429);
+  if ((allQ.count || 0) >= GLOBAL_REQUESTS_PER_DAY) return json({ error: "We have had a lot of requests today. Please try again tomorrow." }, 429);
   if (AUTO_ADD) {
     const { count: newToday } = await sb.from("stores").select("id", { count: "exact", head: true }).gte("created_at", dayAgo);
     if ((newToday || 0) >= GLOBAL_NEW_STORES_PER_DAY) return json({ error: "We are adding a lot of brands today. Please try again tomorrow." }, 429);
@@ -145,14 +141,12 @@ export async function POST(request: Request) {
   // Must be a real Shopify store, otherwise there is nothing to snapshot.
   const shopify = await probeShopify(domain);
   if (!shopify) {
-    if (!missing) await sb.from("snapshot_requests").insert({ domain, email, ip_hash: ipHash, is_shopify: false, status: "not_shopify" });
+    await sb.from("snapshot_requests").insert({ domain, email, ip_hash: ipHash, is_shopify: false, status: "not_shopify" });
     return json({ status: "not_shopify" });
   }
 
   // Slack only for the first few requests each hour so a flood cannot spam the channel.
-  const { count: pingedLastHour } = missing
-    ? { count: 0 }
-    : await sb.from("snapshot_requests").select("id", { count: "exact", head: true }).in("status", ["queued", "added"]).gte("created_at", hourAgo);
+  const { count: pingedLastHour } = await sb.from("snapshot_requests").select("id", { count: "exact", head: true }).in("status", ["queued", "added"]).gte("created_at", hourAgo);
   const canPing = (pingedLastHour || 0) < SLACK_PINGS_PER_HOUR;
 
   if (!AUTO_ADD) {
@@ -184,12 +178,10 @@ export async function POST(request: Request) {
     scrapeStarted = false;
   }
 
-  if (!missing) {
-    await sb.from("snapshot_requests").insert({
-      domain, email, ip_hash: ipHash, is_shopify: true, store_id: storeId, status: "added",
-      notes: scrapeStarted ? null : "scrape trigger failed, daily cron will pick it up",
-    });
-  }
+  await sb.from("snapshot_requests").insert({
+    domain, email, ip_hash: ipHash, is_shopify: true, store_id: storeId, status: "added",
+    notes: scrapeStarted ? null : "scrape trigger failed, daily cron will pick it up",
+  });
   if (canPing) await ping(url, key, "Snapshot requested for an unlisted brand", `${slackSafe(email)} asked for ${slackSafe(domain)}`, { domain, email: slackSafe(email) });
 
   return json({ status: "added", domain });
