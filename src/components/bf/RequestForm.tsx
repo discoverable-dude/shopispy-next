@@ -10,6 +10,7 @@ type Phase =
   | { kind: "working"; domain: string; tries: number }
   | { kind: "ready"; domain: string; products: number }
   | { kind: "slow"; domain: string }
+  | { kind: "queued"; domain: string }
   | { kind: "not_shopify" }
   | { kind: "error"; message: string };
 
@@ -62,6 +63,10 @@ export function RequestForm({ price }: { price: string }) {
         setPhase({ kind: "not_shopify" });
         return;
       }
+      if (data.status === "queued") {
+        setPhase({ kind: "queued", domain: data.domain || domain });
+        return;
+      }
       if (data.status === "tracked") {
         const products = 0;
         setPhase({ kind: "ready", domain: data.domain, products });
@@ -74,6 +79,18 @@ export function RequestForm({ price }: { price: string }) {
   }
 
   const busy = phase.kind === "sending" || phase.kind === "working";
+
+  if (phase.kind === "queued") {
+    return (
+      <div className="rounded-2xl border border-primary/30 bg-primary/5 p-6 text-center">
+        <CheckCircle2 className="mx-auto h-8 w-8 text-primary" />
+        <h3 className="mt-3 text-lg font-bold">Request received</h3>
+        <p className="mt-1 text-sm text-muted-foreground">
+          {phase.domain} looks like a Shopify store. We will add it and email you at {email} as soon as its snapshot is ready to download.
+        </p>
+      </div>
+    );
+  }
 
   if (phase.kind === "ready") {
     return (

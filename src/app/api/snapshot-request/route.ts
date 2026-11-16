@@ -10,6 +10,13 @@ const GLOBAL_NEW_STORES_PER_DAY = 60;
 const PER_IP_PER_HOUR = 5;
 const PER_EMAIL_PER_DAY = 3;
 
+// Visitor-added stores are scraped into the SHARED products tables. Until the
+// ownership trigger in scripts/launch-fixes.sql is live, a hostile site could
+// return another brand's product ids and overwrite that brand's rows. So
+// auto-adding is OFF unless SNAPSHOT_AUTO_ADD=1; otherwise requests are logged
+// and the team is pinged to add the brand.
+const AUTO_ADD = process.env.SNAPSHOT_AUTO_ADD === "1";
+
 function admin() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -107,6 +114,22 @@ export async function POST(request: Request) {
   if (!shopify) {
     await sb.from("snapshot_requests").insert({ domain, email, ip_hash: ipHash, is_shopify: false, status: "not_shopify" });
     return json({ status: "not_shopify" });
+  }
+
+  if (!AUTO_ADD) {
+    await sb.from("snapshot_requests").insert({ domain, email, ip_hash: ipHash, is_shopify: true, status: "queued" });
+    fetch(`${url}/functions/v1/send-slack-notification`, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        type: "store_added",
+        title: "Snapshot requested: brand needs adding",
+        message: `${email} asked for ${domain}`,
+        data: { domain, email },
+        severity: "success",
+      }),
+    }).catch(() => {});
+    return json({ status: "queued", domain });
   }
 
   const { data: created, error: insErr } = await sb
