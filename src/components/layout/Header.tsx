@@ -29,6 +29,7 @@ export function Header() {
       ]
     : [
         { href: "/", label: "Home" },
+        { href: "/black-friday", label: "Black Friday" },
         { href: "/market", label: "Market" },
         { href: "/industries", label: "Industries" },
         { href: "/compare", label: "Compare" },

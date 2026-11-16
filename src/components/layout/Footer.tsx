@@ -10,6 +10,7 @@ const footerColumns = [
       { href: "/industries", label: "Industries" },
       { href: "/compare", label: "Compare" },
       { href: "/reports", label: "Reports" },
+      { href: "/black-friday", label: "Black Friday" },
     ],
   },
   {

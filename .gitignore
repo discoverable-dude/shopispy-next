@@ -49,3 +49,4 @@ next-env.d.ts
 scripts/setup-crons.sql
 
 scripts/setup-deep-cron.sql
+scripts/launch-fixes.sql
