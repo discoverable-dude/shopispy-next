@@ -167,7 +167,7 @@ export function RequestForm({ price }: { price: string }) {
 
       {phase.kind === "working" && (
         <p className="text-center text-sm text-muted-foreground" role="status">
-          We are reading every product from {phase.domain} now. This usually takes under a minute, keep this page open.
+          We are reading every product from {phase.domain} now. This can take a minute or two, keep this page open.
         </p>
       )}
       {phase.kind === "slow" && (

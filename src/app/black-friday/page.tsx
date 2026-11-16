@@ -130,7 +130,7 @@ export default async function BlackFridayPage() {
               <SectionHead
                 eyebrow="Live discount tracker"
                 title="Who is cutting prices, and by how much"
-                sub={`Updated ${updated}. Built from a sample of ${nf(d.discount.sample)} products across ${nf(d.discount.sampleStores)} stores, plus every price change we logged this week.`}
+                sub={`Calculated ${updated}. Built from a sample of ${nf(d.discount.sample)} products across ${nf(d.discount.sampleStores)} stores, plus every price change we logged this week.`}
               />
 
               <div className="grid gap-6 lg:grid-cols-2">
@@ -242,7 +242,7 @@ export default async function BlackFridayPage() {
                   <SnapshotPicker brands={PICKER_BRANDS} price={REPORTS.company.display} />
                 </div>
                 <p className="mt-4 text-xs text-muted-foreground">
-                  Their store is not listed? <a href="#request" className="font-medium text-primary underline underline-offset-4">We will add it for you</a>, usually in under a minute.
+                  Their store is not listed? <a href="#request" className="font-medium text-primary underline underline-offset-4">Request it</a> and we will add it for you.
                 </p>
               </div>
 
@@ -304,8 +304,8 @@ export default async function BlackFridayPage() {
           <div className="mx-auto max-w-5xl px-6 py-16">
             <SectionHead
               eyebrow="What we track"
-              title="A daily record of the whole Shopify market"
-              sub="Every morning we read the public product feed of every store we track and log what changed. Nothing is estimated and nobody's private sales are involved."
+              title="A running record of the whole Shopify market"
+              sub="We read the public product feeds of the stores we track and log every change: prices, launches, sales and stock. Nothing is estimated and nobody's private sales are involved."
             />
             {d && (
               <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
@@ -463,7 +463,7 @@ export default async function BlackFridayPage() {
               <p className="text-xs font-semibold uppercase tracking-widest text-primary">Not on our list?</p>
               <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">Request a snapshot of any Shopify store</h2>
               <p className="mb-6 mt-3 text-muted-foreground">
-                Type the address of a competitor we do not track yet. We check it is a Shopify store, pull its whole catalogue, and offer you the snapshot for {REPORTS.company.display}. It usually takes under a minute.
+                Type the address of a competitor we do not track yet. We check it is a Shopify store, add it, and email you when the snapshot is ready for {REPORTS.company.display}.
               </p>
               <RequestForm price={REPORTS.company.display} />
             </div>
@@ -477,10 +477,10 @@ export default async function BlackFridayPage() {
             <div className="divide-y divide-border rounded-2xl border border-border bg-card">
               {[
                 { q: "What exactly do I get?", a: "A CSV file you can open in Excel or Google Sheets. A brand snapshot lists every product the store sells with its price, original price, sale status and stock status. An industry benchmark compares every brand in a category side by side." },
-                { q: "How fresh is the data?", a: "We read every store daily. Your file is built from the latest data at the moment you download it. Save your download link and open it again any time up to and beyond Cyber Monday to get a fresh copy." },
+                { q: "How fresh is the data?", a: "Your file is built from the latest data we hold at the moment you download it. Save your download link and open it again any time up to and beyond Cyber Monday to get a copy built from our newest data." },
                 { q: "How far back does the data go?", a: "We have tracked daily since July 2026. That makes this a live view of this year's run-up to Black Friday. We do not have last year's sale data, so we do not claim year-on-year comparisons." },
                 { q: "Where does it come from?", a: "The public product feed every Shopify store exposes. We never log in to anyone's store, and we cannot see anyone's sales, traffic or orders. We show prices, products and stock, not revenue." },
-                { q: "Can I get a store you do not list?", a: "Yes. Use the request form above. We check it is a Shopify store, pull the catalogue, and you can buy the snapshot straight away." },
+                { q: "Can I get a store you do not list?", a: "Yes. Use the request form above. We check it is a Shopify store, add it, and email you as soon as its snapshot is ready." },
                 { q: "Is payment safe?", a: "Yes. Payments are handled by Stripe. We never see your card details." },
                 { q: "Something wrong with my file?", a: <>Tell us on the <Link href="/contact" className="text-primary underline underline-offset-4">contact page</Link> and we will sort it out.</> },
               ].map(({ q, a }) => (
@@ -500,7 +500,7 @@ export default async function BlackFridayPage() {
         <section className="border-t border-border/60">
           <div className="mx-auto max-w-3xl px-6 py-16 text-center">
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Walk into Black Friday knowing what they know.</h2>
-            <p className="mx-auto mt-3 max-w-xl text-muted-foreground">Snapshots from {REPORTS.company.display}. Instant download. Live through Cyber Monday.</p>
+            <p className="mx-auto mt-3 max-w-xl text-muted-foreground">Snapshots from {REPORTS.company.display}. Instant download. Your link stays live through Cyber Monday.</p>
             <div className="mt-6 flex justify-center"><Countdown /></div>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a href="#pick" className={ctaPrimary}>Choose my snapshot</a>
