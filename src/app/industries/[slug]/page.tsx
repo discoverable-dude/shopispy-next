@@ -27,6 +27,7 @@ import {
 import { fetchStatsForDomains, enrichBrand } from "@/lib/brandStats";
 import { fetchVerticalActivity } from "@/lib/productData";
 import { BuyReportButton } from "@/components/reports/BuyReportButton";
+import { REPORTS } from "@/lib/reports";
 
 // Revalidate every hour so live stats stay fresh without a full rebuild.
 export const revalidate = 300;
@@ -151,10 +152,10 @@ export default async function IndustryPage({
                   report="industry"
                   target={slug}
                   label={vertical.label}
-                  price="£99"
+                  price={REPORTS.industry.display}
                   className="inline-flex h-12 items-center justify-center rounded-xl border border-input bg-background px-6 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground disabled:opacity-60"
                 >
-                  Buy benchmark (CSV) — £99
+                  Buy benchmark (CSV), {REPORTS.industry.display}
                 </BuyReportButton>
               </div>
             </FadeInView>

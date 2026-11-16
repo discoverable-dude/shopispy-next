@@ -20,9 +20,9 @@ const stripe = new Stripe(key, { apiVersion: "2023-10-16" });
 
 // One-off report products (GBP only — that's how the reports are priced).
 const REPORTS = [
-  { lookup: "shopispy_report_company",  name: "ShopiSpy Company Snapshot",     desc: "Full product-level catalogue export for one brand.", gbp: 1900 },
-  { lookup: "shopispy_report_industry", name: "ShopiSpy Industry Benchmark",   desc: "Every brand in a vertical, benchmarked side by side.", gbp: 9900 },
-  { lookup: "shopispy_report_market",   name: "ShopiSpy Complete Market Report", desc: "Every tracked brand across all industries in one file.", gbp: 49900 },
+  { lookup: "shopispy_report_company_v2",  name: "ShopiSpy Company Snapshot",     desc: "Full product-level catalogue export for one brand.", gbp: 900 },
+  { lookup: "shopispy_report_industry_v2", name: "ShopiSpy Industry Benchmark",   desc: "Every brand in a vertical, benchmarked side by side.", gbp: 2900 },
+  { lookup: "shopispy_report_market_v2",   name: "ShopiSpy Complete Market Report", desc: "Every tracked brand across all industries in one file.", gbp: 9900 },
 ];
 
 // Recurring subscription tiers. Multi-currency via currency_options so one Price

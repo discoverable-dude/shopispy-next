@@ -102,6 +102,7 @@ export async function createReportCheckout(
       // types target a newer version that renamed it, hence the cast.
       ui_mode: "embedded" as any,
       mode: "payment",
+      allow_promotion_codes: true,
       line_items: lineItems,
       metadata: { report, target },
       // Embedded Checkout redirects the host page here once payment completes.
@@ -111,6 +112,7 @@ export async function createReportCheckout(
 
   return stripe.checkout.sessions.create({
     mode: "payment",
+    allow_promotion_codes: true,
     line_items: lineItems,
     metadata: { report, target },
     success_url: successPath,
